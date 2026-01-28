@@ -5,11 +5,15 @@ thrivehub-logo.png
 qr_thrivehub.png
 /one-pagers
 /resources
-README.md
+README.md[index.html](https://github.com/user-attachments/files/24898160/index.html)<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>ThriveHub – Additional Resources</title></head><body><p>This content now appears on the home page. <a href='../index.html'>Back to ThriveHub</a<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><met<img width="64" height="64" alt="favicon" src="https://github.com/user-attachments/assets/23970118-2941-4097-9e5d-f1ea1462e29c" />
+a http-equiv='refresh' content='2; url=./index.html'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Redirecting…</title><style>body{font-family:Arial,Helvetica,sans-serif;margin:2rem}a{color:#00796b}</style></head><body><h1>We moved something.</h1><p>Taking you back to ThriveHub… If not redirected automatically, <a href='./index.html'>click here</a>.</p></body></html>[404.html](https://github.com/user-attachments/files/24898161/404.html)
+></p></body></html>
+
 index.html
 favicon.png
 thrivehub-logo.png
-404.html
+404.html[adhd.html](https://github.com/user-attachments/files/24898159/adhd.html)<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>One‑Pager – ADHD</title><style>body{font-family:Arial,sans-serif;margin:24px;color:#111}h1{margin:0 0 8px}h2{margin:16px 0 6px}ul{margin:6px 0 16px}.small{opacity:.75}@media print{a:after{content:''}} .print{position:fixed;top:12px;right:12px;padding:.4rem .6rem;border:1px solid #ccc;border-radius:6px;}</style></head><body><button class='print' onclick='window.print()'>Print</button><h1>ThriveHub One‑Pager</h1><h2>ADHD</h2><p>Quick checklist for planning and classroom use. For full links and details, open <strong>https://DGR125.github.io/thrivehub/</strong>.</p><h3>Core strategies</h3><ul><li>Use clear goals, chunk tasks, provide visuals.</li><li>Build predictable routines; pre‑teach and model.</li><li>Offer adjustments and assistive tools as needed.</li></ul><h3>Live resources</h3><p>See the <em>Additional Resources</em> section in ThriveHub (e.g., NCCD, Student Wellbeing Hub, Positive Partnerships, eSafety, EAL/D, SWPBS).</p><p class='small'>Generated one‑pager.</p></body></html>
+
 qr_thrivehub.png
 /one-pagers
 /resources

@@ -1,3 +1,10 @@
+index.html
+favicon.png
+thrivehub-logo.png
+resources/      (folder)
+  └── index.html
+README.md
+
 # ThriveHub (V2) — Quick Start
 
 **Public URL (after GitHub Pages):** `https://DGR125.github.io/thrivehub/`

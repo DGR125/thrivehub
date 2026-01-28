@@ -1,26 +1,27 @@
-# ThriveHub (V4) — Quick Start & Troubleshooting
+# ThriveHub (V5) — Blended List
 
-**Public URL:** `https://DGR125.github.io/thrivehub/`
+This version merges **Categories** and **Additional Resources** into **one searchable list**.
 
-## New in V4
-- Additional Resources **embedded on home** with live filter (kept legacy /resources/)
-- **Accessibility:** skip link, ARIA roles/labels, focus outlines, higher contrast
-- **Print buttons** for each category → opens one‑pager
-- **Blog panel** tries to auto‑list latest 3 posts from WordPress (with graceful fallback)
-- Added **404.html** to redirect back to the home page if users hit a bad path
+## Publish in 3 steps
+1. Upload **all files in this folder** to the **root** of your `thrivehub` repo (top level). Do not nest in a subfolder.
+2. Go to **Settings → Pages** → Source: `main` / Folder: `/root`. Save.
+3. Wait ~60s → open `https://DGR125.github.io/thrivehub/` (try a private window).
 
-## Publish (GitHub Pages)
-1. Repo name must be **`thrivehub`** under `DGR125`.
-2. Upload all files to the **repo root** (top level). `index.html` must be in the root.
-3. Go to **Settings → Pages**:
-   - **Source:** `main`
-   - **Folder:** `/root`
-4. Wait 30–60 seconds, then open `https://DGR125.github.io/thrivehub/` (try a private/incognito window).
+## What’s inside
+- `index.html` — the blended UI (search + tag chips)
+- `assets/data.json` — the items; edit this to add or remove entries
+- `one-pagers/` — quick printable HTML one‑pagers
+- `.nojekyll`, `404.html`, `health-check.html` — stability helpers for GitHub Pages
 
-## If it "isn’t loading"
-- Ensure the repo is **Public** (unless your plan supports private Pages).
-- Confirm `index.html` is at **root** (not inside a folder like `/thrivehub_site_v4/`).
-- Check **Settings → Pages** really shows a green banner with your site URL.
-- If you used a custom domain previously, clear it under Pages.
-- Case matters in file names/paths; keep the URL path as `/thrivehub/` exactly.
-- Give it a minute after changes; then **hard refresh** (`Ctrl/Cmd+Shift+R`).
+## Edit content (so easy!)
+- To **add a new link or strategy**, open `assets/data.json` and add a new object with:
+{
+  "title": "Name of thing",
+  "type": "resource" or "strategy",
+  "desc": "What it is / how to use",
+  "href": "https://...",  
+  "tags": ["autism", "adhd", "trauma", "eal-d", "assistive", "wellbeing", "online-safety", "evidence", "universal"]
+}
+- Save and commit — the page updates itself.
+
+Happy teaching! ✨

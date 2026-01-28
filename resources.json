@@ -1,0 +1,158 @@
+[
+  {
+    "title": "NCCD – National guidance",
+    "desc": "Adjustments and case studies for Australian schools.",
+    "href": "https://www.nccd.edu.au/",
+    "tags": [
+      "policy",
+      "universal"
+    ]
+  },
+  {
+    "title": "Be You (Wellbeing)",
+    "desc": "National mental health in education – PL and tools.",
+    "href": "https://beyou.edu.au/",
+    "tags": [
+      "wellbeing",
+      "universal"
+    ]
+  },
+  {
+    "title": "Student Wellbeing Hub",
+    "desc": "Evidence‑based resources for schools.",
+    "href": "https://studentwellbeinghub.edu.au/",
+    "tags": [
+      "wellbeing",
+      "universal"
+    ]
+  },
+  {
+    "title": "eSafety classroom resources",
+    "desc": "Curriculum‑aligned online safety activities.",
+    "href": "https://www.esafety.gov.au/educators/classroom-resources",
+    "tags": [
+      "online-safety"
+    ]
+  },
+  {
+    "title": "Positive Partnerships (Autism)",
+    "desc": "Free PL, tools, strategies for autism.",
+    "href": "https://www.positivepartnerships.com.au/",
+    "tags": [
+      "autism",
+      "pl"
+    ]
+  },
+  {
+    "title": "Autism SA – School Inclusion Program",
+    "desc": "Local professional learning and supports.",
+    "href": "https://autismsa.org.au/supports-services/school-inclusion-program-for-educators/",
+    "tags": [
+      "autism",
+      "pl",
+      "sa"
+    ]
+  },
+  {
+    "title": "NSW Inclusive Practice – ADHD",
+    "desc": "Evidence‑based ADHD strategies (DoE).",
+    "href": "https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/adhd/evidence-based-strategies",
+    "tags": [
+      "adhd",
+      "evidence"
+    ]
+  },
+  {
+    "title": "AADPA – ADHD for Educators",
+    "desc": "Concise ADHD factsheet for schools.",
+    "href": "https://adhdguideline.aadpa.com.au/adhd-for-educators/",
+    "tags": [
+      "adhd"
+    ]
+  },
+  {
+    "title": "AllPlay Learn – Deaf/HoH",
+    "desc": "Teacher strategies and adjustments.",
+    "href": "https://allplaylearn.org.au/primary/teacher/deaf/",
+    "tags": [
+      "hearing"
+    ]
+  },
+  {
+    "title": "NSW Inclusive Practice – Blind/low vision",
+    "desc": "Strategies for access and participation.",
+    "href": "https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/blind-and-low-vision/evidence-based-strategies",
+    "tags": [
+      "vision",
+      "evidence"
+    ]
+  },
+  {
+    "title": "ACARA EAL/D Teacher Resource",
+    "desc": "Planning for EAL/D students.",
+    "href": "https://www.acara.edu.au/_resources/EALD_teacher_resource.pdf",
+    "tags": [
+      "eal-d",
+      "evidence"
+    ]
+  },
+  {
+    "title": "HPGE (Gifted/High Potential)",
+    "desc": "Identification and provision guidance (NSW).",
+    "href": "https://education.nsw.gov.au/teaching-and-learning/high-potential-and-gifted-education",
+    "tags": [
+      "gifted"
+    ]
+  },
+  {
+    "title": "Evidence for Learning – Toolkit",
+    "desc": "What works? Cost/impact summaries.",
+    "href": "https://evidenceforlearning.org.au/education-evidence/teaching-learning-toolkit",
+    "tags": [
+      "evidence",
+      "universal"
+    ]
+  },
+  {
+    "title": "FASD – Learning with FASD",
+    "desc": "Classroom strategies and teacher PL.",
+    "href": "https://learningwithfasd.org.au/primary-school/classroom-strategies/",
+    "tags": [
+      "fasd"
+    ]
+  },
+  {
+    "title": "FASD Hub Australia – For educators",
+    "desc": "Australian, evidence‑based FASD guidance.",
+    "href": "https://fasdhub.org.au/for-educators/",
+    "tags": [
+      "fasd",
+      "evidence"
+    ]
+  },
+  {
+    "title": "SA Dept – Disability support at school",
+    "desc": "Support and adjustments in SA schools.",
+    "href": "https://www.education.sa.gov.au/parents-and-families/student-health-and-disability-support/disability-support-school",
+    "tags": [
+      "sa",
+      "policy"
+    ]
+  },
+  {
+    "title": "Assistive technology (QLD Education)",
+    "desc": "Overview and school guidance.",
+    "href": "https://education.qld.gov.au/students/inclusive-education/assistive-technology",
+    "tags": [
+      "assistive"
+    ]
+  },
+  {
+    "title": "Inclusive School Communities – AT Toolkit",
+    "desc": "Practical AT toolkit (Purple Orange).",
+    "href": "https://projects.purpleorange.org.au/inclusiveschoolcommunities/resources/toolkit/assistive-technologies-schools",
+    "tags": [
+      "assistive"
+    ]
+  }
+]

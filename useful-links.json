@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Student Wellbeing Blog",
+    "desc": "Support materials for staff at all stages.",
+    "href": "https://thestudentwellbeing.wordpress.com/"
+  },
+  {
+    "title": "YouTube – Wellbeing Playlist",
+    "desc": "Short PD videos and explainers.",
+    "href": "https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ"
+  },
+  {
+    "title": "General | Wellbeing Connection | Microsoft Teams",
+    "desc": "Join for regular updates and resources.",
+    "href": "#REPLACE_WITH_TEAMS_WELLBEING_LINK"
+  },
+  {
+    "title": "General | SWD Connections- PH2 | Microsoft Teams",
+    "desc": "Disability support resources and updates.",
+    "href": "#REPLACE_WITH_TEAMS_SWD_LINK"
+  },
+  {
+    "title": "General | Social Work Truancy | Microsoft Teams",
+    "desc": "Attendance strategies and truancy support.",
+    "href": "#REPLACE_WITH_TEAMS_TRUANCY_LINK"
+  }
+]

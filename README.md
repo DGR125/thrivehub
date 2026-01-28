@@ -1,16 +1,16 @@
-# ThriveHub (V5.2) — Resources grouped by category + Useful Links
+# ThriveHub – static build (V5.6)
 
-**What’s new in V5.2**
-- "Featured" YouTube playlist button at the top of the page
-- **Resources by category (live links)** section so staff can scan by need (Autism, ADHD, EAL/D, etc.)
-- Retains **All resources (search & filter)** grid below
-- Useful Links and One‑pagers unchanged
+## Quick publish (GitHub Pages)
+1) Create/Use repo `thrivehub` (Public).
+2) Upload *the contents* of this folder to the **repo root** (top level).
+3) Settings → Pages → Source: **Deploy from a branch**; Branch: **main**; Folder: **/root** → Save.
+4) Wait ~60s → open https://<your-username>.github.io/thrivehub/ in a private window.
 
-## Publish
-1) Upload all files to the **root** of your `thrivehub` repo.
-2) Settings → Pages → Source: `main` / Folder: `/root` → Save.
-3) Wait ~60s → open `https://DGR125.github.io/thrivehub/` (try a private window).
+## What’s inside
+- `index.html` – home page with all links hardcoded (no JS/JSON fetch).
+- `assets/` – logo + favicon placeholders (replace if you wish).
+- `404.html` – gentle redirect back to home for bad links.
+- `.nojekyll` – ensures assets serve correctly on GitHub Pages.
 
-## Edit content
-- `/assets/resources.json` — add/adjust free links (title, desc, href, tags)
-- `/assets/useful-links.json` — paste your actual Teams invite URLs
+## Edit the content
+Open `index.html` and update links/text in Australian English.

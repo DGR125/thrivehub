@@ -1,3 +1,10 @@
+index.html
+404.html
+.nojekyll
+README.md
+/assets
+  thrivehub-logo.png
+  favicon.png
 # ThriveHub – static build (V5.6a)
 
 Added three Microsoft Teams live links on the opening page (About our team section).

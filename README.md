@@ -1,3 +1,11 @@
+/ (repo root)
+  index.html            ← the only homepage
+  404.html
+  .nojekyll
+  README.md
+  /assets
+    thrivehub-logo.png
+    favicon.png
 # ThriveHub – static build (V5.6)
 
 ## Quick publish (GitHub Pages)

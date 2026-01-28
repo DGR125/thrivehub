@@ -6,6 +6,14 @@ qr_thrivehub.png
 /one-pagers
 /resources
 README.md
+index.html
+favicon.png
+thrivehub-logo.png
+404.html
+qr_thrivehub.png
+/one-pagers
+/resources
+README.md
 
 index.html
 favicon.png

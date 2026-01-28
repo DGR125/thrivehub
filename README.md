@@ -1,24 +1,8 @@
-/ (repo root)
-  index.html            ← the only homepage
-  404.html
-  .nojekyll
-  README.md
-  /assets
-    thrivehub-logo.png
-    favicon.png
-# ThriveHub – static build (V5.6)
+# ThriveHub – static build (V5.6a)
 
-## Quick publish (GitHub Pages)
-1) Create/Use repo `thrivehub` (Public).
-2) Upload *the contents* of this folder to the **repo root** (top level).
-3) Settings → Pages → Source: **Deploy from a branch**; Branch: **main**; Folder: **/root** → Save.
-4) Wait ~60s → open https://<your-username>.github.io/thrivehub/ in a private window.
+Added three Microsoft Teams live links on the opening page (About our team section).
 
-## What’s inside
-- `index.html` – home page with all links hardcoded (no JS/JSON fetch).
-- `assets/` – logo + favicon placeholders (replace if you wish).
-- `404.html` – gentle redirect back to home for bad links.
-- `.nojekyll` – ensures assets serve correctly on GitHub Pages.
-
-## Edit the content
-Open `index.html` and update links/text in Australian English.
+## Publish (GitHub Pages)
+1) Upload the folder contents to the **repo root**.
+2) Settings → Pages → Source: **Deploy from a branch**; Branch: **main**; Folder: **/root** → Save.
+3) Open the site in a private window.

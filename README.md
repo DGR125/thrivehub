@@ -1,3 +1,9 @@
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 index.html
 library.html
 404.html

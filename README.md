@@ -1,4 +1,4 @@
-# ThriveHub V6.0 — Bold Modern (Gradient Hero)
+# ThriveHub V6.0a — Bold Modern + Vibrant Green
 
 **Publish (branch deploy)**
 1) Settings → Pages → **Source: Deploy from a branch** → **Branch: main** → **Folder: /(root)** → Save.
@@ -7,5 +7,8 @@
    - https://dgr125.github.io/thrivehub/
    - https://dgr125.github.io/thrivehub/library.html
 
-Teams links live on the homepage under **Teams spaces**.
-Cloudflare analytics is embedded on both pages (token: `4be9740951c64b459e4609a0c51af0b1`).
+What’s new:
+- Vibrant indigo→teal hero + green/cyan accents
+- Teams links restored and **pinned in hero on mobile**
+- Library: floating **Back to top** + **Copy link** buttons for each section
+- Cloudflare analytics embedded (token: `4be9740951c64b459e4609a0c51af0b1`).

@@ -7,46 +7,63 @@
   <meta name="description" content="Independent wellbeing & inclusive education resources curated by Teresa Bruno.">
   <style>
     :root{
-      --bg:#0b1026;           /* deep indigo for header */
-      --bg2:#0e2a6e;          /* deep blue for gradient */
-      --text:#101418;
+      --indigo:#0b1026;     /* deep indigo */
+      --teal:#036d6d;       /* deep teal for gradient */
+      --text:#0f1720;
       --muted:#5a6472;
       --card:#ffffff;
       --border:#e8ecf3;
-      --accent:#10b5ff;       /* bright cyan */
-      --accent-2:#7cc9ff;
-      --link:#0d6efd;
+      --accent:#10b5ff;     /* cyan */
+      --accent-2:#7cc9ff;   /* light cyan */
+      --green:#10c26e;      /* vibrant green */
+      --green-2:#19e27d;    /* brighter green */
+      --link:#0b6bff;
     }
     html,body{margin:0;padding:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:#fff}
     a{color:var(--link);text-decoration:none}
-    .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+    .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
 
-    header.site{background:linear-gradient(140deg,var(--bg) 0%, var(--bg2) 100%);color:#fff}
+    header.site{background:linear-gradient(135deg,var(--indigo) 0%, var(--teal) 100%);color:#fff}
     .site-bar{display:flex;align-items:center;gap:12px;padding:14px 0}
-    .site-bar img{height:36px;width:auto}
-    .site-title{font-weight:700;letter-spacing:.2px}
+    .site-bar img{height:38px;width:auto}
+    .site-title{font-weight:800;letter-spacing:.2px}
 
-    .hero{padding:36px 0 28px}
-    .hero h1{margin:0 0 10px;font-size:28px;color:#fff}
-    .hero p{margin:0 0 16px;color:#e7eefc;max-width:70ch}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;font-weight:600;border:1px solid transparent}
-    .btn-primary{background:var(--accent);color:#03243a;border-color:#22c1ff;box-shadow:0 6px 18px rgba(16,181,255,.25)}
-    .btn-light{background:#fff;color:#0b2640;border-color:#dbe7f3}
-    .badge-hero{display:inline-block;margin-left:8px;padding:4px 10px;border-radius:999px;background:#0f356b;color:#a9c8ff;border:1px solid rgba(255,255,255,.15);font-size:12px}
+    .hero{padding:38px 0 26px}
+    .hero h1{margin:0 0 10px;font-size:30px;color:#fff}
+    .hero p{margin:0 0 16px;color:#d9f7ff;max-width:70ch}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin:10px 0}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;font-weight:700;border:1px solid transparent}
+    .btn-primary{background:linear-gradient(180deg,var(--green-2),var(--green));color:#032a18;border-color:#17d577;box-shadow:0 10px 24px rgba(25,226,125,.28)}
+    .btn-secondary{background:#ffffff;color:#07283e;border-color:#dbe7f3}
+    .btn-accent{background:linear-gradient(180deg,var(--accent-2),var(--accent));color:#06243b;border-color:#22c1ff;box-shadow:0 10px 24px rgba(16,181,255,.28)}
+    .badge-hero{display:inline-block;margin-left:10px;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.12);color:#d4e8ff;border:1px solid rgba(255,255,255,.22);font-size:12px}
 
-    main{padding:22px 0 34px}
+    main{padding:24px 0 36px}
     .section-title{font-size:20px;margin:0 0 10px}
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:0 4px 12px rgba(3,17,38,.06)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:0 6px 16px rgba(3,17,38,.07)}
     .card h3{margin:2px 0 8px;font-size:16px}
     .muted{color:var(--muted);font-size:14px}
 
-    /* Teams block */
-    .teams{margin-top:18px}
-    .teams .btn{background:#0e2a6e;color:#fff;border-color:#294786}
-    .teams .btn:hover{filter:brightness(1.08)}
+    /* Teams in hero on small screens */
+    .teams-inline{display:none}
+
+    .teams-grid{margin-top:18px}
+    .teams-grid .btn{background:linear-gradient(180deg,#1b4291,#14306a);color:#fff;border-color:#294786}
+    .teams-grid .btn:hover{filter:brightness(1.07)}
+
+    @media (max-width:720px){
+      .teams-inline{display:block;margin-top:12px}
+      .teams-grid{display:none}
+      .teams-inline .btn{background:linear-gradient(180deg,#1b4291,#14306a);color:#fff;border-color:#294786;margin:6px 8px 0 0}
+    }
+
+    /* invite strip */
+    .invite{margin-top:18px;display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+    .invite .panel{background:linear-gradient(135deg,rgba(16,194,110,.12),rgba(16,181,255,.12));border:1px solid var(--border);border-radius:16px;padding:16px}
+    .invite h3{margin:6px 0 8px}
+    @media (max-width:880px){.invite{grid-template-columns:1fr}}
 
     footer{border-top:1px solid var(--border);padding:16px 0;color:var(--muted);font-size:14px}
   </style>
@@ -62,9 +79,12 @@
         <h1>Free, teacher‑ready resources — one click <a class="badge-hero" href="library.html#policy">New: Policy resources</a></h1>
         <p><strong>Curated for education staff</strong>. Independent wellbeing support created by <strong>Teresa Bruno</strong>.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="https://www.youtube.com/playlist?list=PLt-example" target="_blank" rel="noopener">▶ Open the Wellbeing playlist</a>
-          <a class="btn btn-light" href="library.html">📚 Explore the full library</a>
-          <a class="btn btn-light" href="https://thestudentwellbeing.wordpress.com/2026/02/05/supporting-every-learner-specialist-google-classrooms-for-wellbeing-and-diverse-needs/" target="_blank" rel="noopener">🆕 Specialist Google Classrooms</a>
+          <a class="btn btn-primary" href="library.html">📚 Explore the full library</a>
+          <a class="btn btn-accent" href="https://www.youtube.com/playlist?list=PLt-example" target="_blank" rel="noopener">▶ Wellbeing playlist</a>
+          <a class="btn btn-secondary" href="https://thestudentwellbeing.wordpress.com/2026/02/05/supporting-every-learner-specialist-google-classrooms-for-wellbeing-and-diverse-needs/" target="_blank" rel="noopener">🆕 Specialist Google Classrooms</a>
+        </div>
+        <div class="teams-inline">
+          <a class=\"btn\" href=\"https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 General Wellbeing Connection</a><a class=\"btn\" href=\"https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 SWD Connections – PH2</a><a class=\"btn\" href=\"https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 Social Work Truancy</a>
         </div>
         <p class="muted">The Senior Leadership team is committed to high‑performing teams and meeting the needs of students to ensure they thrive in wellbeing and learning.</p>
       </div>
@@ -72,7 +92,26 @@
   </header>
 
   <main class="wrap">
-    <section>
+    <section class="invite">
+      <div class="panel">
+        <h3>Quick start</h3>
+        <p class="muted">Jump straight into ready‑to‑use resources. Browse by need, then open a trusted source in one click.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="library.html#wellbeing">Wellbeing</a>
+          <a class="btn btn-primary" href="library.html#dld">DLD</a>
+          <a class="btn btn-primary" href="library.html#aac">AAC</a>
+          <a class="btn btn-primary" href="library.html#policy">Policy</a>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Join our Teams spaces</h3>
+        <div class="actions">
+          <a class=\"btn\" style=\"background:linear-gradient(180deg,#1b4291,#14306a);color:#fff\" href=\"https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 General Wellbeing Connection</a><a class=\"btn\" style=\"background:linear-gradient(180deg,#1b4291,#14306a);color:#fff\" href=\"https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 SWD Connections – PH2</a><a class=\"btn\" style=\"background:linear-gradient(180deg,#1b4291,#14306a);color:#fff\" href=\"https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 Social Work Truancy</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:18px">
       <h2 class="section-title">Highlights</h2>
       <div class="grid">
         <article class="card">
@@ -98,10 +137,10 @@
       </div>
     </section>
 
-    <section class="teams">
+    <section class="teams-grid">
       <h2 class="section-title">Teams spaces</h2>
       <div class="actions">
-        <a class="btn" href="https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" rel="noopener">💬 General Wellbeing Connection</a><a class="btn" href="https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" rel="noopener">💬 SWD Connections – PH2</a><a class="btn" href="https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" rel="noopener">💬 Social Work Truancy</a>
+        <a class=\"btn\" href=\"https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 General Wellbeing Connection</a><a class=\"btn\" href=\"https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 SWD Connections – PH2</a><a class=\"btn\" href=\"https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 Social Work Truancy</a>
       </div>
     </section>
   </main>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-AU"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Suggest a resource — ThriveHub</title>
+<style>body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;margin:24px;max-width:820px}
+label{display:block;margin:10px 0 4px}input,textarea{width:100%;padding:10px;border:1px solid #e8ecf3;border-radius:8px}
+.btn{margin-top:12px;display:inline-block;padding:10px 14px;border-radius:10px;background:#10c26e;color:#062816;text-decoration:none}
+.note{color:#5a6472}</style>
+<h1>Suggest a resource</h1>
+<p>Have a high‑quality, free resource we should add? Send the details below.</p>
+<p class="note">Tip: If your site prefers a form, replace this page later with a Microsoft Form link and keep the menu label the same.</p>
+<form onsubmit="send();return false;">
+  <label>Resource name</label><input id="n" required>
+  <label>URL</label><input id="u" required>
+  <label>Why it helps (1 sentence)</label><textarea id="d" rows="3" required></textarea>
+  <label>Best for (e.g., classroom strategies, planning, policy)</label><input id="b">
+  <button class="btn" type="submit">Open email to submit</button>
+</form>
+<script>function send(){
+  const s='ThriveHub: resource suggestion';
+  const body=`Name: ${n.value}%0AURL: ${u.value}%0ADescription: ${d.value}%0ABest for: ${b.value}`;
+  location.href=`mailto:teresa.bruno@sa.gov.au?subject=${encodeURIComponent(s)}&body=${body}`;
+}</script>
+</html>

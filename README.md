@@ -1,4 +1,7 @@
 
+it commit --allow-empty -m "chore: retrigger pages"
+git push
+
 # ThriveHub – V5.9g (Full library fixed + last updated + analytics)
 
 - Restores the **full library** content on `library.html` (no trimming).

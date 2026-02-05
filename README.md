@@ -1,4 +1,11 @@
-
+index.html
+library.html
+404.html
+.nojekyll
+README.md
+/assets
+  thrivehub-logo.png
+  favicon.png
 it commit --allow-empty -m "chore: retrigger pages"
 git push
 

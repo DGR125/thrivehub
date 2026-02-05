@@ -1,30 +1,18 @@
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+# ThriveHub – V5.9h (Branch Deploy)
 
-index.html
-library.html
-404.html
-.nojekyll
-README.md
-/assets
-  thrivehub-logo.png
-  favicon.png
-it commit --allow-empty -m "chore: retrigger pages"
-git push
+This build is configured for **GitHub Pages → Deploy from a branch** (no Actions).
 
-# ThriveHub – V5.9g (Full library fixed + last updated + analytics)
+## How to publish (branch mode)
+1. Go to **Settings → Pages**.
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**.
+3. **Branch:** `main`  •  **Folder:** `/root`  → **Save`**.
+4. Upload the **contents** of this folder to the **repo root** (not the ZIP).
+5. Open the site in a **private/incognito** window: `https://<username>.github.io/thrivehub/`.
 
-- Restores the **full library** content on `library.html` (no trimming).
-- Adds **last updated** badge (Home hero): 29 January 2026.
-- Cloudflare Web Analytics beacon (your token) is embedded **before </body>** on both pages.
+## Why branch mode?
+- For static sites, GitHub recommends publishing from a **branch/folder** when no build step is needed. It removes the dependency on Actions runners and avoids concurrency cancellations. (See GitHub Docs: *Configuring a publishing source for your GitHub Pages site*.)
 
-## Publish
-1) Upload the **contents** of this folder to the **repo root**.
-2) Settings → Pages → Source: Deploy from a branch; Branch: main; Folder: /root → Save.
-3) Open the site in a private/incognito window to bypass cache.
+## Verify Cloudflare Web Analytics
+- View source and search for `static.cloudflareinsights.com/beacon.min.js`. The snippet is injected just before `</body>`.
 
-## Verify analytics locally in the page source
-- View source of the deployed page and search for `static.cloudflareinsights.com/beacon.min.js`.

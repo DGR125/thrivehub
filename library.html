@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>ThriveHub — Full Library</title>
   <style>
-    body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;margin:0;color:#1a1a1a}
+    :root{--text:#101418;--muted:#5a6472;--border:#e8ecf3;--link:#0d6efd}
+    body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;margin:0;color:var(--text)}
     header,footer{padding:16px 20px}
-    header{border-bottom:1px solid #eee}
-    .container{max-width:1040px;margin:0 auto;padding:20px}
+    header{border-bottom:1px solid var(--border)}
+    .container{max-width:1120px;margin:0 auto;padding:20px}
     h1{margin:8px 0 0}
-    nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;padding:8px 20px;z-index:1;overflow:auto;white-space:nowrap}
-    nav a{margin-right:10px;font-size:14px;text-decoration:none;color:#1166cc}
-    section{padding:18px 0;border-bottom:1px solid #f1f1f1}
+    nav{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);padding:8px 20px;z-index:1;overflow:auto;white-space:nowrap}
+    nav a{margin-right:10px;font-size:14px;text-decoration:none;color:var(--link)}
+    section{padding:18px 0;border-bottom:1px solid #f3f5f8}
     section h2{margin:0 0 8px;font-size:20px}
     ul{margin:8px 0 0 18px}
     li{margin:6px 0}
-    .badge{display:inline-block;background:#f60;color:#fff;font-size:11px;padding:2px 6px;border-radius:999px;margin-left:6px}
-    .small{color:#555}
-    a{color:#1166cc}
+    .badge{display:inline-block;background:#ff7a1a;color:#fff;font-size:11px;padding:2px 6px;border-radius:999px;margin-left:6px}
+    .small{color:var(--muted)}
+    a{color:var(--link)}
   </style>
 </head>
 <body>
@@ -53,6 +54,7 @@
 </nav>
 
 <main class="container">
+  <!-- Sections trimmed for brevity in code; same complete list as previous minimal build -->
   <section id="cultural">
     <h2>Cultural Responsiveness — Aboriginal & Torres Strait Islander</h2>
     <ul>
@@ -62,186 +64,109 @@
       <li><a href="https://www.shareourpride.org.au/" target="_blank" rel="noopener">Share Our Pride</a></li>
     </ul>
   </section>
-
-  <section id="wellbeing">
-    <h2>Wellbeing (whole‑school & classroom)</h2>
-    <ul>
-      <li><a href="https://beyou.edu.au/" target="_blank" rel="noopener">Be You</a></li>
-      <li><a href="https://education.headspace.org.au/" target="_blank" rel="noopener">headspace Schools</a></li>
-      <li><a href="https://emergingminds.com.au/resources/" target="_blank" rel="noopener">Emerging Minds — Resources</a></li>
-      <li><a href="https://studentwellbeinghub.edu.au/" target="_blank" rel="noopener">Student Wellbeing Hub</a></li>
-      <li><a href="https://schools.au.reachout.com/" target="_blank" rel="noopener">ReachOut Schools</a></li>
-    </ul>
-  </section>
-
-  <section id="online-safety">
-    <h2>Online Safety</h2>
-    <ul>
-      <li><a href="https://www.esafety.gov.au/educators/classroom-resources" target="_blank" rel="noopener">eSafety — Classroom resources</a></li>
-      <li><a href="https://www.thinkuknow.org.au/" target="_blank" rel="noopener">ThinkUKnow</a></li>
-    </ul>
-  </section>
-
-  <section id="autism">
-    <h2>Autism</h2>
-    <ul>
-      <li><a href="https://www.positivepartnerships.com.au/" target="_blank" rel="noopener">Positive Partnerships</a></li>
-      <li><a href="https://inclusioned.edu.au/" target="_blank" rel="noopener">inclusionED (Autism CRC)</a></li>
-      <li><a href="https://www.autismcrc.com.au/" target="_blank" rel="noopener">Autism CRC</a></li>
-      <li><a href="https://autismsa.org.au/" target="_blank" rel="noopener">Autism SA</a></li>
-      <li><a href="https://www.allplaylearn.org.au/" target="_blank" rel="noopener">AllPlay Learn</a></li>
-    </ul>
-  </section>
-
-  <section id="adhd">
-    <h2>ADHD</h2>
-    <ul>
-      <li><a href="https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/attention-deficit-hyperactivity-disorder" target="_blank" rel="noopener">NSW Inclusive Practice — ADHD strategies</a></li>
-      <li><a href="https://aadpa.com/adhd-fact-sheets/" target="_blank" rel="noopener">AADPA — Educator factsheets</a></li>
-    </ul>
-  </section>
-
-  <section id="eald">
-    <h2>EAL/D</h2>
-    <ul>
-      <li><a href="https://www.acara.edu.au/docs/default-source/resources/eald-teacher-resource.pdf" target="_blank" rel="noopener">ACARA EAL/D Teacher Resource (PDF)</a></li>
-      <li><a href="https://www.australiancurriculum.edu.au/resources/eald/" target="_blank" rel="noopener">Australian Curriculum — EAL/D</a></li>
-      <li><a href="https://education.nsw.gov.au/teaching-and-learning/curriculum/languages/english-as-an-additional-language-or-dialect" target="_blank" rel="noopener">NSW — EAL/D resources</a></li>
-    </ul>
-  </section>
-
-  <section id="dld">
-    <h2>Developmental Language Disorder (DLD)</h2>
-    <ul>
-      <li><a href="https://thedldproject.com/" target="_blank" rel="noopener">The DLD Project</a></li>
-      <li><a href="https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/communication-and-language-disorders" target="_blank" rel="noopener">NSW Inclusive Practice — Communication & language</a></li>
-      <li><a href="https://readingwritingcentre.education.qld.gov.au/language-disorders" target="_blank" rel="noopener">QLD Reading & Writing Centre — Language disorders</a></li>
-    </ul>
-  </section>
-
-  <section id="at">
-    <h2>Assistive Technology (AT)</h2>
-    <ul>
-      <li><a href="https://education.qld.gov.au/students/inclusive-education/assistive-technology" target="_blank" rel="noopener">QLD Education — Assistive Technology</a></li>
-      <li><a href="https://inclusiveschoolcommunities.org.au/resources/assistive-technology" target="_blank" rel="noopener">Inclusive School Communities — AT toolkit</a></li>
-      <li><a href="https://dsf.net.au/resources/assistive-technology" target="_blank" rel="noopener">DSF — AT resources</a></li>
-    </ul>
-  </section>
-
-  <section id="aac">
-    <h2>AAC (Augmentative & Alternative Communication)</h2>
-    <ul>
-      <li><a href="https://www.adwest.sa.edu.au/our-school/curriculum/augmentative-and-alternative-communication.html" target="_blank" rel="noopener">Adelaide West — AAC info</a></li>
-      <li><a href="https://www.plink.sa.edu.au/ilp/pages/description.jsf?menuId=21772486#/users/@self/catalogues/15965657/courses/15974112/description" target="_blank" rel="noopener">PLINK — AAC course (login may be required)</a></li>
-      <li><a href="https://sourcekids.com.au/complex-communication-needs-and-an-introduction-to-aac/" target="_blank" rel="noopener">Source Kids — Intro to AAC</a></li>
-      <li><a href="https://communicationhub.com.au/AidsAndSupports" target="_blank" rel="noopener">Communication Hub — Aids & Supports</a></li>
-      <li><a href="https://praacticalaac.org/" target="_blank" rel="noopener">PrAACtical AAC</a></li>
-    </ul>
-  </section>
-
-  <section id="vision-hearing">
-    <h2>Blind/Low Vision & Deaf/Hard of Hearing</h2>
-    <ul>
-      <li><a href="https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/vision-impairment" target="_blank" rel="noopener">NSW — Vision impairment strategies</a></li>
-      <li><a href="https://www.allplaylearn.org.au/" target="_blank" rel="noopener">AllPlay Learn</a></li>
-      <li><a href="https://www.visionaustralia.org/services/children" target="_blank" rel="noopener">Vision Australia — Education</a></li>
-      <li><a href="https://www.deafchildren.org.au/resources/" target="_blank" rel="noopener">Deaf Children Australia — Resources</a></li>
-    </ul>
-  </section>
-
-  <section id="fasd">
-    <h2>FASD</h2>
-    <ul>
-      <li><a href="https://learningwithfasd.org.au/" target="_blank" rel="noopener">Learning with FASD</a></li>
-      <li><a href="https://www.fasdhub.org.au/" target="_blank" rel="noopener">FASD Hub Australia</a></li>
-      <li><a href="https://www.nofasd.org.au/" target="_blank" rel="noopener">NOFASD Australia</a></li>
-      <li><a href="https://www.telethonkids.org.au/our-research/brain-behaviour-development/alcohol-and-pregnancy-and-fasd/" target="_blank" rel="noopener">Telethon Kids — FASD</a></li>
-    </ul>
-  </section>
-
-  <section id="evidence">
-    <h2>Evidence for practice</h2>
-    <ul>
-      <li><a href="https://evidenceforlearning.org.au/the-toolkit/" target="_blank" rel="noopener">Evidence for Learning — Toolkit</a></li>
-      <li><a href="https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit" target="_blank" rel="noopener">EEF — Teaching & Learning Toolkit</a></li>
-      <li><a href="https://www.cese.nsw.gov.au/research-programs/what-works-best" target="_blank" rel="noopener">NSW CESE — What works best</a></li>
-    </ul>
-  </section>
-
-  <section id="policy">
-    <h2>Policy & guidance (national)</h2>
-    <ul>
-      <li><a href="https://www.nccd.edu.au/" target="_blank" rel="noopener">NCCD Portal</a></li>
-      <li><a href="https://www.legislation.gov.au/F2005L00767/latest/text" target="_blank" rel="noopener">Disability Standards for Education 2005</a></li>
-      <li><a href="https://www.disabilitysupportguide.com.au/" target="_blank" rel="noopener">Disability Support Guide — Directory & information</a> <span class="badge">NEW</span></li>
-    </ul>
-  </section>
-
-  <section id="attendance">
-    <h2>Attendance & engagement</h2>
-    <ul>
-      <li><a href="https://education.qld.gov.au/initiatives-and-strategies/initiatives/every-day-counts" target="_blank" rel="noopener">QLD — Every Day Counts</a></li>
-      <li><a href="https://education.nsw.gov.au/student-wellbeing/attendance-behaviour-and-engagement/attendance" target="_blank" rel="noopener">NSW — Attendance</a></li>
-      <li><a href="https://www.education.vic.gov.au/school/teachers/behaviour/attendance/Pages/default.aspx" target="_blank" rel="noopener">VIC — Attendance</a></li>
-    </ul>
-  </section>
-
-  <section id="trauma">
-    <h2>Trauma‑aware practice & Interoception</h2>
-    <ul>
-      <li><a href="https://emergingminds.com.au/resources/" target="_blank" rel="noopener">Emerging Minds — Trauma resources</a></li>
-      <li><a href="https://beyou.edu.au/resources/tools-and-guides/responding-to-critical-incidents" target="_blank" rel="noopener">Be You — Trauma</a></li>
-      <li><a href="https://professionals.childhood.org.au/resources/" target="_blank" rel="noopener">Australian Childhood Foundation — Resources</a></li>
-      <li><a href="https://www.kelly-mahler.com/free-resources/" target="_blank" rel="noopener">Kelly Mahler — Interoception (free resources)</a></li>
-      <li><a href="https://www.allplaylearn.org.au/understanding-disability/self-regulation/" target="_blank" rel="noopener">AllPlay — Self‑regulation</a></li>
-    </ul>
-  </section>
-
-  <section id="behaviour">
-    <h2>Behaviour support (non‑departmental)</h2>
-    <ul>
-      <li><a href="https://educationendowmentfoundation.org.uk/guidance-for-teachers/behaviour" target="_blank" rel="noopener">EEF — Behaviour guidance</a></li>
-      <li><a href="https://beyou.edu.au/educators/learning-modules/creating-inclusion/positive-classroom-communities" target="_blank" rel="noopener">Be You — Positive classroom communities</a></li>
-      <li><a href="https://www.allplaylearn.org.au/" target="_blank" rel="noopener">AllPlay Learn — Behaviour</a></li>
-    </ul>
-  </section>
-
-  <section id="family">
-    <h2>Family engagement</h2>
-    <ul>
-      <li><a href="https://beyou.edu.au/fact-sheets/mental-health/working-with-families" target="_blank" rel="noopener">Be You — Partnering with families</a></li>
-      <li><a href="https://www.aracy.org.au/" target="_blank" rel="noopener">ARACY</a></li>
-      <li><a href="https://raisingchildren.net.au/" target="_blank" rel="noopener">Raising Children Network</a></li>
-    </ul>
-  </section>
-
-  <section id="leadership">
-    <h2>Leadership</h2>
-    <ul>
-      <li><a href="https://www.aitsl.edu.au/lead-develop" target="_blank" rel="noopener">AITSL — Leadership</a></li>
-      <li><a href="https://www.acer.org/au/school-improvement" target="_blank" rel="noopener">ACER — School improvement</a></li>
-      <li><a href="https://grattan.edu.au/school-education/" target="_blank" rel="noopener">Grattan Institute — School education</a></li>
-    </ul>
-  </section>
-
-  <section id="udl">
-    <h2>UDL & Cognitive load</h2>
-    <ul>
-      <li><a href="https://www.cast.org/impact/universal-design-for-learning-udl" target="_blank" rel="noopener">CAST — UDL</a></li>
-      <li><a href="https://education.nsw.gov.au/teaching-and-learning/curriculum/learning-across-the-curriculum/cognitive-load-theory" target="_blank" rel="noopener">NSW CESE — Cognitive load</a></li>
-      <li><a href="https://educationendowmentfoundation.org.uk/guidance-for-teachers/cognitive-science-approaches-in-the-classroom" target="_blank" rel="noopener">EEF — Cognitive science approaches</a></li>
-    </ul>
-  </section>
-
-  <section id="mental-health">
-    <h2>Mental health (quick pathways)</h2>
-    <ul>
-      <li><a href="https://www.blackdoginstitute.org.au/education-services/schools/" target="_blank" rel="noopener">Black Dog Institute — Schools</a></li>
-      <li><a href="https://www.headtohealth.gov.au/" target="_blank" rel="noopener">Head to Health</a></li>
-      <li><a href="https://kidshelpline.com.au/schools" target="_blank" rel="noopener">Kids Helpline @ School</a></li>
-    </ul>
-  </section>
-
+  <section id="wellbeing"><h2>Wellbeing (whole‑school & classroom)</h2><ul>
+    <li><a href="https://beyou.edu.au/" target="_blank" rel="noopener">Be You</a></li>
+    <li><a href="https://education.headspace.org.au/" target="_blank" rel="noopener">headspace Schools</a></li>
+    <li><a href="https://emergingminds.com.au/resources/" target="_blank" rel="noopener">Emerging Minds — Resources</a></li>
+    <li><a href="https://studentwellbeinghub.edu.au/" target="_blank" rel="noopener">Student Wellbeing Hub</a></li>
+    <li><a href="https://schools.au.reachout.com/" target="_blank" rel="noopener">ReachOut Schools</a></li>
+  </ul></section>
+  <section id="online-safety"><h2>Online Safety</h2><ul>
+    <li><a href="https://www.esafety.gov.au/educators/classroom-resources" target="_blank" rel="noopener">eSafety — Classroom resources</a></li>
+    <li><a href="https://www.thinkuknow.org.au/" target="_blank" rel="noopener">ThinkUKnow</a></li>
+  </ul></section>
+  <section id="autism"><h2>Autism</h2><ul>
+    <li><a href="https://www.positivepartnerships.com.au/" target="_blank" rel="noopener">Positive Partnerships</a></li>
+    <li><a href="https://inclusioned.edu.au/" target="_blank" rel="noopener">inclusionED (Autism CRC)</a></li>
+    <li><a href="https://www.autismcrc.com.au/" target="_blank" rel="noopener">Autism CRC</a></li>
+    <li><a href="https://autismsa.org.au/" target="_blank" rel="noopener">Autism SA</a></li>
+    <li><a href="https://www.allplaylearn.org.au/" target="_blank" rel="noopener">AllPlay Learn</a></li>
+  </ul></section>
+  <section id="adhd"><h2>ADHD</h2><ul>
+    <li><a href="https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/attention-deficit-hyperactivity-disorder" target="_blank" rel="noopener">NSW Inclusive Practice — ADHD strategies</a></li>
+    <li><a href="https://aadpa.com/adhd-fact-sheets/" target="_blank" rel="noopener">AADPA — Educator factsheets</a></li>
+  </ul></section>
+  <section id="eald"><h2>EAL/D</h2><ul>
+    <li><a href="https://www.acara.edu.au/docs/default-source/resources/eald-teacher-resource.pdf" target="_blank" rel="noopener">ACARA EAL/D Teacher Resource (PDF)</a></li>
+    <li><a href="https://www.australiancurriculum.edu.au/resources/eald/" target="_blank" rel="noopener">Australian Curriculum — EAL/D</a></li>
+    <li><a href="https://education.nsw.gov.au/teaching-and-learning/curriculum/languages/english-as-an-additional-language-or-dialect" target="_blank" rel="noopener">NSW — EAL/D resources</a></li>
+  </ul></section>
+  <section id="dld"><h2>Developmental Language Disorder (DLD)</h2><ul>
+    <li><a href="https://thedldproject.com/" target="_blank" rel="noopener">The DLD Project</a></li>
+    <li><a href="https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/communication-and-language-disorders" target="_blank" rel="noopener">NSW Inclusive Practice — Communication & language</a></li>
+    <li><a href="https://readingwritingcentre.education.qld.gov.au/language-disorders" target="_blank" rel="noopener">QLD Reading & Writing Centre — Language disorders</a></li>
+  </ul></section>
+  <section id="at"><h2>Assistive Technology (AT)</h2><ul>
+    <li><a href="https://education.qld.gov.au/students/inclusive-education/assistive-technology" target="_blank" rel="noopener">QLD Education — Assistive Technology</a></li>
+    <li><a href="https://inclusiveschoolcommunities.org.au/resources/assistive-technology" target="_blank" rel="noopener">Inclusive School Communities — AT toolkit</a></li>
+    <li><a href="https://dsf.net.au/resources/assistive-technology" target="_blank" rel="noopener">DSF — AT resources</a></li>
+  </ul></section>
+  <section id="aac"><h2>AAC (Augmentative & Alternative Communication)</h2><ul>
+    <li><a href="https://www.adwest.sa.edu.au/our-school/curriculum/augmentative-and-alternative-communication.html" target="_blank" rel="noopener">Adelaide West — AAC info</a></li>
+    <li><a href="https://www.plink.sa.edu.au/ilp/pages/description.jsf?menuId=21772486#/users/@self/catalogues/15965657/courses/15974112/description" target="_blank" rel="noopener">PLINK — AAC course (login may be required)</a></li>
+    <li><a href="https://sourcekids.com.au/complex-communication-needs-and-an-introduction-to-aac/" target="_blank" rel="noopener">Source Kids — Intro to AAC</a></li>
+    <li><a href="https://communicationhub.com.au/AidsAndSupports" target="_blank" rel="noopener">Communication Hub — Aids & Supports</a></li>
+    <li><a href="https://praacticalaac.org/" target="_blank" rel="noopener">PrAACtical AAC</a></li>
+  </ul></section>
+  <section id="vision-hearing"><h2>Blind/Low Vision & Deaf/Hard of Hearing</h2><ul>
+    <li><a href="https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/vision-impairment" target="_blank" rel="noopener">NSW — Vision impairment strategies</a></li>
+    <li><a href="https://www.allplaylearn.org.au/" target="_blank" rel="noopener">AllPlay Learn</a></li>
+    <li><a href="https://www.visionaustralia.org/services/children" target="_blank" rel="noopener">Vision Australia — Education</a></li>
+    <li><a href="https://www.deafchildren.org.au/resources/" target="_blank" rel="noopener">Deaf Children Australia — Resources</a></li>
+  </ul></section>
+  <section id="fasd"><h2>FASD</h2><ul>
+    <li><a href="https://learningwithfasd.org.au/" target="_blank" rel="noopener">Learning with FASD</a></li>
+    <li><a href="https://www.fasdhub.org.au/" target="_blank" rel="noopener">FASD Hub Australia</a></li>
+    <li><a href="https://www.nofasd.org.au/" target="_blank" rel="noopener">NOFASD Australia</a></li>
+    <li><a href="https://www.telethonkids.org.au/our-research/brain-behaviour-development/alcohol-and-pregnancy-and-fasd/" target="_blank" rel="noopener">Telethon Kids — FASD</a></li>
+  </ul></section>
+  <section id="evidence"><h2>Evidence for practice</h2><ul>
+    <li><a href="https://evidenceforlearning.org.au/the-toolkit/" target="_blank" rel="noopener">Evidence for Learning — Toolkit</a></li>
+    <li><a href="https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit" target="_blank" rel="noopener">EEF — Teaching & Learning Toolkit</a></li>
+    <li><a href="https://www.cese.nsw.gov.au/research-programs/what-works-best" target="_blank" rel="noopener">NSW CESE — What works best</a></li>
+  </ul></section>
+  <section id="policy"><h2>Policy & guidance (national)</h2><ul>
+    <li><a href="https://www.nccd.edu.au/" target="_blank" rel="noopener">NCCD Portal</a></li>
+    <li><a href="https://www.legislation.gov.au/F2005L00767/latest/text" target="_blank" rel="noopener">Disability Standards for Education 2005</a></li>
+    <li><a href="https://www.disabilitysupportguide.com.au/" target="_blank" rel="noopener">Disability Support Guide — Directory & information</a> <span class="badge">NEW</span></li>
+  </ul></section>
+  <section id="attendance"><h2>Attendance & engagement</h2><ul>
+    <li><a href="https://education.qld.gov.au/initiatives-and-strategies/initiatives/every-day-counts" target="_blank" rel="noopener">QLD — Every Day Counts</a></li>
+    <li><a href="https://education.nsw.gov.au/student-wellbeing/attendance-behaviour-and-engagement/attendance" target="_blank" rel="noopener">NSW — Attendance</a></li>
+    <li><a href="https://www.education.vic.gov.au/school/teachers/behaviour/attendance/Pages/default.aspx" target="_blank" rel="noopener">VIC — Attendance</a></li>
+  </ul></section>
+  <section id="trauma"><h2>Trauma‑aware practice & Interoception</h2><ul>
+    <li><a href="https://emergingminds.com.au/resources/" target="_blank" rel="noopener">Emerging Minds — Trauma resources</a></li>
+    <li><a href="https://beyou.edu.au/resources/tools-and-guides/responding-to-critical-incidents" target="_blank" rel="noopener">Be You — Trauma</a></li>
+    <li><a href="https://professionals.childhood.org.au/resources/" target="_blank" rel="noopener">Australian Childhood Foundation — Resources</a></li>
+    <li><a href="https://www.kelly-mahler.com/free-resources/" target="_blank" rel="noopener">Kelly Mahler — Interoception (free resources)</a></li>
+    <li><a href="https://www.allplaylearn.org.au/understanding-disability/self-regulation/" target="_blank" rel="noopener">AllPlay — Self‑regulation</a></li>
+  </ul></section>
+  <section id="behaviour"><h2>Behaviour support (non‑departmental)</h2><ul>
+    <li><a href="https://educationendowmentfoundation.org.uk/guidance-for-teachers/behaviour" target="_blank" rel="noopener">EEF — Behaviour guidance</a></li>
+    <li><a href="https://beyou.edu.au/educators/learning-modules/creating-inclusion/positive-classroom-communities" target="_blank" rel="noopener">Be You — Positive classroom communities</a></li>
+    <li><a href="https://www.allplaylearn.org.au/" target="_blank" rel="noopener">AllPlay Learn — Behaviour</a></li>
+  </ul></section>
+  <section id="family"><h2>Family engagement</h2><ul>
+    <li><a href="https://beyou.edu.au/fact-sheets/mental-health/working-with-families" target="_blank" rel="noopener">Be You — Partnering with families</a></li>
+    <li><a href="https://www.aracy.org.au/" target="_blank" rel="noopener">ARACY</a></li>
+    <li><a href="https://raisingchildren.net.au/" target="_blank" rel="noopener">Raising Children Network</a></li>
+  </ul></section>
+  <section id="leadership"><h2>Leadership</h2><ul>
+    <li><a href="https://www.aitsl.edu.au/lead-develop" target="_blank" rel="noopener">AITSL — Leadership</a></li>
+    <li><a href="https://www.acer.org/au/school-improvement" target="_blank" rel="noopener">ACER — School improvement</a></li>
+    <li><a href="https://grattan.edu.au/school-education/" target="_blank" rel="noopener">Grattan Institute — School education</a></li>
+  </ul></section>
+  <section id="udl"><h2>UDL & Cognitive load</h2><ul>
+    <li><a href="https://www.cast.org/impact/universal-design-for-learning-udl" target="_blank" rel="noopener">CAST — UDL</a></li>
+    <li><a href="https://education.nsw.gov.au/teaching-and-learning/curriculum/learning-across-the-curriculum/cognitive-load-theory" target="_blank" rel="noopener">NSW CESE — Cognitive load</a></li>
+    <li><a href="https://educationendowmentfoundation.org.uk/guidance-for-teachers/cognitive-science-approaches-in-the-classroom" target="_blank" rel="noopener">EEF — Cognitive science approaches</a></li>
+  </ul></section>
+  <section id="mental-health"><h2>Mental health (quick pathways)</h2><ul>
+    <li><a href="https://www.blackdoginstitute.org.au/education-services/schools/" target="_blank" rel="noopener">Black Dog Institute — Schools</a></li>
+    <li><a href="https://www.headtohealth.gov.au/" target="_blank" rel="noopener">Head to Health</a></li>
+    <li><a href="https://kidshelpline.com.au/schools" target="_blank" rel="noopener">Kids Helpline @ School</a></li>
+  </ul></section>
 </main>
 
 <footer class="container">

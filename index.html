@@ -6,71 +6,109 @@
   <title>ThriveHub — Free, teacher‑ready resources</title>
   <meta name="description" content="Independent wellbeing & inclusive education resources curated by Teresa Bruno.">
   <style>
-    body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;margin:0;color:#1a1a1a;background:#fff}
-    header,footer{padding:16px 20px}
-    header{display:flex;align-items:center;gap:12px;border-bottom:1px solid #eee}
-    header img{height:36px;width:auto}
-    .brand{font-weight:700}
-    .container{max-width:1040px;margin:0 auto;padding:20px}
-    .hero{padding:28px 20px;background:#f6fafc;border:1px solid #e7f0f5;border-radius:12px;margin-top:16px}
-    .hero h1{margin:0 0 8px}
-    .badge{display:inline-block;background:#005fb8;color:#fff;font-size:12px;padding:4px 8px;border-radius:999px;margin-left:8px;text-decoration:none}
-    .cta{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
-    .cta a{background:#1166cc;color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:16px}
-    .card{border:1px solid #eee;border-radius:10px;padding:14px;background:#fff}
-    .card h3{margin:4px 0 10px;font-size:16px}
-    .small{color:#555;font-size:14px}
-    a{color:#1166cc}
+    :root{
+      --bg:#0b1026;           /* deep indigo for header */
+      --bg2:#0e2a6e;          /* deep blue for gradient */
+      --text:#101418;
+      --muted:#5a6472;
+      --card:#ffffff;
+      --border:#e8ecf3;
+      --accent:#10b5ff;       /* bright cyan */
+      --accent-2:#7cc9ff;
+      --link:#0d6efd;
+    }
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:#fff}
+    a{color:var(--link);text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+    header.site{background:linear-gradient(140deg,var(--bg) 0%, var(--bg2) 100%);color:#fff}
+    .site-bar{display:flex;align-items:center;gap:12px;padding:14px 0}
+    .site-bar img{height:36px;width:auto}
+    .site-title{font-weight:700;letter-spacing:.2px}
+
+    .hero{padding:36px 0 28px}
+    .hero h1{margin:0 0 10px;font-size:28px;color:#fff}
+    .hero p{margin:0 0 16px;color:#e7eefc;max-width:70ch}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;font-weight:600;border:1px solid transparent}
+    .btn-primary{background:var(--accent);color:#03243a;border-color:#22c1ff;box-shadow:0 6px 18px rgba(16,181,255,.25)}
+    .btn-light{background:#fff;color:#0b2640;border-color:#dbe7f3}
+    .badge-hero{display:inline-block;margin-left:8px;padding:4px 10px;border-radius:999px;background:#0f356b;color:#a9c8ff;border:1px solid rgba(255,255,255,.15);font-size:12px}
+
+    main{padding:22px 0 34px}
+    .section-title{font-size:20px;margin:0 0 10px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:0 4px 12px rgba(3,17,38,.06)}
+    .card h3{margin:2px 0 8px;font-size:16px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Teams block */
+    .teams{margin-top:18px}
+    .teams .btn{background:#0e2a6e;color:#fff;border-color:#294786}
+    .teams .btn:hover{filter:brightness(1.08)}
+
+    footer{border-top:1px solid var(--border);padding:16px 0;color:var(--muted);font-size:14px}
   </style>
 </head>
 <body>
-  <header>
-    <img src="assets/thrivehub-logo.png" alt="ThriveHub" onerror="this.replaceWith(Object.assign(document.createElement('strong'),{textContent:'ThriveHub'}))">
-    <div class="brand">ThriveHub</div>
+  <header class="site">
+    <div class="wrap">
+      <div class="site-bar">
+        <img src="assets/thrivehub-logo.png" alt="ThriveHub" onerror="this.replaceWith(Object.assign(document.createElement('strong'),{textContent:'ThriveHub'}))">
+        <div class="site-title">ThriveHub</div>
+      </div>
+      <div class="hero">
+        <h1>Free, teacher‑ready resources — one click <a class="badge-hero" href="library.html#policy">New: Policy resources</a></h1>
+        <p><strong>Curated for education staff</strong>. Independent wellbeing support created by <strong>Teresa Bruno</strong>.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://www.youtube.com/playlist?list=PLt-example" target="_blank" rel="noopener">▶ Open the Wellbeing playlist</a>
+          <a class="btn btn-light" href="library.html">📚 Explore the full library</a>
+          <a class="btn btn-light" href="https://thestudentwellbeing.wordpress.com/2026/02/05/supporting-every-learner-specialist-google-classrooms-for-wellbeing-and-diverse-needs/" target="_blank" rel="noopener">🆕 Specialist Google Classrooms</a>
+        </div>
+        <p class="muted">The Senior Leadership team is committed to high‑performing teams and meeting the needs of students to ensure they thrive in wellbeing and learning.</p>
+      </div>
+    </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Free, teacher‑ready resources — one click
-        <a class="badge" href="library.html#policy">New: Policy resources</a>
-      </h1>
-      <p class="small"><strong>Curated for education staff</strong>. Independent wellbeing support created by <strong>Teresa Bruno</strong>.</p>
-      <div class="cta">
-        <a href="https://www.youtube.com/playlist?list=PLt-example" target="_blank" rel="noopener">▶ Open the Wellbeing playlist</a>
-        <a href="library.html">📚 Explore the full library</a>
-        <a href="https://thestudentwellbeing.wordpress.com/2026/02/05/supporting-every-learner-specialist-google-classrooms-for-wellbeing-and-diverse-needs/" target="_blank" rel="noopener">🆕 Specialist Google Classrooms</a>
+  <main class="wrap">
+    <section>
+      <h2 class="section-title">Highlights</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Wellbeing (whole‑school & classroom)</h3>
+          <p class="muted">Be You • headspace Schools • Emerging Minds • Student Wellbeing Hub • ReachOut Schools</p>
+          <p><a href="library.html#wellbeing">Open</a></p>
+        </article>
+        <article class="card">
+          <h3>DLD & EAL/D</h3>
+          <p class="muted">The DLD Project • NSW Inclusive Practice • QLD R&W Centre • ACARA EAL/D</p>
+          <p><a href="library.html#dld">Open</a></p>
+        </article>
+        <article class="card">
+          <h3>AAC & Assistive Tech</h3>
+          <p class="muted">Adelaide West AAC • PLINK (login may be required) • QLD AT • DSF</p>
+          <p><a href="library.html#aac">Open</a></p>
+        </article>
+        <article class="card">
+          <h3>Full Library</h3>
+          <p class="muted">Autism • ADHD • Online Safety • Policy • UDL • Cognitive Load • Attendance • Trauma & more</p>
+          <p><a href="library.html">Open</a></p>
+        </article>
       </div>
-      <p class="small">The Senior Leadership team is committed to high‑performing teams and meeting the needs of students to ensure they thrive in wellbeing and learning.</p>
     </section>
 
-    <section class="grid" aria-label="Highlights">
-      <article class="card">
-        <h3>Wellbeing (whole‑school & classroom)</h3>
-        <p class="small">Be You • headspace Schools • Emerging Minds • Student Wellbeing Hub • ReachOut Schools</p>
-        <p><a href="library.html#wellbeing">Open</a></p>
-      </article>
-      <article class="card">
-        <h3>DLD & EAL/D</h3>
-        <p class="small">The DLD Project • NSW Inclusive Practice • QLD R&W Centre • ACARA EAL/D</p>
-        <p><a href="library.html#dld">Open</a></p>
-      </article>
-      <article class="card">
-        <h3>AAC & Assistive Tech</h3>
-        <p class="small">Adelaide West AAC • PLINK (login may be required) • QLD AT • DSF</p>
-        <p><a href="library.html#aac">Open</a></p>
-      </article>
-      <article class="card">
-        <h3>Full Library</h3>
-        <p class="small">Autism • ADHD • Online Safety • Policy • UDL • Cognitive Load • Attendance • Trauma & more</p>
-        <p><a href="library.html">Open</a></p>
-      </article>
+    <section class="teams">
+      <h2 class="section-title">Teams spaces</h2>
+      <div class="actions">
+        <a class="btn" href="https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" rel="noopener">💬 General Wellbeing Connection</a><a class="btn" href="https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" rel="noopener">💬 SWD Connections – PH2</a><a class="btn" href="https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" rel="noopener">💬 Social Work Truancy</a>
+      </div>
     </section>
   </main>
 
-  <footer class="container">
+  <footer class="wrap">
     <p>Contact <a href="mailto:teresa.bruno@sa.gov.au">teresa.bruno@sa.gov.au</a> — built to support our education staff in sites.</p>
-    <p class="small">Privacy: Analytics via Cloudflare Web Analytics (no cookies for basic stats).</p>
+    <p>Privacy: Analytics via Cloudflare Web Analytics (no cookies for basic stats).</p>
   </footer>
 
   <!-- Cloudflare Web Analytics -->

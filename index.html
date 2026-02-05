@@ -1,11 +1,9 @@
-
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ThriveHub – Free, trusted resources for inclusive practice</title>
-<meta name="description" content="ThriveHub: free, teacher‑ready links for inclusive education, wellbeing and accessibility. Curated for South Australian contexts but usable anywhere. Created by Teresa Bruno.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ThriveHub — Independent wellbeing support (Home)</title>
+<meta name="description" content="ThriveHub: free, teacher‑ready links for inclusion, wellbeing and accessibility — curated for education staff. Independent resource created by Teresa Bruno.">
 <link rel="icon" href="assets/favicon.png">
 <style>
 :root{--bg:#f7f9fb;--card:#fff;--text:#0f172a;--brand:#0d3b66;--accent:#0a9396;--muted:#e6f4f1;--focus:#ffbf47}
@@ -15,197 +13,114 @@ a{color:var(--accent);text-decoration:none}
 a:focus,button:focus{outline:3px solid var(--focus);outline-offset:2px}
 header{background:var(--brand);color:#fff;padding:1.25rem 1rem;position:sticky;top:0;z-index:10}
 header .wrap{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1rem}
-header img{width:56px;height:56px}
+header img{width:56px;height:56px;border-radius:12px;background:#0a9396}
 .hero{background:var(--muted);border-bottom:1px solid #cfe7e7}
 .hero .wrap{max-width:1100px;margin:0 auto;padding:1.5rem}
-.hero h1{margin:.25rem 0 0;font-size:1.8rem}
+.hero h1{margin:.25rem 0 0;font-size:1.9rem}
 .hero p{margin:.25rem 0 1rem}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:.6rem .9rem;border-radius:8px;border:0}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:.65rem 1rem;border-radius:10px;border:0}
+.btn.secondary{background:#164e63}
+.badge{display:inline-block;background:#eef; color:#223; font-size:.75rem; padding:.15rem .5rem; border-radius:999px;margin:.25rem .25rem 0 0}
+.badge.new{background:#16a34a20;color:#166534;border:1px solid #16a34a66}
+.main-badge{display:inline-block;margin-left:.6rem;font-size:.8rem;background:#e0f2fe;color:#075985;border:1px solid #7dd3fc;padding:.2rem .45rem;border-radius:999px}
+.last-updated{display:inline-block;margin-left:.6rem;font-size:.8rem;background:#ecfccb;color:#3f6212;border:1px solid #bef264;padding:.2rem .45rem;border-radius:999px}
 main{max-width:1100px;margin:0 auto;padding:1rem}
 .section{margin:1.25rem 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
-.card{background:var(--card);border-radius:12px;padding:1rem;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-.card h3{margin:.2rem 0 .5rem;font-size:1.05rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.card{background:var(--card);border-radius:14px;padding:1rem;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.card h3{margin:.2rem 0 .5rem;font-size:1.08rem}
 .card ul{margin:.25rem 0 0;padding-left:1.2rem}
-.badge{display:inline-block;background:#eef; color:#223; font-size:.75rem; padding:.15rem .5rem; border-radius:999px;margin:.25rem .25rem 0 0}
+.small{font-size:.9rem;color:#334155}
 hr{border:0;border-top:1px solid #e6ecec;margin:1.5rem 0}
 footer{margin:2rem 0;color:#475569;text-align:center}
-.small{font-size:.9rem;color:#334155}
+.note{background:#fff7ed;border:1px solid #ffedd5;color:#7c2d12;border-radius:10px;padding:.75rem;margin:.75rem 0}
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem .75rem;border-radius:6px}
-.note{background:#fff7ed;border:1px solid #ffedd5;color:#7c2d12;border-radius:10px;padding:.75rem;margin:.75rem 0}
+.footer-meta{font-size:.85rem;color:#475569;margin-top:.35rem}
+nav.toc{background:#eaf6f6;border:1px solid #cce8e8;padding:1rem;border-radius:12px}
+nav.toc a{margin-right:.8rem}
 </style>
 </head>
 <body>
-<a class="skip" href="#library">Skip to resources</a>
+<a class="skip" href="#highlights">Skip to content</a>
 <header>
   <div class="wrap">
-    <img src="assets/thrivehub-logo.png" alt="ThriveHub logo"/>
+    <img src="assets/thrivehub-logo.png" alt="ThriveHub logo" onerror="this.replaceWith(Object.assign(document.createElement('strong'),{'textContent': 'ThriveHub'}));"/>
     <div>
       <div style="font-weight:700;letter-spacing:.2px">ThriveHub</div>
-      <div class="small">Independent wellbeing support created by Teresa Bruno</div>
+      <div class="small">Independent wellbeing support created by Teresa Bruno — curated for education staff</div>
     </div>
   </div>
 </header>
 <section class="hero">
   <div class="wrap">
-    <h1>Free, teacher‑ready resources — one click</h1>
-    <p>Evidence‑informed links for inclusive practice, wellbeing and accessibility. Curated for SA educators (public resources) and broadly useful for all contexts.</p>
+    <h1>Free, teacher‑ready resources — one click
+      <a class="main-badge" href="library.html#policy" title="Jump to policy & guidance">New: Policy resources</a>
+      <span class="last-updated" title="Date last updated">Updated 29 January 2026</span>
+    </h1>
+    <p>Evidence‑informed links for inclusion, wellbeing and accessibility, curated for education staff.</p>
     <p>
       <a class="btn" target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ">▶ Open the Wellbeing playlist</a>
+      <a class="btn secondary" href="library.html">📚 Explore the full library</a>
     </p>
   </div>
 </section>
 <main>
   <section id="about" class="section card">
     <h2>About this site</h2>
-    <p><strong>ThriveHub</strong> is a lightweight collection of trusted, publicly available links to help teachers quickly find what they need. It is <strong>independent of any department</strong> and maintained by <strong>Teresa Bruno</strong>.</p>
+    <p><strong>ThriveHub</strong> is a lightweight collection of trusted, publicly available links to help teachers quickly find what they need. It is <strong>independent</strong> and maintained by <strong>Teresa Bruno</strong>.</p>
+    <p><em>The Senior Leadership team is committed to high‑performing teams and meeting the needs of students to ensure they thrive in wellbeing and learning.</em></p>
     <ul>
       <li><a target="_blank" rel="noopener" href="https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&amp;tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07">General | Wellbeing Connection | Microsoft Teams</a></li>
       <li><a target="_blank" rel="noopener" href="https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&amp;tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07">General | SWD Connections – PH2 | Microsoft Teams</a></li>
       <li><a target="_blank" rel="noopener" href="https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&amp;tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07">General | Social Work Truancy | Microsoft Teams</a></li>
     </ul>
-    <div class="note small"><strong>Content feedback (implemented):</strong> Added more language disorder (DLD) and AAC resources; kept everything generic (no references to any department); prioritised public‑facing links suitable for SA educators.</div>
+    <div class="note small">This hub is independent (no affiliation with any government department). If a link requires login, the source is noted.</div>
   </section>
 
-  <section id="library" class="section">
-    <h2>Resource Library (live links)</h2>
-    <p class="small">All links open the official, free source in a new tab. Some professional learning portals may require login.</p>
+  <section class="section">
+    <h2>Specialist Google Classrooms — Supporting Every Learner</h2>
+    <p class="small">Promoted: curated Google Classrooms for wellbeing and diverse needs. Join here:</p>
+    <p>
+      <a class="btn" target="_blank" rel="noopener" href="https://thestudentwellbeing.wordpress.com/2026/02/05/supporting-every-learner-specialist-google-classrooms-for-wellbeing-and-diverse-needs/">🌐 Open Specialist Google Classrooms</a>
+    </p>
+  </section>
 
+  <section id="highlights" class="section">
+    <h2>Highlights</h2>
     <div class="grid">
       <article class="card">
-        <h3>Cultural Responsiveness — Aboriginal & Torres Strait Islander</h3>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://www.narragunnawali.org.au/curriculum-resources">Narragunnawali – Curriculum resources & PL</a></li>
-          <li><a target="_blank" rel="noopener" href="https://www.aitsl.edu.au/teach/cultural-responsiveness/indigenous-education">AITSL – Indigenous cultural responsiveness</a></li>
-          <li><a target="_blank" rel="noopener" href="https://www.australiancurriculum.edu.au/student-diversity/aboriginal-and-torres-strait-islander-learners/">Australian Curriculum – Aboriginal & Torres Strait Islander learners</a></li>
-          <li><a target="_blank" rel="noopener" href="https://beyou.edu.au/resources/cultural-responsiveness/first-nations-communities">Be You – Working with First Nations communities</a></li>
-        </ul>
-        <div>
-          <span class="badge">First Nations</span><span class="badge">Cultural safety</span><span class="badge">Curriculum</span>
-        </div>
+        <h3>Wellbeing</h3>
+        <p class="small">Be You, headspace Schools, Emerging Minds, and more.</p>
+        <p><a href="library.html#wellbeing" class="btn">Open Wellbeing</a></p>
       </article>
-
       <article class="card">
-        <h3>Wellbeing (whole‑school & classroom)</h3>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://beyou.edu.au/resources">Be You – Educator resources</a></li>
-          <li><a target="_blank" rel="noopener" href="https://headspace.org.au/professionals-and-educators/">headspace Schools – programs & postvention</a></li>
-          <li><a target="_blank" rel="noopener" href="https://emergingminds.com.au/resources/toolkits/community-trauma-toolkit/educators/">Emerging Minds – Educators & Community Trauma Toolkit</a></li>
-          <li><a target="_blank" rel="noopener" href="https://studentwellbeinghub.edu.au/">Student Wellbeing Hub – national portal</a></li>
-          <li><a target="_blank" rel="noopener" href="https://schools.au.reachout.com/">ReachOut Schools – classroom resources</a></li>
-        </ul>
-        <div><span class="badge">Wellbeing</span><span class="badge">PL</span><span class="badge">Toolkit</span></div>
+        <h3>DLD & EAL/D</h3>
+        <p class="small">High‑impact language supports for every classroom.</p>
+        <p><a href="library.html#dld" class="btn">Open DLD</a> <a href="library.html#eald" class="btn secondary" style="margin-left:.4rem">Open EAL/D</a></p>
       </article>
-
       <article class="card">
-        <h3>Online safety</h3>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://www.esafety.gov.au/educators/classroom-resources">eSafety Commissioner – Classroom resources</a></li>
-        </ul>
-        <div><span class="badge">Digital</span><span class="badge">Policy</span></div>
+        <h3>AAC & Assistive Tech</h3>
+        <p class="small">Practical tools, training and classroom guides.</p>
+        <p><a href="library.html#aac" class="btn">Open AAC</a> <a href="library.html#at" class="btn secondary" style="margin-left:.4rem">Open AT</a></p>
       </article>
-
       <article class="card">
-        <h3>Autism</h3>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://www.positivepartnerships.com.au/">Positive Partnerships – free PL & tools</a></li>
-          <li><a target="_blank" rel="noopener" href="https://www.inclusioned.edu.au/">inclusionED (Autism CRC) – practices & templates</a></li>
-          <li><a target="_blank" rel="noopener" href="https://www.autismcrc.com.au/knowledge-centre/resource/structured-teaching">Autism CRC – Structured Teaching templates</a></li>
-          <li><a target="_blank" rel="noopener" href="https://autismsa.org.au/supports-services/school-inclusion-program-for-educators/">Autism SA – School Inclusion Program</a></li>
-        </ul>
-        <div><span class="badge">Autism</span><span class="badge">Adjustments</span></div>
-      </article>
-
-      <article class="card">
-        <h3>ADHD</h3>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/adhd/evidence-based-strategies">NSW Inclusive Practice – ADHD classroom strategies</a></li>
-          <li><a target="_blank" rel="noopener" href="https://adhdguideline.aadpa.com.au/adhd-for-educators/">AADPA – ADHD factsheet for educators</a></li>
-        </ul>
-        <div><span class="badge">Attention</span><span class="badge">Adjustments</span></div>
-      </article>
-
-      <article class="card">
-        <h3>EAL/D</h3>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://www.acara.edu.au/_resources/EALD_teacher_resource.pdf">ACARA – EAL/D Teacher Resource (PDF)</a></li>
-          <li><a target="_blank" rel="noopener" href="https://www.australiancurriculum.edu.au/student-diversity/eal-d-students">Australian Curriculum – EAL/D students</a></li>
-          <li><a target="_blank" rel="noopener" href="https://education.nsw.gov.au/teaching-and-learning/multicultural-education/english-as-an-additional-language-or-dialect/resources">NSW DoE – EAL/D resources</a></li>
-        </ul>
-        <div><span class="badge">Language</span><span class="badge">Planning</span></div>
-      </article>
-
-      <article class="card">
-        <h3>Developmental Language Disorder (DLD)</h3>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://thedldproject.com/">The DLD Project – awareness & educator resources</a></li>
-          <li><a target="_blank" rel="noopener" href="https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/communication-and-language-disorders">NSW Inclusive Practice Hub – Communication & language disorders</a></li>
-          <li><a target="_blank" rel="noopener" href="https://readingwritingcentre.education.qld.gov.au/language-disorders">Queensland Reading and Writing Centre – Language disorders</a></li>
-        </ul>
-        <div><span class="badge">Language disorder</span><span class="badge">Universal strategies</span></div>
-      </article>
-
-      <article class="card">
-        <h3>Assistive Technology & AAC</h3>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://education.qld.gov.au/students/inclusive-education/assistive-technology">QLD Education – Assistive technology</a></li>
-          <li><a target="_blank" rel="noopener" href="https://projects.purpleorange.org.au/inclusiveschoolcommunities/resources/toolkit/assistive-technologies-schools">Inclusive School Communities – AT toolkit</a></li>
-          <li><a target="_blank" rel="noopener" href="https://dsf.net.au/professionals/teachers-and-tutors/supporting-students-with-learning-difficulties-in-/assistive-technology-resources">DSF – AT resources</a></li>
-          <li><a target="_blank" rel="noopener" href="https://www.adwest.sa.edu.au/our-school/curriculum/augmentative-and-alternative-communication.html">Adelaide West – AAC information</a></li>
-          <li><a target="_blank" rel="noopener" href="https://www.plink.sa.edu.au/ilp/pages/description.jsf?menuId=21772486#/users/@self/catalogues/15965657/courses/15974112/description">PLINK – AAC course (login may be required)</a></li>
-          <li><a target="_blank" rel="noopener" href="https://sourcekids.com.au/complex-communication-needs-and-an-introduction-to-aac/">Source Kids – Intro to AAC (complex communication needs)</a></li>
-          <li><a target="_blank" rel="noopener" href="https://communicationhub.com.au/AidsAndSupports">Communication Hub – Aids and Supports</a></li>
-        </ul>
-        <div><span class="badge">AT</span><span class="badge">AAC</span><span class="badge">Communication</span></div>
-      </article>
-
-      <article class="card">
-        <h3>Blind/Low Vision & Deaf/Hard of Hearing</h3>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/blind-and-low-vision/evidence-based-strategies">NSW – Blind/Low Vision strategies</a></li>
-          <li><a target="_blank" rel="noopener" href="https://allplaylearn.org.au/secondary/teacher/blind/">AllPlay Learn – Blind/Low Vision</a></li>
-          <li><a target="_blank" rel="noopener" href="https://allplaylearn.org.au/primary/teacher/deaf/">AllPlay Learn – Deaf/HoH</a></li>
-        </ul>
-        <div><span class="badge">Vision</span><span class="badge">Hearing</span></div>
-      </article>
-
-      <article class="card">
-        <h3>FASD</h3>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://learningwithfasd.org.au/primary-school/classroom-strategies/">Learning with FASD – Classroom strategies</a></li>
-          <li><a target="_blank" rel="noopener" href="https://fasdhub.org.au/for-educators/">FASD Hub Australia – For educators</a></li>
-          <li><a target="_blank" rel="noopener" href="https://www.nofasd.org.au/fasd-information/service-providers/education/">NOFASD – Education resources</a></li>
-        </ul>
-        <div><span class="badge">FASD</span><span class="badge">Neurodiversity</span></div>
-      </article>
-
-      <article class="card">
-        <h3>Evidence for practice</h3>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://evidenceforlearning.org.au/education-evidence/teaching-learning-toolkit">Evidence for Learning – Teaching & Learning Toolkit</a></li>
-          <li><a target="_blank" rel="noopener" href="https://education.nsw.gov.au/about-us/education-data-and-research/cese/publications/teaching-and-learning-toolkit">NSW CESE – Toolkit overview</a></li>
-        </ul>
-        <div><span class="badge">Evidence</span><span class="badge">Strategy</span></div>
-      </article>
-
-      <article class="card">
-        <h3>Policy & guidance (national)</h3>
-        <ul>
-          <li><a target="_blank" rel="noopener" href="https://www.nccd.edu.au/">NCCD – Official guidance & case studies</a></li>
-        </ul>
-        <div><span class="badge">Policy</span><span class="badge">National</span></div>
+        <h3>Full Library</h3>
+        <p class="small">View all categories including attendance, behaviour and leadership.</p>
+        <p><a href="library.html" class="btn">View everything</a></p>
       </article>
     </div>
   </section>
 
   <hr>
   <section class="section small">
-    <p>Questions or suggestions? Contact Teresa Bruno. This is an independent resource hub; no affiliation with any government department.</p>
+    <p>Contact <a href="mailto:teresa.bruno@sa.gov.au">teresa.bruno@sa.gov.au</a> — built to support our education staff in sites.</p>
+    <p class="footer-meta">Privacy: traffic is measured using privacy‑friendly Cloudflare Web Analytics. No cookies or tracking beacons beyond the Cloudflare script are used.</p>
   </section>
 </main>
 <footer>
   <p>© 2026 ThriveHub — Curated by Teresa Bruno</p>
 </footer>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4be9740951c64b459e4609a0c51af0b1"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

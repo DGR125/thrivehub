@@ -1,3 +1,5 @@
+git commit --allow-empty -m "Trigger GitHub Pages rebuild"
+git push
 # ThriveHub V6.1b — Icons + Tags + Expanded Professional Learning
 
 **Publish (branch deploy)**

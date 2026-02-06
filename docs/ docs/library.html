@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ThriveHub — Library (V7.0)</title>
+<style>
+:root{--blue:#0EA5E9;--green:#10B981;--ink:#0F172A;--cloud:#F6F8FB}
+*{box-sizing:border-box} body{margin:0;background:var(--cloud);font:16px/1.55 system-ui,Segoe UI,Arial,sans-serif;color:var(--ink)}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+.toolbar{position:sticky;top:0;background:#fff;border-radius:12px;padding:.5rem;margin:.75rem 0;box-shadow:0 4px 12px rgba(0,0,0,.05)}
+.item{border-left:5px solid var(--green);background:#fff;padding:10px 12px;margin:10px 0;box-shadow:0 3px 10px rgba(0,0,0,.05)}
+.badge{display:inline-block;background:var(--blue);color:#fff;padding:2px 8px;border-radius:999px;font-weight:800;font-size:.85rem}
+.btn{display:inline-flex;gap:.5rem;align-items:center;background:#0EA5E9;color:#fff;padding:.45rem .8rem;border-radius:10px;text-decoration:none;font-weight:800}
+</style>
+</head><body>
+<div class="container">
+<header style="display:flex;gap:.6rem;align-items:center">
+  <svg width="160" height="36" viewBox="0 0 200 40" aria-label="ThriveHub V7.0"><rect rx="10" width="200" height="40" fill="#0EA5E9"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial" font-size="18" font-weight="800">ThriveHub V7.0</text></svg>
+  <strong>ThriveHub</strong>
+</header>
+
+<h1 style="color:#0EA5E9">Free resource library — V7.0</h1>
+
+<div class="toolbar">
+  <input id="q" placeholder="Search (e.g., Classrooms, Engagement, EALD, SA)" style="padding:.5rem .75rem;border:1px solid #cbd5e1;border-radius:10px;min-width:280px">
+  <button id="sa" style="margin-left:.5rem;padding:.5rem .75rem;border-radius:999px;border:1px solid #cbd5e1;background:#fff;cursor:pointer">SA‑only</button>
+  <button id="reset" style="margin-left:.5rem;padding:.5rem .75rem;border-radius:999px;border:1px solid #cbd5e1;background:#fff;cursor:pointer">Reset</button>
+</div>
+
+<div id="list" aria-live="polite"></div>
+
+<footer>Created by Teresa Bruno • © Teresa Bruno</footer>
+</div>
+
+<script>
+const RES=[
+ {t:'Google Classroom — Learning Matters',u:'https://classroom.google.com/c/MTY0NDI3NDI0OTRa',tags:'Classrooms, Engagement, Learning challenges',region:'SA'},
+ {t:'Google Classroom — Wellbeing Matters',u:'https://classroom.google.com/c/MTQ5MDI2ODQxOTJa',tags:'Classrooms, Wellbeing, Trauma-aware, Engagement',region:'SA'},
+ {t:'Student Wellbeing Hub — Brain break bops (Early Years)',u:'https://studentwellbeinghub.edu.au/',tags:'Early Years, Interoception, SEL',region:'National'},
+ {t:'Headspace Schools — Secondary programs',u:'https://headspace.org.au/schools',tags:'Secondary, Wellbeing, Programs',region:'National'},
+ {t:'eSafety — Classroom resources',u:'https://www.esafety.gov.au/educators/classroom-resources',tags:'Online safety, Digital citizenship',region:'National'},
+ {t:'AITSL — Inclusive Practices',u:'https://www.aitsl.edu.au/tools-resources/resource/inclusive-practices',tags:'Teaching Practice, Inclusion',region:'National'},
+ {t:'NCCD — Guidance for schools',u:'https://www.nccd.edu.au/',tags:'Disability, Adjustments',region:'National'},
+ {t:'Department for Education SA — Inclusive education',u:'https://www.education.sa.gov.au/parents-and-families/supporting-student/inclusive-education',tags:'SA Policy, Inclusion',region:'SA'},
+ {t:'National Student Wellbeing Program (NSWP) — SA overview',u:'https://www.education.sa.gov.au/schools-and-educators/national-student-wellbeing-program/about-the-program',tags:'Wellbeing, Program, Funding',region:'SA'}
+];
+const list=document.getElementById('list');
+const q=document.getElementById('q');
+const sa=document.getElementById('sa');
+const reset=document.getElementById('reset');
+let saOnly=false;
+function draw(){
+  const term=(q.value||'').toLowerCase();
+  let arr=RES.slice();
+  if(saOnly){arr=arr.filter(r=>r.region==='SA');}
+  arr=arr.filter(r=>!term||r.t.toLowerCase().includes(term)||r.tags.toLowerCase().includes(term));
+  list.innerHTML=arr.map(r=>`
+    <div class="item">
+      <strong>${r.t}</strong><br>
+      <a class="btn" href="${r.u}" target="_blank" rel="noopener">Open link ↗</a>
+      <div style="color:#64748B;margin-top:.25rem">${r.tags} • <span class="badge">${r.region}</span></div>
+    </div>`).join('');
+}
+draw();
+q.oninput=draw; sa.onclick=()=>{saOnly=!saOnly; sa.textContent= saOnly? 'SA‑only (on)':'SA‑only'; draw();};
+reset.onclick=()=>{saOnly=false; q.value=''; sa.textContent='SA‑only'; draw();};
+</script>
+</body></html>

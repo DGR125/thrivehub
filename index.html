@@ -2,6 +2,152 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ThriveHub — Home (V7.1)</title>
+
+<style>
+:root{
+  --blue:#0EA5E9;
+  --green:#10B981;
+  --ink:#0F172A;
+  --cloud:#F5F7FA;
+  --radius:16px;
+  --shadow:0 4px 22px rgba(15,23,42,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font:16px/1.55 system-ui,Segoe UI,Arial,sans-serif;
+  background:var(--cloud);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:20px;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  gap:.7rem;
+  margin-bottom:14px;
+}
+
+.logo{
+  padding:.35rem .8rem;
+  background:var(--blue);
+  color:#fff;
+  border-radius:12px;
+  font-weight:800;
+}
+
+.hero{
+  background:linear-gradient(140deg, rgba(14,165,233,.9), rgba(16,185,129,.9));
+  border-radius:var(--radius);
+  padding:48px 32px;
+  color:#fff;
+  margin-bottom:26px;
+  box-shadow:var(--shadow);
+}
+
+.badge{
+  display:inline-block;
+  background:#fff;
+  color:var(--blue);
+  padding:.25rem .6rem;
+  border-radius:999px;
+  font-size:.85rem;
+  font-weight:800;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  background:var(--blue);
+  padding:.65rem 1.1rem;
+  border-radius:12px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  margin-right:.4rem;
+}
+
+.btn.green{background:var(--green)}
+
+.cards{
+  display:grid;
+  gap:16px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+footer{
+  margin-top:30px;
+  text-align:center;
+  color:#64748B;
+  font-size:.9rem;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <span class="logo">ThriveHub</span>
+  <strong>V7.1</strong>
+</header>
+
+<section class="hero">
+  <span class="badge">LIVE — V7.1</span>
+  <h1 style="margin-top:.7rem;">Inclusive practice, faster</h1>
+  <p style="max-width:520px;margin:8px 0 20px;">
+    Evidence‑based strategies, free classroom resources, and calming tools that support wellbeing for learning.
+  </p>
+
+  <a class="btn" href="library.html">Open Library</a>
+  <a class="btn green" href="resources.html">Open Calm Space</a>
+</section>
+
+<section class="cards">
+
+  <article class="card">
+    <h3>Google Classrooms</h3>
+    <p><strong>Learning Matters</strong> — supports students with learning challenges.</p>
+    <p><strong>Wellbeing Matters</strong> — supports students with trauma‑aware and wellbeing needs.</p>
+
+    <p style="margin-top:12px;">
+      <a class="btn" href="https://classroom.google.com/c/MTY0NDI3NDI0OTRa" target="_blank" rel="noopener">Open Learning Matters</a>
+      <a class="btn" href="https://classroom.google.com/c/MTQ5MDI2ODQxOTJa" target="_blank" rel="noopener">Open Wellbeing Matters</a>
+    </p>
+    <p style="color:#64748B;font-size:.85rem;margin-top:6px;">* Requires Google sign‑in.</p>
+  </article>
+
+  <article class="card">
+    <h3>Version check</h3>
+    <p>If this page doesn’t show <strong>LIVE — V7.1</strong> and the gradient hero, your browser cached an older version.</p>
+    <p>Use a hard refresh or add <code>?v=now</code> to the URL.</p>
+  </article>
+
+</section>
+
+<footer>Created by Teresa Bruno • © Teresa Bruno</footer>
+
+</div>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ThriveHub — Home (V7.0)</title>
 <style>

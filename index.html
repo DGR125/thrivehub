@@ -16,7 +16,7 @@
   </header>
   <section class='hero' role='banner' aria-label='Hero'>
     <div class='inner'>
-      <span class='pill'><img src='assets/icon-library.svg' alt='' width='18' height='18'> V6.9</span>
+      <span class='pill'><img src='assets/icon-library.svg' alt='' width='18' height='18'> V7.0</span>
       <h1>Inclusive practice, faster</h1>
       <p>Find strategies, free resources and calming tools to help <strong>facilitate wellbeing for learning</strong> for educators.</p>
       <div class='quick'>
@@ -44,18 +44,37 @@
       <p>Presentations staff can use anytime.</p>
       <p><a id='ytLink' class='btn' href='#'>Watch Playlist</a></p>
     </article>
+    <article class='card'>
+      <h3><img src='assets/icon-gc.svg' alt=''> Google Classrooms</h3>
+      <p><strong>Learning Matters</strong> — for students with learning challenges. Helps scaffold tasks and skills. <br>
+         <strong>Wellbeing Matters</strong> — for students with underlying trauma or wellbeing‑related needs; supports engagement in learning.</p>
+      <p style='display:flex;flex-wrap:wrap;gap:.5rem'>
+        <a class='btn' id='gcLearn' href='#'>Open Learning Matters</a>
+        <a class='btn light' id='gcWell' href='#'>Open Wellbeing Matters</a>
+      </p>
+      <p style='color:#64748B;font-size:.9rem'>* Requires Google sign‑in; students join with their school account.</p>
+    </article>
   </section>
 
   <footer>Created by Teresa Bruno • © Teresa Bruno</footer>
 </div>
 <script>
-const LINKS={blog:'https://thestudentwellbeing.wordpress.com/',yt:'https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ',teams:[
-  {label:'Social Work Truancy', url:'https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07'},
-  {label:'Wellbeing Connections', url:'https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07'},
-  {label:'SWD Connections', url:'https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07'}]};
+const LINKS={blog:'https://thestudentwellbeing.wordpress.com/',yt:'https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ',
+  teams:[
+    {label:'Social Work Truancy', url:'https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07'},
+    {label:'Wellbeing Connections', url:'https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07'},
+    {label:'SWD Connections', url:'https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07'}
+  ],
+  classrooms:{
+    learn:'https://classroom.google.com/c/MTY0NDI3NDI0OTRa',
+    well:'https://classroom.google.com/c/MTQ5MDI2ODQxOTJa'
+  }
+};
 ['blog','yt'].forEach(function(k){var el=document.getElementById(k+'Link'); if(el&&LINKS[k]) el.href=LINKS[k];});
 var wrap=document.getElementById('teamsWrap');
 if(wrap){wrap.innerHTML=LINKS.teams.map(function(t){return '<a class="btn" href="'+t.url+'">'+t.label+'</a>';}).join('');}
+var gl=document.getElementById('gcLearn'); if(gl) gl.href=LINKS.classrooms.learn;
+var gw=document.getElementById('gcWell'); if(gw) gw.href=LINKS.classrooms.well;
 </script>
 </body>
 </html>

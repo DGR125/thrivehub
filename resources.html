@@ -1,22 +1,14 @@
-<!-- Add (or merge) into <head> <style> … </style> -->
-<style>
-:root{
-  --calm-sky:#66E0FF; --calm-forest:#66FF9A; --calm-sunset:#FF8A66; --calm-violet:#A366FF;
-}
-.pill{display:inline-block; padding:.45rem .75rem; border-radius:999px; font-weight:700; color:#111}
-.pill.sky{background:var(--calm-sky)}
-.pill.forest{background:var(--calm-forest)}
-.pill.sunset{background:var(--calm-sunset); color:#fff}
-.pill.violet{background:var(--calm-violet); color:#fff}
-.card{background:#fff; border-radius:16px; padding:16px; box-shadow:0 4px 22px rgba(15,23,42,.08)}
-/* Focus ring */
-#focusRingBg{stroke:#E8EAF6; stroke-width:12}
-#focusRing{stroke:url(#grad); stroke-width:12; stroke-linecap:round}
-#toTop{
-  position:fixed; right:16px; bottom:16px; z-index:40;
-  background:#6C2BD9; color:#fff; border-radius:999px; border:0; width:48px; height:48px;
-  box-shadow:0 8px 24px rgba(108,43,217,.35);
-}
-#toTop:hover{background:#5623AD}
-</style>
-<html><body><h1>Resources</h1></body></html>
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>ThriveHub — Calm Space</title><link rel='icon' href='assets/logo.svg'><style>
+:root{--th-primary:#0066FF;--th-primary-600:#0050C7;--th-accent:#FF4D6D;--th-mango:#FFB100;--th-plum:#6C2BD9;--th-teal:#00AFA0;--ink:#0F172A;--ink-600:#1F2937;--cloud:#F6F8FB;--paper:#fff;--focus:#FFB100}
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:var(--cloud)}.container{max-width:1100px;margin:0 auto;padding:16px}
+.site{display:flex;align-items:center;gap:.75rem;padding:.5rem 0}.site img{height:32px}.site nav a{margin-left:.75rem;color:var(--ink-600);text-decoration:none;font-weight:700}.site nav a:hover{color:var(--th-primary)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-radius:12px;border:0;cursor:pointer;background:var(--th-primary);color:#fff;font-weight:800;text-decoration:none;box-shadow:0 8px 24px rgba(0,102,255,.25)}.btn:hover{background:var(--th-primary-600)}.btn.sec{background:var(--th-plum)}.btn.light{background:var(--paper);color:var(--ink)}.pill{display:inline-block;background:var(--th-accent);color:#fff;padding:.35rem .7rem;border-radius:999px;font-weight:800;font-size:.9rem}
+.hero{position:relative;overflow:hidden;border-radius:16px;margin:12px 0 20px;background:linear-gradient(120deg, rgba(0,102,255,.9), rgba(255,77,109,.9)), url('assets/hero.jpg') center/cover no-repeat;color:#fff}
+.hero .inner{padding:clamp(24px,6vw,56px)}.hero h1{margin:.75rem 0 0;font-size:clamp(28px,5vw,44px);line-height:1.1}.hero p{max-width:60ch;margin:12px 0 18px;font-size:1.125rem;opacity:.95}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.card{background:var(--paper);border-radius:16px;padding:16px;box-shadow:0 4px 22px rgba(15,23,42,.08)}
+footer{color:#6b7280;font-size:.9rem;padding:16px 0}
+.quick{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem}.quick .pill{background:var(--th-mango);color:#111}
+/* Calm Space */
+.mode .pill{margin-right:.4rem}.tile{border-radius:14px;padding:14px;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.12)}.tile.rain{background:linear-gradient(135deg,#66E0FF,#0066FF)}.tile.forest{background:linear-gradient(135deg,#66FF9A,#00AFA0)}.tile.fire{background:linear-gradient(135deg,#FF8A66,#FF4D6D)}.tile.brown{background:linear-gradient(135deg,#A366FF,#6C2BD9)}
+#toTop{position:fixed;right:16px;bottom:16px;z-index:40;background:var(--th-plum);color:#fff;border-radius:999px;border:0;width:48px;height:48px;box-shadow:0 8px 24px rgba(108,43,217,.35)}#toTop:hover{background:#5623AD}
+</style></head><body><div class='container'><header class='site'><img src='assets/logo.svg' alt=''><strong>ThriveHub</strong><nav><a href='index.html'>Home</a><a href='library.html'>Library</a><a href='suggest.html'>Suggest</a></nav></header><h1 style='color:var(--th-accent)'>Calm Space</h1><section class='card mode'><h2>Modes</h2><span class='pill'>Visual‑only</span><span class='pill' style='background:var(--th-teal)'>Audio‑guided</span><span class='pill' style='background:var(--th-mango);color:#111'>Dark calm</span><span class='pill' style='background:var(--th-plum)'>Low sensory</span></section><section class='card'><h2>10‑minute focus</h2><p>Press start; a gentle chime will play at the end.</p><div style='display:grid;place-items:center;text-align:center'><svg width='180' height='180' viewBox='0 0 120 120' aria-hidden='true'><circle cx='60' cy='60' r='54' fill='none' stroke='#E8EAF6' stroke-width='12'/><defs><linearGradient id='grad' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='#0066FF'/><stop offset='100%' stop-color='#FF4D6D'/></linearGradient></defs><circle id='ring' cx='60' cy='60' r='54' fill='none' stroke='url(#grad)' stroke-width='12' stroke-linecap='round' stroke-dasharray='339.292' stroke-dashoffset='339.292'/></svg><div style='margin-top:.75rem;display:flex;gap:.5rem'><button id='start' class='btn'>Start</button><button id='stop' class='btn light'>Stop</button></div><p id='msg'>Ready</p></div></section><section class='cards'><div class='tile rain'>Rain</div><div class='tile forest'>Forest</div><div class='tile fire'>Fire</div><div class='tile brown'>Brown noise</div></section><button id='toTop' aria-label='Back to top' onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button><footer>Press Esc for a quiet screen • Built for quick use in class</footer></div><script>(()=>{const ring=document.getElementById('ring');const start=document.getElementById('start');const stop=document.getElementById('stop');const msg=document.getElementById('msg');const L=339.292,D=600000;let raf,t0;const chime=new Audio('assets/chime.mp3');function step(ts){if(!t0)t0=ts;const p=Math.min((ts-t0)/D,1);ring.style.strokeDashoffset=String(L*(1-p));msg.textContent=p<1?`Focusing… ${Math.ceil((D-(ts-t0))/1000)}s`:'Done!';if(p<1)raf=requestAnimationFrame(step);else chime.play().catch(()=>{});}start.addEventListener('click',()=>{cancelAnimationFrame(raf);t0=null;ring.style.strokeDashoffset=L;raf=requestAnimationFrame(step);});stop.addEventListener('click',()=>{cancelAnimationFrame(raf);t0=null;msg.textContent='Paused';});})();</script></body></html>

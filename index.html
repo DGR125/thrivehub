@@ -1,15 +1,14 @@
-
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>ThriveHub Home</title>
-<style>
-body{margin:0;font-family:Arial;background:#f0f8ff;color:#111;}
-header{background:#0066ff;color:#fff;padding:20px;text-align:center;}
-nav a{margin:0 10px;color:#fff;text-decoration:none;font-weight:bold;}
-.hero{background:linear-gradient(120deg,#0066ff,#ff4d6d);padding:60px;text-align:center;color:#fff;}
-.btn{display:inline-block;padding:10px 20px;border-radius:8px;background:#ffb100;color:#111;text-decoration:none;margin:10px;}
-</style></head><body>
-<header><h1>ThriveHub</h1><nav><a href='library.html'>Library</a><a href='resources.html'>Calm Space</a><a href='suggest.html'>Suggest</a></nav></header>
-<div class='hero'><h2>Inclusive Resources</h2><p>Vibrant, accessible tools for educators.</p>
-<a class='btn' href='library.html'>Explore Library</a>
-<a class='btn' href='resources.html'>Open Calm Space</a></div>
-</body></html>
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>ThriveHub — Home</title><link rel='icon' href='assets/logo.svg'><style>
+:root{--th-primary:#0066FF;--th-primary-600:#0050C7;--th-accent:#FF4D6D;--th-mango:#FFB100;--th-plum:#6C2BD9;--th-teal:#00AFA0;--ink:#0F172A;--ink-600:#1F2937;--cloud:#F6F8FB;--paper:#fff;--focus:#FFB100}
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:var(--cloud)}.container{max-width:1100px;margin:0 auto;padding:16px}
+.site{display:flex;align-items:center;gap:.75rem;padding:.5rem 0}.site img{height:32px}.site nav a{margin-left:.75rem;color:var(--ink-600);text-decoration:none;font-weight:700}.site nav a:hover{color:var(--th-primary)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-radius:12px;border:0;cursor:pointer;background:var(--th-primary);color:#fff;font-weight:800;text-decoration:none;box-shadow:0 8px 24px rgba(0,102,255,.25)}.btn:hover{background:var(--th-primary-600)}.btn.sec{background:var(--th-plum)}.btn.light{background:var(--paper);color:var(--ink)}.pill{display:inline-block;background:var(--th-accent);color:#fff;padding:.35rem .7rem;border-radius:999px;font-weight:800;font-size:.9rem}
+.hero{position:relative;overflow:hidden;border-radius:16px;margin:12px 0 20px;background:linear-gradient(120deg, rgba(0,102,255,.9), rgba(255,77,109,.9)), url('assets/hero.jpg') center/cover no-repeat;color:#fff}
+.hero .inner{padding:clamp(24px,6vw,56px)}.hero h1{margin:.75rem 0 0;font-size:clamp(28px,5vw,44px);line-height:1.1}.hero p{max-width:60ch;margin:12px 0 18px;font-size:1.125rem;opacity:.95}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.card{background:var(--paper);border-radius:16px;padding:16px;box-shadow:0 4px 22px rgba(15,23,42,.08)}
+footer{color:#6b7280;font-size:.9rem;padding:16px 0}
+.quick{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem}.quick .pill{background:var(--th-mango);color:#111}
+/* Calm Space */
+.mode .pill{margin-right:.4rem}.tile{border-radius:14px;padding:14px;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.12)}.tile.rain{background:linear-gradient(135deg,#66E0FF,#0066FF)}.tile.forest{background:linear-gradient(135deg,#66FF9A,#00AFA0)}.tile.fire{background:linear-gradient(135deg,#FF8A66,#FF4D6D)}.tile.brown{background:linear-gradient(135deg,#A366FF,#6C2BD9)}
+#toTop{position:fixed;right:16px;bottom:16px;z-index:40;background:var(--th-plum);color:#fff;border-radius:999px;border:0;width:48px;height:48px;box-shadow:0 8px 24px rgba(108,43,217,.35)}#toTop:hover{background:#5623AD}
+</style></head><body><div class='container'><header class='site'><img src='assets/logo.svg' alt='ThriveHub logo'/><strong>ThriveHub</strong><nav><a href='library.html'>Library</a><a href='resources.html'>Calm Space</a><a href='suggest.html'>Suggest</a></nav></header><section class='hero'><div class='inner'><span class='pill'>V6.4</span><h1>Inclusive practice, faster — now in vibrant colour</h1><p>Find strategies, free resources and calming tools aligned to SA practice.</p><div class='quick'><a class='btn' href='library.html'>Explore Library</a><a class='btn sec' href='resources.html'>Open Calm Space</a><a class='btn light' href='#links'>Links & Channels</a></div></div></section><section id='links' class='cards'><article class='card'><h3>Microsoft Teams</h3><p>Open the ThriveHub team/channel.</p><a class='btn' href='#' id='teamsLink'>Open Teams</a><p style='font-size:.9rem;color:#6b7280;margin-top:.5rem'>Replace this link in <code>index.html</code> (search for <code>LINKS</code> object).</p></article><article class='card'><h3>Blog</h3><p>Latest updates and tips.</p><a class='btn' href='#' id='blogLink'>Visit Blog</a></article><article class='card'><h3>YouTube</h3><p>Short walkthroughs and how‑tos.</p><a class='btn' href='#' id='ytLink'>Watch Videos</a></article></section><footer>Built for SA educators • Accessible and fast • © ThriveHub</footer></div><script>const LINKS={teams:'',blog:'',yt:''};for(const[k,v]of Object.entries(LINKS)){const el=document.getElementById(k+'Link');if(el&&v)el.href=v;else if(el)el.title='Set this link in index.html';}</script></body></html>

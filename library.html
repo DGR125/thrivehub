@@ -6,6 +6,122 @@
 :root{--blue:#0EA5E9;--green:#10B981;--ink:#0F172A;--cloud:#F6F8FB}
 *{box-sizing:border-box}body{margin:0;background:var(--cloud);font:16px/1.55 system-ui,Segoe UI,Arial,sans-serif;color:var(--ink)}
 .container{max-width:1100px;margin:0 auto;padding:16px}
+header{display:flex;gap:.6rem;align-items:center}
+.logo{display:inline-block;padding:.25rem .6rem;border-radius:10px;background:var(--blue);color:#fff;font-weight:800}
+h1{color:#0EA5E9;margin:12px 0}
+.toolbar{position:sticky;top:0;background:#fff;border-radius:12px;padding:.5rem;margin:.75rem 0;box-shadow:0 4px 12px rgba(0,0,0,.05);display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+input[type="text"]{padding:.5rem .75rem;border:1px solid #cbd5e1;border-radius:10px;min-width:280px}
+button{padding:.5rem .75rem;border-radius:999px;border:1px solid #cbd5e1;background:#fff;cursor:pointer}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:.5rem 0 1rem}
+.card{background:#fff;border-radius:16px;padding:16px;box-shadow:0 4px 22px rgba(15,23,42,.08)}
+.quick .btn{display:inline-block;background:#0EA5E9;color:#fff;padding:.45rem .7rem;border-radius:10px;text-decoration:none;font-weight:800;margin:.15rem .25rem 0 0}
+.item{border-left:5px solid var(--green);background:#fff;padding:10px 12px;margin:10px 0;box-shadow:0 3px 10px rgba(0,0,0,.05)}
+.badge{display:inline-block;background:var(--blue);color:#fff;padding:2px 8px;border-radius:999px;font-weight:800;font-size:.85rem}
+a.link{color:#0EA5E9;font-weight:800;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <span class="logo">ThriveHub</span><strong>V7.0</strong>
+  </header>
+
+  <h1>Free resource library — V7.0</h1>
+
+  <!-- Early Years + Secondary -->
+  <section class="cards">
+    <article class="card">
+      <h3>Early Years bundle</h3>
+      <p>High‑impact early learning resources:</p>
+      <p class="quick">
+        <a class="btn" href="https://studentwellbeinghub.edu.au/" target="_blank" rel="noopener">Brain break bops (Early Years)</a>
+        <a class="btn" href="https://studentwellbeinghub.edu.au/" target="_blank" rel="noopener">Interoception & self‑regulation (PL)</a>
+        <a class="btn" href="https://www.narragunnawali.org.au/curriculum-resources" target="_blank" rel="noopener">Narragunnawali (Early Learning)</a>
+        <a class="btn" href="https://learninghub.earlychildhoodaustralia.org.au/esafety-early-years-program/" target="_blank" rel="noopener">eSafety Early Years PL</a>
+      </p>
+    </article>
+    <article class="card">
+      <h3>Secondary starter set</h3>
+      <p>Quick links for secondary teams:</p>
+      <p class="quick">
+        <a class="btn" href="https://headspace.org.au/schools" target="_blank" rel="noopener">Headspace Schools</a>
+        <a class="btn" href="https://www.esafety.gov.au/educators/classroom-resources" target="_blank" rel="noopener">eSafety — Be Deadly Online</a>
+        <a class="btn" href="https://studentwellbeinghub.edu.au/" target="_blank" rel="noopener">Student Wellbeing Hub — Secondary</a>
+      </p>
+    </article>
+  </section>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <input id="q" type="text" placeholder="Search (e.g., Classrooms, Engagement, EALD, SA)">
+    <button id="saBtn" aria-pressed="false" title="Show South Australia only">SA‑only</button>
+    <button id="resetBtn" title="Reset all filters">Reset</button>
+  </div>
+
+  <!-- Results -->
+  <div id="list" aria-live="polite"></div>
+
+  <footer>Created by Teresa Bruno • © Teresa Bruno</footer>
+</div>
+
+<script>
+const RES=[
+  // Google Classrooms (SA)
+  {t:'Google Classroom — Learning Matters', u:'https://classroom.google.com/c/MTY0NDI3NDI0OTRa', tags:'Classrooms, Engagement, Learning challenges', region:'SA'},
+  {t:'Google Classroom — Wellbeing Matters', u:'https://classroom.google.com/c/MTQ5MDI2ODQxOTJa', tags:'Classrooms, Wellbeing, Trauma-aware, Engagement', region:'SA'},
+
+  // Early Years
+  {t:'Student Wellbeing Hub — Brain break bops (Early Years)', u:'https://studentwellbeinghub.edu.au/', tags:'Early Years, Interoception, SEL', region:'National'},
+  {t:'Student Wellbeing Hub — Interoception & Self‑regulation (PL)', u:'https://studentwellbeinghub.edu.au/', tags:'Early Years, PL, Interoception', region:'National'},
+  {t:'Narragunnawali — Early Learning resources', u:'https://www.narragunnawali.org.au/curriculum-resources', tags:'Early Years, Aboriginal Education', region:'National'},
+  {t:'eSafety Early Years — Professional Learning (ECA modules)', u:'https://learninghub.earlychildhoodaustralia.org.au/esafety-early-years-program/', tags:'Early Years, Online Safety, PL', region:'National'},
+
+  // Secondary highlights
+  {t:'Headspace Schools — Secondary programs', u:'https://headspace.org.au/schools', tags:'Secondary, Wellbeing, Programs', region:'National'},
+  {t:'eSafety — Classroom resources', u:'https://www.esafety.gov.au/educators/classroom-resources', tags:'Online safety, Digital citizenship', region:'National'},
+  {t:'Student Wellbeing Hub — Secondary resources', u:'https://studentwellbeinghub.edu.au/', tags:'Secondary, Wellbeing, PL', region:'National'},
+
+  // Core SA resources (policy/program)
+  {t:'Department for Education SA — Inclusive education', u:'https://www.education.sa.gov.au/parents-and-families/supporting-student/inclusive-education', tags:'SA Policy, Inclusion', region:'SA'},
+  {t:'National Student Wellbeing Program (NSWP) — SA overview', u:'https://www.education.sa.gov.au/schools-and-educators/national-student-wellbeing-program/about-the-program', tags:'Wellbeing, Program, Funding', region:'SA'}
+];
+
+const list = document.getElementById('list');
+const q = document.getElementById('q');
+const saBtn = document.getElementById('saBtn');
+const resetBtn = document.getElementById('resetBtn');
+let saOnly=false;
+
+function draw(){
+  const term=(q.value||'').toLowerCase();
+  let arr=RES.slice();
+  if(saOnly){arr=arr.filter(r=>r.region==='SA');}
+  arr=arr.filter(r=>{
+    const hitTerm=!term || r.t.toLowerCase().includes(term) || r.tags.toLowerCase().includes(term);
+    return hitTerm;
+  });
+  list.innerHTML = arr.map(r=>`
+    <div class="item">
+      <strong>${r.t}</strong><br>
+      <a class="link" href="${r.u}" target="_blank" rel="noopener">Open link ↗</a>
+      <div style="color:#64748B;margin-top:.25rem">${r.tags} • <span class="badge">${r.region}</span></div>
+    </div>
+  `).join('') || '<p>No results — try clearing filters.</p>';
+}
+saBtn.onclick=()=>{ saOnly=!saOnly; saBtn.setAttribute('aria-pressed', String(saOnly)); saBtn.textContent = saOnly ? 'SA‑only (on)' : 'SA‑only'; draw(); };
+resetBtn.onclick=()=>{ saOnly=false; saBtn.setAttribute('aria-pressed','false'); saBtn.textContent='SA‑only'; q.value=''; draw(); };
+q.oninput=draw;
+draw();
+</script>
+</body></html>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ThriveHub — Library (V7.0)</title>
+<style>
+:root{--blue:#0EA5E9;--green:#10B981;--ink:#0F172A;--cloud:#F6F8FB}
+*{box-sizing:border-box}body{margin:0;background:var(--cloud);font:16px/1.55 system-ui,Segoe UI,Arial,sans-serif;color:var(--ink)}
+.container{max-width:1100px;margin:0 auto;padding:16px}
 .toolbar{position:sticky;top:0;background:#fff;border-radius:12px;padding:.5rem;margin:.75rem 0;box-shadow:0 4px 12px rgba(0,0,0,.05)}
 .item{border-left:5px solid var(--green);background:#fff;padding:10px 12px;margin:10px 0;box-shadow:0 3px 10px rgba(0,0,0,.05)}
 .badge{display:inline-block;background:var(--blue);color:#fff;padding:2px 8px;border-radius:999px;font-weight:800;font-size:.85rem}

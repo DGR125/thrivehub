@@ -1,20 +1,76 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>ThriveHub — Home</title><link rel='icon' href='assets/logo.svg'><style>
-:root{--th-primary:#0066FF;--th-primary-600:#0050C7;--th-accent:#FF4D6D;--th-mango:#FFB100;--th-plum:#6C2BD9;--th-teal:#00AFA0;--ink:#0F172A;--ink-600:#1F2937;--cloud:#F6F8FB;--paper:#fff;--focus:#FFB100}
-*{box-sizing:border-box}body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:var(--cloud)}.container{max-width:1100px;margin:0 auto;padding:16px}
-.site{display:flex;align-items:center;gap:.75rem;padding:.5rem 0}.site img{height:32px}.site nav a{margin-left:.75rem;color:var(--ink-600);text-decoration:none;font-weight:700}.site nav a:hover{color:var(--th-primary)}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-radius:12px;border:0;cursor:pointer;background:var(--th-primary);color:#fff;font-weight:800;text-decoration:none;box-shadow:0 8px 24px rgba(0,102,255,.25)}.btn:hover{background:var(--th-primary-600)}.btn.sec{background:var(--th-plum)}.btn.light{background:var(--paper);color:var(--ink)}.pill{display:inline-block;background:var(--th-accent);color:#fff;padding:.35rem .7rem;border-radius:999px;font-weight:800;font-size:.9rem}
-.hero{position:relative;overflow:hidden;border-radius:16px;margin:12px 0 20px;background:linear-gradient(120deg, rgba(0,102,255,.9), rgba(255,77,109,.9)), url('assets/hero.jpg') center/cover no-repeat;color:#fff}
-.hero .inner{padding:clamp(24px,6vw,56px)}.hero h1{margin:.75rem 0 0;font-size:clamp(28px,5vw,44px);line-height:1.1}.hero p{max-width:60ch;margin:12px 0 18px;font-size:1.125rem;opacity:.95}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.card{background:var(--paper);border-radius:16px;padding:16px;box-shadow:0 4px 22px rgba(15,23,42,.08)}
-footer{color:#6b7280;font-size:.9rem;padding:16px 0}
-.quick{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem}.quick .pill{background:var(--th-mango);color:#111}
-/* Calm Space */
-.mode .pill{margin-right:.4rem}.tile{border-radius:14px;padding:14px;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.12)}.tile.rain{background:linear-gradient(135deg,#66E0FF,#0066FF)}.tile.forest{background:linear-gradient(135deg,#66FF9A,#00AFA0)}.tile.fire{background:linear-gradient(135deg,#FF8A66,#FF4D6D)}.tile.brown{background:linear-gradient(135deg,#A366FF,#6C2BD9)}
-#toTop{position:fixed;right:16px;bottom:16px;z-index:40;background:var(--th-plum);color:#fff;border-radius:999px;border:0;width:48px;height:48px;box-shadow:0 8px 24px rgba(108,43,217,.35)}#toTop:hover{background:#5623AD}
-</style></head><body><div class='container'><header class='site'><img src='assets/logo.svg' alt='ThriveHub logo'/><strong>ThriveHub</strong><nav><a href='library.html'>Library</a><a href='resources.html'>Calm Space</a><a href='suggest.html'>Suggest</a></nav></header><section class='hero'><div class='inner'><span class='pill'>V6.4</span><h1>Inclusive practice, faster — now in vibrant colour</h1><p>Find strategies, free resources and calming tools aligned to SA practice.</p><div class='quick'><a class='btn' href='library.html'>Explore Library</a><a class='btn sec' href='resources.html'>Open Calm Space</a><a class='btn light' href='#links'>Links & Channels</a></div></div></section><section id='links' class='cards'><article class='card'><h3>Microsoft Teams</h3><p>Open the ThriveHub team/channel.</p><a class='btn' href='#' id='teamsLink'>Open Teams</a><p style='font-size:.9rem;color:#6b7280;margin-top:.5rem'>Replace this link in <code>index.html</code> (search for <code>LINKS</code> object).</p></article><article class='card'><h3>Blog</h3><p>Latest updates and tips.</p><a class='btn' href='#' id='blogLink'>Visit Blog</a></article><article class='card'><h3>YouTube</h3><p>Short walkthroughs and how‑tos.</p><a class='btn' href='#' id='ytLink'>Watch Videos</a></article></section><footer>Built for SA educators • Accessible and fast • © ThriveHub</footer></div><script>const LINKS={teams:'',blog:'',yt:''};for(const[k,v]of Object.entries(LINKS)){const el=document.getElementById(k+'Link');if(el&&v)el.href=v;else if(el)el.title='Set this link in index.html';}</script></body></html>
-const LINKS = { teams:'', blog:'', yt:'' };
-const LINKS = {
-  teams:'https://teams.microsoft.com/l/channel/…',
-  blog:'https://yourblog.example.com/',
-  yt:'https://www.youtube.com/@YourChannel'
-};
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <title>ThriveHub — Home</title>
+  <link rel='icon' href='assets/logo.svg'>
+  <style>:root{--th-blue:#0EA5E9;--th-blue-700:#0369A1;--th-green:#10B981;--th-green-700:#047857;--th-ink:#0F172A;--th-ink-600:#334155;--paper:#FFFFFF;--cloud:#F6F8FB;--focus:#FFB100}*{box-sizing:border-box}body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--th-ink);background:var(--cloud)}.container{max-width:1100px;margin:0 auto;padding:16px}.site{display:flex;align-items:center;gap:.6rem;padding:.5rem 0}.site img{height:34px}.site nav a{margin-left:.75rem;color:var(--th-ink-600);text-decoration:none;font-weight:700}.site nav a:hover{color:var(--th-blue-700)}.hero{position:relative;overflow:hidden;border-radius:16px;margin:12px 0 20px;background:linear-gradient(120deg, rgba(14,165,233,.88), rgba(16,185,129,.88)), url('assets/hero-classroom.svg') center/cover no-repeat;color:#fff}.hero .inner{padding:clamp(24px,6vw,56px)}.pill{display:inline-flex;align-items:center;gap:.4rem;background:var(--th-green);color:#fff;padding:.35rem .65rem;border-radius:999px;font-weight:800;font-size:.85rem}.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-radius:12px;border:0;cursor:pointer;background:var(--th-blue);color:#fff;font-weight:800;text-decoration:none;box-shadow:0 10px 28px rgba(14,165,233,.25)}.btn:hover{background:var(--th-blue-700)}.btn.green{background:var(--th-green)}.btn.green:hover{background:var(--th-green-700)}.btn.light{background:var(--paper);color:var(--th-ink)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.card{background:var(--paper);border-radius:16px;padding:16px;box-shadow:0 4px 22px rgba(15,23,42,.08)}.badge{display:inline-block;padding:.25rem .5rem;border-radius:999px;font-weight:800;font-size:.8rem;background:var(--th-blue);color:#fff}footer{color:#64748B;font-size:.9rem;padding:16px 0}.quick{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem}.quick .pill{background:var(--th-blue)}.toolbar{position:sticky;top:0;z-index:5;background:linear-gradient(180deg,#fff,rgba(255,255,255,.9));backdrop-filter:blur(6px);border-radius:12px;padding:.5rem;margin-bottom:.75rem}.filter{display:inline-block;margin:.15rem;padding:.35rem .6rem;border-radius:999px;background:#E0F2FE;color:#0C4A6E;font-weight:800;cursor:pointer}.filter.active{background:#D1FAE5;color:#065F46}.item{border-left:5px solid var(--th-green);padding:12px 14px;margin:10px 0;background:#fff}.item h4{margin:.25rem 0}.search{margin:.5rem 0 1rem;display:flex;gap:.5rem}.search input{flex:1;padding:.6rem .8rem;border-radius:10px;border:1px solid #d1d5db}.mode .pill{margin-right:.4rem}.tile{border-radius:14px;padding:14px;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.12)}.tile.rain{background:linear-gradient(135deg,#7DD3FC,#0EA5E9)}.tile.forest{background:linear-gradient(135deg,#6EE7B7,#10B981)}.tile.ocean{background:linear-gradient(135deg,#93C5FD,#2563EB)}#toTop{position:fixed;right:16px;bottom:16px;z-index:40;background:var(--th-green);color:#fff;border-radius:999px;border:0;width:48px;height:48px;box-shadow:0 8px 24px rgba(16,185,129,.35)}#toTop:hover{background:var(--th-green-700)}</style>
+</head>
+<body>
+  <div class='container'>
+    <header class='site' aria-label='Site header'>
+      <img src='assets/logo.svg' alt='ThriveHub logo'>
+      <strong>ThriveHub</strong>
+      <nav aria-label='Top navigation'>
+        <a href='library.html'>Library</a>
+        <a href='resources.html'>Calm Space</a>
+        <a href='suggest.html'>Suggest</a>
+      </nav>
+    </header>
+
+    <section class='hero' role='banner' aria-label='Hero'>
+      <div class='inner'>
+        <span class='pill'><img src='assets/icon-library.svg' alt='' width='18' height='18'> V6.5</span>
+        <h1>Inclusive practice, faster</h1>
+        <p>Find strategies, free resources and calming tools to help facilitate wellbeing for learning for educators.</p>
+        <div class='quick'>
+          <a class='btn' href='library.html'><img src='assets/icon-library.svg' alt=''> Explore Library</a>
+          <a class='btn green' href='resources.html'><img src='assets/icon-calm.svg' alt=''> Open Calm Space</a>
+          <a class='btn light' href='#links'><img src='assets/icon-blog.svg' alt=''> Links & Channels</a>
+        </div>
+      </div>
+    </section>
+
+    <section id='links' class='cards' aria-labelledby='hlinks'>
+      <h2 id='hlinks' style='position:absolute;left:-9999px'>Key links</h2>
+      <article class='card'>
+        <h3><img src='assets/icon-teams.svg' alt=''> Microsoft Teams</h3>
+        <div id='teamsWrap' style='display:flex;flex-wrap:wrap;gap:.5rem'></div>
+      </article>
+      <article class='card'>
+        <h3><img src='assets/icon-blog.svg' alt=''> Wellbeing Blog</h3>
+        <p>Updates and practice tips.</p>
+        <p><a id='blogLink' class='btn' href='#'>Visit Blog</a></p>
+      </article>
+      <article class='card'>
+        <h3><img src='assets/icon-youtube.svg' alt=''> YouTube — Complex Needs</h3>
+        <p>Presentations staff can use anytime.</p>
+        <p><a id='ytLink' class='btn' href='#'>Watch Playlist</a></p>
+      </article>
+    </section>
+
+    <footer>Built for SA educators • Accessible and fast • © ThriveHub</footer>
+  </div>
+
+  <script>
+    const LINKS = {
+      blog: 'https://thestudentwellbeing.wordpress.com/',
+      yt: 'https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ',
+      teams: [
+        { label: 'Teams — Complex Needs 1', url: 'https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07' },
+        { label: 'Teams — Complex Needs 2', url: 'https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07' },
+        { label: 'Teams — Complex Needs 3', url: 'https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07' }
+      ]
+    };
+    const singleMap = { blog: 'blogLink', yt: 'ytLink' };
+    for (const k in singleMap) { const el = document.getElementById(singleMap[k]); if (el && LINKS[k]) el.href = LINKS[k]; }
+    const wrap = document.getElementById('teamsWrap');
+    if (wrap && Array.isArray(LINKS.teams)) {
+      wrap.innerHTML = LINKS.teams.map(function(t){
+        return '<a class="btn" href="' + t.url + '">' + t.label + '</a>';
+      }).join('');
+    }
+  </script>
+</body>
+</html>

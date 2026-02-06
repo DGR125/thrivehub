@@ -1,0 +1,148 @@
+<!doctype html><html lang='en-AU'><head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>ThriveHub — Calm Space</title>
+<link rel='icon' href='assets/favicon.png'>
+<style>:root{--eucalyptus:#6B9080;--soft-sage:#A4C3B2;--warm-cream:#F6FFF8;--muted-teal:#CCE3DE;--charcoal:#2F3E46;--soft-peach:#FFB7A5;--dusty-mustard:#F2CC8F;--sky-blue:#BEE7E8;--soft-lavender:#CDB4DB;--bg:var(--warm-cream);--panel:#ffffff;--text:var(--charcoal);--muted:#50606b;--border:#e6efe9;--link:#2F6B68}
+:root{--radius:16px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 18px}
+header.site{padding:14px 0;background:linear-gradient(135deg,var(--muted-teal),var(--soft-sage));border-bottom:1px solid var(--border)}
+.bar{display:flex;gap:10px;align-items:center} .bar img{height:40px} .sp{margin-left:auto;display:flex;gap:10px}
+.btn{display:inline-flex;gap:8px;align-items:center;padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:#fff;box-shadow:0 4px 12px rgba(47,62,70,.06)}
+.panel{background:linear-gradient(180deg,var(--warm-cream),#ffffff);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:0 8px 24px rgba(47,62,70,.08);margin:16px 0}
+.quick{position:sticky;top:0;z-index:40;background:rgba(246,255,248,.86);backdrop-filter:saturate(1.1) blur(6px);border-bottom:1px solid var(--border)}
+.row{display:flex;gap:8px;overflow-x:auto;padding:10px 2px} .qbtn{flex:0 0 auto;min-width:120px;display:flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--border);border-radius:999px;padding:10px 12px;box-shadow:0 4px 12px rgba(47,62,70,.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px} .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:0 6px 16px rgba(47,62,70,.07)}
+.calm-fab{position:fixed;right:18px;bottom:18px;background:var(--soft-peach);color:#412e2a;border:none;padding:14px 16px;border-radius:999px;box-shadow:0 12px 28px rgba(47,62,70,.2);cursor:pointer;font-weight:800;z-index:50}
+.modal{position:fixed;inset:0;background:rgba(47,62,70,.25);display:none;align-items:center;justify-content:center;z-index:60} .modal .box{background:#fff;border:1px solid var(--border);border-radius:20px;max-width:760px;width:92%;padding:20px;box-shadow:0 18px 48px rgba(47,62,70,.28)}
+.breathe{display:flex;align-items:center;justify-content:center;height:220px;margin:8px 0 10px} .circle{width:160px;height:160px;border-radius:50%;background:radial-gradient(circle at 30% 30%, var(--muted-teal), var(--soft-sage));box-shadow:inset 0 0 40px rgba(0,0,0,.06);animation:breathe 12s ease-in-out infinite}
+@keyframes breathe{0%{transform:scale(.8)}50%{transform:scale(1)}100%{transform:scale(.8)}}
+.visbox{position:relative;height:220px;border-radius:14px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(120deg,#fefefe,var(--muted-teal))} .pill{border-radius:12px;padding:10px;border:1px solid var(--border);background:#fff}
+.low-sensory *{animation:none !important;transition:none !important} .dark-calm{--bg:#222b2b;--panel:#263232;--text:#edf7f3;--muted:#b9c5bf;--border:#2f3e46;--link:#bde0dc}
+</style>
+</head>
+<body>
+<header class='site'><div class='wrap bar'><img src='assets/thrivehub-logo.png' alt='ThriveHub'><strong>Calm Space</strong><div class='sp'><a class='btn' href='index.html'>🏠 Home</a><a class='btn' href='library.html'>📚 Full Library</a></div></div></header>
+<main class='wrap'>
+  <section class='panel'>
+    <h1>Welcome to your calm space 🌿</h1>
+    <p>Everything here is designed to support your wellbeing, at your pace.</p>
+    <div style='display:flex;gap:10px;flex-wrap:wrap'><a class='btn' href='#calm'>Calm now</a><a class='btn' href='#tools'>Explore tools</a><a class='btn' href='#daily'>Daily support</a></div>
+    <div style='display:flex;gap:10px;margin-top:8px;flex-wrap:wrap'>
+      <label class='btn'><input type='checkbox' id='lowSens'> Low sensory</label>
+      <label class='btn'><input type='checkbox' id='darkMode'> Dark calm</label>
+      <label class='btn'><input type='checkbox' id='visualOnly'> Visual only</label>
+      <label class='btn'><input type='checkbox' id='audioGuide'> Audio guided</label>
+    </div>
+  </section>
+
+  <div class='quick'><div class='wrap'><div class='row' role='tablist' aria-label='Quick access'><a class='qbtn' href='#calm'>🎧 Calm</a><a class='qbtn' href='#focus'>🧠 Focus</a><a class='qbtn' href='#talk'>💬 Talk</a><a class='qbtn' href='#feel'>🫶 Feel Better</a><a class='qbtn' href='#regulate'>🧩 Regulate</a><a class='qbtn' href='#sleep'>💤 Sleep</a></div></div></div>
+
+  <section id='daily' class='panel' aria-label='Daily support'>
+    <h2>Good morning ☀️</h2>
+    <p>How are you feeling today?</p>
+    <div style='display:flex;gap:8px;margin:8px 0'><button data-mood='1'>😖</button><button data-mood='2'>😟</button><button data-mood='3'>😐</button><button data-mood='4'>🙂</button><button data-mood='5'>😄</button></div>
+    <div class='suggest'></div>
+  </section>
+
+  <section id='tools' style='margin-top:18px'>
+    <div class='grid'>
+      <article class='card'><h2>🧠 Mental Health Tools</h2><p>Calming strategies, grounding exercises and emotional support</p><a class='btn' href='#calm'>Explore</a></article>
+      <article class='card'><h2>🧩 Neurodivergent Supports</h2><p>Sensory regulation, routines, visual tools</p><a class='btn' href='#regulate'>Explore</a></article>
+      <article class='card'><h2>🎧 Audio Calm Space</h2><p>Nature sounds, breathing guides, white & brown noise</p><a class='btn' href='#calm'>Listen</a></article>
+      <article class='card'><h2>💬 Communication Tools</h2><p>Scripts, conversation supports, emotional expression</p><a class='btn' href='#talk'>Open</a></article>
+      <article class='card'><h2>📚 Learning & Study Support</h2><p>Focus tools, planners, ADHD supports</p><a class='btn' href='#focus'>Go</a></article>
+    </div>
+  </section>
+
+  <section id='calm' style='margin-top:18px'>
+    <h2>Calm now</h2>
+    <div class='grid'>
+      <article class='card'>
+        <h3>🎧 Sound tools</h3>
+        <div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px'>
+          <button class='btn' data-sound='rain'>🌧 Rain</button>
+          <button class='btn' data-sound='ocean'>🌊 Ocean</button>
+          <button class='btn' data-sound='forest'>🌲 Forest</button>
+          <button class='btn' data-sound='brown'>🤎 Brown noise</button>
+          <button class='btn' data-sound='pink'>💗 Pink noise</button>
+          <button class='btn' data-sound='white'>⚪ White noise</button>
+          <button class='btn' data-sound='fire'>🔥 Fireplace</button>
+          <button class='btn' id='stopAudio'>⏹ Stop</button>
+        </div>
+      </article>
+      <article class='card'>
+        <h3>🖼 Visual calm</h3>
+        <div class='visbox'><canvas id='bubbles'></canvas></div>
+        <div style='display:flex;gap:8px;margin-top:8px;flex-wrap:wrap'>
+          <button class='btn' data-visual='bubbles'>Bubbles</button>
+          <button class='btn' data-visual='lava'>Lava lamp</button>
+          <button class='btn' data-visual='gradient'>Soft gradient</button>
+          <button class='btn' data-visual='stars'>Star field</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id='regulate' style='margin-top:18px'>
+    <h2>Regulation</h2>
+    <div class='grid'>
+      <article class='card'><h3>🧱 Body regulation</h3><ul><li>Wall push</li><li>Hand pressure</li><li>Butterfly taps</li><li>Stretch routine</li></ul></article>
+      <article class='card'><h3>🧠 Emotional naming</h3><p>Try: calm • flat • tense • worried • overloaded • restless • sleepy</p></article>
+    </div>
+  </section>
+
+  <section id='focus' style='margin-top:18px'>
+    <h2>Focus</h2>
+    <div class='grid'>
+      <article class='card'><h3>⏱ 10‑minute focus</h3><p class='muted'>A gentle chime sounds at the end.</p><button class='btn' id='focus10'>Start 10 min</button></article>
+      <article class='card'><h3>📋 Visual routine builder</h3>
+        <div id='routine' style='display:flex;gap:10px;flex-wrap:wrap'>
+          <div class='pill' draggable='true'>🛏 Wake</div>
+          <div class='pill' draggable='true'>🚿 Shower</div>
+          <div class='pill' draggable='true'>🍳 Eat</div>
+          <div class='pill' draggable='true'>🎒 Prepare</div>
+          <div class='pill' draggable='true'>🏫 School/work</div>
+          <div class='pill' draggable='true'>🛋 Rest</div>
+          <div class='pill' draggable='true'>🛌 Sleep</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id='talk' style='margin-top:18px'>
+    <h2>Talk</h2>
+    <div class='grid'>
+      <article class='card'><h3>💬 Gentle scripts</h3><ul><li>“I need a short break, please.”</li><li>“I’m feeling overloaded. Can we pause?”</li><li>“Could you write that down for me?”</li><li>“Can we do one thing at a time?”</li></ul></article>
+      <article class='card'><h3>💡 Prompts</h3><p id='affirm'>You’re doing better than you think.</p><button class='btn' id='moreAff'>Show another</button></article>
+    </div>
+  </section>
+
+  <section id='sleep' style='margin-top:18px'>
+    <h2>Sleep</h2>
+    <div class='grid'>
+      <article class='card'><h3>😴 Wind‑down</h3><p>Lower lights, switch to dark calm mode, and try brown noise.</p></article>
+    </div>
+  </section>
+</main>
+<button class='calm-fab' id='needCalm'>🚨 I Need Calm Now</button>
+<div class='modal' id='calmModal' role='dialog' aria-modal='true' aria-label='Calm now'><div class='box'><h2>You're safe. Slow your breath. Let’s reset together.</h2><div class='breathe'><div class='circle'></div></div><div style='text-align:center;color:#50606b'><span id='count'>60</span> seconds</div></div></div>
+<script>
+const lowSens=document.getElementById('lowSens'), darkMode=document.getElementById('darkMode'), visualOnly=document.getElementById('visualOnly'), audioGuide=document.getElementById('audioGuide');
+['lowSens','darkMode','visualOnly','audioGuide'].forEach(k=>{const v=localStorage.getItem('th_'+k); if(v==='1') document.getElementById(k).checked=true;});
+function applyModes(){document.body.classList.toggle('low-sensory',lowSens.checked);document.body.classList.toggle('dark-calm',darkMode.checked);} applyModes();
+[lowSens,darkMode,visualOnly,audioGuide].forEach(i=>i.addEventListener('change',()=>{localStorage.setItem('th_'+i.id,i.checked?'1':'0');applyModes();}));
+const SUG={tools:['Try the 10‑minute focus','Open the Calm modal','Switch to dark calm mode','Play gentle brown noise'],ground:['5‑4‑3‑2‑1 senses','Butterfly taps','Name 3 colours you can see','Wall push for 15 seconds'],msg:['Slow is still progress.','One step is enough today.','You don’t have to do everything.','Notice your wins.']};
+document.querySelectorAll('[data-mood]').forEach(b=>b.addEventListener('click',()=>{const box=document.querySelector('.suggest');const pick=a=>a[Math.floor(Math.random()*a.length)];box.innerHTML='<div class="pill">✨ Give this a go: <strong>'+pick(SUG.tools)+'</strong></div><div class="pill">🧘 Grounding: <strong>'+pick(SUG.ground)+'</strong></div><div class="pill">💬 Message: <strong>'+pick(SUG.msg)+'</strong></div>'; if(audioGuide.checked && 'speechSynthesis' in window){speechSynthesis.speak(new SpeechSynthesisUtterance('You are safe. Slow your breath. One step is enough today.'));}}));
+const AFF=['You\'re doing better than you think.','Slow is still progress.','One step is enough today.','You don\'t have to do everything.','Rest is productive.','You\'re safe right now.'];
+const moreAff=document.getElementById('moreAff'); if(moreAff) moreAff.onclick=()=>{document.getElementById('affirm').textContent=AFF[Math.floor(Math.random()*AFF.length)];};
+Array.from(document.querySelectorAll('#routine .pill')).forEach(el=>{el.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',el.textContent);});}); const routine=document.getElementById('routine'); routine.addEventListener('dragover',e=>e.preventDefault()); routine.addEventListener('drop',e=>{e.preventDefault(); const t=e.dataTransfer.getData('text/plain'); const node=Array.from(routine.children).find(c=>c.textContent===t); if(node) routine.appendChild(node);});
+const calm=document.getElementById('calmModal'); document.getElementById('needCalm').onclick=()=>{calm.style.display='flex'; let n=60; const cnt=document.getElementById('count'); const id=setInterval(()=>{cnt.textContent=--n; if(n<=0) clearInterval(id);},1000);};
+const canvas=document.getElementById('bubbles'); if(canvas){const ctx=canvas.getContext('2d'); function r(){canvas.width=canvas.offsetWidth; canvas.height=canvas.offsetHeight;} window.addEventListener('resize',r); r(); let B=Array.from({length:20},()=>({x:Math.random()*canvas.width,y:canvas.height+Math.random()*canvas.height,r:6+Math.random()*18,vy:.4+Math.random()*0.8})); (function loop(){if(document.body.classList.contains('low-sensory')) return; ctx.clearRect(0,0,canvas.width,canvas.height); ctx.fillStyle='rgba(255,255,255,0.6)'; B.forEach(b=>{ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,Math.PI*2);ctx.fill(); b.y-=b.vy; if(b.y<-20){b.y=canvas.height+20; b.x=Math.random()*canvas.width;}}); requestAnimationFrame(loop);})();}
+let actx=null, source=null, gain=null; function stopAudio(){if(source){try{source.stop()}catch(e){} source.disconnect();} if(gain) gain.disconnect(); source=null;} const stopBtn=document.getElementById('stopAudio'); if(stopBtn) stopBtn.onclick=stopAudio;
+function makeNoise(type){const buf=actx.createBuffer(1, actx.sampleRate*2, actx.sampleRate); const data=buf.getChannelData(0); let last=0; for(let i=0;i<data.length;i++){const w=Math.random()*2-1; if(type==='white') data[i]=w; else if(type==='pink'){last=0.98*last+0.02*w; data[i]=last*1.8;} else {last+=0.02*w; data[i]=Math.max(-1,Math.min(1,last))*2;}} const src=actx.createBufferSource(); src.buffer=buf; src.loop=true; return src;}
+function filteredNoise(low,high){const src=makeNoise('white'); const f=actx.createBiquadFilter(); f.type='bandpass'; f.frequency.value=(low+high)/2; f.Q.value=0.7; src.connect(f); return {src, f};}
+function play(kind){ if(document.getElementById('visualOnly').checked) return alert('Visual‑only mode is on.'); if(!actx) actx=new (window.AudioContext||window.webkitAudioContext)(); stopAudio(); gain=actx.createGain(); gain.gain.value=0.15; if(['white','pink','brown'].includes(kind)){ source=makeNoise(kind==='brown'?'brown':kind); source.connect(gain);} else if(kind==='rain'){ const n=filteredNoise(300,3000); source=n.src; n.f.connect(gain);} else if(kind==='ocean'){ const n=filteredNoise(80,800); source=n.src; n.f.connect(gain);} else if(kind==='forest'){ const n=filteredNoise(800,4800); source=n.src; n.f.connect(gain);} else if(kind==='fire'){ const n=filteredNoise(600,4000); source=n.src; n.f.connect(gain);} gain.connect(actx.destination); source.start(); }
+Array.from(document.querySelectorAll('[data-sound]')).forEach(b=>b.onclick=()=>play(b.dataset.sound));
+const focus=document.getElementById('focus10'); if(focus) focus.onclick=()=>{alert('10‑minute focus started. A gentle chime will play at the end.'); setTimeout(()=>{ if(!actx) actx=new (window.AudioContext||window.webkitAudioContext)(); const osc=actx.createOscillator(); const g=actx.createGain(); osc.type='sine'; osc.frequency.value=660; g.gain.value=0.0001; osc.connect(g); g.connect(actx.destination); osc.start(); const t=actx.currentTime; g.gain.setTargetAtTime(0.2,t,0.02); g.gain.setTargetAtTime(0.0001,t+0.6,0.2); setTimeout(()=>{osc.stop(); osc.disconnect(); g.disconnect();},1200); if('speechSynthesis' in window && audioGuide.checked){speechSynthesis.speak(new SpeechSynthesisUtterance('Nice work. Take a short break.'));}}, 10*60*1000);};
+</script>
+</body></html>

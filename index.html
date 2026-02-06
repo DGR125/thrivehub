@@ -1,168 +1,37 @@
-<!doctype html>
-<html lang="en-AU">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ThriveHub — Free, teacher‑ready resources</title>
-  <meta name="description" content="Independent wellbeing & inclusive education resources curated by Teresa Bruno.">
-  <style>
-    :root{
-      --indigo:#0b1026; --teal:#036d6d; --text:#0f1720; --muted:#5a6472; --card:#ffffff; --border:#e8ecf3;
-      --accent:#10b5ff; --accent2:#7cc9ff; --green:#10c26e; --green2:#19e27d; --link:#0b6bff;
-      --tagbg:#e8fff2; --tag:#096d3c;
-    }
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:#fff}
-    a{color:var(--link);text-decoration:none}
-    .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
-    header.site{background:linear-gradient(135deg,var(--indigo) 0%, var(--teal) 100%);color:#fff}
-    .site-bar{display:flex;align-items:center;gap:12px;padding:14px 0}
-    .site-bar img{height:40px;width:auto}
-    .site-title{font-weight:800;letter-spacing:.2px;font-size:22px}
-    .tagline{color:#d9f7ff;font-size:15px;margin-left:auto}
-    .hero{padding:12px 0 24px}
-    .hero img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.25);box-shadow:0 10px 24px rgba(0,0,0,.15)}
-    .title-block{margin:18px 0 6px;display:flex;align-items:end;gap:12px;flex-wrap:wrap}
-    .title-block h1{color:#fff;margin:0;font-size:28px}
-    .subtitle{color:#e7fffb;margin:0;font-size:16px}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;font-weight:700;border:1px solid transparent}
-    .btn-primary{background:linear-gradient(180deg,var(--green2),var(--green));color:#032a18;border-color:#17d577;box-shadow:0 10px 24px rgba(25,226,125,.28)}
-    .btn-accent{background:linear-gradient(180deg,var(--accent2),var(--accent));color:#06243b;border-color:#22c1ff;box-shadow:0 10px 24px rgba(16,181,255,.28)}
-    .btn-light{background:#ffffff;color:#07283e;border-color:#dbe7f3}
+<!doctype html><html lang='en-AU'><head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>ThriveHub — Free, teacher‑ready resources</title>
+<link rel='icon' href='assets/favicon.png'>
+<style>:root{--eucalyptus:#6B9080;--soft-sage:#A4C3B2;--warm-cream:#F6FFF8;--muted-teal:#CCE3DE;--charcoal:#2F3E46;--soft-peach:#FFB7A5;--dusty-mustard:#F2CC8F;--sky-blue:#BEE7E8;--soft-lavender:#CDB4DB;--bg:var(--warm-cream);--panel:#ffffff;--text:var(--charcoal);--muted:#50606b;--border:#e6efe9;--link:#2F6B68}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+a{color:var(--link)} .wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+header.site{background:linear-gradient(135deg,var(--muted-teal),var(--soft-sage));border-bottom:1px solid var(--border)}
+.bar{display:flex;gap:10px;align-items:center;padding:12px 0} .bar img{height:44px}
+.btn{display:inline-flex;gap:8px;align-items:center;padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:#fff;box-shadow:0 4px 12px rgba(47,62,70,.06)}
 
-    main{padding:24px 0 36px}
-
-    .gateway{margin-top:18px}
-    .gateway .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-    .gate{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;display:flex;gap:10px;align-items:center;box-shadow:0 4px 12px rgba(3,17,38,.06)}
-    .gate svg{flex:0 0 18px}
-
-    .invite{margin-top:22px;display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
-    .panel{background:linear-gradient(135deg,rgba(16,194,110,.10),rgba(16,181,255,.10));border:1px solid var(--border);border-radius:14px;padding:16px}
-    .panel h3{margin:6px 0 8px}
-    @media (max-width:920px){.invite{grid-template-columns:1fr}}
-
-    .highlights{margin-top:22px}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:0 6px 16px rgba(3,17,38,.07)}
-    .card h3{margin:4px 0 10px;font-size:16px}
-    .muted{color:var(--muted);font-size:14px}
-    .tags{display:inline-flex;gap:6px;margin-left:6px}
-    .tag{background:var(--tagbg);color:var(--tag);border:1px solid #c7f5dc;border-radius:999px;padding:2px 6px;font-size:11px}
-
-    .teams-inline{display:none}
-    @media (max-width:720px){.teams-inline{display:block;margin-top:10px}}
-
-    footer{border-top:1px solid var(--border);padding:16px 0;color:var(--muted);font-size:14px}
-    .about{margin-top:26px}
-  </style>
-</head>
+.hero img{width:100%;border-radius:16px;border:1px solid var(--border);box-shadow:0 8px 24px rgba(47,62,70,.12)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gate{background:#fff;border:1px solid var(--border);border-radius:14px;padding:12px 14px;display:flex;gap:10px;align-items:center;box-shadow:0 4px 12px rgba(47,62,70,.06)}
+</style></head>
 <body>
-  <header class="site">
-    <div class="wrap">
-      <div class="site-bar">
-        <img src="assets/thrivehub-logo.png" alt="ThriveHub" onerror="this.replaceWith(Object.assign(document.createElement('strong'),{textContent:'ThriveHub'}))">
-        <div class="site-title">ThriveHub</div>
-        <p class="tagline">Your curated directory for free, trusted teaching and wellbeing resources.</p>
-      </div>
-      <div class="hero">
-        <div class="title-block">
-          <h1>Free, teacher‑ready resources — one click <a class="btn-light" style="padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.4)" href="library.html#policy">NEW: Policy updates</a></h1>
-          <p class="subtitle"><strong>Curated for education staff</strong>. Independent wellbeing support by <strong>Teresa Bruno</strong>.</p>
-        </div>
-        <img src="assets/hero.jpg" alt="Welcoming classroom scene in blues and greens">
-        <div class="actions">
-          <a class="btn btn-primary" href="library.html">📚 Explore the full library</a>
-          <a class="btn btn-accent" href="https://www.youtube.com/playlist?list=PLt-example" target="_blank" rel="noopener">▶ Wellbeing playlist</a>
-          <a class="btn btn-light" href="https://thestudentwellbeing.wordpress.com/2026/02/05/supporting-every-learner-specialist-google-classrooms-for-wellbeing-and-diverse-needs/" target="_blank" rel="noopener">🆕 Specialist Google Classrooms</a>
-        </div>
-        <div class="teams-inline">
-          <a class=\"btn btn-light\" href=\"https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 General Wellbeing Connection</a><a class=\"btn btn-light\" href=\"https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 SWD Connections – PH2</a><a class=\"btn btn-light\" href=\"https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 Social Work Truancy</a>
-        </div>
-      </div>
+<header class='site'><div class='wrap bar'><img src='assets/thrivehub-logo.png' alt='ThriveHub'><strong>ThriveHub</strong><span style='margin-left:auto;color:#2F3E46;opacity:.85'>Calm • Warm • Supportive</span></div></header>
+<main class='wrap'>
+  <section class='hero' style='margin-top:8px'>
+    <img src='assets/hero.jpg' alt='Calm hero'>
+    <div style='margin:10px 0;display:flex;gap:10px;flex-wrap:wrap'>
+      <a class='btn' style='background:var(--soft-peach);color:#412e2a' href='resources.html'>🌿 Calm Space</a>
+      <a class='btn' style='background:var(--dusty-mustard);color:#3f321e' href='library.html'>📚 Full Library</a>
+      <a class='btn' href='suggest.html'>💡 Suggest a resource</a>
     </div>
-  </header>
-
-  <main class="wrap">
-    <section class="gateway" aria-label="Library gateway">
-      <h2>Browse topics</h2>
-      <div class="grid">
-        <a class="gate" href="library.html#wellbeing"><svg width='18' height='18' viewBox='0 0 24 24' fill='none'><circle cx='12' cy='8' r='4' fill='#19e27d'/><path d='M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6' stroke='#0b6bff' stroke-width='2' stroke-linecap='round'/></svg><div>Wellbeing</div></a>
-        <a class="gate" href="library.html#autism"><svg width='18' height='18' viewBox='0 0 24 24' fill='none'><path d='M12 2l3 6 6 3-6 3-3 6-3-6-6-3 6-3 3-6z' fill='#0b6bff'/></svg><div>Autism</div></a>
-        <a class="gate" href="library.html#adhd"><svg width='18' height='18' viewBox='0 0 24 24' fill='none'><path d='M5 12h14' stroke='#0b6bff' stroke-width='2'/><path d='M12 5v14' stroke='#10c26e' stroke-width='2'/></svg><div>ADHD</div></a>
-        <a class="gate" href="library.html#dld"><svg width='18' height='18' viewBox='0 0 24 24' fill='none'><rect x='3' y='5' width='18' height='14' rx='2' stroke='#036d6d' stroke-width='2'/><path d='M6 9h6M6 13h12' stroke='#19e27d' stroke-width='2'/></svg><div>DLD</div></a>
-        <a class="gate" href="library.html#eald"><svg width='18' height='18' viewBox='0 0 24 24' fill='none'><path d='M4 6h10v4H4z' fill='#7cc9ff'/><path d='M14 10l6 4-6 4V10z' fill='#10b5ff'/></svg><div>EAL/D</div></a>
-        <a class="gate" href="library.html#aac"><svg width='18' height='18' viewBox='0 0 24 24' fill='none'><path d='M4 6h12v10H4z' stroke='#0b6bff' stroke-width='2'/><circle cx='10' cy='11' r='2' fill='#19e27d'/></svg><div>AAC & AT</div></a>
-        <a class="gate" href="library.html#online-safety"><svg width='18' height='18' viewBox='0 0 24 24' fill='none'><rect x='3' y='4' width='18' height='12' rx='2' fill='#10c26e'/><path d='M8 20h8' stroke='#0b6bff' stroke-width='2' stroke-linecap='round'/></svg><div>Online safety</div></a>
-        <a class="gate" href="library.html#policy"><svg width='18' height='18' viewBox='0 0 24 24' fill='none'><path d='M6 3h12v18l-6-3-6 3V3z' fill='#036d6d'/></svg><div>Policy</div></a>
-        <a class="gate" href="library.html#professional-learning"><svg width='18' height='18' viewBox='0 0 24 24' fill='none'><path d='M4 6h16v10H4z' stroke='#0b6bff' stroke-width='2'/><path d='M8 20h8' stroke='#19e27d' stroke-width='2' stroke-linecap='round'/></svg><div>Professional learning</div></a>
-      </div>
-    </section>
-
-    <section class="invite">
-      <div class="panel">
-        <h3>Quick start</h3>
-        <p class="muted">Open trusted, free resources in one click. Everything is organised by topic, audience and format.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="library.html#wellbeing">Wellbeing</a>
-          <a class="btn btn-primary" href="library.html#dld">DLD</a>
-          <a class="btn btn-primary" href="library.html#aac">AAC</a>
-          <a class="btn btn-primary" href="library.html#policy">Policy</a>
-        </div>
-      </div>
-      <div class="panel">
-        <h3>Join our Teams spaces</h3>
-        <div class="actions">
-          <a class=\"btn btn-light\" style=\"background:linear-gradient(180deg,#1b4291,#14306a);color:#fff\" href=\"https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 General Wellbeing Connection</a><a class=\"btn btn-light\" style=\"background:linear-gradient(180deg,#1b4291,#14306a);color:#fff\" href=\"https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 SWD Connections – PH2</a><a class=\"btn btn-light\" style=\"background:linear-gradient(180deg,#1b4291,#14306a);color:#fff\" href=\"https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07\" target=\"_blank\" rel=\"noopener\">💬 Social Work Truancy</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="highlights">
-      <h2>Highlights</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Wellbeing (whole‑school & classroom)</h3>
-          <ul class="res">
-            <li><a href="https://beyou.edu.au/" target="_blank" rel="noopener">Be You</a> — educator PD and whole‑school frameworks. <span class="tags"><span class="tag">PD</span></span></li>
-            <li><a href="https://education.headspace.org.au/" target="_blank" rel="noopener">headspace Schools</a> — mental health programs Y4–12. <span class="tags"><span class="tag">Toolkit</span><span class="tag">Video</span></span></li>
-            <li><a href="https://positivemindsaustralia.com.au/" target="_blank" rel="noopener">Positive Minds Australia</a> — PD, workshops & SEL programs. <span class="tags"><span class="tag">PD</span></span></li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Autism & neurodiversity</h3>
-          <ul class="res">
-            <li><a href="https://www.positivepartnerships.com.au/" target="_blank" rel="noopener">Positive Partnerships</a> — classroom strategies & PL. <span class="tags"><span class="tag">Toolkit</span></span></li>
-            <li><a href="https://inclusioned.edu.au/" target="_blank" rel="noopener">inclusionED (Autism CRC)</a> — evidence‑informed practices. <span class="tags"><span class="tag">Guide</span></span></li>
-            <li><a href="https://suelarkey.com.au/" target="_blank" rel="noopener">Sue Larkey</a> — autism courses & practical resources. <span class="tags"><span class="tag">PD</span></span></li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Professional learning</h3>
-          <ul class="res">
-            <li><a href="https://www.plink.sa.edu.au/" target="_blank" rel="noopener">PLINK — SA Department for Education</a> — course portal (EdPass login). <span class="tags"><span class="tag">Course</span></span></li>
-            <li><a href="https://www.education.sa.gov.au/working-us/rrhan-ec/fundamentals-course-responding-risks-harm-abuse-and-neglect-education-and-care" target="_blank" rel="noopener">RRHAN‑EC Fundamentals</a> — mandatory notification training overview. <span class="tags"><span class="tag">Compliance</span></span></li>
-            <li><a href="https://www.ais.sa.edu.au/professional-learning/" target="_blank" rel="noopener">AISSA — Professional Learning</a> — independent sector PD calendar. <span class="tags"><span class="tag">PD</span></span></li>
-            <li><a href="https://www.cesa.catholic.edu.au/working-with-us/benefits-support/professional-development" target="_blank" rel="noopener">CESA — Professional Development</a> — Catholic Education SA PD hub. <span class="tags"><span class="tag">PD</span></span></li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <h2>About</h2>
-      <p>I’m <strong>Teresa Bruno</strong>. I built ThriveHub so education staff can open <em>reliable, free</em> wellbeing and inclusion resources in one click — without trawling the web.</p>
-      <p><strong>How I curate</strong>: reputable and public sources; evidence‑informed, practical guidance; resources that are classroom‑ready. Links are checked and refreshed regularly, and I welcome suggestions via the “Suggest a resource” link.</p>
-    </section>
-  </main>
-
-  <footer class="wrap">
-    <p>Contact <a href="mailto:teresa.bruno@sa.gov.au">teresa.bruno@sa.gov.au</a> — built to support our education staff in sites. <a href="suggest.html">Suggest a resource</a>.</p>
-    <p class="muted">Privacy: Analytics via Cloudflare Web Analytics (no cookies for basic stats). Links open in a new tab.</p>
-  </footer>
-
-  <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4be9740951c64b459e4609a0c51af0b1"}'></script>
-<!-- End Cloudflare Web Analytics -->
-</body>
-</html>
+  </section>
+  <h2>Browse topics</h2>
+  <div class='grid'>
+    <a class='gate' href='library.html#wellbeing'>🌱<div>Wellbeing</div></a>
+    <a class='gate' href='library.html#autism'>🧩<div>Autism</div></a>
+    <a class='gate' href='library.html#adhd'>⚡<div>ADHD</div></a>
+    <a class='gate' href='library.html#eald'>🗣️<div>EAL/D</div></a>
+    <a class='gate' href='library.html#aac'>🗨️<div>AAC & AT</div></a>
+    <a class='gate' href='library.html#professional-learning'>🎓<div>Professional learning</div></a>
+  </div>
+</main>
+</body></html>

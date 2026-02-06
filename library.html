@@ -1,94 +1,128 @@
-<!doctype html>
-<html lang="en-AU">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ThriveHub — Full Library</title>
-  <style>
-    :root{--text:#0f1720;--muted:#5a6472;--border:#e8ecf3;--link:#0b6bff}
-    body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;margin:0;color:var(--text);background:#fff}
-    header,footer{padding:16px 20px}
-    header{border-bottom:1px solid var(--border)}
-    .container{max-width:1160px;margin:0 auto;padding:20px}
-    a{color:var(--link)}
-  </style>
-  
-  <style>
-    .filters{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 18px}
-    .chip{border:1px solid var(--border);background:#fff;padding:6px 10px;border-radius:999px;cursor:pointer;font-size:14px}
-    .chip.active{background:linear-gradient(180deg,#19e27d,#10c26e);color:#062816;border-color:#18d37c}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
-    .card{background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:0 6px 16px rgba(3,17,38,.07);padding:16px}
-    .card h2{margin:0 0 6px;font-size:18px}
-    .card p.overview{margin:0 0 10px;color:var(--muted)}
-    .meta{font-size:12px;color:var(--muted);margin:6px 0 10px}
-    .links li{margin:8px 0}
-    .links a{font-weight:600}
-    .badge{display:inline-block;background:#ff7a1a;color:#fff;font-size:11px;padding:2px 6px;border-radius:999px;margin-left:6px}
-    .copy-btn{margin-left:8px;border:1px solid var(--border);border-radius:999px;padding:3px 8px;font-size:12px;background:#f6fff9}
-    .to-top{position:fixed;right:18px;bottom:18px;background:linear-gradient(180deg,#19e27d,#10c26e);color:#062816;border:none;padding:12px 14px;border-radius:999px;box-shadow:0 10px 24px rgba(25,226,125,.28);cursor:pointer;display:none;font-weight:800}
-  </style>
-  <script>
-    const state={topic:null,aud:null,fmt:null};
-    function setFilter(group,value){
-      state[group]= state[group]===value? null: value;
-      document.querySelectorAll('.chip[data-group="'+group+'"]').forEach(c=>c.classList.toggle('active', c.dataset.value===state[group]));
-      apply();
-    }
-    function apply(){
-      document.querySelectorAll('.card[data-topic]').forEach(card=>{
-        const okTopic = !state.topic || card.dataset.topic===state.topic;
-        const okAud   = !state.aud   || card.dataset.aud.split(',').includes(state.aud);
-        const okFmt   = !state.fmt   || card.dataset.fmt.split(',').includes(state.fmt);
-        card.style.display = (okTopic && okAud && okFmt)? 'block':'none';
-      });
-    }
-    function copyLink(id, el){
-      const url = location.origin+location.pathname+'#'+id;
-      navigator.clipboard.writeText(url).then(()=>{el.textContent='✓ Copied'; setTimeout(()=>el.textContent='🔗 Copy link',1200)})
-    }
-    window.addEventListener('scroll',()=>{
-      document.getElementById('toTop').style.display = window.scrollY>400? 'inline-flex':'none';
-    });
-    function toTop(){window.scrollTo({top:0,behavior:'smooth'});}
-  </script>
+<!doctype html><html lang='en-AU'><head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>ThriveHub — Full Library</title>
+<link rel='icon' href='assets/favicon.png'>
+<style>:root{--eucalyptus:#6B9080;--soft-sage:#A4C3B2;--warm-cream:#F6FFF8;--muted-teal:#CCE3DE;--charcoal:#2F3E46;--soft-peach:#FFB7A5;--dusty-mustard:#F2CC8F;--sky-blue:#BEE7E8;--soft-lavender:#CDB4DB;--bg:var(--warm-cream);--panel:#ffffff;--text:var(--charcoal);--muted:#50606b;--border:#e6efe9;--link:#2F6B68}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+a{color:var(--link)} .wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+header.site{background:linear-gradient(135deg,var(--muted-teal),var(--soft-sage));border-bottom:1px solid var(--border)}
+.bar{display:flex;gap:10px;align-items:center;padding:12px 0} .bar img{height:44px}
+.btn{display:inline-flex;gap:8px;align-items:center;padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:#fff;box-shadow:0 4px 12px rgba(47,62,70,.06)}
 
+header.site{background:linear-gradient(180deg,var(--muted-teal),#fff)}
+.container{max-width:1160px;margin:0 auto;padding:20px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{border:1px solid var(--border);background:#fff;padding:6px 10px;border-radius:999px;cursor:pointer;font-size:14px}
+.chip.active{background:var(--soft-sage);color:#122}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:0 6px 16px rgba(47,62,70,.07);padding:16px}
+.card h2{margin:0 0 6px;font-size:18px} .card p.overview{margin:0 0 10px;color:var(--muted)}
+.meta{font-size:12px;color:var(--muted);margin:6px 0 10px} .links li{margin:8px 0} .links a{font-weight:600}
+.badge{display:inline-block;background:var(--soft-peach);color:#412e2a;font-size:11px;padding:2px 6px;border-radius:999px;margin-left:6px}
+.region{display:inline-block;background:var(--sky-blue);color:#0f4a4c;font-size:11px;padding:2px 6px;border-radius:999px;margin-left:6px;border:1px solid #97d6d8}
+.copy-btn{margin-left:8px;border:1px solid var(--border);border-radius:999px;padding:3px 8px;font-size:12px;background:#fff}
+.searchbar{margin:10px 0 16px;display:flex;gap:8px} .searchbar input{flex:1;padding:10px 12px;border:1px solid var(--border);border-radius:10px;font-size:14px}
+.to-top{position:fixed;right:18px;bottom:18px;background:var(--soft-peach);color:#412e2a;border:none;padding:12px 14px;border-radius:999px;box-shadow:0 10px 24px rgba(47,62,70,.18);cursor:pointer;display:none;font-weight:800}
+</style>
+<script>
+const state={topic:null,aud:null,fmt:null,query:''};
+function setFilter(group,value){state[group]= state[group]===value? null: value; document.querySelectorAll('.chip[data-group="'+group+'"]').forEach(c=>c.classList.toggle('active', c.dataset.value===state[group])); apply();}
+function setQuery(v){state.query=v.toLowerCase(); apply();}
+function apply(){document.querySelectorAll('.card[data-topic]').forEach(card=>{const okT=!state.topic||card.dataset.topic===state.topic; const okA=!state.aud||card.dataset.aud.split(',').includes(state.aud); const okF=!state.fmt||card.dataset.fmt.split(',').includes(state.fmt); const okQ=!state.query||card.innerText.toLowerCase().includes(state.query); card.style.display=(okT&&okA&&okF&&okQ)?'block':'none';});}
+function copyLink(id,el){const url=location.origin+location.pathname+'#'+id; navigator.clipboard.writeText(url).then(()=>{el.textContent='✓ Copied'; setTimeout(()=>el.textContent='🔗 Copy link',1200)});}
+(function(){document.querySelectorAll('[data-added]').forEach(el=>{const d=new Date(el.dataset.added); if(Date.now()-d.getTime()>30*24*60*60*1000){el.querySelectorAll('.badge').forEach(b=>b.style.display='none');}})})();
+window.addEventListener('scroll',()=>{document.getElementById('toTop').style.display=window.scrollY>400?'inline-flex':'none';});
+function toTop(){window.scrollTo({top:0,behavior:'smooth'});}
+</script>
 </head>
-<body>
-<header>
-  <div class="container">
-    <h1>ThriveHub — Full Library</h1>
-    <p class="small">Independent wellbeing support curated by Teresa Bruno. Links open in a new tab; major links show <em>last verified</em> dates.</p>
-    <div class="filters" role="toolbar" aria-label="Filters">
-      <strong>Filter:</strong>
-      <button class="chip" data-group="topic" data-value="wellbeing" onclick="setFilter('topic','wellbeing')">Topic: Wellbeing</button>
-      <button class="chip" data-group="topic" data-value="autism" onclick="setFilter('topic','autism')">Topic: Autism</button>
-      <button class="chip" data-group="topic" data-value="policy" onclick="setFilter('topic','policy')">Topic: Policy</button>
-      <button class="chip" data-group="topic" data-value="professional-learning" onclick="setFilter('topic','professional-learning')">Topic: Professional learning</button>
-      <button class="chip" data-group="aud" data-value="Teacher" onclick="setFilter('aud','Teacher')">Audience: Teacher</button>
-      <button class="chip" data-group="aud" data-value="Leader" onclick="setFilter('aud','Leader')">Audience: Leader</button>
-      <button class="chip" data-group="aud" data-value="Student Support" onclick="setFilter('aud','Student Support')">Audience: Student Support</button>
-      <button class="chip" data-group="fmt" data-value="Guide" onclick="setFilter('fmt','Guide')">Format: Guide</button>
-      <button class="chip" data-group="fmt" data-value="Toolkit" onclick="setFilter('fmt','Toolkit')">Format: Toolkit</button>
-      <button class="chip" data-group="fmt" data-value="Video" onclick="setFilter('fmt','Video')">Format: Video</button>
-      <button class="chip" data-group="fmt" data-value="Course" onclick="setFilter('fmt','Course')">Format: Course</button>
-      <button class="chip" data-group="fmt" data-value="PD" onclick="setFilter('fmt','PD')">Format: PD</button>
-    </div>
-  </div>
-</header>
+<body onload='apply()'>
+<header class='site'><div class='container'><h1>ThriveHub — Full Library</h1>
+<p class='small'>Independent wellbeing support curated for education staff. Links open in a new tab; major links show <em>last verified</em> dates.</p>
+<div class='searchbar'><input type='search' placeholder='Search library… (e.g., trauma, PD, RRHAN, autism)' aria-label='Search library' oninput='setQuery(this.value)'></div>
+<div class='filters' role='toolbar' aria-label='Filters'>
+<strong>Filter:</strong>
+<button class='chip' data-group='topic' data-value='wellbeing' onclick="setFilter('topic','wellbeing')">Topic: Wellbeing</button>
+<button class='chip' data-group='topic' data-value='autism' onclick="setFilter('topic','autism')">Topic: Autism</button>
+<button class='chip' data-group='topic' data-value='policy' onclick="setFilter('topic','policy')">Topic: Policy</button>
+<button class='chip' data-group='topic' data-value='professional-learning' onclick="setFilter('topic','professional-learning')">Topic: Professional learning</button>
+<button class='chip' data-group='aud' data-value='Teacher' onclick="setFilter('aud','Teacher')">Audience: Teacher</button>
+<button class='chip' data-group='aud' data-value='Leader' onclick="setFilter('aud','Leader')">Audience: Leader</button>
+<button class='chip' data-group='aud' data-value='Student Support' onclick="setFilter('aud','Student Support')">Audience: Student Support</button>
+<button class='chip' data-group='fmt' data-value='Guide' onclick="setFilter('fmt','Guide')">Format: Guide</button>
+<button class='chip' data-group='fmt' data-value='Toolkit' onclick="setFilter('fmt','Toolkit')">Format: Toolkit</button>
+<button class='chip' data-group='fmt' data-value='Video' onclick="setFilter('fmt','Video')">Format: Video</button>
+<button class='chip' data-group='fmt' data-value='Course' onclick="setFilter('fmt','Course')">Format: Course</button>
+<button class='chip' data-group='fmt' data-value='PD' onclick="setFilter('fmt','PD')">Format: PD</button>
+</div></div></header>
+<main class='container'><section class='cards'>
 
-<main class="container">
-  <section class="cards"><article class="card" id="wellbeing" data-topic="wellbeing" data-aud="Teacher,Leader" data-fmt="Guide,Toolkit,Video"><h2>🌱 Wellbeing <button class="copy-btn" onclick="copyLink('wellbeing',this)">🔗 Copy link</button></h2><p class="overview">Whole‑school frameworks and classroom resources to strengthen mental health and belonging.</p><div class="meta">Audience: Teacher, Leader • Formats: Guide, Toolkit, Video</div><ul class="links"><li><a href="https://beyou.edu.au/" target="_blank" rel="noopener">Be You</a> — National initiative with PD, planning tools and classroom activities. <span class="muted">Best for: Whole‑school planning; verified: Feb 2026</span></li><li><a href="https://education.headspace.org.au/" target="_blank" rel="noopener">headspace Schools</a> — Programs and lesson content for Years 4–12. <span class="muted">Best for: Classroom activities; verified: Feb 2026</span></li><li><a href="https://emergingminds.com.au/resources/" target="_blank" rel="noopener">Emerging Minds — Resources</a> — Trauma‑aware approaches and practical guides. <span class="muted">Best for: Student support; verified: Feb 2026</span></li><li><a href="https://studentwellbeinghub.edu.au/" target="_blank" rel="noopener">Student Wellbeing Hub</a> — Evidence‑based resources for teachers and leaders. <span class="muted">Best for: Policy & practice; verified: Feb 2026</span></li><li><a href="https://positivemindsaustralia.com.au/" target="_blank" rel="noopener">Positive Minds Australia</a> — PD, school workshops, and SEL programs by Madhavi N. Parker. <span class="muted">Best for: PD & SEL; verified: Feb 2026</span> <span class="badge">NEW</span></li></ul></article><article class="card" id="online-safety" data-topic="online-safety" data-aud="Teacher,Leader" data-fmt="Guide,Toolkit"><h2>🛡️ Online Safety <button class="copy-btn" onclick="copyLink('online-safety',this)">🔗 Copy link</button></h2><p class="overview">Classroom resources and guidance for digital safety and citizenship.</p><div class="meta">Audience: Teacher, Leader • Formats: Guide, Toolkit</div><ul class="links"><li><a href="https://www.esafety.gov.au/educators/classroom-resources" target="_blank" rel="noopener">eSafety — Classroom resources</a> — Units, lesson plans and activities by year level. <span class="muted">Best for: Classroom strategies; verified: Feb 2026</span></li><li><a href="https://www.thinkuknow.org.au/" target="_blank" rel="noopener">ThinkUKnow</a> — Teacher and parent education materials. <span class="muted">Best for: Community engagement; verified: Feb 2026</span></li></ul></article><article class="card" id="autism" data-topic="autism" data-aud="Teacher,Student Support" data-fmt="Guide,Toolkit"><h2>🧩 Autism <button class="copy-btn" onclick="copyLink('autism',this)">🔗 Copy link</button></h2><p class="overview">Quality‑assured strategies and templates to support autistic learners.</p><div class="meta">Audience: Teacher, Student Support • Formats: Guide, Toolkit</div><ul class="links"><li><a href="https://www.positivepartnerships.com.au/" target="_blank" rel="noopener">Positive Partnerships</a> — Professional learning and classroom resources. <span class="muted">Best for: Classroom strategies; verified: Feb 2026</span></li><li><a href="https://inclusioned.edu.au/" target="_blank" rel="noopener">inclusionED (Autism CRC)</a> — Evidence‑informed practices to include all learners. <span class="muted">Best for: Planning & intervention; verified: Feb 2026</span></li><li><a href="https://www.autismcrc.com.au/" target="_blank" rel="noopener">Autism CRC — Resources</a> — Research and practice resources from Autism CRC. <span class="muted">Best for: Evidence & tools; verified: Feb 2026</span></li><li><a href="https://suelarkey.com.au/" target="_blank" rel="noopener">Sue Larkey — Autism courses & resources</a> — Courses, workshops and classroom strategies. <span class="muted">Best for: PD & strategies; verified: Feb 2026</span> <span class="badge">NEW</span></li></ul></article><article class="card" id="adhd" data-topic="adhd" data-aud="Teacher,Student Support" data-fmt="Guide,Toolkit"><h2>⚡ ADHD <button class="copy-btn" onclick="copyLink('adhd',this)">🔗 Copy link</button></h2><p class="overview">Practical strategies and factsheets for attention and regulation support.</p><div class="meta">Audience: Teacher, Student Support • Formats: Guide, Toolkit</div><ul class="links"><li><a href="https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/attention-deficit-hyperactivity-disorder" target="_blank" rel="noopener">NSW Inclusive Practice — ADHD strategies</a> — Evidence‑based classroom strategies. <span class="muted">Best for: Classroom strategies; verified: Feb 2026</span></li><li><a href="https://aadpa.com/adhd-fact-sheets/" target="_blank" rel="noopener">AADPA — Educator factsheets</a> — Short, practical factsheets for schools. <span class="muted">Best for: Quick reference; verified: Feb 2026</span></li></ul></article><article class="card" id="eald" data-topic="eald" data-aud="Teacher" data-fmt="Guide,PDF"><h2>🗣️ EAL/D <button class="copy-btn" onclick="copyLink('eald',this)">🔗 Copy link</button></h2><p class="overview">Resources for learners of English as an Additional Language or Dialect.</p><div class="meta">Audience: Teacher • Formats: Guide, PDF</div><ul class="links"><li><a href="https://www.acara.edu.au/docs/default-source/resources/eald-teacher-resource.pdf" target="_blank" rel="noopener">ACARA EAL/D Teacher Resource (PDF)</a> — Progression and planning guidance. <span class="muted">Best for: Planning; verified: Feb 2026</span></li><li><a href="https://www.australiancurriculum.edu.au/resources/eald/" target="_blank" rel="noopener">Australian Curriculum — EAL/D</a> — Curriculum resources and advice. <span class="muted">Best for: Curriculum links; verified: Feb 2026</span></li><li><a href="https://education.nsw.gov.au/teaching-and-learning/curriculum/languages/english-as-an-additional-language-or-dialect" target="_blank" rel="noopener">NSW — EAL/D resources</a> — Practical classroom supports. <span class="muted">Best for: Classroom strategies; verified: Feb 2026</span></li></ul></article><article class="card" id="dld" data-topic="dld" data-aud="Teacher,Student Support" data-fmt="Guide,Toolkit"><h2>🔤 Developmental Language Disorder (DLD) <button class="copy-btn" onclick="copyLink('dld',this)">🔗 Copy link</button></h2><p class="overview">High‑value links for understanding and supporting language disorders in the classroom.</p><div class="meta">Audience: Teacher, Student Support • Formats: Guide, Toolkit</div><ul class="links"><li><a href="https://thedldproject.com/" target="_blank" rel="noopener">The DLD Project</a> — Awareness, educator info and classroom tips. <span class="muted">Best for: Awareness & planning; verified: Feb 2026</span></li><li><a href="https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/communication-and-language-disorders" target="_blank" rel="noopener">NSW Inclusive Practice — Communication & language</a> — Teacher guidance for communication needs. <span class="muted">Best for: Classroom strategies; verified: Feb 2026</span></li><li><a href="https://readingwritingcentre.education.qld.gov.au/language-disorders" target="_blank" rel="noopener">QLD Reading & Writing Centre — Language disorders</a> — Guidance and tools from QLD DoE. <span class="muted">Best for: Planning & intervention; verified: Feb 2026</span></li></ul></article><article class="card" id="at" data-topic="at" data-aud="Teacher,Student Support,Leader" data-fmt="Toolkit,Guide"><h2>🛠️ Assistive Technology (AT) <button class="copy-btn" onclick="copyLink('at',this)">🔗 Copy link</button></h2><p class="overview">Approaches and tools to support access, participation and learning.</p><div class="meta">Audience: Teacher, Student Support, Leader • Formats: Toolkit, Guide</div><ul class="links"><li><a href="https://education.qld.gov.au/students/inclusive-education/assistive-technology" target="_blank" rel="noopener">QLD Education — Assistive Technology</a> — Overview and pathways for AT in schools. <span class="muted">Best for: Planning; verified: Feb 2026</span></li><li><a href="https://inclusiveschoolcommunities.org.au/resources/assistive-technology" target="_blank" rel="noopener">Inclusive School Communities — AT toolkit</a> — Practical toolkit for selecting AT. <span class="muted">Best for: Choosing tools; verified: Feb 2026</span></li><li><a href="https://dsf.net.au/resources/assistive-technology" target="_blank" rel="noopener">DSF — AT resources</a> — Literacy‑support technologies and guides. <span class="muted">Best for: Intervention; verified: Feb 2026</span></li></ul></article><article class="card" id="aac" data-topic="aac" data-aud="Teacher,Student Support" data-fmt="Guide,Course"><h2>🗨️ AAC (Augmentative & Alternative Communication) <button class="copy-btn" onclick="copyLink('aac',this)">🔗 Copy link</button></h2><p class="overview">Key resources to support complex communication needs and AAC.</p><div class="meta">Audience: Teacher, Student Support • Formats: Guide, Course</div><ul class="links"><li><a href="https://www.adwest.sa.edu.au/our-school/curriculum/augmentative-and-alternative-communication.html" target="_blank" rel="noopener">Adelaide West — AAC</a> — Local information about AAC approaches. <span class="muted">Best for: Getting started; verified: Feb 2026</span></li><li><a href="https://www.plink.sa.edu.au/ilp/pages/description.jsf?menuId=21772486#/users/@self/catalogues/15965657/courses/15974112/description" target="_blank" rel="noopener">PLINK — AAC course (login may be required)</a> — Professional learning module for AAC. <span class="muted">Best for: PD / course; verified: Feb 2026</span></li><li><a href="https://communicationhub.com.au/AidsAndSupports" target="_blank" rel="noopener">Communication Hub — Aids & Supports</a> — Overview of AAC aids and supports. <span class="muted">Best for: Choosing tools; verified: Feb 2026</span></li></ul></article><article class="card" id="vision-hearing" data-topic="vision-hearing" data-aud="Teacher,Student Support" data-fmt="Guide"><h2>👁️‍🗨️ Blind/Low Vision & Deaf/Hard of Hearing <button class="copy-btn" onclick="copyLink('vision-hearing',this)">🔗 Copy link</button></h2><p class="overview">Strategies and links for sensory accessibility and participation.</p><div class="meta">Audience: Teacher, Student Support • Formats: Guide</div><ul class="links"><li><a href="https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/vision-impairment" target="_blank" rel="noopener">NSW — Vision impairment strategies</a> — Teacher strategies and adjustments. <span class="muted">Best for: Classroom strategies; verified: Feb 2026</span></li><li><a href="https://www.allplaylearn.org.au/" target="_blank" rel="noopener">AllPlay Learn</a> — Evidence‑based resources to include every student. <span class="muted">Best for: Classroom strategies; verified: Feb 2026</span></li><li><a href="https://www.visionaustralia.org/services/children" target="_blank" rel="noopener">Vision Australia — Education</a> — Guidance and services for children. <span class="muted">Best for: Information & pathways; verified: Feb 2026</span></li></ul></article><article class="card" id="fasd" data-topic="fasd" data-aud="Teacher,Student Support" data-fmt="Guide"><h2>🍃 FASD <button class="copy-btn" onclick="copyLink('fasd',this)">🔗 Copy link</button></h2><p class="overview">Resources for understanding and supporting students with FASD.</p><div class="meta">Audience: Teacher, Student Support • Formats: Guide</div><ul class="links"><li><a href="https://learningwithfasd.org.au/" target="_blank" rel="noopener">Learning with FASD</a> — Practical strategies for educators. <span class="muted">Best for: Classroom strategies; verified: Feb 2026</span></li><li><a href="https://www.fasdhub.org.au/" target="_blank" rel="noopener">FASD Hub Australia</a> — National information hub with school resources. <span class="muted">Best for: Reference; verified: Feb 2026</span></li><li><a href="https://www.nofasd.org.au/" target="_blank" rel="noopener">NOFASD Australia</a> — Support information and guidance. <span class="muted">Best for: Reference; verified: Feb 2026</span></li></ul></article><article class="card" id="evidence" data-topic="evidence" data-aud="Teacher,Leader" data-fmt="Toolkit,Guide"><h2>🗂️ Evidence for practice <button class="copy-btn" onclick="copyLink('evidence',this)">🔗 Copy link</button></h2><p class="overview">Trusted summaries of what works to improve learning and wellbeing.</p><div class="meta">Audience: Teacher, Leader • Formats: Toolkit, Guide</div><ul class="links"><li><a href="https://evidenceforlearning.org.au/the-toolkit/" target="_blank" rel="noopener">Evidence for Learning — Toolkit</a> — Australia‑focused, practice‑oriented evidence summaries. <span class="muted">Best for: Strategy selection; verified: Feb 2026</span></li><li><a href="https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit" target="_blank" rel="noopener">EEF — Teaching & Learning Toolkit</a> — Global evidence summaries and cost/impact. <span class="muted">Best for: Strategy selection; verified: Feb 2026</span></li><li><a href="https://www.cese.nsw.gov.au/research-programs/what-works-best" target="_blank" rel="noopener">NSW CESE — What works best</a> — Evidence‑based themes for improvement. <span class="muted">Best for: Leadership & planning; verified: Feb 2026</span></li></ul></article><article class="card" id="professional-learning" data-topic="professional-learning" data-aud="Teacher,Leader,Student Support" data-fmt="Course,PD,Guide"><h2>🎓 Professional learning (PLINK & PD) <button class="copy-btn" onclick="copyLink('professional-learning',this)">🔗 Copy link</button></h2><p class="overview">Courses and workshops for SA educators and school staff.</p><div class="meta">Audience: Teacher, Leader, Student Support • Formats: Course, PD, Guide</div><ul class="links"><li><a href="https://www.plink.sa.edu.au/" target="_blank" rel="noopener">PLINK — SA Department for Education</a> — Portal for SA education professional learning (EdPass login). <span class="muted">Best for: Courses & certificates; verified: Feb 2026</span> <span class="badge">NEW</span></li><li><a href="https://www.education.sa.gov.au/working-us/rrhan-ec/fundamentals-course-responding-risks-harm-abuse-and-neglect-education-and-care" target="_blank" rel="noopener">RRHAN‑EC Fundamentals (overview)</a> — Mandatory notification training information and access. <span class="muted">Best for: Compliance; verified: Feb 2026</span></li><li><a href="https://www.ais.sa.edu.au/professional-learning/" target="_blank" rel="noopener">AISSA — Professional Learning</a> — Independent sector professional learning calendar and events. <span class="muted">Best for: PD; verified: Feb 2026</span> <span class="badge">NEW</span></li><li><a href="https://www.cesa.catholic.edu.au/working-with-us/benefits-support/professional-development" target="_blank" rel="noopener">CESA — Professional Development</a> — Professional development information and registration centre. <span class="muted">Best for: PD; verified: Feb 2026</span> <span class="badge">NEW</span></li></ul></article></section>
-</main>
+<article class='card' id='wellbeing' data-topic='wellbeing' data-aud='Teacher,Leader' data-fmt='Guide,Toolkit,Video' data-added='2026-02-06'>
+  <h2>🌱 Wellbeing <button class='copy-btn' onclick="copyLink('wellbeing',this)">🔗 Copy link</button></h2>
+  <p class='overview'>Whole‑school frameworks and classroom resources to strengthen mental health and belonging.</p>
+  <div class='meta'>Audience: Teacher, Leader • Formats: Guide, Toolkit, Video</div>
+  <ul class='links'>
+    <li><a href='https://beyou.edu.au/' target='_blank' rel='noopener'>Be You</a> — educator PD and planning tools. <span class='muted'>Best for: whole‑school planning; verified: Feb 2026</span><span class='region'>National</span></li>
+    <li><a href='https://education.headspace.org.au/' target='_blank' rel='noopener'>headspace Schools</a> — lesson content for Years 4–12. <span class='muted'>Best for: classroom activities; verified: Feb 2026</span><span class='region'>National</span></li>
+    <li><a href='https://emergingminds.com.au/resources/' target='_blank' rel='noopener'>Emerging Minds</a> — trauma‑aware approaches and practical guides. <span class='muted'>Best for: student support; verified: Feb 2026</span><span class='region'>National</span></li>
+  </ul>
+</article>
 
-<footer class="container">
-  <p>Contact <a href="mailto:teresa.bruno@sa.gov.au">teresa.bruno@sa.gov.au</a> • <a href="suggest.html">Suggest a resource</a></p>
-</footer>
+<article class='card' id='autism' data-topic='autism' data-aud='Teacher,Student Support' data-fmt='Guide,Toolkit' data-added='2026-02-06'>
+  <h2>🧩 Autism <button class='copy-btn' onclick="copyLink('autism',this)">🔗 Copy link</button></h2>
+  <p class='overview'>Quality‑assured strategies and templates to support autistic learners.</p>
+  <div class='meta'>Audience: Teacher, Student Support • Formats: Guide, Toolkit</div>
+  <ul class='links'>
+    <li><a href='https://www.positivepartnerships.com.au/' target='_blank' rel='noopener'>Positive Partnerships</a> — professional learning and classroom resources. <span class='muted'>Best for: classroom strategies; verified: Feb 2026</span><span class='region'>National</span></li>
+    <li><a href='https://inclusioned.edu.au/' target='_blank' rel='noopener'>inclusionED (Autism CRC)</a> — evidence‑informed practices. <span class='muted'>Best for: planning & intervention; verified: Feb 2026</span><span class='region'>National</span></li>
+    <li><a href='https://suelarkey.com.au/' target='_blank' rel='noopener'>Sue Larkey</a> — autism courses & practical resources. <span class='muted'>Best for: PD & strategies; verified: Feb 2026</span><span class='badge'>NEW</span><span class='region'>National</span></li>
+  </ul>
+</article>
 
-<button class="to-top" id="toTop" onclick="toTop()" aria-label="Back to top">↑ Top</button>
+<article class='card' id='adhd' data-topic='adhd' data-aud='Teacher,Student Support' data-fmt='Guide,Toolkit'>
+  <h2>⚡ ADHD <button class='copy-btn' onclick="copyLink('adhd',this)">🔗 Copy link</button></h2>
+  <p class='overview'>Practical strategies and factsheets for attention and regulation support.</p>
+  <div class='meta'>Audience: Teacher, Student Support • Formats: Guide, Toolkit</div>
+  <ul class='links'>
+    <li><a href='https://education.nsw.gov.au/campaigns/inclusive-practice-hub/all-resources/primary-resources/understanding-disability/attention-deficit-hyperactivity-disorder' target='_blank' rel='noopener'>NSW Inclusive Practice — ADHD strategies</a> — evidence‑based classroom strategies. <span class='muted'>Best for: classroom strategies; verified: Feb 2026</span><span class='region'>NSW</span></li>
+    <li><a href='https://aadpa.com/adhd-fact-sheets/' target='_blank' rel='noopener'>AADPA — Educator factsheets</a> — short, practical factsheets. <span class='muted'>Best for: quick reference; verified: Feb 2026</span><span class='region'>National</span></li>
+  </ul>
+</article>
 
-<!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4be9740951c64b459e4609a0c51af0b1"}'></script>
-<!-- End Cloudflare Web Analytics -->
-</body>
-</html>
+<article class='card' id='eald' data-topic='eald' data-aud='Teacher' data-fmt='Guide,PDF'>
+  <h2>🗣️ EAL/D <button class='copy-btn' onclick="copyLink('eald',this)">🔗 Copy link</button></h2>
+  <p class='overview'>Resources for learners of English as an Additional Language or Dialect.</p>
+  <div class='meta'>Audience: Teacher • Formats: Guide, PDF</div>
+  <ul class='links'>
+    <li><a href='https://www.acara.edu.au/docs/default-source/resources/eald-teacher-resource.pdf' target='_blank' rel='noopener'>ACARA EAL/D Teacher Resource (PDF)</a> — progression & planning. <span class='muted'>Best for: planning; verified: Feb 2026</span><span class='region'>National</span></li>
+    <li><a href='https://www.australiancurriculum.edu.au/resources/eald/' target='_blank' rel='noopener'>Australian Curriculum — EAL/D</a> — advice & resources. <span class='muted'>Best for: curriculum links; verified: Feb 2026</span><span class='region'>National</span></li>
+  </ul>
+</article>
+
+<article class='card' id='aac' data-topic='aac' data-aud='Teacher,Student Support' data-fmt='Guide,Course'>
+  <h2>🗨️ AAC (Augmentative & Alternative Communication) <button class='copy-btn' onclick="copyLink('aac',this)">🔗 Copy link</button></h2>
+  <p class='overview'>Key resources to support complex communication needs and AAC.</p>
+  <div class='meta'>Audience: Teacher, Student Support • Formats: Guide, Course</div>
+  <ul class='links'>
+    <li><a href='https://www.adwest.sa.edu.au/our-school/curriculum/augmentative-and-alternative-communication.html' target='_blank' rel='noopener'>Adelaide West — AAC</a> — local information on AAC approaches. <span class='muted'>Best for: getting started; verified: Feb 2026</span><span class='region'>SA</span></li>
+    <li><a href='https://www.plink.sa.edu.au/ilp/pages/description.jsf?menuId=21772486#/users/@self/catalogues/15965657/courses/15974112/description' target='_blank' rel='noopener'>PLINK — AAC course (login)</a> — professional learning module. <span class='muted'>Best for: PD/course; verified: Feb 2026</span><span class='region'>SA</span></li>
+  </ul>
+</article>
+
+<article class='card' id='professional-learning' data-topic='professional-learning' data-aud='Teacher,Leader,Student Support' data-fmt='Course,PD,Guide' data-added='2026-02-06'>
+  <h2>🎓 Professional learning (PLINK & PD) <button class='copy-btn' onclick="copyLink('professional-learning',this)">🔗 Copy link</button></h2>
+  <p class='overview'>Courses and workshops for SA educators and school staff.</p>
+  <div class='meta'>Audience: Teacher, Leader, Student Support • Formats: Course, PD, Guide</div>
+  <ul class='links'>
+    <li><a href='https://www.plink.sa.edu.au/' target='_blank' rel='noopener'>PLINK — SA Department for Education</a> — EdPass portal for professional learning. <span class='muted'>Best for: courses & certificates; verified: Feb 2026</span><span class='region'>SA</span></li>
+    <li><a href='https://www.education.sa.gov.au/working-us/rrhan-ec/fundamentals-course-responding-risks-harm-abuse-and-neglect-education-and-care' target='_blank' rel='noopener'>RRHAN‑EC Fundamentals (overview)</a> — mandatory notification training info; access via PLINK. <span class='muted'>Best for: compliance; verified: Feb 2026</span><span class='region'>SA</span></li>
+    <li><a href='https://www.ais.sa.edu.au/professional-learning/' target='_blank' rel='noopener'>AISSA — Professional Learning</a> — independent sector PD calendar & events. <span class='muted'>Best for: PD; verified: Feb 2026</span><span class='region'>SA</span></li>
+    <li><a href='https://www.cesa.catholic.edu.au/working-with-us/benefits-support/professional-development' target='_blank' rel='noopener'>CESA — Professional Development</a> — PD hub & registrations. <span class='muted'>Best for: PD; verified: Feb 2026</span><span class='region'>SA</span></li>
+    <li><a href='https://educators-sa.sa.edu.au/events/' target='_blank' rel='noopener'>Educators SA — PL events</a> — association‑led PD across SA. <span class='muted'>Best for: PD; verified: Feb 2026</span><span class='badge'>NEW</span><span class='region'>SA</span></li>
+    <li><a href='https://education.parliament.sa.gov.au/teach/professional-learning/' target='_blank' rel='noopener'>Parliament of SA — Teacher PL</a> — free civics PL. <span class='muted'>Best for: PD; verified: Feb 2026</span><span class='badge'>NEW</span><span class='region'>SA</span></li>
+  </ul>
+</article>
+
+</section></main>
+<footer class='container'><p>Contact <a href='mailto:teresa.bruno@sa.gov.au'>teresa.bruno@sa.gov.au</a> • <a href='resources.html'>Open the Calm Space</a></p></footer>
+<button class='to-top' id='toTop' onclick='toTop()' aria-label='Back to top'>↑ Top</button>
+</body></html>

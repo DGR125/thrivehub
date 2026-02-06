@@ -8,6 +8,65 @@
 :root{--blue:#0EA5E9;--green:#10B981;--ink:#0F172A;--cloud:#F6F8FB}
 *{box-sizing:border-box}body{margin:0;background:var(--cloud);font:16px/1.55 system-ui,Segoe UI,Arial,sans-serif;color:var(--ink)}
 .container{max-width:1100px;margin:0 auto;padding:16px}
+header{display:flex;gap:.6rem;align-items:center}
+.logo{display:inline-block;padding:.25rem .6rem;border-radius:10px;background:var(--blue);color:#fff;font-weight:800}
+.hero{border-radius:16px;margin:12px 0 20px;background:linear-gradient(120deg,rgba(14,165,233,.88),rgba(16,185,129,.88));color:#fff;padding:40px}
+.badge{display:inline-block;background:var(--green);color:#fff;padding:.25rem .6rem;border-radius:999px;font-weight:800}
+.btn{display:inline-flex;gap:.5rem;align-items:center;background:#0EA5E9;color:#fff;padding:.6rem 1rem;border-radius:12px;text-decoration:none;font-weight:800}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.card{background:#fff;border-radius:16px;padding:16px;box-shadow:0 4px 22px rgba(15,23,42,.08)}
+footer{color:#64748B;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <span class="logo">ThriveHub</span>
+    <strong>V7.0</strong>
+  </header>
+
+  <section class="hero" role="banner">
+    <div class="badge">V7.0 — LIVE</div>
+    <h1 style="margin:.6rem 0 0">Inclusive practice, faster</h1>
+    <p>Find strategies, free resources, and calming tools to enable wellbeing for learning.</p>
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+      <a class="btn" href="library.html">Open Library</a>
+      <a class="btn" href="resources.html" style="background:#10B981">Open Calm Space</a>
+    </div>
+  </section>
+
+  <section class="cards">
+    <article class="card">
+      <h3>Google Classrooms</h3>
+      <p><strong>Learning Matters</strong> — for students with learning challenges (scaffolds tasks/skills).</p>
+      <p><strong>Wellbeing Matters</strong> — for students with underlying trauma or wellbeing‑related needs; helps them stay engaged.</p>
+      <p style="display:flex;gap:.5rem;flex-wrap:wrap">
+        <a class="btn" href="https://classroom.google.com/c/MTY0NDI3NDI0OTRa" target="_blank" rel="noopener">Open Learning Matters</a>
+        <a class="btn" href="https://classroom.google.com/c/MTQ5MDI2ODQxOTJa" target="_blank" rel="noopener" style="background:#0ea5e9">Open Wellbeing Matters</a>
+      </p>
+      <p style="color:#64748B;font-size:.9rem">* Requires Google sign‑in.</p>
+    </article>
+
+    <article class="card">
+      <h3>Version check</h3>
+      <p>If this page doesn’t show <strong>V7.0 — LIVE</strong> and the blue‑green hero, your browser is caching an old copy. Hard refresh or add <code>?v=now</code> to the URL.</p>
+    </article>
+  </section>
+
+  <footer>Created by Teresa Bruno • © Teresa Bruno</footer>
+</div>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ThriveHub — Home (V7.0)</title>
+<style>
+:root{--blue:#0EA5E9;--green:#10B981;--ink:#0F172A;--cloud:#F6F8FB}
+*{box-sizing:border-box}body{margin:0;background:var(--cloud);font:16px/1.55 system-ui,Segoe UI,Arial,sans-serif;color:var(--ink)}
+.container{max-width:1100px;margin:0 auto;padding:16px}
 .hero{border-radius:16px;margin:12px 0 20px;background:linear-gradient(120deg,rgba(14,165,233,.88),rgba(16,185,129,.88));color:#fff;padding:40px}
 .btn{display:inline-flex;gap:.5rem;align-items:center;background:#0EA5E9;color:#fff;padding:.6rem 1rem;border-radius:12px;text-decoration:none;font-weight:800}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}

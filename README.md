@@ -1,4 +1,8 @@
-<!-- Place where your 10-minute focus lives -->
+index.html
+library.html
+resources.html
+suggest.html
+/assets/   (logo.svg, hero-classroom.svg, icon-*.svg, chime.mp3)<!-- Place where your 10-minute focus lives -->
 <div class="card" style="display:grid; place-items:center; text-align:center;">
   <h3>10‑minute focus</h3>
   <svg width="180" height="180" viewBox="0 0 120 120" aria-hidden="true">

@@ -4,70 +4,52 @@
 <head>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>ThriveHub — Home (V7.5)</title>
+<title>ThriveHub — Home (V7.6)</title>
 <style>
-:root{
-  --bg1:#0b3a3f; --bg2:#0b5a7a; --ink:#E6F2F4; --muted:#9CC7D1;
-  --green:#23d160; --blue:#3aa9ff; --pill:#ffffff; --dark:#0a1a22;
-  --radius:22px; --shadow:0 18px 50px rgba(0,0,0,.35);
-}
-*{box-sizing:border-box}
-html,body{margin:0}
-body{font:16px/1.6 system-ui,Segoe UI,Arial,sans-serif;background:var(--dark);color:var(--ink)}
-.container{max-width:1100px;margin:0 auto;padding:22px}
-.header{display:flex;align-items:center;justify-content:space-between;color:var(--muted)}
-.brand{display:inline-flex;align-items:center;gap:.6rem;font-weight:800}
-.brand .logo{background:linear-gradient(135deg,#1f9bd1,#2bd6b2);color:#051418;padding:.4rem .8rem;border-radius:12px}
-.card{background:radial-gradient(1200px 500px at 10% 10%, rgba(58,169,255,.15), transparent),linear-gradient(140deg,var(--bg1),var(--bg2));color:var(--ink);border-radius:26px;padding:28px 24px;box-shadow:var(--shadow)}
-.h1{font-size:1.9rem;margin:.35rem 0 8px}
-.badge{display:inline-block;background:rgba(255,255,255,.12);color:var(--pill);border:1px solid rgba(255,255,255,.25);padding:.25rem .6rem;border-radius:999px;font-weight:800}
-.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1.1rem;border-radius:16px;text-decoration:none;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.35)}
-.btn.green{background:linear-gradient(180deg,#35f27f,#12c55a);color:#072116}
-.btn.blue{background:linear-gradient(180deg,#66c1ff,#2e97ff);color:#04121e}
-.btn.white{background:var(--pill);color:#0a2b38}
-.btn small{opacity:.85;font-weight:700}
-footer{color:#6ea7b4;margin-top:18px}
-
-/* Premium bundle cards */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:16px}
-.bundle{background:#0f2631;border:1px solid #103141;color:var(--ink);border-radius:18px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
-.bundle h3{margin:.1rem 0 .25rem}
-.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin:.25rem 0 .5rem}
-.tag{display:inline-block;background:#103141;color:#9CC7D1;border:1px solid #123a4a;padding:2px 8px;border-radius:999px;font-weight:800;font-size:.8rem}
-.desc{color:var(--muted);margin:.15rem 0 .6rem}
-.linkset{display:flex;flex-wrap:wrap;gap:.4rem}
-.chip{display:inline-block;background:linear-gradient(180deg,#66c1ff,#2e97ff);color:#04121e;padding:.45rem .7rem;border-radius:12px;text-decoration:none;font-weight:800}
-.chip.white{background:#fff;color:#0a2b38}
-.chip.green{background:linear-gradient(180deg,#35f27f,#12c55a);color:#062213}
-
-/* Search toolbar */
-.searchbar{position:sticky;top:0;background:#0f2631;border:1px solid #103141;padding:10px;border-radius:14px;box-shadow:0 4px 14px rgba(0,0,0,.25);display:flex;flex-wrap:wrap;gap:.6rem;margin:22px 0}
-.searchbar input{flex:1;min-width:240px;padding:.6rem .75rem;background:#0d2029;color:var(--ink);border:1px solid #123a4a;border-radius:12px}
-.searchbar button{padding:.6rem .85rem;border-radius:999px;border:1px solid #123a4a;background:#0d2029;color:#9CC7D1;cursor:pointer}
-.item{background:#0f2631;border:1px solid #123a4a;border-left:6px solid #12c55a;border-radius:12px;padding:12px;margin:10px 0;box-shadow:0 6px 16px rgba(0,0,0,.3)}
-.badgeSA{display:inline-block;background:#103141;color:#9CC7D1;border:1px solid #123a4a;padding:2px 8px;border-radius:999px;font-weight:800;font-size:.85rem}
-
-/* Calm Space cards */
-.cardLite{background:#0f2631;border:1px solid #103141;color:var(--ink);border-radius:18px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
-.link{color:#72c8ff;font-weight:800;text-decoration:none}
+:root{--bg1:#0b3a3f; --bg2:#0b5a7a; --ink:#E6F2F4; --muted:#9CC7D1; --green:#23d160; --blue:#3aa9ff; --pill:#ffffff; --dark:#0a1a22; --radius:22px; --shadow:0 18px 50px rgba(0,0,0,.35)}*{box-sizing:border-box}html,body{margin:0}body{font:16px/1.6 system-ui,Segoe UI,Arial,sans-serif;background:var(--dark);color:var(--ink)}.container{max-width:1100px;margin:0 auto;padding:22px}.header{display:flex;align-items:center;justify-content:space-between;color:var(--muted)}.brand{display:inline-flex;align-items:center;gap:.6rem;font-weight:800}.brand .logo{background:linear-gradient(135deg,#1f9bd1,#2bd6b2);color:#051418;padding:.4rem .8rem;border-radius:12px}.card{background:radial-gradient(1200px 500px at 10% 10%, rgba(58,169,255,.15), transparent),linear-gradient(140deg,var(--bg1),var(--bg2));color:var(--ink);border-radius:26px;padding:28px 24px;box-shadow:var(--shadow)}.h1{font-size:1.9rem;margin:.35rem 0 8px}.badge{display:inline-block;background:rgba(255,255,255,.12);color:var(--pill);border:1px solid rgba(255,255,255,.25);padding:.25rem .6rem;border-radius:999px;font-weight:800}.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1.1rem;border-radius:16px;text-decoration:none;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.35)}.btn.green{background:linear-gradient(180deg,#35f27f,#12c55a);color:#072116}.btn.blue{background:linear-gradient(180deg,#66c1ff,#2e97ff);color:#04121e}.btn.white{background:var(--pill);color:#0a2b38}.btn small{opacity:.85;font-weight:700}footer{color:#6ea7b4;margin-top:18px}.heroFlex{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center}.heroArt{background:radial-gradient(400px 200px at 70% 20%, rgba(58,169,255,.28), transparent),linear-gradient(140deg,#0a2c33,#0b4a67);border-radius:22px;padding:16px;min-height:230px;display:grid;place-items:center}.heroSVG{width:100%;max-width:420px;height:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:16px}.bundle{background:#0f2631;border:1px solid #103141;color:var(--ink);border-radius:18px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.35)}.bundleHead{display:flex;align-items:center;gap:10px;margin-bottom:6px}.thumb{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,#66c1ff,#2e97ff);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.35)}.thumb svg{width:34px;height:34px}.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin:.25rem 0 .5rem}.tag{display:inline-block;background:#103141;color:#9CC7D1;border:1px solid #123a4a;padding:2px 8px;border-radius:999px;font-weight:800;font-size:.8rem}.desc{color:var(--muted);margin:.15rem 0 .6rem}.linkset{display:flex;flex-wrap:wrap;gap:.4rem}.chip{display:inline-block;background:linear-gradient(180deg,#66c1ff,#2e97ff);color:#04121e;padding:.45rem .7rem;border-radius:12px;text-decoration:none;font-weight:800}.chip.white{background:#fff;color:#0a2b38}.chip.green{background:linear-gradient(180deg,#35f27f,#12c55a);color:#062213}.searchbar{position:sticky;top:0;background:#0f2631;border:1px solid #103141;padding:10px;border-radius:14px;box-shadow:0 4px 14px rgba(0,0,0,.25);display:flex;flex-wrap:wrap;gap:.6rem;margin:22px 0}.searchbar input{flex:1;min-width:240px;padding:.6rem .75rem;background:#0d2029;color:var(--ink);border:1px solid #123a4a;border-radius:12px}.searchbar button{padding:.6rem .85rem;border-radius:999px;border:1px solid #123a4a;background:#0d2029;color:#9CC7D1;cursor:pointer}.item{background:#0f2631;border:1px solid #123a4a;border-left:6px solid #12c55a;border-radius:12px;padding:12px;margin:10px 0;box-shadow:0 6px 16px rgba(0,0,0,.3)}.badgeSA{display:inline-block;background:#103141;color:#9CC7D1;border:1px solid #123a4a;padding:2px 8px;border-radius:999px;font-weight:800;font-size:.85rem}.cardLite{background:#0f2631;border:1px solid #103141;color:var(--ink);border-radius:18px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.35)}.link{color:#72c8ff;font-weight:800;text-decoration:none}
 </style>
 </head>
 <body>
 <div class='container'>
   <div class='header'>
-    <div class='brand'><span class='logo'>ThriveHub</span><span>V7.5</span></div>
+    <div class='brand'><span class='logo'>ThriveHub</span><span>V7.6</span></div>
     <div></div>
   </div>
 
   <section class='card' role='banner'>
-    <span class='badge'>New: Policy resources</span>
-    <h1 class='h1'>Free, teacher‑ready resources — one click</h1>
-    <p style='max-width:820px;color:var(--muted)'>We believe every student deserves to thrive—both in their learning and wellbeing. Our mission is to empower education staff with free, high‑quality resources and practical tools that support student engagement, foster positive mental health, and create vibrant, inclusive classrooms. This site is designed to connect you with materials, ideas, and strategies that make a real difference for students and help our teams deliver their very best every day.</p>
-    <p style='display:flex;gap:.6rem;flex-wrap:wrap;margin-top:12px'>
-      <a class='btn green' href='library.html'><span>Explore the full library</span></a>
-      <a class='btn blue' href='resources.html'><span>Wellbeing playlist</span></a>
-      <a class='btn white' href='https://classroom.google.com/c/MTY0NDI3NDI0OTRa' target='_blank' rel='noopener'><small>NEW</small> Specialist Google Classrooms</a>
-    </p>
+    <div class='heroFlex'>
+      <div>
+        <span class='badge'>New: Policy resources</span>
+        <h1 class='h1'>Free, teacher‑ready resources — one click</h1>
+        <p style='max-width:820px;color:var(--muted)'>We believe every student deserves to thrive—both in their learning and wellbeing. Our mission is to empower education staff with free, high‑quality resources and practical tools that support student engagement, foster positive mental health, and create vibrant, inclusive classrooms. This site is designed to connect you with materials, ideas, and strategies that make a real difference for students and help our teams deliver their very best every day.</p>
+        <p style='display:flex;gap:.6rem;flex-wrap:wrap;margin-top:12px'>
+          <a class='btn green' href='library.html'><span>Explore the full library</span></a>
+          <a class='btn blue' href='resources.html'><span>Wellbeing playlist</span></a>
+          <a class='btn white' href='https://classroom.google.com/c/MTY0NDI3NDI0OTRa' target='_blank' rel='noopener'><small>NEW</small> Specialist Google Classrooms</a>
+        </p>
+      </div>
+      <div class='heroArt' aria-hidden='true'>
+        <svg class='heroSVG' viewBox='0 0 640 320'>
+          <defs>
+            <linearGradient id='g' x1='0' x2='1'>
+              <stop offset='0' stop-color='#66c1ff'/>
+              <stop offset='1' stop-color='#23d160'/>
+            </linearGradient>
+          </defs>
+          <circle cx='520' cy='60' r='28' fill='url(#g)' opacity='.8'/>
+          <rect x='80' y='40' width='220' height='140' rx='16' fill='url(#g)' opacity='.2'/>
+          <rect x='120' y='70' width='160' height='16' rx='8' fill='#fff' opacity='.9'/>
+          <rect x='120' y='100' width='130' height='16' rx='8' fill='#fff' opacity='.7'/>
+          <rect x='120' y='130' width='100' height='16' rx='8' fill='#fff' opacity='.5'/>
+          <g transform='translate(360,120)'>
+            <circle cx='40' cy='35' r='24' fill='#fff' opacity='.9'/>
+            <circle cx='80' cy='45' r='20' fill='#fff' opacity='.7'/>
+            <circle cx='0' cy='45' r='20' fill='#fff' opacity='.6'/>
+            <rect x='-10' y='70' width='120' height='40' rx='20' fill='#fff' opacity='.25'/>
+          </g>
+        </svg>
+      </div>
+    </div>
   </section>
 
   <footer>Created by Teresa Bruno • © Teresa Bruno</footer>

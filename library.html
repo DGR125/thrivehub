@@ -6,31 +6,21 @@
   <title>ThriveHub · Library</title>
   <meta name="description" content="ThriveHub Library – curated, free, classroom‑ready links for inclusive education in South Australia." />
   <style>
-    :root{
-      /* brand tokens (not visible) */
-      --brand:#0E7C86; --accent:#673AB7; --bg:#f7fafc; --surface:#ffffff; --text:#1f2937; --muted:#64748b;
-      --radius:14px; --shadow: 0 10px 24px rgba(2,12,27,.08), 0 2px 6px rgba(2,12,27,.06);
-    }
-    @media (prefers-color-scheme: dark){
-      :root{ --bg:#0b1220; --surface:#0f172a; --text:#e5e7eb; --muted:#9ca3af; --shadow: 0 10px 24px rgba(0,0,0,.35), 0 2px 6px rgba(0,0,0,.3); }
-    }
+    :root{ --brand:#0E7C86; --accent:#673AB7; --bg:#f7fafc; --surface:#ffffff; --text:#1f2937; --muted:#64748b; --radius:14px; --shadow: 0 10px 24px rgba(2,12,27,.08), 0 2px 6px rgba(2,12,27,.06); }
+    @media (prefers-color-scheme: dark){ :root{ --bg:#0b1220; --surface:#0f172a; --text:#e5e7eb; --muted:#9ca3af; --shadow: 0 10px 24px rgba(0,0,0,.35), 0 2px 6px rgba(0,0,0,.3); } }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial;}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:1100px;margin:0 auto;padding:18px}
-
-    /* Top nav with simple wordmark */
     header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid rgba(0,0,0,.06)}
     @media (prefers-color-scheme: dark){header{background:rgba(15,23,42,.6);border-color:rgba(255,255,255,.06)}}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px;color:var(--brand);font-weight:800;letter-spacing:.2px}
-    .brand .logobox{width:30px;height:30px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--brand)}
+    .brand svg{width:26px;height:26px}
     .links a{margin:0 8px;padding:8px 12px;border-radius:10px;color:var(--text)}
     .links a.active{background:var(--brand);color:white}
     .links a:hover{background:rgba(103,58,183,.12)}
-
-    /* Hero */
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:28px 0}
     .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0}
     .hero p{color:var(--muted);margin:8px 0 14px}
@@ -38,19 +28,16 @@
     .hero-svg{padding:14px;background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow)}
     .search{display:flex;align-items:center;gap:8px;background:var(--surface);border-radius:12px;padding:10px 12px;border:1px solid rgba(0,0,0,.06);box-shadow:var(--shadow);max-width:520px}
     .search input{all:unset;width:100%}
-
-    /* Cards */
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
     section{margin:26px 0}
     .card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
     .thumb{height:120px;background:linear-gradient(135deg,var(--brand) 0%, var(--accent) 100%);position:relative}
     .thumb svg{position:absolute;inset:0;margin:auto;width:120px;height:120px;opacity:.25;color:white}
     .body{padding:18px}
-    .body h3{display:flex;align-items:center;gap:10px;font-size:20px;margin:0 0 8px}
+    .body h3{font-size:20px;margin:0 0 8px}
     .body p{color:var(--muted);margin:0 0 12px}
     .body ul{margin:0;padding:0 0 0 16px}
     .tag{display:inline-flex;align-items:center;gap:6px;background:rgba(103,58,183,.12);color:var(--accent);border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600;margin:8px 6px 0 0}
-
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   </style>
 </head>
@@ -58,13 +45,7 @@
   <header>
     <div class="container nav">
       <div class="brand" aria-label="ThriveHub">
-        <!-- Simple inline logo (SVG wordmark) -->
-        <svg class="logobox" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><linearGradient id="lg" x1="0" x2="1"><stop stop-color="var(--brand)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient></defs>
-          <rect rx="12" ry="12" width="64" height="64" fill="url(#lg)"/>
-          <path d="M16 22h32v6H34v22h-6V28H16z" fill="#fff" opacity=".95"/>
-          <path d="M40 28h8v16c0 4.4-3.6 8-8 8h-6v-6h6c1.1 0 2-.9 2-2V28z" fill="#fff" opacity=".9"/>
-        </svg>
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1"><stop stop-color="var(--brand)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient></defs><rect rx="12" ry="12" width="64" height="64" fill="url(#lg)"/><path d="M16 22h32v6H34v22h-6V28H16z" fill="#fff" opacity=".95"/><path d="M40 28h8v16c0 4.4-3.6 8-8 8h-6v-6h6c1.1 0 2-.9 2-2V28z" fill="#fff" opacity=".9"/></svg>
         <span>ThriveHub</span>
       </div>
       <nav class="links" aria-label="Primary">
@@ -88,9 +69,7 @@
       </div>
       <div class="hero-svg" aria-hidden="true">
         <svg viewBox="0 0 440 270" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="var(--brand)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient>
-          </defs>
+          <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="var(--brand)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient></defs>
           <rect x="0" y="0" width="100%" height="100%" rx="16" fill="url(#g)" opacity=".12"/>
           <g fill="none" stroke="url(#g)" stroke-width="2">
             <path d="M30,200 C120,80 320,260 410,80" opacity=".9"/>
@@ -106,11 +85,8 @@
       <h2 class="sr-only">Curated categories</h2>
       <div class="grid" id="grid">
 
-        <!-- Literacy – Reading -->
         <article class="card" data-tags="literacy reading phonics decodable dyslexia speld">
-          <div class="thumb">
-            <svg viewBox="0 0 128 128"><path d="M16 32h44c6 0 10 3 14 8 4-5 8-8 14-8h24v64h-24c-6 0-10 3-14 8-4-5-8-8-14-8H16z" fill="currentColor"/></svg>
-          </div>
+          <div class="thumb"><svg viewBox="0 0 128 128"><path d="M16 32h44c6 0 10 3 14 8 4-5 8-8 14-8h24v64h-24c-6 0-10 3-14 8-4-5-8-8-14-8H16z" fill="currentColor"/></svg></div>
           <div class="body">
             <h3>Literacy · Reading</h3>
             <p>Evidence‑based reading instruction, decodables and strategy libraries.</p>
@@ -120,16 +96,12 @@
               <li><a target="_blank" rel="noopener" href="https://premiersreadingchallenge.sa.edu.au/decodable-books/">SA Premier’s Reading Challenge: Decodable books (guide)</a></li>
               <li><a target="_blank" rel="noopener" href="https://www.readingrockets.org/classroom/classroom-strategies">Reading Rockets · Classroom Strategy Library</a></li>
             </ul>
-            <span class="tag">Decodables</span>
-            <span class="tag">K–10</span>
+            <span class="tag">Decodables</span><span class="tag">K–10</span>
           </div>
         </article>
 
-        <!-- Literacy – Writing -->
         <article class="card" data-tags="literacy writing prompts planning readwritethink pobble">
-          <div class="thumb">
-            <svg viewBox="0 0 128 128"><path d="M16 24h96v20H16zM16 56h64v16H16zM16 84h40v16H16z" fill="currentColor"/></svg>
-          </div>
+          <div class="thumb"><svg viewBox="0 0 128 128"><path d="M16 24h96v20H16zM16 56h64v16H16zM16 84h40v16H16z" fill="currentColor"/></svg></div>
           <div class="body">
             <h3>Literacy · Writing</h3>
             <p>High‑leverage writing tools and daily prompts.</p>
@@ -138,16 +110,12 @@
               <li><a target="_blank" rel="noopener" href="https://www.readwritethink.org/classroom-resources/student-interactives/essay">Essay/Persuasion/Compare‑Contrast maps</a></li>
               <li><a target="_blank" rel="noopener" href="https://www.pobble.com/">Pobble 365 · Daily image prompts</a></li>
             </ul>
-            <span class="tag">Writing</span>
-            <span class="tag">3–12</span>
+            <span class="tag">Writing</span><span class="tag">3–12</span>
           </div>
         </article>
 
-        <!-- Numeracy -->
         <article class="card" data-tags="numeracy maths manipulatives nrich mlc geogebra mathsbot">
-          <div class="thumb">
-            <svg viewBox="0 0 128 128"><path d="M16 96h96v16H16zM24 80l24-40 24 40zM88 64h24v16H88z" fill="currentColor"/></svg>
-          </div>
+          <div class="thumb"><svg viewBox="0 0 128 128"><path d="M16 96h96v16H16zM24 80l24-40 24 40zM88 64h24v16H88z" fill="currentColor"/></svg></div>
           <div class="body">
             <h3>Numeracy</h3>
             <p>Rich tasks, virtual manipulatives and interactive calculators.</p>
@@ -161,11 +129,8 @@
           </div>
         </article>
 
-        <!-- Wellbeing -->
         <article class="card" data-tags="wellbeing sel calm smiling mind sa framework">
-          <div class="thumb">
-            <svg viewBox="0 0 128 128"><circle cx="64" cy="48" r="18" fill="currentColor"/><path d="M28 100c8-16 20-24 36-24s28 8 36 24" stroke="currentColor" stroke-width="12" fill="none" stroke-linecap="round"/></svg>
-          </div>
+          <div class="thumb"><svg viewBox="0 0 128 128"><circle cx="64" cy="48" r="18" fill="currentColor"/><path d="M28 100c8-16 20-24 36-24s28 8 36 24" stroke="currentColor" stroke-width="12" fill="none" stroke-linecap="round"/></svg></div>
           <div class="body">
             <h3>Wellbeing & SEL</h3>
             <p>Evidence‑based programs and SA guidance to support student wellbeing.</p>
@@ -178,11 +143,8 @@
           </div>
         </article>
 
-        <!-- Accessibility tools -->
         <article class="card" data-tags="accessibility immersive reader dictation voice typing edge google">
-          <div class="thumb">
-            <svg viewBox="0 0 128 128"><path d="M20 88h88l-12 20H32zM44 20h40v44H44z" fill="currentColor"/></svg>
-          </div>
+          <div class="thumb"><svg viewBox="0 0 128 128"><path d="M20 88h88l-12 20H32zM44 20h40v44H44z" fill="currentColor"/></svg></div>
           <div class="body">
             <h3>Accessibility & Study Tools</h3>
             <p>Built‑in, no‑cost tools to reduce barriers and boost independence.</p>
@@ -195,11 +157,8 @@
           </div>
         </article>
 
-        <!-- EAL/D -->
         <article class="card" data-tags="eal eald leap bilingual newcomers multilingual">
-          <div class="thumb">
-            <svg viewBox="0 0 128 128"><path d="M16 92l24-56h12l24 56h-12l-6-14H34l-6 14H16zm24-26h20l-10-24z" fill="currentColor"/></svg>
-          </div>
+          <div class="thumb"><svg viewBox="0 0 128 128"><path d="M16 92l24-56h12l24 56h-12l-6-14H34l-6 14H16zm24-26h20l-10-24z" fill="currentColor"/></svg></div>
           <div class="body">
             <h3>EAL/D (English as an Additional Language/Dialect)</h3>
             <p>SA guidance, progressions and high‑quality learner materials.</p>
@@ -212,11 +171,8 @@
           </div>
         </article>
 
-        <!-- First Nations -->
         <article class="card" data-tags="first nations aboriginal torres strait islander reconciliation curriculum narragunnawali">
-          <div class="thumb">
-            <svg viewBox="0 0 128 128"><circle cx="64" cy="64" r="28" fill="currentColor"/><path d="M8 64h48M72 64h48" stroke="currentColor" stroke-width="12" opacity=".5"/></svg>
-          </div>
+          <div class="thumb"><svg viewBox="0 0 128 128"><circle cx="64" cy="64" r="28" fill="currentColor"/><path d="M8 64h48M72 64h48" stroke="currentColor" stroke-width="12" opacity=".5"/></svg></div>
           <div class="body">
             <h3>Aboriginal & Torres Strait Islander Histories and Cultures</h3>
             <p>Curriculum‑aligned resources and whole‑school reconciliation actions.</p>
@@ -229,11 +185,8 @@
           </div>
         </article>
 
-        <!-- Disability-specific -->
         <article class="card" data-tags="asd adhd dyslexia dyscalculia disability inclusion adjustments">
-          <div class="thumb">
-            <svg viewBox="0 0 128 128"><path d="M64 12a52 52 0 1 0 52 52A52 52 0 0 0 64 12zm0 20a18 18 0 1 1-18 18A18 18 0 0 1 64 32zm0 70c-18 0-34-10-42-25 2-13 28-20 42-20s40 7 42 20c-8 15-24 25-42 25z" fill="currentColor"/></svg>
-          </div>
+          <div class="thumb"><svg viewBox="0 0 128 128"><path d="M64 12a52 52 0 1 0 52 52A52 52 0 0 0 64 12zm0 20a18 18 0 1 1-18 18A18 18 0 0 1 64 32zm0 70c-18 0-34-10-42-25 2-13 28-20 42-20s40 7 42 20c-8 15-24 25-42 25z" fill="currentColor"/></svg></div>
           <div class="body">
             <h3>Student Support (ASD · ADHD · Dyslexia · Dyscalculia)</h3>
             <p>Trusted Australian sources for condition‑specific strategies and family supports.</p>
@@ -249,11 +202,8 @@
           </div>
         </article>
 
-        <!-- Policy & frameworks -->
         <article class="card" data-tags="policy nccd south australia inclusion guidelines sies">
-          <div class="thumb">
-            <svg viewBox="0 0 128 128"><path d="M24 24h80v20H24zM24 54h80v20H24zM24 84h56v20H24z" fill="currentColor"/></svg>
-          </div>
+          <div class="thumb"><svg viewBox="0 0 128 128"><path d="M24 24h80v20H24zM24 54h80v20H24zM24 84h56v20H24z" fill="currentColor"/></svg></div>
           <div class="body">
             <h3>Policy & Frameworks</h3>
             <p>For planning, evidence and whole‑school implementation.</p>
@@ -266,11 +216,8 @@
           </div>
         </article>
 
-        <!-- Executive function & study skills -->
         <article class="card" data-tags="executive function study skills metacognition spacing retrieval notes pomodoro">
-          <div class="thumb">
-            <svg viewBox="0 0 128 128"><path d="M64 20a36 36 0 1 0 36 36A36 36 0 0 0 64 20zm-6 12h12v24H58zM58 64h12v12H58z" fill="currentColor"/></svg>
-          </div>
+          <div class="thumb"><svg viewBox="0 0 128 128"><path d="M64 20a36 36 0 1 0 36 36A36 36 0 0 0 64 20zm-6 12h12v24H58zM58 64h12v12H58z" fill="currentColor"/></svg></div>
           <div class="body">
             <h3>Executive Function & Study Skills</h3>
             <p>Explicit strategies for planning, memory and self‑regulation.</p>
@@ -284,11 +231,8 @@
           </div>
         </article>
 
-        <!-- Assessment templates & tools -->
         <article class="card" data-tags="assessment templates rubric moderation evidence nccd number check ochre readwritethink">
-          <div class="thumb">
-            <svg viewBox="0 0 128 128"><path d="M20 92l20 16 48-64 20 16-56 72z" fill="currentColor"/></svg>
-          </div>
+          <div class="thumb"><svg viewBox="0 0 128 128"><path d="M20 92l20 16 48-64 20 16-56 72z" fill="currentColor"/></svg></div>
           <div class="body">
             <h3>Assessment Templates & Tools</h3>
             <p>Ready‑to‑use templates and checks to streamline assessment and evidence.</p>
@@ -307,16 +251,9 @@
   </main>
 
   <script>
-    // Simple in-page filter
     const q = document.getElementById('q');
-    const cards = [...document.querySelectorAll('#grid .card')];
-    q.addEventListener('input', () => {
-      const v = q.value.trim().toLowerCase();
-      cards.forEach(c => {
-        const hay = (c.textContent + ' ' + (c.dataset.tags||'')).toLowerCase();
-        c.style.display = v && !hay.includes(v) ? 'none' : '';
-      });
-    });
+    if(q){ const cards = [...document.querySelectorAll('#grid .card')];
+      q.addEventListener('input', () => { const v = q.value.trim().toLowerCase(); cards.forEach(c => { const hay = (c.textContent + ' ' + (c.dataset.tags||'')).toLowerCase(); c.style.display = v && !hay.includes(v) ? 'none' : ''; }); }); }
   </script>
 
   <!-- Deployment tip (hidden): This page uses relative links (no leading slash), so it works reliably at /thrivehub/. Update the CSS color variables in :root to match Home. -->

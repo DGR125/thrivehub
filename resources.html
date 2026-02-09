@@ -6,9 +6,7 @@
   <title>ThriveHub · Calm Space</title>
   <style>
     :root{ --brand:#0E7C86; --accent:#673AB7; --bg:#0b1220; --surface:#0f172a; --text:#e5e7eb; --muted:#9ca3af; }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#f7fafc; --surface:#ffffff; --text:#1f2937; --muted:#64748b; }
-    }
+    @media (prefers-color-scheme: light){ :root{ --bg:#f7fafc; --surface:#ffffff; --text:#1f2937; --muted:#64748b; } }
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial}
     a{color:var(--brand);text-decoration:none}
@@ -34,7 +32,6 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <!-- inline logo -->
         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs><linearGradient id="lg" x1="0" x2="1"><stop stop-color="var(--brand)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient></defs>
           <rect rx="12" ry="12" width="64" height="64" fill="url(#lg)"/>
@@ -88,116 +85,37 @@
   </main>
 
   <script>
-  // ——— Calm Space controller (no dependencies) ———
   (() => {
     const $ = (sel, el = document) => el.querySelector(sel);
-    // 1) Breathing
     let breathingTimer=null;
-    const steps = [
-      { label:'Inhale', seconds:4 },
-      { label:'Hold',  seconds:4 },
-      { label:'Exhale',seconds:4 },
-      { label:'Hold',  seconds:4 },
-    ];
+    const steps=[{label:'Inhale',seconds:4},{label:'Hold',seconds:4},{label:'Exhale',seconds:4},{label:'Hold',seconds:4}];
     function startBreathing(){
       const panel = $('#breathing-panel'); if(!panel) return;
-      panel.hidden = false;
-      const box = $('#breathing-box', panel) || panel;
-      box.textContent = `${steps[0].label}…`;
+      panel.hidden=false; const box=$('#breathing-box',panel) || panel; box.textContent=`${steps[0].label}…`;
       clearInterval(breathingTimer);
-      breathingTimer = setInterval(()=>{
-        const i = steps.findIndex(s => box.textContent.startsWith(s.label));
-        const next = steps[(i+1+steps.length)%steps.length];
-        box.textContent = `${next.label}…`;
-      }, steps[0].seconds*1000);
-      // simple animation
-      box.style.cssText = `
-        width:200px;height:200px;margin:18px auto;border-radius:16px;
-        display:grid;place-items:center;color:var(--text);
-        background:rgba(103,58,183,.12);animation:breathe 4s ease-in-out infinite;
-      `;
-      if(!document.getElementById('breathe-style')){
-        const style=document.createElement('style'); style.id='breathe-style';
-        style.textContent='@keyframes breathe{0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}';
-        document.head.appendChild(style);
-      }
+      breathingTimer=setInterval(()=>{ const i=steps.findIndex(s=>box.textContent.startsWith(s.label)); const next=steps[(i+1+steps.length)%steps.length]; box.textContent=`${next.label}…`; }, steps[0].seconds*1000);
+      box.style.cssText='width:200px;height:200px;margin:18px auto;border-radius:16px;display:grid;place-items:center;color:var(--text);background:rgba(103,58,183,.12);animation:breathe 4s ease-in-out infinite';
+      if(!document.getElementById('breathe-style')){ const st=document.createElement('style'); st.id='breathe-style'; st.textContent='@keyframes breathe{0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}'; document.head.appendChild(st); }
     }
-
-    // 2) Brown noise (starts only after a click -> allowed by autoplay policy)
-    let audioCtx=null, noiseNode=null, gainNode=null;
-    function toggleBrownNoise(btn, volumeInput){
+    let audioCtx=null, gainNode=null;
+    function toggleBrownNoise(btn, vol){
       if(!audioCtx){
-        audioCtx = new (window.AudioContext||window.webkitAudioContext)();
-        const bufferSize = 2 * audioCtx.sampleRate;
-        const brown = audioCtx.createScriptProcessor(bufferSize,1,1);
-        let lastOut=0.0;
-        brown.onaudioprocess = e => {
-          const out=e.outputBuffer.getChannelData(0);
-          for(let i=0;i<bufferSize;i++){
-            const white=Math.random()*2-1;
-            out[i]=(lastOut+(0.02*white))/1.02; lastOut=out[i]; out[i]*=3.5;
-          }
-        };
-        gainNode = audioCtx.createGain();
-        gainNode.gain.value = Number(volumeInput?.value || 0.25);
-        brown.connect(gainNode).connect(audioCtx.destination);
-        noiseNode = brown;
+        audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+        const bufferSize=2*audioCtx.sampleRate; const brown=audioCtx.createScriptProcessor(bufferSize,1,1); let lastOut=0.0;
+        brown.onaudioprocess=(e)=>{const out=e.outputBuffer.getChannelData(0); for(let i=0;i<bufferSize;i++){ const white=Math.random()*2-1; out[i]=(lastOut+(0.02*white))/1.02; lastOut=out[i]; out[i]*=3.5; }};
+        gainNode=audioCtx.createGain(); gainNode.gain.value=Number(vol?.value||0.25); brown.connect(gainNode).connect(audioCtx.destination);
       }
       if(audioCtx.state==='suspended') audioCtx.resume();
-      const isPlaying = btn.getAttribute('aria-pressed')==='true';
-      if(isPlaying){
-        audioCtx.suspend();
-        btn.setAttribute('aria-pressed','false'); btn.textContent='Play Brown Noise';
-      }else{
-        audioCtx.resume();
-        btn.setAttribute('aria-pressed','true'); btn.textContent='Pause Brown Noise';
-      }
+      const isPlaying=btn.getAttribute('aria-pressed')==='true';
+      if(isPlaying){ audioCtx.suspend(); btn.setAttribute('aria-pressed','false'); btn.textContent='Play Brown Noise'; }
+      else { audioCtx.resume(); btn.setAttribute('aria-pressed','true'); btn.textContent='Pause Brown Noise'; }
     }
-
-    // 3) Fullscreen panel
-    let fsPanel=null;
-    function ensureFsPanel(){
-      if(!fsPanel){
-        fsPanel = document.createElement('div');
-        fsPanel.id='calm-fullscreen';
-        fsPanel.style.cssText = `
-          position:fixed;inset:0;z-index:9999;display:none;
-          background: radial-gradient(1200px 700px at 30% 20%, rgba(14,124,134,.18), transparent),
-                      linear-gradient(135deg, var(--brand), var(--accent));
-        `;
-        fsPanel.addEventListener('click', exitFullscreen);
-        document.body.appendChild(fsPanel);
-      }
-      return fsPanel;
-    }
-    function enterFullscreen(){
-      const panel = ensureFsPanel(); panel.style.display='block';
-      const el=document.documentElement;
-      (el.requestFullscreen||el.webkitRequestFullscreen||el.msRequestFullscreen)?.call(el);
-    }
-    function exitFullscreen(){
-      const panel = ensureFsPanel(); panel.style.display='none';
-      (document.exitFullscreen||document.webkitExitFullscreen||document.msExitFullscreen)?.call(document);
-    }
-
-    // 4) Events (delegated)
-    document.addEventListener('click', (e)=>{
-      const btn = e.target.closest('[data-open],[data-audio]'); if(!btn) return;
-      if(btn.hasAttribute('data-open')){
-        const t=btn.getAttribute('data-open');
-        if(t==='breathing') startBreathing();
-        if(t==='fullscreen') enterFullscreen();
-      }
-      if(btn.hasAttribute('data-audio')){
-        if(btn.getAttribute('data-audio')==='brown-noise'){
-          toggleBrownNoise(btn, document.getElementById('noise-volume'));
-        }
-      }
-    });
-    document.addEventListener('input', (e)=>{
-      if(e.target?.id==='noise-volume' && gainNode){ gainNode.gain.value = Number(e.target.value); }
-    });
-    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') exitFullscreen(); });
+    let fsPanel=null; function ensureFs(){ if(!fsPanel){ fsPanel=document.createElement('div'); fsPanel.id='calm-fullscreen'; fsPanel.style.cssText='position:fixed;inset:0;z-index:9999;display:none;background: radial-gradient(1200px 700px at 30% 20%, rgba(14,124,134,.18), transparent), linear-gradient(135deg, var(--brand), var(--accent))'; fsPanel.addEventListener('click', exitFs); document.body.appendChild(fsPanel);} return fsPanel; }
+    function enterFs(){ const p=ensureFs(); p.style.display='block'; const el=document.documentElement; (el.requestFullscreen||el.webkitRequestFullscreen||el.msRequestFullscreen)?.call(el); }
+    function exitFs(){ const p=ensureFs(); p.style.display='none'; (document.exitFullscreen||document.webkitExitFullscreen||document.msExitFullscreen)?.call(document); }
+    document.addEventListener('click',(e)=>{ const btn=e.target.closest('[data-open],[data-audio]'); if(!btn) return; if(btn.hasAttribute('data-open')){ const w=btn.getAttribute('data-open'); if(w==='breathing') startBreathing(); if(w==='fullscreen') enterFs(); } if(btn.hasAttribute('data-audio')){ if(btn.getAttribute('data-audio')==='brown-noise'){ toggleBrownNoise(btn, document.getElementById('noise-volume')); } }});
+    document.addEventListener('input',(e)=>{ if(e.target?.id==='noise-volume'&&gainNode){ gainNode.gain.value=Number(e.target.value); }});
+    document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') exitFs(); });
   })();
   </script>
 </body>

@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ThriveHub · Home</title>
   <meta name="description" content="Free, teacher‑ready resources for inclusive practice — one click." />
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root{ --brand:#0E7C86; --accent:#673AB7; --bg:#0b1220; --surface:#0f172a; --text:#e5e7eb; --muted:#9ca3af; --radius:16px; --shadow: 0 18px 40px rgba(0,0,0,.45), 0 2px 10px rgba(0,0,0,.35); }
     @media (prefers-color-scheme: light){ :root{ --bg:#f7fafc; --surface:#ffffff; --text:#1f2937; --muted:#64748b; --shadow: 0 10px 24px rgba(2,12,27,.08), 0 2px 6px rgba(2,12,27,.06);} }
@@ -18,7 +19,7 @@
     .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;align-items:center;gap:12px;color:var(--brand);font-weight:800}
     .brand .logobox{width:30px;height:30px}
-    .links a{margin:0 8px;padding:8px 12px;border-radius:10px;color:var(--text)}
+    .links a{margin:0 6px;padding:8px 12px;border-radius:10px;color:var(--text)}
     .links a.active{background:var(--brand);color:white}
     .links a:hover{background:rgba(103,58,183,.12)}
     .hero{margin:26px 0}
@@ -31,14 +32,19 @@
     .btn.secondary{color:white;background:linear-gradient(180deg,#7b5ae4,#6d38d9)}
     .hero-visual{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:12px}
     @media (prefers-color-scheme: light){.hero-visual{background:rgba(103,58,183,.06);border-color:rgba(0,0,0,.06)}}
+    .mission{margin:24px 0;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+    .mission .img{min-height:180px;background:url('https://source.unsplash.com/1600x500/?classroom,education') center/cover no-repeat;}
+    .mission .body{padding:18px;background:var(--surface)}
     footer{opacity:.8;margin:14px 0}
   </style>
+
 </head>
 <body>
+
   <header>
     <div class="container nav">
       <div class="brand" aria-label="ThriveHub">
-        <!-- INLINE SVG LOGO -->
+        <!-- Inline SVG logo (always visible) -->
         <svg class="logobox" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs><linearGradient id="lg" x1="0" x2="1"><stop stop-color="var(--brand)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient></defs>
           <rect rx="12" ry="12" width="64" height="64" fill="url(#lg)"/>
@@ -49,14 +55,16 @@
       </div>
       <nav class="links" aria-label="Primary">
         <a class="active" href="index.html" aria-current="page">Home</a>
-        <a href="library.html">Library</a>
-        <a href="resources.html">Calm Space</a>
+        <a  href="library.html" >Library</a>
+        <a  href="resources.html" >Calm Space</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://teams.microsoft.com/" target="_blank" rel="noopener">Microsoft Teams</a>
+        <a href="https://thestudentwellbeing.wordpress.com/" target="_blank" rel="noopener">Student Wellbeing Blog</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <!-- HERO: Title + Description + Visual + Clear CTAs -->
     <section class="hero">
       <div class="card">
         <div>
@@ -68,7 +76,6 @@
             <a class="btn secondary" href="resources.html">Calm Space</a>
           </div>
         </div>
-        <!-- ALWAYS‑VISIBLE INLINE SVG VISUAL -->
         <div class="hero-visual" aria-hidden="true">
           <svg viewBox="0 0 440 250" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -92,7 +99,15 @@
       </div>
     </section>
 
-    <!-- FEATURES: short & scannable -->
+    <section class="mission" aria-labelledby="mission-title">
+      <div class="img" role="img" aria-label="Students learning in classroom (illustrative)"></div>
+      <div class="body">
+        <h2 id="mission-title" style="margin:0 0 8px">Our mission</h2>
+        <p style="margin:0;max-width:88ch">We believe every student deserves to thrive—both in their learning and wellbeing. Our mission is to empower education staff with free, high-quality resources and practical tools that support student engagement, foster positive mental health, and create vibrant, inclusive classrooms. This site is designed to connect you with materials, ideas, and strategies that make a real difference for students and help our teams deliver their very best every day.</p>
+        <p style="margin:12px 0 0;color:var(--muted);font-size:14px">Mission banner uses an Unsplash free photo. License permits free commercial use; attribution appreciated but not required.</p>
+      </div>
+    </section>
+
     <section>
       <div class="card" style="grid-template-columns:1fr">
         <h2 style="margin:0 0 10px">What you’ll find inside</h2>

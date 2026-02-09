@@ -9,14 +9,14 @@
     :root{ --brand:#0E7C86; --accent:#673AB7; --bg:#0b1220; --surface:#0f172a; --text:#e5e7eb; --muted:#9ca3af; --radius:16px; --shadow: 0 18px 40px rgba(0,0,0,.45), 0 2px 10px rgba(0,0,0,.35); }
     @media (prefers-color-scheme: light){ :root{ --bg:#f7fafc; --surface:#ffffff; --text:#1f2937; --muted:#64748b; --shadow: 0 10px 24px rgba(2,12,27,.08), 0 2px 6px rgba(2,12,27,.06);} }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:1100px;margin:0 auto;padding:18px}
     header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
     @media (prefers-color-scheme: light){header{background:rgba(255,255,255,.7);border-color:rgba(0,0,0,.06)}}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px;color:var(--brand);font-weight:800;letter-spacing:.2px}
+    .brand{display:flex;align-items:center;gap:12px;color:var(--brand);font-weight:800}
     .brand .logobox{width:30px;height:30px}
     .links a{margin:0 8px;padding:8px 12px;border-radius:10px;color:var(--text)}
     .links a.active{background:var(--brand);color:white}
@@ -29,7 +29,6 @@
     .btns{display:flex;gap:12px;flex-wrap:wrap}
     .btn{appearance:none;border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;color:#031018;background:linear-gradient(180deg,#7edbff,#21b8d6);box-shadow:0 6px 16px rgba(0,0,0,.25)}
     .btn.secondary{color:white;background:linear-gradient(180deg,#7b5ae4,#6d38d9)}
-    .btn:focus{outline:2px solid #fff;outline-offset:2px}
     .hero-visual{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:12px}
     @media (prefers-color-scheme: light){.hero-visual{background:rgba(103,58,183,.06);border-color:rgba(0,0,0,.06)}}
     footer{opacity:.8;margin:14px 0}
@@ -39,6 +38,7 @@
   <header>
     <div class="container nav">
       <div class="brand" aria-label="ThriveHub">
+        <!-- INLINE SVG LOGO -->
         <svg class="logobox" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs><linearGradient id="lg" x1="0" x2="1"><stop stop-color="var(--brand)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient></defs>
           <rect rx="12" ry="12" width="64" height="64" fill="url(#lg)"/>
@@ -56,38 +56,43 @@
   </header>
 
   <main class="container">
+    <!-- HERO: Title + Description + Visual + Clear CTAs -->
     <section class="hero">
       <div class="card">
         <div>
-          <div class="chip" style="display:inline-flex;align-items:center;gap:8px;background:rgba(14,124,134,.15);color:#c7f5ff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.4px">ThriveHub</div>
+          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(14,124,134,.15);color:#c7f5ff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.4px">ThriveHub</div>
           <h1 style="margin-top:10px">Free, teacher‑ready resources — one click</h1>
-          <p>Quick access to classroom‑ready tools, inclusive strategies, study skills supports, and wellbeing resources — designed for South Australian educators.</p>
+          <p style="max-width:560px">Quick access to classroom‑ready tools, inclusive strategies, study‑skills supports, and wellbeing resources — designed for South Australian educators.</p>
           <div class="btns">
             <a class="btn" href="library.html">Open Library</a>
             <a class="btn secondary" href="resources.html">Calm Space</a>
           </div>
         </div>
+        <!-- ALWAYS‑VISIBLE INLINE SVG VISUAL -->
         <div class="hero-visual" aria-hidden="true">
           <svg viewBox="0 0 440 250" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="vgrad" x1="0" x2="1" y1="0" y2="1">
                 <stop stop-color="var(--brand)" offset="0"/><stop stop-color="var(--accent)" offset="1"/>
               </linearGradient>
-              <filter id="blur" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur in="SourceGraphic" stdDeviation="1.6"/></filter>
+              <filter id="blur" x="-10%" y="-10%" width="120%" height="120%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" />
+              </filter>
             </defs>
             <rect x="0" y="0" width="100%" height="100%" rx="18" fill="url(#vgrad)" opacity=".18"/>
-            <g filter="url(#blur)" opacity=".5">
+            <g filter="url(#blur)" opacity=".55">
               <rect x="44" y="50" width="150" height="70" rx="14" fill="#fff"/>
-              <rect x="214" y="50" width="110" height="70" rx="14" fill="#fff" opacity=".5"/>
+              <rect x="214" y="50" width="110" height="70" rx="14" fill="#fff" opacity=".55"/>
               <circle cx="365" cy="90" r="12" fill="#4ade80"/>
               <rect x="70" y="140" width="200" height="20" rx="10" fill="#fff"/>
-              <rect x="70" y="170" width="130" height="20" rx="10" fill="#fff" opacity=".6"/>
+              <rect x="70" y="170" width="130" height="20" rx="10" fill="#fff" opacity=".65"/>
             </g>
           </svg>
         </div>
       </div>
     </section>
 
+    <!-- FEATURES: short & scannable -->
     <section>
       <div class="card" style="grid-template-columns:1fr">
         <h2 style="margin:0 0 10px">What you’ll find inside</h2>

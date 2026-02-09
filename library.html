@@ -1,51 +1,31 @@
-:root{
-  --brand:#0E7C86; /* primary */
-  --accent:#673AB7;
-  --bg:#f7fafc; --surface:#fff;
-  --text:#1f2937; --muted:#64748b;
-}
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ThriveHub · Library</title>
-  <meta name="description" content="ThriveHub Library – curated, free, classroom-ready links for inclusive education in South Australia." />
+  <meta name="description" content="ThriveHub Library – curated, free, classroom‑ready links for inclusive education in South Australia." />
   <style>
     :root{
-      /* ✅ Update these 6 variables to exactly match your Home page colours */
-      --brand:#0E7C86;          /* primary brand */
-      --accent:#673AB7;         /* accent (buttons, highlights) */
-      --bg:#f7fafc;             /* page background */
-      --surface:#ffffff;        /* cards */
-      --text:#1f2937;           /* body text */
-      --muted:#64748b;          /* secondary text */
-      --success:#0E9F6E;
-      --warning:#B45309;
-      --danger:#DC2626;
-      --radius:14px;
-      --shadow: 0 10px 24px rgba(2,12,27,.08), 0 2px 6px rgba(2,12,27,.06);
+      /* brand tokens (not visible) */
+      --brand:#0E7C86; --accent:#673AB7; --bg:#f7fafc; --surface:#ffffff; --text:#1f2937; --muted:#64748b;
+      --radius:14px; --shadow: 0 10px 24px rgba(2,12,27,.08), 0 2px 6px rgba(2,12,27,.06);
     }
     @media (prefers-color-scheme: dark){
-      :root{
-        --bg:#0b1220; 
-        --surface:#0f172a; 
-        --text:#e5e7eb; 
-        --muted:#9ca3af;
-        --shadow: 0 10px 24px rgba(0,0,0,.35), 0 2px 6px rgba(0,0,0,.3);
-      }
+      :root{ --bg:#0b1220; --surface:#0f172a; --text:#e5e7eb; --muted:#9ca3af; --shadow: 0 10px 24px rgba(0,0,0,.35), 0 2px 6px rgba(0,0,0,.3); }
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial;}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:1100px;margin:0 auto;padding:18px}
-    /* Top bar */
+
+    /* Top nav with simple wordmark */
     header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid rgba(0,0,0,.06)}
     @media (prefers-color-scheme: dark){header{background:rgba(15,23,42,.6);border-color:rgba(255,255,255,.06)}}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--brand)}
-    .brand svg{width:26px;height:26px}
+    .brand{display:flex;align-items:center;gap:12px;color:var(--brand);font-weight:800;letter-spacing:.2px}
+    .brand .logobox{width:30px;height:30px}
     .links a{margin:0 8px;padding:8px 12px;border-radius:10px;color:var(--text)}
     .links a.active{background:var(--brand);color:white}
     .links a:hover{background:rgba(103,58,183,.12)}
@@ -59,16 +39,18 @@
     .search{display:flex;align-items:center;gap:8px;background:var(--surface);border-radius:12px;padding:10px 12px;border:1px solid rgba(0,0,0,.06);box-shadow:var(--shadow);max-width:520px}
     .search input{all:unset;width:100%}
 
-    /* Sections */
+    /* Cards */
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
     section{margin:26px 0}
-    .card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
-    .card h3{display:flex;align-items:center;gap:10px;font-size:20px;margin:0 0 8px}
-    .card p{color:var(--muted);margin:0 0 12px}
-    .icon{flex:0 0 auto;width:28px;height:28px}
-    .card ul{margin:0;padding:0 0 0 16px}
+    .card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .thumb{height:120px;background:linear-gradient(135deg,var(--brand) 0%, var(--accent) 100%);position:relative}
+    .thumb svg{position:absolute;inset:0;margin:auto;width:120px;height:120px;opacity:.25;color:white}
+    .body{padding:18px}
+    .body h3{display:flex;align-items:center;gap:10px;font-size:20px;margin:0 0 8px}
+    .body p{color:var(--muted);margin:0 0 12px}
+    .body ul{margin:0;padding:0 0 0 16px}
     .tag{display:inline-flex;align-items:center;gap:6px;background:rgba(103,58,183,.12);color:var(--accent);border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600;margin:8px 6px 0 0}
-    footer{margin:40px 0 26px;color:var(--muted);font-size:14px}
+
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   </style>
 </head>
@@ -76,7 +58,13 @@
   <header>
     <div class="container nav">
       <div class="brand" aria-label="ThriveHub">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2l3.1 6.3L22 9.2l-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9L2 9.2l6.9-1L12 2z" fill="currentColor" opacity=".2"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/></svg>
+        <!-- Simple inline logo (SVG wordmark) -->
+        <svg class="logobox" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><linearGradient id="lg" x1="0" x2="1"><stop stop-color="var(--brand)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient></defs>
+          <rect rx="12" ry="12" width="64" height="64" fill="url(#lg)"/>
+          <path d="M16 22h32v6H34v22h-6V28H16z" fill="#fff" opacity=".95"/>
+          <path d="M40 28h8v16c0 4.4-3.6 8-8 8h-6v-6h6c1.1 0 2-.9 2-2V28z" fill="#fff" opacity=".9"/>
+        </svg>
         <span>ThriveHub</span>
       </div>
       <nav class="links" aria-label="Primary">
@@ -99,7 +87,6 @@
         </label>
       </div>
       <div class="hero-svg" aria-hidden="true">
-        <!-- Simple decorative SVG -->
         <svg viewBox="0 0 440 270" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="var(--brand)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient>
@@ -115,136 +102,212 @@
       </div>
     </div>
 
-    <!-- GRID OF SECTIONS -->
     <section>
       <h2 class="sr-only">Curated categories</h2>
       <div class="grid" id="grid">
 
         <!-- Literacy – Reading -->
         <article class="card" data-tags="literacy reading phonics decodable dyslexia speld">
-          <h3><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 19.5V6.2c0-.7.6-1.2 1.3-1.2 3.3 0 5.9.9 7.7 2.6 1.8-1.7 4.4-2.6 7.7-2.6.7 0 1.3.5 1.3 1.2v13.3c0 .5-.4.9-.9.9-3.9 0-6.7.9-8.1 2.6-1.4-1.7-4.2-2.6-8.1-2.6-.5 0-.9-.4-.9-.9z"/></svg> Literacy · Reading</h3>
-          <p>Evidence‑based reading instruction, decodables and strategy libraries.</p>
-          <ul>
-            <li><a target="_blank" rel="noopener" href="https://speldsa.org.au/pages/speld-sa-phonic-books">SPELD SA Free Phonic/Decodable Readers</a></li>
-            <li><a target="_blank" rel="noopener" href="https://fivefromfive.com.au/phonics-teaching/decodable-books/">Five from Five · Decodable books (overview)</a></li>
-            <li><a target="_blank" rel="noopener" href="https://premiersreadingchallenge.sa.edu.au/decodable-books/">SA Premier’s Reading Challenge: Decodable books (guide)</a></li>
-            <li><a target="_blank" rel="noopener" href="https://www.readingrockets.org/classroom/classroom-strategies">Reading Rockets · Classroom Strategy Library</a></li>
-          </ul>
-          <span class="tag">Decodables</span>
-          <span class="tag">K–10</span>
+          <div class="thumb">
+            <svg viewBox="0 0 128 128"><path d="M16 32h44c6 0 10 3 14 8 4-5 8-8 14-8h24v64h-24c-6 0-10 3-14 8-4-5-8-8-14-8H16z" fill="currentColor"/></svg>
+          </div>
+          <div class="body">
+            <h3>Literacy · Reading</h3>
+            <p>Evidence‑based reading instruction, decodables and strategy libraries.</p>
+            <ul>
+              <li><a target="_blank" rel="noopener" href="https://speldsa.org.au/pages/speld-sa-phonic-books">SPELD SA Free Phonic/Decodable Readers</a></li>
+              <li><a target="_blank" rel="noopener" href="https://fivefromfive.com.au/phonics-teaching/decodable-books/">Five from Five · Decodable books (overview)</a></li>
+              <li><a target="_blank" rel="noopener" href="https://premiersreadingchallenge.sa.edu.au/decodable-books/">SA Premier’s Reading Challenge: Decodable books (guide)</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.readingrockets.org/classroom/classroom-strategies">Reading Rockets · Classroom Strategy Library</a></li>
+            </ul>
+            <span class="tag">Decodables</span>
+            <span class="tag">K–10</span>
+          </div>
         </article>
 
         <!-- Literacy – Writing -->
         <article class="card" data-tags="literacy writing prompts planning readwritethink pobble">
-          <h3><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h10a2 2 0 0 1 2 2v2H4V4zm0 6h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10zm9 3H7v2h6v-2z"/></svg> Literacy · Writing</h3>
-          <p>High‑leverage writing tools and daily prompts.</p>
-          <ul>
-            <li><a target="_blank" rel="noopener" href="https://www.readwritethink.org/classroom-resources/student-interactives">ReadWriteThink · Student Interactives (maps, poetry, planners)</a></li>
-            <li><a target="_blank" rel="noopener" href="https://www.readwritethink.org/classroom-resources/student-interactives/essay">ReadWriteThink · Essay/Persuasion/Compare‑Contrast maps</a></li>
-            <li><a target="_blank" rel="noopener" href="https://www.pobble.com/">Pobble 365 · Free daily image‑based writing prompts</a></li>
-          </ul>
-          <span class="tag">Writing</span>
-          <span class="tag">3–12</span>
+          <div class="thumb">
+            <svg viewBox="0 0 128 128"><path d="M16 24h96v20H16zM16 56h64v16H16zM16 84h40v16H16z" fill="currentColor"/></svg>
+          </div>
+          <div class="body">
+            <h3>Literacy · Writing</h3>
+            <p>High‑leverage writing tools and daily prompts.</p>
+            <ul>
+              <li><a target="_blank" rel="noopener" href="https://www.readwritethink.org/classroom-resources/student-interactives">ReadWriteThink · Student Interactives</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.readwritethink.org/classroom-resources/student-interactives/essay">Essay/Persuasion/Compare‑Contrast maps</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.pobble.com/">Pobble 365 · Daily image prompts</a></li>
+            </ul>
+            <span class="tag">Writing</span>
+            <span class="tag">3–12</span>
+          </div>
         </article>
 
         <!-- Numeracy -->
         <article class="card" data-tags="numeracy maths manipulatives nrich mlc geogebra mathsbot">
-          <h3><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></svg> Numeracy</h3>
-          <p>Rich tasks, virtual manipulatives and interactive calculators.</p>
-          <ul>
-            <li><a target="_blank" rel="noopener" href="https://nrich.maths.org/">NRICH · rich problems & games (3–18)</a></li>
-            <li><a target="_blank" rel="noopener" href="https://www.mathlearningcenter.org/apps">MLC · Free Math Apps (frames, number line, geoboard)</a></li>
-            <li><a target="_blank" rel="noopener" href="https://www.geogebra.org/classic">GeoGebra Classic · graphing, geometry, 3D, statistics</a></li>
-            <li><a target="_blank" rel="noopener" href="https://mathsbot.com/">MathsBot · digital manipulatives & generators</a></li>
-          </ul>
-          <span class="tag">P–12</span>
+          <div class="thumb">
+            <svg viewBox="0 0 128 128"><path d="M16 96h96v16H16zM24 80l24-40 24 40zM88 64h24v16H88z" fill="currentColor"/></svg>
+          </div>
+          <div class="body">
+            <h3>Numeracy</h3>
+            <p>Rich tasks, virtual manipulatives and interactive calculators.</p>
+            <ul>
+              <li><a target="_blank" rel="noopener" href="https://nrich.maths.org/">NRICH · rich problems & games (3–18)</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.mathlearningcenter.org/apps">MLC · Free Math Apps</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.geogebra.org/classic">GeoGebra Classic</a></li>
+              <li><a target="_blank" rel="noopener" href="https://mathsbot.com/">MathsBot · manipulatives & generators</a></li>
+            </ul>
+            <span class="tag">P–12</span>
+          </div>
         </article>
 
         <!-- Wellbeing -->
         <article class="card" data-tags="wellbeing sel calm smiling mind sa framework">
-          <h3><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a7 7 0 0 1 14 0c0 5.6-7 10-7 10z"/></svg> Wellbeing & SEL</h3>
-          <p>Evidence‑based programs and SA guidance to support student wellbeing.</p>
-          <ul>
-            <li><a target="_blank" rel="noopener" href="https://www.smilingmind.com.au/">Smiling Mind · free app & school program info</a></li>
-            <li><a target="_blank" rel="noopener" href="https://www.education.sa.gov.au/schools-and-educators/strategies-and-initiatives/wellbeing-learning-and-life-framework">SA Department · Wellbeing for Learning and Life framework</a></li>
-            <li><a target="_blank" rel="noopener" href="https://www.acer.org/au/news/article/supporting-student-wellbeing-by-simplifying-the-choice-in-selecting-effective-wellbeing-programs">ACER · SA directory of effective wellbeing programs (overview)</a></li>
-          </ul>
-          <span class="tag">Wellbeing</span>
+          <div class="thumb">
+            <svg viewBox="0 0 128 128"><circle cx="64" cy="48" r="18" fill="currentColor"/><path d="M28 100c8-16 20-24 36-24s28 8 36 24" stroke="currentColor" stroke-width="12" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <div class="body">
+            <h3>Wellbeing & SEL</h3>
+            <p>Evidence‑based programs and SA guidance to support student wellbeing.</p>
+            <ul>
+              <li><a target="_blank" rel="noopener" href="https://www.smilingmind.com.au/">Smiling Mind · free app & school program info</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.education.sa.gov.au/schools-and-educators/strategies-and-initiatives/wellbeing-learning-and-life-framework">SA · Wellbeing for Learning and Life framework</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.acer.org/au/news/article/supporting-student-wellbeing-by-simplifying-the-choice-in-selecting-effective-wellbeing-programs">ACER · SA directory overview</a></li>
+            </ul>
+            <span class="tag">Wellbeing</span>
+          </div>
         </article>
 
         <!-- Accessibility tools -->
         <article class="card" data-tags="accessibility immersive reader dictation voice typing edge google">
-          <h3><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a4 4 0 0 1 4 4v5a4 4 0 1 1-8 0V7a4 4 0 0 1 4-4zm-6 9a6 6 0 0 0 12 0h2a8 8 0 0 1-16 0h2z"/></svg> Accessibility & Study Tools</h3>
-          <p>Built‑in, no‑cost tools to reduce barriers and boost independence.</p>
-          <ul>
-            <li><a target="_blank" rel="noopener" href="https://support.microsoft.com/en-us/topic/use-immersive-reader-in-microsoft-edge-78a7a17d-52e1-47ee-b0ac-eff8539015e1">Microsoft Edge · Immersive Reader & Read Aloud</a></li>
-            <li><a target="_blank" rel="noopener" href="https://support.google.com/docs/answer/4492226?Hl=en">Google Docs · Voice typing (speech‑to‑text)</a></li>
-            <li><a target="_blank" rel="noopener" href="https://dictation.io/">Dictation.io · browser‑based speech‑to‑text</a></li>
-          </ul>
-          <span class="tag">Inclusive Tech</span>
+          <div class="thumb">
+            <svg viewBox="0 0 128 128"><path d="M20 88h88l-12 20H32zM44 20h40v44H44z" fill="currentColor"/></svg>
+          </div>
+          <div class="body">
+            <h3>Accessibility & Study Tools</h3>
+            <p>Built‑in, no‑cost tools to reduce barriers and boost independence.</p>
+            <ul>
+              <li><a target="_blank" rel="noopener" href="https://support.microsoft.com/en-us/topic/use-immersive-reader-in-microsoft-edge-78a7a17d-52e1-47ee-b0ac-eff8539015e1">Microsoft Edge · Immersive Reader & Read Aloud</a></li>
+              <li><a target="_blank" rel="noopener" href="https://support.google.com/docs/answer/4492226?Hl=en">Google Docs · Voice typing</a></li>
+              <li><a target="_blank" rel="noopener" href="https://dictation.io/">Dictation.io · speech‑to‑text</a></li>
+            </ul>
+            <span class="tag">Inclusive Tech</span>
+          </div>
         </article>
 
         <!-- EAL/D -->
         <article class="card" data-tags="eal eald leap bilingual newcomers multilingual">
-          <h3><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm-9 9a9 9 0 1 1 18 0H3z"/></svg> EAL/D (English as an Additional Language/Dialect)</h3>
-          <p>SA guidance, progressions and high‑quality learner materials.</p>
-          <ul>
-            <li><a target="_blank" rel="noopener" href="https://www.education.sa.gov.au/schools-and-educators/curriculum-and-teaching/curriculum-programs/english-additional-language-or-dialect-program">SA Department · EALD program & LEAP Levels</a></li>
-            <li><a target="_blank" rel="noopener" href="https://www.australiancurriculum.edu.au/student-diversity/eal-d-students">Australian Curriculum · EAL/D students (V9)</a></li>
-            <li><a target="_blank" rel="noopener" href="https://learnenglishkids.britishcouncil.org/">British Council · LearnEnglish Kids (games, songs, stories)</a></li>
-          </ul>
-          <span class="tag">EAL/D</span>
+          <div class="thumb">
+            <svg viewBox="0 0 128 128"><path d="M16 92l24-56h12l24 56h-12l-6-14H34l-6 14H16zm24-26h20l-10-24z" fill="currentColor"/></svg>
+          </div>
+          <div class="body">
+            <h3>EAL/D (English as an Additional Language/Dialect)</h3>
+            <p>SA guidance, progressions and high‑quality learner materials.</p>
+            <ul>
+              <li><a target="_blank" rel="noopener" href="https://www.education.sa.gov.au/schools-and-educators/curriculum-and-teaching/curriculum-programs/english-additional-language-or-dialect-program">SA EALD program & LEAP Levels</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.australiancurriculum.edu.au/student-diversity/eal-d-students">Australian Curriculum · EAL/D students (V9)</a></li>
+              <li><a target="_blank" rel="noopener" href="https://learnenglishkids.britishcouncil.org/">British Council · LearnEnglish Kids</a></li>
+            </ul>
+            <span class="tag">EAL/D</span>
+          </div>
         </article>
 
-        <!-- First Nations perspectives -->
+        <!-- First Nations -->
         <article class="card" data-tags="first nations aboriginal torres strait islander reconciliation curriculum narragunnawali">
-          <h3><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l9 4-9 4-9-4 9-4zm9 7l-9 4-9-4v9l9 4 9-4V9z"/></svg> Aboriginal & Torres Strait Islander Histories and Cultures</h3>
-          <p>Curriculum‑aligned resources and whole‑school reconciliation actions.</p>
-          <ul>
-            <li><a target="_blank" rel="noopener" href="https://www.narragunnawali.org.au/">Narragunnawali · RAPs, PL & classroom resources</a></li>
-            <li><a target="_blank" rel="noopener" href="https://v8.australiancurriculum.edu.au/f-10-curriculum/cross-curriculum-priorities/aboriginal-and-torres-strait-islander-histories-and-cultures">ACARA · Cross‑curriculum priority (overview)</a></li>
-            <li><a target="_blank" rel="noopener" href="https://aiatsis.gov.au/education/curriculum-resources">AIATSIS · Curriculum resources</a></li>
-          </ul>
-          <span class="tag">CCP</span>
+          <div class="thumb">
+            <svg viewBox="0 0 128 128"><circle cx="64" cy="64" r="28" fill="currentColor"/><path d="M8 64h48M72 64h48" stroke="currentColor" stroke-width="12" opacity=".5"/></svg>
+          </div>
+          <div class="body">
+            <h3>Aboriginal & Torres Strait Islander Histories and Cultures</h3>
+            <p>Curriculum‑aligned resources and whole‑school reconciliation actions.</p>
+            <ul>
+              <li><a target="_blank" rel="noopener" href="https://www.narragunnawali.org.au/">Narragunnawali · RAPs, PL & classroom resources</a></li>
+              <li><a target="_blank" rel="noopener" href="https://v8.australiancurriculum.edu.au/f-10-curriculum/cross-curriculum-priorities/aboriginal-and-torres-strait-islander-histories-and-cultures">ACARA · CCP overview</a></li>
+              <li><a target="_blank" rel="noopener" href="https://aiatsis.gov.au/education/curriculum-resources">AIATSIS · curriculum resources</a></li>
+            </ul>
+            <span class="tag">CCP</span>
+          </div>
         </article>
 
         <!-- Disability-specific -->
         <article class="card" data-tags="asd adhd dyslexia dyscalculia disability inclusion adjustments">
-          <h3><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10zm-1-6.5l7-7-1.4-1.4L11 13.2 7.4 9.6 6 11l5 4.5z"/></svg> Student Support (ASD · ADHD · Dyslexia · Dyscalculia)</h3>
-          <p>Trusted Australian sources for condition‑specific strategies and family supports.</p>
-          <ul>
-            <li><a target="_blank" rel="noopener" href="https://www.aspect.org.au/">Autism Spectrum Australia (Aspect)</a></li>
-            <li><a target="_blank" rel="noopener" href="https://raisingchildren.net.au/adhd/learning-school-work">Raising Children Network · ADHD at school</a></li>
-            <li><a target="_blank" rel="noopener" href="https://www.cdc.gov/adhd/treatment/classroom.html">CDC · ADHD classroom strategies</a></li>
-            <li><a target="_blank" rel="noopener" href="https://speldsa.org.au/">SPELD SA · parent guides & local services</a></li>
-            <li><a target="_blank" rel="noopener" href="https://dsf.net.au/resources">DSF · dyslexia/dysgraphia/dyscalculia resources</a></li>
-            <li><a target="_blank" rel="noopener" href="https://www.dyscalculia.org/">Dyscalculia.org · information & checklists</a></li>
-          </ul>
-          <span class="tag">Adjustments</span>
+          <div class="thumb">
+            <svg viewBox="0 0 128 128"><path d="M64 12a52 52 0 1 0 52 52A52 52 0 0 0 64 12zm0 20a18 18 0 1 1-18 18A18 18 0 0 1 64 32zm0 70c-18 0-34-10-42-25 2-13 28-20 42-20s40 7 42 20c-8 15-24 25-42 25z" fill="currentColor"/></svg>
+          </div>
+          <div class="body">
+            <h3>Student Support (ASD · ADHD · Dyslexia · Dyscalculia)</h3>
+            <p>Trusted Australian sources for condition‑specific strategies and family supports.</p>
+            <ul>
+              <li><a target="_blank" rel="noopener" href="https://www.aspect.org.au/">Autism Spectrum Australia (Aspect)</a></li>
+              <li><a target="_blank" rel="noopener" href="https://raisingchildren.net.au/adhd/learning-school-work">Raising Children Network · ADHD at school</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.cdc.gov/adhd/treatment/classroom.html">CDC · ADHD classroom strategies</a></li>
+              <li><a target="_blank" rel="noopener" href="https://speldsa.org.au/">SPELD SA · parent guides & local services</a></li>
+              <li><a target="_blank" rel="noopener" href="https://dsf.net.au/resources">DSF · dyslexia/dysgraphia/dyscalculia</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.dyscalculia.org/">Dyscalculia.org · information & checklists</a></li>
+            </ul>
+            <span class="tag">Adjustments</span>
+          </div>
         </article>
 
         <!-- Policy & frameworks -->
         <article class="card" data-tags="policy nccd south australia inclusion guidelines sies">
-          <h3><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h10v2H4v-2z"/></svg> Policy & Frameworks</h3>
-          <p>For planning, evidence and whole‑school implementation.</p>
-          <ul>
-            <li><a target="_blank" rel="noopener" href="https://www.nccd.edu.au/">NCCD · official portal, guidelines & PL</a></li>
-            <li><a target="_blank" rel="noopener" href="https://www.education.sa.gov.au/department/strategies-and-plans/supporting-inclusion-student-engagement">SA · Supporting inclusion & student engagement</a></li>
-            <li><a target="_blank" rel="noopener" href="https://www.sies.sa.edu.au/">SIES (formerly SERU) · inclusive tech, resources & PD</a></li>
-          </ul>
-          <span class="tag">SA</span>
+          <div class="thumb">
+            <svg viewBox="0 0 128 128"><path d="M24 24h80v20H24zM24 54h80v20H24zM24 84h56v20H24z" fill="currentColor"/></svg>
+          </div>
+          <div class="body">
+            <h3>Policy & Frameworks</h3>
+            <p>For planning, evidence and whole‑school implementation.</p>
+            <ul>
+              <li><a target="_blank" rel="noopener" href="https://www.nccd.edu.au/">NCCD · portal, guidelines & PL</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.education.sa.gov.au/department/strategies-and-plans/supporting-inclusion-student-engagement">SA · Supporting inclusion & engagement</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.sies.sa.edu.au/">SIES · inclusive tech, resources & PD</a></li>
+            </ul>
+            <span class="tag">SA</span>
+          </div>
+        </article>
+
+        <!-- Executive function & study skills -->
+        <article class="card" data-tags="executive function study skills metacognition spacing retrieval notes pomodoro">
+          <div class="thumb">
+            <svg viewBox="0 0 128 128"><path d="M64 20a36 36 0 1 0 36 36A36 36 0 0 0 64 20zm-6 12h12v24H58zM58 64h12v12H58z" fill="currentColor"/></svg>
+          </div>
+          <div class="body">
+            <h3>Executive Function & Study Skills</h3>
+            <p>Explicit strategies for planning, memory and self‑regulation.</p>
+            <ul>
+              <li><a target="_blank" rel="noopener" href="https://www.learningscientists.org/posters">Learning Scientists · Six Strategies posters</a></li>
+              <li><a target="_blank" rel="noopener" href="https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition">EEF · Metacognition & Self‑Regulated Learning</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.101planners.com/cornell-notes-template/">Cornell note templates (printable & Google Docs)</a></li>
+              <li><a target="_blank" rel="noopener" href="https://pomofocus.io/">Pomodoro focus timer (browser)</a></li>
+            </ul>
+            <span class="tag">Study Skills</span>
+          </div>
+        </article>
+
+        <!-- Assessment templates & tools -->
+        <article class="card" data-tags="assessment templates rubric moderation evidence nccd number check ochre readwritethink">
+          <div class="thumb">
+            <svg viewBox="0 0 128 128"><path d="M20 92l20 16 48-64 20 16-56 72z" fill="currentColor"/></svg>
+          </div>
+          <div class="body">
+            <h3>Assessment Templates & Tools</h3>
+            <p>Ready‑to‑use templates and checks to streamline assessment and evidence.</p>
+            <ul>
+              <li><a target="_blank" rel="noopener" href="https://www.readwritethink.org/classroom-resources/student-interactives/readwritethink-notetaker">ReadWriteThink · Notetaker/Outliner</a> · <a target="_blank" rel="noopener" href="https://www.readwritethink.org/classroom-resources/printouts/oral-presentation-rubric">Oral Presentation Rubric</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.mathematicshub.edu.au/">Mathematics Hub · Number Check (Year 1)</a></li>
+              <li><a target="_blank" rel="noopener" href="https://ochre.org.au/">Ochre Education · assessment resources</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www2.education.vic.gov.au/pal/nccd-students-with-disability/resources">NCCD resources · summary sheet & moderation</a></li>
+            </ul>
+            <span class="tag">Templates</span>
+          </div>
         </article>
 
       </div>
     </section>
-
-    <footer>
-      <p>Tip: this page uses relative links (no leading slash), so it works reliably at <code>/thrivehub/</code>. Update the colour variables at the top to match your Home page.</p>
-    </footer>
   </main>
 
   <script>
-    // Simple client-side filter
+    // Simple in-page filter
     const q = document.getElementById('q');
     const cards = [...document.querySelectorAll('#grid .card')];
     q.addEventListener('input', () => {
@@ -255,5 +318,7 @@
       });
     });
   </script>
+
+  <!-- Deployment tip (hidden): This page uses relative links (no leading slash), so it works reliably at /thrivehub/. Update the CSS color variables in :root to match Home. -->
 </body>
 </html>

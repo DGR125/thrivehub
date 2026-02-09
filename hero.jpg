@@ -1,0 +1,60 @@
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="card">
+      <div>
+        <div class="chip">ThriveHub</div>
+
+        <h1 style="margin-top:10px">
+          Free, teacher‑ready resources — one click
+        </h1>
+
+        <p style="color:var(--muted);max-width:520px;margin-bottom:18px">
+          Quick access to classroom‑ready tools, inclusive strategies, study skills supports, and wellbeing resources — designed for South Australian educators.
+        </p>
+
+        <div class="btns">
+          <a class="btn" href="library.html">Open Library</a>
+          <a class="btn secondary" href="resources.html">Calm Space</a>
+        </div>
+      </div>
+
+      <!-- Inline hero visual -->
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 440 250" width="100%" height="100%">
+          <defs>
+            <linearGradient id="vgrad" x1="0" x2="1" y1="0" y2="1">
+              <stop stop-color="var(--brand)" offset="0"/>
+              <stop stop-color="var(--accent)" offset="1"/>
+            </stop>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="100%" height="100%" rx="18" fill="url(#vgrad)" opacity=".18"/>
+          <g opacity=".4">
+            <rect x="40" y="60" width="160" height="70" rx="12" fill="#fff"/>
+            <rect x="220" y="60" width="120" height="70" rx="12" fill="#fff" opacity=".4"/>
+            <circle cx="370" cy="95" r="12" fill="#4ade80"/>
+            <rect x="70" y="150" width="200" height="18" rx="9" fill="#fff"/>
+            <rect x="70" y="180" width="130" height="18" rx="9" fill="#fff" opacity=".5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section>
+    <div class="card" style="grid-template-columns:1fr">
+      <h2 style="margin:0 0 10px">What you’ll find inside</h2>
+
+      <ul style="margin:0;padding-left:18px;color:var(--muted);line-height:1.6">
+        <li>Inclusive literacy & numeracy resources</li>
+        <li>Study skills & executive function strategies</li>
+        <li>Wellbeing and self‑regulation tools</li>
+        <li>Assessment templates & NCCD evidence helpers</li>
+      </ul>
+    </div>
+  </section>
+
+</main>

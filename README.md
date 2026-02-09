@@ -1,3 +1,7 @@
+index.html
+library.html        ← either a redirect (from step A) or the full page
+resources.html      ← your Calm Space page
+.nojekyll
 git commit --allow-empty -m "Trigger GitHub Pages rebuild"
 git push
 # Make sure you're on the publishing branch

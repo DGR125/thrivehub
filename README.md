@@ -1,3 +1,5 @@
+git commit --allow-empty -m "Trigger GitHub Pages rebuild"
+git push
 # Make sure you're on the publishing branch
 git checkout gh-pages
 

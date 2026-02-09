@@ -1,6 +1,70 @@
 <!doctype html>
 <html lang="en">
 <head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ThriveHub — Calm Space (V7.7)</title>
+<style>
+:root{--bg1:#0b3a3f;--bg2:#0b5a7a;--ink:#E6F2F4;--muted:#9CC7D1;--dark:#0a1a22}
+*{box-sizing:border-box}html,body{margin:0}
+body{font:16px/1.6 system-ui,Segoe UI,Arial,sans-serif;background:var(--dark);color:var(--ink)}
+.container{max-width:1100px;margin:0 auto;padding:22px}
+.header{display:flex;align-items:center;justify-content:space-between;color:var(--muted)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font-weight:800}
+.brand .logo{background:linear-gradient(135deg,#1f9bd1,#2bd6b2);color:#051418;padding:.4rem .8rem;border-radius:12px}
+.card{background:radial-gradient(1200px 500px at 10% 10%, rgba(58,169,255,.15), transparent),linear-gradient(140deg,var(--bg1),var(--bg2));border-radius:26px;padding:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:10px}
+.cardLite{background:#0f2631;border:1px solid #103141;border-radius:18px;padding:16px}
+.link{color:#72c8ff;font-weight:800;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="brand"><span class="logo">ThriveHub</span><span>V7.7</span></div>
+    <div></div>
+  </div>
+
+  <section class="card">
+    <h2 style="margin:.35rem 0 8px">Calm Space / Wellbeing playlist</h2>
+    <p style="color:#9CC7D1">Short, classroom‑ready calming tools.</p>
+
+    <div class="grid">
+      <div class="cardLite">
+        <h3>Breathing exercises</h3>
+        <p>
+          <a class="link" href="https://youtu.be/8VwY4ptQkLU" target="_blank" rel="noopener">Box breathing</a><br>
+          <a class="link" href="https://www.smilingmind.com.au/schools" target="_blank" rel="noopener">Smiling Mind — Schools</a>
+        </p>
+      </div>
+      <div class="cardLite">
+        <h3>Grounding & regulation</h3>
+        <p>
+          <a class="link" href="https://youtu.be/7bK7i3Oe6nY" target="_blank" rel="noopener">5‑4‑3‑2‑1 grounding</a><br>
+          <a class="link" href="https://studentwellbeinghub.edu.au/educators" target="_blank" rel="noopener">Student Wellbeing Hub — Regulation</a>
+        </p>
+      </div>
+      <div class="cardLite">
+        <h3>Digital wellbeing</h3>
+        <p><a class="link" href="https://www.esafety.gov.au/educators/classroom-resources" target="_blank" rel="noopener">eSafety — Classroom resources</a></p>
+      </div>
+    </div>
+
+    <div class="cardLite" style="margin-top:14px">
+      <h3>Coming next…</h3>
+      <ul>
+        <li>Micro‑breaks</li><li>Calming animations</li><li>Breathing prompts</li><li>Mindfulness grounding tools</li>
+      </ul>
+    </div>
+
+    <p style="margin-top:12px"><a class="link" href="index.html">Back to Home</a></p>
+  </section>
+  <footer>Created by Teresa Bruno • © Teresa Bruno</footer>
+</div>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ThriveHub — Library (V7.7)</title>

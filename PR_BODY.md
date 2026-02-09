@@ -1,3 +1,16 @@
+---
+
+## Fastest way to open the PR (Web UI)
+
+1) Go to your repo: **DGR125 / `https-DGR125.github.io-thrivehub-`**. [9](https://psychology.org.au/getmedia/76c3a52b-ee2b-41d6-a4bc-f739bb6e95d1/20aps-ccn-is-secondary-math-tips-p1.pdf)  
+2) **Add file → Upload files**, and upload the new **`library.html`** I provided earlier (same filename, root of repo).  
+3) Choose **Create a new branch** → name it `feature/library-visuals`.  
+4) Click **Propose changes** → **Create pull request**.  
+5) Paste the PR body from the block above. Submit.  
+6) Merge when you’re ready, then open `…/thrivehub/library.html?v=v82` to bypass cache and verify.
+
+> Reminder: GitHub Pages serves static files from the selected publishing source; using **relative links** keeps it reliable under `/thrivehub/`. 
+
 ### ThriveHub: Library visual refresh + new sections
 
 **What’s changed**

@@ -1,3 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ThriveHub · Home</title>
+  <meta name="description" content="Free, teacher‑ready resources for inclusive practice — one click." />
+  <style>
+    :root{
+      /* brand tokens */
+      --brand:#0E7C86; --accent:#673AB7; --bg:#0b1220; --surface:#0f172a; --text:#e5e7eb; --muted:#9ca3af;
+      --radius:16px; --shadow: 0 18px 40px rgba(0,0,0,.45), 0 2px 10px rgba(0,0,0,.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7fafc; --surface:#ffffff; --text:#1f2937; --muted:#64748b; --shadow: 0 10px 24px rgba(2,12,27,.08), 0 2px 6px rgba(2,12,27,.06);}
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:18px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+    @media (prefers-color-scheme: light){header{background:rgba(255,255,255,.7);border-color:rgba(0,0,0,.06)}}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px;color:var(--brand);font-weight:800;letter-spacing:.2px}
+    .brand .logobox{width:30px;height:30px}
+    .links a{margin:0 8px;padding:8px 12px;border-radius:10px;color:var(--text)}
+    .links a.active{background:var(--brand);color:white}
+    .links a:hover{background:rgba(103,58,183,.12)}
+
+    /* Chips & badges */
+    .chip{display:inline-flex;align-items:center;gap:8px;background:rgba(14,124,134,.15);color:#c7f5ff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+    .chip.version{background:rgba(255,255,255,.08);color:#cbd5e1}
+    .built{position:absolute;right:14px;top:14px;background:rgba(255,255,255,.08);color:#cbd5e1;padding:6px 10px;border-radius:999px;font-size:12px}
+
+    /* Hero card */
+    .hero{margin:26px 0}
+    .card{
+      position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center;
+      padding:22px;border-radius:20px;background:
+        radial-gradient(900px 520px at 20% 0%, rgba(14,124,134,.25), transparent),
+        linear-gradient(180deg, rgba(103,58,183,.15), rgba(103,58,183,.10) 30%, rgba(14,124,134,.12));
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    @media (max-width: 860px){.card{grid-template-columns:1fr;}}
+    .card h1{font-size:clamp(26px,4.2vw,42px);line-height:1.1;margin:8px 0 10px}
+    .card p{color:var(--muted);margin:0 0 16px}
+    .btns{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      appearance:none;border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;
+      color:#031018;background:linear-gradient(180deg,#7edbff,#21b8d6);box-shadow:0 6px 16px rgba(0,0,0,.25);
+    }
+    .btn.secondary{color:white;background:linear-gradient(180deg,#7b5ae4,#6d38d9)}
+    .btn:focus{outline:2px solid #fff;outline-offset:2px}
+
+    /* Inline hero visual */
+    .hero-visual{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:12px}
+    @media (prefers-color-scheme: light){.hero-visual{background:rgba(103,58,183,.06);border-color:rgba(0,0,0,.06)}}
+
+    /* Footer */
+    footer{opacity:.8;margin:14px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="ThriveHub">
+        <!-- Inline SVG logo: simple, fast, always visible -->
+        <svg class="logobox" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><linearGradient id="lg" x1="0" x2="1"><stop stop-color="var(--brand)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient></defs>
+          <rect rx="12" ry="12" width="64" height="64" fill="url(#lg)"/>
+          <path d="M16 22h32v6H34v22h-6V28H16z" fill="#fff" opacity=".95"/>
+          <path d="M40 28h8v16c0 4.4-3.6 8-8 8h-6v-6h6c1.1 0 2-.9 2-2V28z" fill="#fff" opacity=".9"/>
+        </svg>
+        <span>ThriveHub</span>
+      </div>
+      <nav class="links" aria-label="Primary">
+        <a class="active" href="index.html" aria-current="page">Home</a>
+        <a href="library.html">Library</a>
+        <a href="resources.html">Calm Space</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <div>
+          <div class="chip">ThriveHub</div>
+          <div style="height:6px"></div>
+          <h1>Free, teacher‑ready resources — one click</h1>
+          <p>Explore the premium Library and the Calm Space. This page includes an inline SVG visual so it always shows.</p>
+          <div class="btns">
+            <a class="btn" href="library.html">Open Library</a>
+            <a class="btn secondary" href="resources.html">Calm Space</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 440 250" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="vgrad" x1="0" x2="1" y1="0" y2="1">
+                <stop stop-color="var(--brand)" offset="0"/><stop stop-color="var(--accent)" offset="1"/>
+              </linearGradient>
+              <filter id="blur" x="-10%" y="-10%" width="120%" height="120%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" />
+              </filter>
+            </defs>
+            <rect x="0" y="0" width="100%" height="100%" rx="18" fill="url(#vgrad)" opacity=".18"/>
+            <g filter="url(#blur)">
+              <rect x="44" y="50" width="150" height="70" rx="14" fill="#fff" opacity=".18"/>
+              <rect x="214" y="50" width="110" height="70" rx="14" fill="#fff" opacity=".12"/>
+              <circle cx="365" cy="90" r="12" fill="#4ade80" opacity=".9"/>
+              <rect x="70" y="140" width="180" height="20" rx="10" fill="#fff" opacity=".35"/>
+              <rect x="70" y="170" width="120" height="20" rx="10" fill="#fff" opacity=".25"/>
+            </g>
+          </svg>
+        </div>
+        <div class="built" id="builtTag">Built now</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card" style="grid-template-columns:1fr">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <span class="chip version" id="ver">V7.8</span>
+          <span class="chip version" id="builtAt"></span>
+        </div>
+        <h2 style="margin:12px 0 6px">What’s inside</h2>
+        <p style="margin:0 0 12px;color:var(--muted)">Clear categories, evidence‑informed links (NCCD, SA guidelines, specialists), and quick tools you can share directly with students.</p>
+        <ul style="margin:0;padding-left:18px;color:var(--muted)">
+          <li>Inclusive literacy & numeracy links</li>
+          <li>Study skills, executive function & wellbeing tools</li>
+          <li>Assessment templates and NCCD evidence helpers</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>Created by Teresa · ThriveHub</p>
+  </footer>
+
+  <script>
+    // Timestamp badges
+    const builtAt = document.getElementById('builtAt');
+    const builtTag = document.getElementById('builtTag');
+    const now = new Date();
+    const pad = n => String(n).padStart(2,'0');
+    const ts = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+    if (builtAt) builtAt.textContent = `Built: ${ts}`;
+    if (builtTag) builtTag.textContent = `Built now`;
+  </script>
+
+  <!-- Deployment tip (hidden): Keep links relative. Update --brand and --accent to mirror your palette. -->
+</body>
+</html>
 <a class="btn" href="library.html">Open Library</a>
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">

@@ -166,6 +166,22 @@ q.oninput=draw; draw();
 </body>
 </html>
 index.html
+library.html        ← either a redirect (from step A) or the full page
+resources.html      ← your Calm Space page
+.nojekyll
+git commit --allow-empty -m "Trigger GitHub Pages rebuild"
+git push
+# Make sure you're on the publishing branch
+git checkout gh-pages
+
+# Add the missing pages (create if needed)
+# Open your editor to paste the HTML contents I provided below
+# e.g., code library.html resources.html
+
+git add library.html resources.html
+git commit -m "Add Library and Calm Space pages"
+git push
+index.html
 library.html
 resources.html
 suggest.html

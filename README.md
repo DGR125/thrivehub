@@ -1,3 +1,13 @@
+# Make sure you're on the publishing branch
+git checkout gh-pages
+
+# Add the missing pages (create if needed)
+# Open your editor to paste the HTML contents I provided below
+# e.g., code library.html resources.html
+
+git add library.html resources.html
+git commit -m "Add Library and Calm Space pages"
+git push
 index.html
 library.html
 resources.html

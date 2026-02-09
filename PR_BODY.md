@@ -1,3 +1,18 @@
+### ThriveHub: Home page – logo + visuals refresh
+
+**Summary**
+- Adds **inline SVG logo** in header (consistent with Library page; no external assets).
+- Rebuilds the hero as a **gradient card** with an **inline SVG visual** (always shows on GH Pages, no broken external images).
+- Primary actions: **Open Library** and **Calm Space** (relative links).
+- Adds small **version/built** badges (client-side timestamp) and a compact “What’s inside” explainer.
+- Preserves dark/light support + tokenised colours for quick brand updates.
+
+**Files changed**
+- `index.html` only.
+
+**Post‑merge**
+- Bypass cache to confirm changes: `…/thrivehub/index.html?v=v30`
+- To align colours with Library, adjust `:root --brand` and `--accent`.
 ---
 
 ## Fastest way to open the PR (Web UI)

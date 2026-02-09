@@ -25,6 +25,71 @@ body{font:16px/1.6 system-ui,Segoe UI,Arial,sans-serif;background:var(--dark);co
 
   <section class="card">
     <h2 style="margin:.35rem 0 8px">Premium Library — One Page</h2>
+    <p style="color:#9CC7D1">Use search, the SA‑only toggle, or scroll.</p>
+
+    <div class="searchbar">
+      <input id="q" placeholder="Search (e.g., Interoception, EALD, SA)">
+      <button id="saBtn" aria-pressed="false">SA‑only</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <div id="list" aria-live="polite"></div>
+  </section>
+</div>
+
+<script>
+const RES=[
+ {t:'SA Dept — Interoception',u:'https://www.education.sa.gov.au/student-support-services/health-and-wellbeing/interoception',tags:'Interoception, Regulation',region:'SA'},
+ {t:'eSafety — Classroom resources',u:'https://www.esafety.gov.au/educators/classroom-resources',tags:'Online safety, Digital wellbeing',region:'National'},
+ {t:'Student Wellbeing Hub — Families',u:'https://studentwellbeinghub.edu.au/families',tags:'Family engagement',region:'National'}
+];
+const list=document.getElementById('list'), q=document.getElementById('q'),
+      saBtn=document.getElementById('saBtn'), resetBtn=document.getElementById('resetBtn');
+let saOnly=false;
+function draw(){
+  const term=(q.value||'').toLowerCase();
+  let arr=RES.slice();
+  if(saOnly) arr=arr.filter(r=>r.region==='SA');
+  arr=arr.filter(r=>!term||r.t.toLowerCase().includes(term)||r.tags.toLowerCase().includes(term));
+  list.innerHTML = arr.map(r=>`
+    <div class="item">
+      <strong>${r.t}</strong><br>
+      ${r.u}Open link ↗</a>
+      <div style="margin-top:.25rem;color:#9CC7D1;font-size:.9rem">${r.region} • ${r.tags}</div>
+    </div>`).join('');
+}
+saBtn.onclick=()=>{saOnly=!saOnly;saBtn.setAttribute('aria-pressed', String(saOnly));saBtn.textContent=saOnly?'SA‑only (on)':'SA‑only';draw();};
+resetBtn.onclick=()=>{saOnly=false;saBtn.setAttribute('aria-pressed','false');saBtn.textContent='SA‑only';q.value='';draw();};
+q.oninput=draw;draw();
+</script>
+</body></html>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ThriveHub — Library (V7.8)</title>
+<style>
+:root{--bg1:#0b3a3f;--bg2:#0b5a7a;--ink:#E6F2F4;--muted:#9CC7D1;--dark:#0a1a22}
+*{box-sizing:border-box}html,body{margin:0}
+body{font:16px/1.6 system-ui,Segoe UI,Arial,sans-serif;background:var(--dark);color:var(--ink)}
+.container{max-width:1100px;margin:0 auto;padding:22px}
+.header{display:flex;align-items:center;justify-content:space-between;color:#9CC7D1}
+.brand{display:inline-flex;gap:.6rem;font-weight:800}
+.brand .logo{background:linear-gradient(135deg,#1f9bd1,#2bd6b2);color:#051418;padding:.4rem .8rem;border-radius:12px}
+.card{background:radial-gradient(1200px 500px at 10% 10%, rgba(58,169,255,.15), transparent),
+       linear-gradient(140deg,#0b3a3f,#0b5a7a));border-radius:26px;padding:24px}
+.searchbar{position:sticky;top:0;background:#0f2631;border:1px solid #103141;padding:10px;border-radius:14px;display:flex;gap:.6rem;margin:22px 0}
+.searchbar input{flex:1;min-width:240px;padding:.6rem .75rem;background:#0d2029;color:#E6F2F4;border:1px solid #123a4a;border-radius:12px}
+.searchbar button{padding:.6rem .85rem;border-radius:999px;border:1px solid #123a4a;background:#0d2029;color:#9CC7D1;cursor:pointer}
+.item{background:#0f2631;border:1px solid #123a4a;border-left:6px solid #12c55a;border-radius:12px;padding:12px;margin:10px 0}
+.link{color:#72c8ff;font-weight:800;text-decoration:none}
+</style></head><body>
+<div class="container">
+  <div class="header">
+    <div class="brand"><span class="logo">ThriveHub</span><span>V7.8</span></div>
+    <a class="link" href="index.html">Back to Home</a>
+  </div>
+
+  <section class="card">
+    <h2 style="margin:.35rem 0 8px">Premium Library — One Page</h2>
     <p style="color:#9CC7D1">Use search or the SA‑only toggle; this is a minimal page to get you live.</p>
 
     <div class="searchbar">

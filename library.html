@@ -7,6 +7,77 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .category-block { border-left: 4px solid #22d3ee; background: #1e293b; margin-bottom: 2rem; }
+        .live-link { color: #22d3ee; font-weight: bold; }
+        .live-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body class="p-10">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-center mb-12">
+            <h1 class="text-5xl font-black">Resource <span class="text-[#22d3ee]">Library</span></h1>
+            <a href="index.html" class="text-[#22d3ee] border border-cyan-500/40 px-6 py-2 rounded-lg">← Home</a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <div class="category-block p-8 rounded-r-xl">
+                <h2 class="text-2xl font-bold mb-4">🧘 Wellbeing & Mental Health</h2>
+                <ul class="space-y-4">
+                    <li><a href="https://beyou.edu.au/" target="_blank" class="live-link">Be You (Beyond Blue) 🇦🇺</a> - National educator initiative.</li>
+                    <li><a href="https://www.annafreud.org/" target="_blank" class="live-link">Anna Freud Centre</a> - Evidence-based youth support.</li>
+                    <li><a href="https://studentwellbeinghub.edu.au/" target="_blank" class="live-link">Student Wellbeing Hub 🇦🇺</a> - National curriculum tools.</li>
+                </ul>
+            </div>
+
+            <div class="category-block p-8 rounded-r-xl">
+                <h2 class="text-2xl font-bold mb-4">📚 Literacy & Writing</h2>
+                <ul class="space-y-4">
+                    <li><a href="https://pobble365.com/" target="_blank" class="live-link">Pobble 365</a> - Daily visual writing prompts.</li>
+                    <li><a href="https://www.literacyshed.com/" target="_blank" class="live-link">The Literacy Shed</a> - Video-based writing stimuli.</li>
+                    <li><a href="https://www.abc.net.au/education/english" target="_blank" class="live-link">ABC Education English 🇦🇺</a> - Curated media assets.</li>
+                </ul>
+            </div>
+
+            <div class="category-block p-8 rounded-r-xl">
+                <h2 class="text-2xl font-bold mb-4">🧮 Numeracy & STEM</h2>
+                <ul class="space-y-4">
+                    <li><a href="https://nrich.maths.org/" target="_blank" class="live-link">NRICH Maths</a> - Deep mathematical thinking tasks.</li>
+                    <li><a href="https://mathsbot.com/" target="_blank" class="live-link">MathsBot</a> - Digital manipulatives for classroom use.</li>
+                    <li><a href="https://www.csiro.au/en/education" target="_blank" class="live-link">CSIRO Education 🇦🇺</a> - Australian science resources.</li>
+                </ul>
+            </div>
+
+            <div class="category-block p-8 rounded-r-xl">
+                <h2 class="text-2xl font-bold mb-4">🤝 Inclusion & SEND</h2>
+                <ul class="space-y-4">
+                    <li><a href="https://www.widgit.com/resources/" target="_blank" class="live-link">Widgit Visuals</a> - Symbols for SEN and EAL/D.</li>
+                    <li><a href="https://www.autismspectrum.org.au/" target="_blank" class="live-link">Aspect Australia 🇦🇺</a> - Supporting autistic learners.</li>
+                    <li><a href="https://www.tes.com/teaching-resources/hub/send" target="_blank" class="live-link">TES SEND Collection</a> - Educator-made adaptions.</li>
+                </ul>
+            </div>
+
+            <div class="category-block p-8 rounded-r-xl">
+                <h2 class="text-2xl font-bold mb-4">🎓 Staff Professional Growth</h2>
+                <ul class="space-y-4">
+                    <li><a href="https://www.education.sa.gov.au/" target="_blank" class="live-link">Dept for Education SA 🇦🇺</a> - Policies and frameworks.</li>
+                    <li><a href="https://www.aitsl.edu.au/" target="_blank" class="live-link">AITSL Standards 🇦🇺</a> - Professional teaching standards.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library | ThriveHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
         .resource-card { 
             background: #1e293b; 
             border-top: 5px solid #22d3ee; 

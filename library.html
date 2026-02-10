@@ -5,6 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library | ThriveHub</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --navy: #1a2a3a; --teal: #22d3ee; }
+        body { background-color: var(--navy); color: white; font-family: sans-serif; }
+        
+        .resource-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--teal);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .resource-card:hover {
+            background: var(--teal);
+            color: var(--navy);
+        }
+        .resource-card:hover p { color: var(--navy); }
+        
+        .badge {
+            background: var(--teal);
+            color: var(--navy);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="p-6">
+
+    <div class="max-w-6xl mx-auto">
+        <div class="flex justify-between items-center mb-12">
+            <h1 class="text-4xl font-bold">Resource <span style="color:var(--teal)">Library</span></h1>
+            <a href="index.html" style="color:var(--teal)" class="font-bold underline">← Home</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <a href="https://pobble365.com/" target="_blank" class="resource-card">
+                <span class="badge">Literacy</span>
+                <h3 class="text-2xl font-bold mt-4 mb-2">Pobble 365</h3>
+                <p class="text-gray-400">A new creative writing prompt every single day of the year.</p>
+                <div class="mt-4 font-bold">Open Site ↗</div>
+            </a>
+
+            <a href="https://www.mentallyhealthyschools.org.uk/" target="_blank" class="resource-card">
+                <span class="badge">Wellbeing</span>
+                <h3 class="text-2xl font-bold mt-4 mb-2">Anna Freud Center</h3>
+                <p class="text-gray-400">The gold standard for school mental health resources.</p>
+                <div class="mt-4 font-bold">Open Site ↗</div>
+            </a>
+
+            <a href="https://www.thenational.academy/" target="_blank" class="resource-card">
+                <span class="badge">Curriculum</span>
+                <h3 class="text-2xl font-bold mt-4 mb-2">Oak National</h3>
+                <p class="text-gray-400">Thousands of free lesson plans and video resources.</p>
+                <div class="mt-4 font-bold">Open Site ↗</div>
+            </a>
+
+            <a href="https://www.widgit.com/resources/" target="_blank" class="resource-card">
+                <span class="badge">Inclusion</span>
+                <h3 class="text-2xl font-bold mt-4 mb-2">Widgit Symbols</h3>
+                <p class="text-gray-400">Free visual packs to support SEN and EAL students.</p>
+                <div class="mt-4 font-bold">Open Site ↗</div>
+            </a>
+
+            <a href="https://www.tes.com/teaching-resources" target="_blank" class="resource-card">
+                <span class="badge">General</span>
+                <h3 class="text-2xl font-bold mt-4 mb-2">TES Library</h3>
+                <p class="text-gray-400">The largest collection of teacher-made materials.</p>
+                <div class="mt-4 font-bold">Open Site ↗</div>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library | ThriveHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         .thrive-navy { background-color: #1a2a3a; }

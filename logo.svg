@@ -1,1 +1,8 @@
+<?xml="1.0" encoding="UTF-8"?>
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="250" cy="250" r="240" fill="#1a2a3a"/>
+  <path d="M250 125C250 125 175 225 175 300C175 341.421 208.579 375 250 375C291.421 375 325 341.421 325 300C325 225 250 125 250 125Z" fill="#22d3ee"/>
+  <path d="M250 125V375" stroke="#1a2a3a" stroke-width="10" stroke-linecap="round"/>
+  <path d="M125 175L150 200M375 175L350 200M100 300H140M360 300H400" stroke="#22d3ee" stroke-width="15" stroke-linecap="round"/>
+</svg>
 <svg xmlns="http://www.w3.org/2000/svg" width="180" height="40" viewBox="0 0 180 40" role="img" aria-label="ThriveHub logo"><rect rx="8" width="180" height="40" fill="#0066FF"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">ThriveHub</text></svg>

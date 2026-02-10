@@ -7,323 +7,55 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #020617; color: #ffffff; font-family: sans-serif; }
-        .category-label { background: #22d3ee; color: #020617; padding: 2px 10px; border-radius: 4px; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; }
-        .resource-card { background: #1e293b; border: 2px solid #334155; transition: 0.3s; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
-        .resource-card:hover { border-color: #22d3ee; transform: translateY(-5px); }
-        .au-badge { border: 1px solid #22d3ee; color: #22d3ee; font-size: 0.65rem; padding: 1px 5px; border-radius: 3px; margin-left: 8px; font-weight: bold; }
+        .res-card { background: #1e293b; border: 2px solid #334155; padding: 1.5rem; border-radius: 1rem; transition: 0.3s; display: block; text-decoration: none; color: white; height: 100%; }
+        .res-card:hover { border-color: #22d3ee; transform: scale(1.02); background: #1e293b; }
+        .tag { background: #22d3ee; color: #020617; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.65rem; text-transform: uppercase; margin-bottom: 0.5rem; display: inline-block; }
     </style>
 </head>
-<body class="p-8">
+<body class="p-6 md:p-12">
     <div class="max-w-7xl mx-auto">
-        <header class="flex justify-between items-end mb-16 border-b-4 border-[#22d3ee] pb-6">
-            <div>
-                <h1 class="text-6xl font-black italic tracking-tighter">Resource <span class="text-[#22d3ee]">Library</span></h1>
-                <p class="text-xl mt-2 font-bold text-slate-300">Curated tools for Australian Education Staff</p>
-            </div>
-            <a href="index.html" class="text-[#22d3ee] font-black text-xl hover:underline mb-2">← BACK HOME</a>
+        <header class="flex justify-between items-end mb-12 border-b-4 border-[#22d3ee] pb-6">
+            <h1 class="text-4xl md:text-6xl font-black italic">Resource <span class="text-[#22d3ee]">Library</span></h1>
+            <a href="index.html" class="text-[#22d3ee] font-black">← HOME</a>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <div class="resource-card p-8 rounded-2xl">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <span class="category-label">Wellbeing</span>
-                        <span class="au-badge">AU 🇦🇺</span>
-                    </div>
-                    <h3 class="text-2xl font-black mb-3 text-white">Student Wellbeing Hub</h3>
-                    <p class="text-slate-200 mb-6">National curriculum-aligned tools for safe, respectful, and inclusive school communities.</p>
-                </div>
-                <a href="https://studentwellbeinghub.edu.au/" target="_blank" class="text-[#22d3ee] font-black hover:underline">ACCESS HUB →</a>
-            </div>
+            <a href="https://www.narragunnawali.org.au/" target="_blank" class="res-card">
+                <span class="tag">Aboriginal Education 🇦🇺</span>
+                <h3 class="text-xl font-bold mb-2">Narragunnawali</h3>
+                <p class="text-slate-400 text-sm">Professional learning and curriculum resources for Reconciliation.</p>
+            </a>
 
-            <div class="resource-card p-8 rounded-2xl">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <span class="category-label">Mental Health</span>
-                        <span class="au-badge">AU 🇦🇺</span>
-                    </div>
-                    <h3 class="text-2xl font-black mb-3 text-white">Be You (Beyond Blue)</h3>
-                    <p class="text-slate-200 mb-6">The national initiative for educator mental health professional learning.</p>
-                </div>
-                <a href="https://beyou.edu.au/" target="_blank" class="text-[#22d3ee] font-black hover:underline">LEARN MORE →</a>
-            </div>
+            <a href="https://www.positivepartnerships.com.au/" target="_blank" class="res-card">
+                <span class="tag">ASD Support 🇦🇺</span>
+                <h3 class="text-xl font-bold mb-2">Positive Partnerships</h3>
+                <p class="text-slate-400 text-sm">Evidence-based tools for supporting autistic students in AU schools.</p>
+            </a>
 
-            <div class="resource-card p-8 rounded-2xl">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <span class="category-label">Literacy</span>
-                    </div>
-                    <h3 class="text-2xl font-black mb-3 text-white">The Literacy Shed</h3>
-                    <p class="text-slate-200 mb-6">A massive collection of visual resources and film clips to inspire creative writing.</p>
-                </div>
-                <a href="https://www.literacyshed.com/" target="_blank" class="text-[#22d3ee] font-black hover:underline">VIEW SHEDS →</a>
-            </div>
+            <a href="https://www.childhood.org.au" target="_blank" class="res-card">
+                <span class="tag">Trauma Informed 🇦🇺</span>
+                <h3 class="text-xl font-bold mb-2">Childhood Foundation</h3>
+                <p class="text-slate-400 text-sm">Classroom strategies for supporting students experiencing adversity.</p>
+            </a>
 
-            <div class="resource-card p-8 rounded-2xl">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <span class="category-label">Literacy</span>
-                        <span class="au-badge">SA 🇦🇺</span>
-                    </div>
-                    <h3 class="text-2xl font-black mb-3 text-white">SPELD SA</h3>
-                    <p class="text-slate-200 mb-6">Free phonic and decodable readers specifically for South Australian learners.</p>
-                </div>
-                <a href="https://www.speldsa.org.au/" target="_blank" class="text-[#22d3ee] font-black hover:underline">DOWNLOAD READERS →</a>
-            </div>
+            <a href="https://www.education.sa.gov.au" target="_blank" class="res-card">
+                <span class="tag">EALD / ESL 🇦🇺</span>
+                <h3 class="text-xl font-bold mb-2">SA Dept EALD Tools</h3>
+                <p class="text-slate-400 text-sm">South Australian framework and resources for EALD learners.</p>
+            </a>
 
-            <div class="resource-card p-8 rounded-2xl">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <span class="category-label">Numeracy</span>
-                    </div>
-                    <h3 class="text-2xl font-black mb-3 text-white">MathsBot</h3>
-                    <p class="text-slate-200 mb-6">Tools for mathematics teachers including virtual manipulatives and question generators.</p>
-                </div>
-                <a href="https://mathsbot.com/" target="_blank" class="text-[#22d3ee] font-black hover:underline">OPEN TOOLS →</a>
-            </div>
+            <a href="https://www.speldsa.org.au" target="_blank" class="res-card">
+                <span class="tag">Literacy 🇦🇺</span>
+                <h3 class="text-xl font-bold mb-2">SPELD SA</h3>
+                <p class="text-slate-400 text-sm">Free phonic readers and literacy scaffolds for SA teachers.</p>
+            </a>
 
-            <div class="resource-card p-8 rounded-2xl">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <span class="category-label">Numeracy</span>
-                        <span class="au-badge">AU 🇦🇺</span>
-                    </div>
-                    <h3 class="text-2xl font-black mb-3 text-white">ABC Education Maths</h3>
-                    <p class="text-slate-200 mb-6">High-quality Australian media assets for teaching mathematical concepts.</p>
-                </div>
-                <a href="https://www.abc.net.au/education" target="_blank" class="text-[#22d3ee] font-black hover:underline">EXPLORE MEDIA →</a>
-            </div>
-
-        </div>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library | ThriveHub</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background-color: #0f172a; color: #f1f5f9; font-family: sans-serif; }
-        .category-header { border-bottom: 2px solid #22d3ee; margin-top: 3rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; }
-        .resource-link { background: #1e293b; padding: 1.5rem; border-radius: 1rem; border: 1px solid #334155; transition: 0.3s; display: block; height: 100%; }
-        .resource-link:hover { border-color: #22d3ee; background: #2d3a4f; }
-    </style>
-</head>
-<body class="p-8">
-    <div class="max-w-7xl mx-auto">
-        <div class="flex justify-between items-center">
-            <h1 class="text-5xl font-black">Resource <span class="text-[#22d3ee]">Library</span></h1>
-            <a href="index.html" class="text-[#22d3ee] font-bold">← Back Home</a>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <section>
-                <h2 class="category-header text-2xl font-bold text-[#22d3ee]">🧘 Wellbeing & SEL</h2>
-                <div class="space-y-4">
-                    <a href="https://studentwellbeinghub.edu.au/" class="resource-link">
-                        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest">AUSTRALIA 🇦🇺</span>
-                        <h4 class="text-xl font-bold mt-1">Student Wellbeing Hub</h4>
-                        <p class="text-slate-400 text-sm">Government resources for safe and inclusive schools.</p>
-                    </a>
-                    <a href="https://beyou.edu.au/" class="resource-link">
-                        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest">AUSTRALIA 🇦🇺</span>
-                        <h4 class="text-xl font-bold mt-1">Be You (Beyond Blue)</h4>
-                        <p class="text-slate-400 text-sm">Professional learning for mental health in education.</p>
-                    </a>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="category-header text-2xl font-bold text-[#22d3ee]">📚 Literacy & Writing</h2>
-                <div class="space-y-4">
-                    <a href="https://pobble365.com/" class="resource-link">
-                        <h4 class="text-xl font-bold">Pobble 365</h4>
-                        <p class="text-slate-400 text-sm">Daily visual writing prompts and activities.</p>
-                    </a>
-                    <a href="https://www.abc.net.au/education" class="resource-link">
-                        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest">AUSTRALIA 🇦🇺</span>
-                        <h4 class="text-xl font-bold mt-1">ABC Education</h4>
-                        <p class="text-slate-400 text-sm">Rich curriculum-aligned media for primary/secondary.</p>
-                    </a>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="category-header text-2xl font-bold text-[#22d3ee]">🧮 Numeracy & STEM</h2>
-                <div class="space-y-4">
-                    <a href="https://mathsbot.com/" class="resource-link">
-                        <h4 class="text-xl font-bold">MathsBot</h4>
-                        <p class="text-slate-400 text-sm">Interactive manipulatives and calculators for teachers.</p>
-                    </a>
-                    <a href="https://nrich.maths.org/" class="resource-link">
-                        <h4 class="text-xl font-bold">NRICH Maths</h4>
-                        <p class="text-slate-400 text-sm">Problem-solving tasks for all key stages.</p>
-                    </a>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="category-header text-2xl font-bold text-[#22d3ee]">🤝 Inclusion & SEND</h2>
-                <div class="space-y-4">
-                    <a href="https://www.widgit.com/resources/" class="resource-link">
-                        <h4 class="text-xl font-bold">Widgit Visuals</h4>
-                        <p class="text-slate-400 text-sm">Free symbol packs for visual timetables and support.</p>
-                    </a>
-                    <a href="https://www.autismspectrum.org.au/" class="resource-link">
-                        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest">AUSTRALIA 🇦🇺</span>
-                        <h4 class="text-xl font-bold mt-1">Aspect Australia</h4>
-                        <p class="text-slate-400 text-sm">Tools and evidence-based autism support.</p>
-                    </a>
-                </div>
-            </section>
-        </div>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library | ThriveHub</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .category-block { border-left: 4px solid #22d3ee; background: #1e293b; margin-bottom: 2rem; }
-        .live-link { color: #22d3ee; font-weight: bold; }
-        .live-link:hover { text-decoration: underline; }
-    </style>
-</head>
-<body class="p-10">
-    <div class="max-w-7xl mx-auto">
-        <div class="flex justify-between items-center mb-12">
-            <h1 class="text-5xl font-black">Resource <span class="text-[#22d3ee]">Library</span></h1>
-            <a href="index.html" class="text-[#22d3ee] border border-cyan-500/40 px-6 py-2 rounded-lg">← Home</a>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            
-            <div class="category-block p-8 rounded-r-xl">
-                <h2 class="text-2xl font-bold mb-4">🧘 Wellbeing & Mental Health</h2>
-                <ul class="space-y-4">
-                    <li><a href="https://beyou.edu.au/" target="_blank" class="live-link">Be You (Beyond Blue) 🇦🇺</a> - National educator initiative.</li>
-                    <li><a href="https://www.annafreud.org/" target="_blank" class="live-link">Anna Freud Centre</a> - Evidence-based youth support.</li>
-                    <li><a href="https://studentwellbeinghub.edu.au/" target="_blank" class="live-link">Student Wellbeing Hub 🇦🇺</a> - National curriculum tools.</li>
-                </ul>
-            </div>
-
-            <div class="category-block p-8 rounded-r-xl">
-                <h2 class="text-2xl font-bold mb-4">📚 Literacy & Writing</h2>
-                <ul class="space-y-4">
-                    <li><a href="https://pobble365.com/" target="_blank" class="live-link">Pobble 365</a> - Daily visual writing prompts.</li>
-                    <li><a href="https://www.literacyshed.com/" target="_blank" class="live-link">The Literacy Shed</a> - Video-based writing stimuli.</li>
-                    <li><a href="https://www.abc.net.au/education/english" target="_blank" class="live-link">ABC Education English 🇦🇺</a> - Curated media assets.</li>
-                </ul>
-            </div>
-
-            <div class="category-block p-8 rounded-r-xl">
-                <h2 class="text-2xl font-bold mb-4">🧮 Numeracy & STEM</h2>
-                <ul class="space-y-4">
-                    <li><a href="https://nrich.maths.org/" target="_blank" class="live-link">NRICH Maths</a> - Deep mathematical thinking tasks.</li>
-                    <li><a href="https://mathsbot.com/" target="_blank" class="live-link">MathsBot</a> - Digital manipulatives for classroom use.</li>
-                    <li><a href="https://www.csiro.au/en/education" target="_blank" class="live-link">CSIRO Education 🇦🇺</a> - Australian science resources.</li>
-                </ul>
-            </div>
-
-            <div class="category-block p-8 rounded-r-xl">
-                <h2 class="text-2xl font-bold mb-4">🤝 Inclusion & SEND</h2>
-                <ul class="space-y-4">
-                    <li><a href="https://www.widgit.com/resources/" target="_blank" class="live-link">Widgit Visuals</a> - Symbols for SEN and EAL/D.</li>
-                    <li><a href="https://www.autismspectrum.org.au/" target="_blank" class="live-link">Aspect Australia 🇦🇺</a> - Supporting autistic learners.</li>
-                    <li><a href="https://www.tes.com/teaching-resources/hub/send" target="_blank" class="live-link">TES SEND Collection</a> - Educator-made adaptions.</li>
-                </ul>
-            </div>
-
-            <div class="category-block p-8 rounded-r-xl">
-                <h2 class="text-2xl font-bold mb-4">🎓 Staff Professional Growth</h2>
-                <ul class="space-y-4">
-                    <li><a href="https://www.education.sa.gov.au/" target="_blank" class="live-link">Dept for Education SA 🇦🇺</a> - Policies and frameworks.</li>
-                    <li><a href="https://www.aitsl.edu.au/" target="_blank" class="live-link">AITSL Standards 🇦🇺</a> - Professional teaching standards.</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library | ThriveHub</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .resource-card { 
-            background: #1e293b; 
-            border-top: 5px solid #22d3ee; 
-            padding: 2rem; 
-            border-radius: 0.75rem; 
-            transition: all 0.3s ease;
-        }
-        .resource-card:hover { transform: translateY(-10px); background: #2d3a4f; }
-        .accent-teal { color: #22d3ee; }
-        .au-tag { background: rgba(34, 211, 238, 0.1); color: #22d3ee; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; margin-bottom: 10px; display: inline-block; border: 1px solid #22d3ee; }
-    </style>
-</head>
-<body class="p-10">
-
-    <div class="max-w-7xl mx-auto">
-        <div class="flex justify-between items-center mb-16">
-            <h1 class="text-5xl font-extrabold italic">Resource <span class="accent-teal">Library</span></h1>
-            <a href="index.html" class="accent-teal font-bold border border-cyan-500/40 px-6 py-2 rounded-lg hover:bg-cyan-500/10 transition">← Home</a>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <div class="resource-card">
-                <span class="au-tag">AUSTRALIAN RESOURCE</span>
-                <h4 class="text-xl font-bold mb-2">Student Wellbeing Hub</h4>
-                <p class="text-slate-400 text-sm mb-6">Free Australian Government resources aligned with the National Curriculum to support safe, inclusive schools.</p>
-                <a href="https://studentwellbeinghub.edu.au/" target="_blank" class="accent-teal font-bold hover:underline">Access Hub ↗</a>
-            </div>
-
-            <div class="resource-card">
-                <span class="au-tag">AUSTRALIAN RESOURCE</span>
-                <h4 class="text-xl font-bold mb-2">Be You (Beyond Blue)</h4>
-                <p class="text-slate-400 text-sm mb-6">The national mental health initiative for educators. Professional learning and classroom tools.</p>
-                <a href="https://beyou.edu.au/" target="_blank" class="accent-teal font-bold hover:underline">Start Learning ↗</a>
-            </div>
-
-            <div class="resource-card">
-                <span class="au-tag">AUSTRALIAN RESOURCE</span>
-                <h4 class="text-xl font-bold mb-2">ABC Education</h4>
-                <p class="text-slate-400 text-sm mb-6">Thousands of free curriculum-linked videos, games, and resources for Australian classrooms.</p>
-                <a href="https://www.abc.net.au/education" target="_blank" class="accent-teal font-bold hover:underline">Explore Media ↗</a>
-            </div>
-
-            <div class="resource-card">
-                <h4 class="text-xl font-bold mb-2">The Literacy Shed</h4>
-                <p class="text-slate-400 text-sm mb-6">High-quality visual stimuli for creative writing and reading engagement across all year levels.</p>
-                <a href="https://www.literacyshed.com/" target="_blank" class="accent-teal font-bold hover:underline">View Sheds ↗</a>
-            </div>
-
-            <div class="resource-card">
-                <h4 class="text-xl font-bold mb-2">NRICH Maths</h4>
-                <p class="text-slate-400 text-sm mb-6">Develop student problem-solving skills with rich, interactive mathematical tasks and games.</p>
-                <a href="https://nrich.maths.org/" target="_blank" class="accent-teal font-bold hover:underline">Open Maths ↗</a>
-            </div>
-
-            <div class="resource-card">
-                <h4 class="text-xl font-bold mb-2">Mentally Healthy Schools</h4>
-                <p class="text-slate-400 text-sm mb-6">Evidence-based mental health resources, classroom scripts, and staff wellbeing advice.</p>
-                <a href="https://www.mentallyhealthyschools.org.uk/" target="_blank" class="accent-teal font-bold hover:underline">Access Tools ↗</a>
-            </div>
+            <a href="https://studentwellbeinghub.edu.au" target="_blank" class="res-card">
+                <span class="tag">Wellbeing 🇦🇺</span>
+                <h3 class="text-xl font-bold mb-2">Wellbeing Hub</h3>
+                <p class="text-slate-400 text-sm">The national standard for safe and supportive school environments.</p>
+            </a>
 
         </div>
     </div>

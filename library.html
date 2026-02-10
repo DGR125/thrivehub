@@ -7,14 +7,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #020617; color: #ffffff; font-family: sans-serif; }
-        .res-card { background: #1e293b; border: 2px solid #334155; padding: 2rem; border-radius: 1.5rem; transition: 0.3s; border-bottom: 5px solid #22d3ee; height: 100%; display: block; text-decoration: none; color: white; }
-        .res-card:hover { border-color: #ffffff; transform: translateY(-5px); }
-        .tag { background: #22d3ee; color: #020617; padding: 4px 10px; border-radius: 6px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 1rem; display: inline-block; }
+        .res-card { background: #1e293b; border: 2px solid #334155; padding: 2rem; border-radius: 1.5rem; transition: 0.3s; border-bottom: 5px solid #22d3ee; height: 100%; display: flex; flex-direction: column; }
+        .res-card:hover { border-color: #ffffff; transform: translateY(-5px); background: #0f172a; }
+        .tag { background: #22d3ee; color: #020617; padding: 4px 10px; border-radius: 6px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 1rem; display: inline-block; width: fit-content; }
+        .link-item { color: #94a3b8; font-weight: 700; font-size: 0.85rem; margin-top: 0.5rem; display: block; }
+        .link-item:hover { color: #22d3ee; text-decoration: underline; }
     </style>
 </head>
 <body class="p-8 md:p-12">
     <div class="max-w-7xl mx-auto">
-        <header class="flex justify-between items-center mb-16 border-b-4 border-[#22d3ee] pb-8">
+        <header class="flex justify-between items-center mb-16 border-b-4 border-[#22d3ee] pb-10">
             <h1 class="text-5xl md:text-7xl font-black italic">The <span class="text-[#22d3ee]">Library</span></h1>
             <a href="index.html" class="text-[#22d3ee] font-black text-xl">← HOME</a>
         </header>
@@ -24,61 +26,65 @@
             <div class="res-card">
                 <span class="tag">Aboriginal Education 🇦🇺</span>
                 <h3 class="text-2xl font-bold mb-3">Cultural Inclusion</h3>
-                <ul class="text-slate-400 space-y-2 text-sm font-bold">
-                    <li><a href="https://www.narragunnawali.org.au/" target="_blank" class="hover:text-cyan-400">• Narragunnawali Resources</a></li>
-                    <li><a href="https://www.aiatsis.gov.au" target="_blank" class="hover:text-cyan-400">• AIATSIS Curriculum Support</a></li>
-                    <li><a href="https://www.indigenous.gov.au" target="_blank" class="hover:text-cyan-400">• Indigenous Education Portal</a></li>
-                </ul>
+                <a href="https://www.narragunnawali.org.au/" target="_blank" class="link-item">• Narragunnawali Curriculum Support</a>
+                <a href="https://www.aiatsis.gov.au" target="_blank" class="link-item">• AIATSIS Education Portal</a>
+                <a href="https://www.deadlyquestions.vic.gov.au" target="_blank" class="link-item">• Deadly Questions Resource</a>
+            </div>
+
+            <div class="res-card">
+                <span class="tag">Neurodiversity 🧠</span>
+                <h3 class="text-2xl font-bold mb-3">ASD & ADHD Support</h3>
+                <a href="https://www.positivepartnerships.com.au" target="_blank" class="link-item">• Positive Partnerships (ASD)</a>
+                <a href="https://www.adhdaustralia.org.au" target="_blank" class="link-item">• ADHD Australia Classroom Hub</a>
+                <a href="https://www.amaze.org.au" target="_blank" class="link-item">• Amaze Autism Resources</a>
             </div>
 
             <div class="res-card">
                 <span class="tag">EAL/D Support 🌏</span>
                 <h3 class="text-2xl font-bold mb-3">Language & Literacy</h3>
-                <ul class="text-slate-400 space-y-2 text-sm font-bold">
-                    <li><a href="https://www.education.sa.gov.au/students/curriculum-and-learning/eald" target="_blank" class="hover:text-cyan-400">• SA EAL/D Hub</a></li>
-                    <li><a href="https://www.vicetesol.vic.edu.au" target="_blank" class="hover:text-cyan-400">• TESOL Teaching Strategies</a></li>
-                    <li><a href="https://www.colorincolorado.org" target="_blank" class="hover:text-cyan-400">• Visual Scaffolding Tools</a></li>
-                </ul>
-            </div>
-
-            <div class="res-card">
-                <span class="tag">ASD Support 🧠</span>
-                <h3 class="text-2xl font-bold mb-3">Autism Inclusion</h3>
-                <ul class="text-slate-400 space-y-2 text-sm font-bold">
-                    <li><a href="https://www.positivepartnerships.com.au" target="_blank" class="hover:text-cyan-400">• Positive Partnerships AU</a></li>
-                    <li><a href="https://www.autismspectrum.org.au" target="_blank" class="hover:text-cyan-400">• ASPECT Education</a></li>
-                    <li><a href="https://www.amaze.org.au" target="_blank" class="hover:text-cyan-400">• Amaze Classroom Guides</a></li>
-                </ul>
-            </div>
-
-            <div class="res-card">
-                <span class="tag">ADHD Support ⚡</span>
-                <h3 class="text-2xl font-bold mb-3">Executive Function</h3>
-                <ul class="text-slate-400 space-y-2 text-sm font-bold">
-                    <li><a href="https://www.adhdaustralia.org.au" target="_blank" class="hover:text-cyan-400">• ADHD Australia Strategies</a></li>
-                    <li><a href="https://www.additudemag.com" target="_blank" class="hover:text-cyan-400">• ADDitude Educator Hub</a></li>
-                    <li><a href="https://www.smartkidsadhd.org" target="_blank" class="hover:text-cyan-400">• Learning Accommodations</a></li>
-                </ul>
+                <a href="https://www.education.sa.gov.au/students/curriculum-and-learning/eald" target="_blank" class="link-item">• SA EAL/D Framework</a>
+                <a href="https://www.tes.com/teaching-resources/hub/eal" target="_blank" class="link-item">• Global EAL Support Hub</a>
+                <a href="https://www.colorincolorado.org" target="_blank" class="link-item">• Bilingual Scaffolding Tools</a>
             </div>
 
             <div class="res-card">
                 <span class="tag">Trauma Informed 🤝</span>
-                <h3 class="text-2xl font-bold mb-3">Safety & Regulation</h3>
-                <ul class="text-slate-400 space-y-2 text-sm font-bold">
-                    <li><a href="https://www.childhood.org.au" target="_blank" class="hover:text-cyan-400">• Australian Childhood Foundation</a></li>
-                    <li><a href="https://www.berrystreet.org.au/learning-model" target="_blank" class="hover:text-cyan-400">• Berry Street Education Model</a></li>
-                    <li><a href="https://www.traumainformedcare.chcs.org" target="_blank" class="hover:text-cyan-400">• Trauma Practice Hub</a></li>
-                </ul>
+                <h3 class="text-2xl font-bold mb-3">Trauma Practice</h3>
+                <a href="https://www.childhood.org.au" target="_blank" class="link-item">• Australian Childhood Foundation</a>
+                <a href="https://www.berrystreet.org.au/learning-model" target="_blank" class="link-item">• Berry Street Education Model</a>
+                <a href="https://traumasensitiveschools.org" target="_blank" class="link-item">• Trauma-Sensitive Classroom Guide</a>
             </div>
 
             <div class="res-card">
-                <span class="tag">Wellbeing Hub 🧘</span>
-                <h3 class="text-2xl font-bold mb-3">National Support</h3>
-                <ul class="text-slate-400 space-y-2 text-sm font-bold">
-                    <li><a href="https://beyou.edu.au" target="_blank" class="hover:text-cyan-400">• Be You (Beyond Blue)</a></li>
-                    <li><a href="https://studentwellbeinghub.edu.au" target="_blank" class="hover:text-cyan-400">• Student Wellbeing Hub</a></li>
-                    <li><a href="https://www.kidshelpline.com.au" target="_blank" class="hover:text-cyan-400">• Kids Helpline for Schools</a></li>
-                </ul>
+                <span class="tag">Literacy 📚</span>
+                <h3 class="text-2xl font-bold mb-3">Reading & Writing</h3>
+                <a href="https://www.speldsa.org.au" target="_blank" class="link-item">• SPELD SA Decodable Readers</a>
+                <a href="https://www.fivefromfive.com.au" target="_blank" class="link-item">• Five from Five Reading Research</a>
+                <a href="https://www.readingrockets.org" target="_blank" class="link-item">• Reading Rockets Strategies</a>
+            </div>
+
+            <div class="res-card">
+                <span class="tag">Numeracy 🧮</span>
+                <h3 class="text-2xl font-bold mb-3">Maths Resources</h3>
+                <a href="https://mathsbot.com" target="_blank" class="link-item">• MathsBot Virtual Manipulatives</a>
+                <a href="https://nrich.maths.org" target="_blank" class="link-item">• NRICH Enrichment Tasks</a>
+                <a href="https://www.geogebra.org" target="_blank" class="link-item">• GeoGebra Interactive Math</a>
+            </div>
+
+            <div class="res-card">
+                <span class="tag">Student Wellbeing ✨</span>
+                <h3 class="text-2xl font-bold mb-3">Mental Health</h3>
+                <a href="https://beyou.edu.au" target="_blank" class="link-item">• Be You (Beyond Blue) Portal</a>
+                <a href="https://studentwellbeinghub.edu.au" target="_blank" class="link-item">• National Student Wellbeing Hub</a>
+                <a href="https://www.kidshelpline.com.au" target="_blank" class="link-item">• Kids Helpline for Educators</a>
+            </div>
+
+            <div class="res-card">
+                <span class="tag">Inclusion & Tools ⚙️</span>
+                <h3 class="text-2xl font-bold mb-3">Accessibility Tools</h3>
+                <a href="https://www.microsoft.com/en-au/accessibility/learning-tools" target="_blank" class="link-item">• MS Immersive Reader</a>
+                <a href="https://www.texthelp.com/products/read-write/" target="_blank" class="link-item">• Read&Write Toolbar</a>
+                <a href="https://vook.com" target="_blank" class="link-item">• Vook (Animated Storybooks)</a>
             </div>
 
         </div>

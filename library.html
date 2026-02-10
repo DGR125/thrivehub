@@ -7,6 +7,67 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #020617; color: #ffffff; font-family: sans-serif; }
+        .res-card { background: #1e293b; border: 2px solid #334155; padding: 2rem; border-radius: 1.5rem; transition: 0.3s; border-bottom: 5px solid #22d3ee; }
+        .res-card:hover { border-color: #ffffff; transform: translateY(-5px); background: #0f172a; }
+        .tag { background: #22d3ee; color: #020617; padding: 3px 10px; border-radius: 5px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 1rem; display: inline-block; }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <header class="flex justify-between items-center mb-16 border-b-4 border-[#22d3ee] pb-10">
+            <h1 class="text-6xl font-black italic">The <span class="text-[#22d3ee]">Library</span></h1>
+            <a href="index.html" class="text-[#22d3ee] font-black text-xl">← HOME</a>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="https://www.narragunnawali.org.au/" target="_blank" class="res-card">
+                <span class="tag">Aboriginal Education</span>
+                <h3 class="text-2xl font-bold mb-2 text-white">Narragunnawali 🇦🇺</h3>
+                <p class="text-slate-400">Reconciliation in education through curriculum and professional learning.</p>
+            </a>
+
+            <a href="https://www.education.sa.gov.au/students/curriculum-and-learning/eald" target="_blank" class="res-card">
+                <span class="tag">EALD / ESL</span>
+                <h3 class="text-2xl font-bold mb-2 text-white">SA EALD Framework</h3>
+                <p class="text-slate-400">South Australian tools for supporting multi-lingual learners.</p>
+            </a>
+
+            <a href="https://www.positivepartnerships.com.au/" target="_blank" class="res-card">
+                <span class="tag">Neurodiversity (ASD)</span>
+                <h3 class="text-2xl font-bold mb-2 text-white">Positive Partnerships</h3>
+                <p class="text-slate-400">Evidence-based support for students on the autism spectrum.</p>
+            </a>
+
+            <a href="https://www.adhdaustralia.org.au/" target="_blank" class="res-card">
+                <span class="tag">Neurodiversity (ADHD)</span>
+                <h3 class="text-2xl font-bold mb-2 text-white">ADHD Australia</h3>
+                <p class="text-slate-400">Classroom strategies and accommodations for ADHD students.</p>
+            </a>
+
+            <a href="https://www.childhood.org.au/trauma-informed-practice-in-education/" target="_blank" class="res-card">
+                <span class="tag">Trauma Informed</span>
+                <h3 class="text-2xl font-bold mb-2 text-white">Childhood Foundation</h3>
+                <p class="text-slate-400">Support for students experiencing trauma and adversity.</p>
+            </a>
+
+            <a href="https://www.speldsa.org.au" target="_blank" class="res-card">
+                <span class="tag">Literacy</span>
+                <h3 class="text-2xl font-bold mb-2 text-white">SPELD SA 📚</h3>
+                <p class="text-slate-400">Phonic readers and literacy intervention resources.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library | ThriveHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #020617; color: #ffffff; font-family: sans-serif; }
         .res-card { background: #1e293b; border: 2px solid #334155; padding: 2rem; border-radius: 1.5rem; transition: 0.3s; height: 100%; border-bottom: 5px solid #22d3ee; }
         .res-card:hover { border-color: #ffffff; transform: translateY(-5px); }
         .tag { background: #22d3ee; color: #020617; padding: 4px 10px; border-radius: 6px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 1rem; display: inline-block; }

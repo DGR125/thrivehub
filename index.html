@@ -1,3 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThriveHub | Empowering Educators</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fcfcfd; }
+        .hero-mesh {
+            background-color: #1a2a3a;
+            background-image: radial-gradient(at 0% 0%, hsla(187,92%,69%,0.15) 0, transparent 50%), 
+                              radial-gradient(at 100% 100%, hsla(187,92%,69%,0.1) 0, transparent 50%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #22d3ee;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #22d3ee, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="p-2 bg-[#1a2a3a] rounded-lg">
+                    <i data-lucide="zap" class="text-[#22d3ee] w-6 h-6"></i>
+                </div>
+                <span class="text-2xl font-800 tracking-tight text-[#1a2a3a]">Thrive<span class="text-[#22d3ee]">Hub</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-600">
+                <a href="#resources" class="hover:text-[#22d3ee] transition">Live Library</a>
+                <a href="#wellbeing" class="hover:text-[#22d3ee] transition">Wellbeing Toolkits</a>
+                <a href="mailto:support@thrivehub.com" class="bg-[#1a2a3a] text-white px-5 py-2 rounded-full hover:bg-slate-800 transition">Get Involved</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-mesh text-white py-24 px-6 overflow-hidden relative">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-full">For Teachers & Staff</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">
+                Empowering <span class="text-gradient">Every Learner</span><br>Supporting Every Staff.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12">
+                Access a curated ecosystem of free, high-quality resources designed to foster inclusive classrooms and vibrant mental health.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#resources" class="bg-[#22d3ee] text-[#1a2a3a] px-10 py-4 rounded-xl font-bold shadow-lg shadow-cyan-500/20 hover:scale-105 transition underline-none">Explore 50+ Free Tools</a>
+                <a href="https://www.mentallyhealthyschools.org.uk/" target="_blank" class="bg-white/5 border border-white/10 px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition">Urgent Wellbeing Support</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="max-w-7xl mx-auto py-24 px-6">
+        <div class="flex justify-between items-end mb-16">
+            <div>
+                <h2 class="text-4xl font-extrabold text-[#1a2a3a] mb-4">The Live Library</h2>
+                <p class="text-gray-500">Instant access to the web's best free educational assets.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-3xl">
+                <div class="w-14 h-14 bg-cyan-50 rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="book-open-check" class="text-[#22d3ee] w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 italic underline decoration-cyan-400 decoration-2">Literacy & English</h3>
+                <p class="text-gray-600 mb-6 text-sm leading-relaxed">Boost reading ages with high-impact, evidence-based scaffolds.</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center text-sm font-semibold text-gray-700">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-2 text-cyan-500"></i>
+                        <a href="https://pobble365.com/" target="_blank" class="hover:underline">Pobble 365 (Daily Writing)</a>
+                    </li>
+                    <li class="flex items-center text-sm font-semibold text-gray-700">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-2 text-cyan-500"></i>
+                        <a href="https://literacyshed.com/" target="_blank" class="hover:underline">The Literacy Shed</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl">
+                <div class="w-14 h-14 bg-rose-50 rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="heart-pulse" class="text-rose-400 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 italic underline decoration-rose-300 decoration-2">Wellbeing Center</h3>
+                <p class="text-gray-600 mb-6 text-sm leading-relaxed">Tools for emotional regulation and mindfulness in the classroom.</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center text-sm font-semibold text-gray-700">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-2 text-rose-400"></i>
+                        <a href="https://www.annafreud.org/schools-and-colleges/" target="_blank" class="hover:underline">Anna Freud Toolkit</a>
+                    </li>
+                    <li class="flex items-center text-sm font-semibold text-gray-700">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-2 text-rose-400"></i>
+                        <a href="https://www.headspace.com/educators" target="_blank" class="hover:underline">Headspace for Educators</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl">
+                <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="shield-check" class="text-amber-500 w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 italic underline decoration-amber-300 decoration-2">Inclusion & SEND</h3>
+                <p class="text-gray-600 mb-6 text-sm leading-relaxed">Ensure no student is left behind with adapted learning tools.</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center text-sm font-semibold text-gray-700">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-2 text-amber-500"></i>
+                        <a href="https://www.widgit.com/resources/" target="_blank" class="hover:underline">Widgit Visual Symbols</a>
+                    </li>
+                    <li class="flex items-center text-sm font-semibold text-gray-700">
+                        <i data-lucide="external-link" class="w-4 h-4 mr-2 text-amber-500"></i>
+                        <a href="https://www.tes.com/teaching-resources/hub/send" target="_blank" class="hover:underline">TES SEND Collection</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="bg-[#1a2a3a] rounded-[2rem] p-12 text-center text-white relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl font-bold mb-4">Have a resource to share?</h2>
+                <p class="text-gray-400 mb-8 max-w-xl mx-auto text-lg">ThriveHub is built by educators, for educators. Help us grow our directory of free tools.</p>
+                <a href="mailto:hello@thrivehub.com" class="inline-flex items-center bg-white text-[#1a2a3a] px-8 py-3 rounded-xl font-bold hover:bg-[#22d3ee] hover:text-white transition">
+                    <i data-lucide="mail" class="mr-2"></i> Submit a Resource
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
 <!doctype html>
 <html lang="en">
 <head>

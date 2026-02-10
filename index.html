@@ -3,415 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThriveHub | Empowering Education</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; }
-        .hero-gradient { background: linear-gradient(135deg, #1a2a3a 0%, #0f172a 100%); }
-        .accent-teal { color: #22d3ee; }
-        .bg-accent-teal { background-color: #22d3ee; }
-        .card { background: #1e293b; border: 1px solid #334155; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); border-color: #22d3ee; }
-    </style>
-</head>
-<body>
-
-    <nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
-        <div class="text-2xl font-800 tracking-tighter">Thrive<span class="accent-teal">Hub</span></div>
-        <div class="flex gap-8 font-bold">
-            <a href="library.html" class="hover:text-[#22d3ee] transition">Library</a>
-            <a href="mailto:hello@thrivehub.com" class="bg-accent-teal text-[#0f172a] px-4 py-2 rounded-lg text-sm">Contact Us</a>
-        </div>
-    </nav>
-
-    <header class="hero-gradient pt-20 pb-32 px-8 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-800 mb-6 leading-tight">Every student deserves <br><span class="accent-teal">to thrive.</span></h1>
-            <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">We empower education staff with practical tools that support student engagement, foster mental health, and create inclusive classrooms.</p>
-            <a href="library.html" class="bg-accent-teal text-[#0f172a] px-8 py-4 rounded-xl font-800 text-lg shadow-xl shadow-cyan-500/20 hover:scale-105 transition inline-block">Explore the Library</a>
-        </div>
-    </header>
-
-    <section class="max-w-7xl mx-auto px-8 -mt-16">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="card p-8 rounded-2xl shadow-2xl">
-                <div class="text-3xl mb-4">🧠</div>
-                <h3 class="text-xl font-bold mb-2">Our Mission</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Connecting you with strategies that make a real difference for students and help teams deliver their best every day.</p>
-            </div>
-            <div class="card p-8 rounded-2xl shadow-2xl">
-                <div class="text-3xl mb-4">🤝</div>
-                <h3 class="text-xl font-bold mb-2">Inclusive Space</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Resources designed for diverse learning needs, ensuring every student has a pathway to success.</p>
-            </div>
-            <div class="card p-8 rounded-2xl shadow-2xl">
-                <div class="text-3xl mb-4">🌱</div>
-                <h3 class="text-xl font-bold mb-2">Staff Wellbeing</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Practical tools to manage classroom dynamics while protecting your own mental health.</p>
-            </div>
-        </div>
-    </section>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThriveHub | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root { --navy: #1a2a3a; --teal: #22d3ee; }
-        body { background-color: var(--navy); font-family: sans-serif; color: white; margin: 0; }
-        
-        /* The Visual "Spark" Logo using only CSS */
-        .css-logo {
-            width: 50px; height: 50px; background: var(--teal);
-            border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
-            display: inline-block; margin-right: 15px;
-            box-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
-        }
-
-        .hero-visual {
-            background: linear-gradient(135deg, rgba(34, 211, 238, 0.2) 0%, transparent 100%);
-            border: 1px solid rgba(34, 211, 238, 0.3);
-            border-radius: 24px;
-        }
-
-        .btn-primary {
-            background: var(--teal); color: var(--navy);
-            padding: 12px 24px; border-radius: 12px; font-weight: bold;
-            transition: all 0.3s; display: inline-block; text-decoration: none;
-        }
-        .btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--teal); }
+        body { background-color: var(--navy); color: #f8fafc; font-family: 'Inter', sans-serif; margin: 0; }
+        .hero-section { background: linear-gradient(180deg, #1e293b 0%, var(--navy) 100%); }
+        .accent-teal { color: var(--teal); }
+        .btn-teal { background-color: var(--teal); color: var(--navy); transition: all 0.3s ease; }
+        .btn-teal:hover { box-shadow: 0 0 20px rgba(34, 211, 238, 0.4); transform: translateY(-2px); }
+        .info-card { background: #1e293b; border: 1px solid #334155; padding: 2rem; border-radius: 1rem; }
     </style>
 </head>
 <body>
-
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <div class="flex items-center">
-            <div class="css-logo"></div>
-            <span class="text-3xl font-bold tracking-tighter">Thrive<span style="color:var(--teal)">Hub</span></span>
-        </div>
-        <div class="space-x-6">
-            <a href="library.html" style="color:var(--teal)" class="font-bold">Library</a>
+    <nav class="flex justify-between items-center px-10 py-8 max-w-7xl mx-auto">
+        <div class="text-3xl font-extrabold tracking-tighter">Thrive<span class="accent-teal">Hub</span></div>
+        <div class="flex gap-10 font-bold items-center">
+            <a href="library.html" class="hover:text-[#22d3ee] transition">Library</a>
+            <a href="mailto:hello@thrivehub.com" class="btn-teal px-6 py-2 rounded-lg text-sm font-bold">Connect</a>
         </div>
     </nav>
 
-    <header class="max-w-6xl mx-auto px-6 py-20 text-center">
-        <h1 class="text-6xl font-extrabold mb-6">Every student deserves to <span style="color:var(--teal)">thrive.</span></h1>
-        <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10">High-quality resources and practical tools to support engagement and mental health in the classroom.</p>
-        
-        <div class="hero-visual p-12 mb-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6">
-                    <div class="text-4xl mb-4">🌱</div>
-                    <h3 class="text-xl font-bold">Wellbeing</h3>
-                    <p class="text-gray-400 text-sm">Mental health toolkits for staff and students.</p>
-                </div>
-                <div class="p-6 border-x border-gray-700">
-                    <div class="text-4xl mb-4">📚</div>
-                    <h3 class="text-xl font-bold">Literacy</h3>
-                    <p class="text-gray-400 text-sm">Evidence-based scaffolds for engagement.</p>
-                </div>
-                <div class="p-6">
-                    <div class="text-4xl mb-4">🤝</div>
-                    <h3 class="text-xl font-bold">Inclusion</h3>
-                    <p class="text-gray-400 text-sm">Adapting learning for every single need.</p>
-                </div>
-            </div>
+    <header class="hero-section py-24 px-10 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-6xl font-extrabold mb-8 leading-tight">Every student deserves <br><span class="accent-teal">to thrive.</span></h1>
+            <p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">Empowering educators with high-quality Australian and global resources to foster engagement, mental health, and vibrant classrooms.</p>
+            <a href="library.html" class="btn-teal px-10 py-4 rounded-xl font-bold text-lg">Enter Resource Library</a>
         </div>
-
-        <a href="library.html" class="btn-primary text-xl">Enter the Library</a>
     </header>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThriveHub | Empowering Educators</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fcfcfd; }
-        .hero-mesh {
-            background-color: #1a2a3a;
-            background-image: radial-gradient(at 0% 0%, hsla(187,92%,69%,0.15) 0, transparent 50%), 
-                              radial-gradient(at 100% 100%, hsla(187,92%,69%,0.1) 0, transparent 50%);
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glass-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            border-color: #22d3ee;
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #22d3ee, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
-</head>
-<body>
-
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 p-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="p-2 bg-[#1a2a3a] rounded-lg">
-                    <i data-lucide="zap" class="text-[#22d3ee] w-6 h-6"></i>
-                </div>
-                <span class="text-2xl font-800 tracking-tight text-[#1a2a3a]">Thrive<span class="text-[#22d3ee]">Hub</span></span>
-            </div>
-            <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-600">
-                <a href="#resources" class="hover:text-[#22d3ee] transition">Live Library</a>
-                <a href="#wellbeing" class="hover:text-[#22d3ee] transition">Wellbeing Toolkits</a>
-                <a href="mailto:support@thrivehub.com" class="bg-[#1a2a3a] text-white px-5 py-2 rounded-full hover:bg-slate-800 transition">Get Involved</a>
-            </div>
+    <section class="max-w-6xl mx-auto px-10 py-20 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="info-card">
+            <h3 class="text-2xl font-bold mb-4 accent-teal italic">Our Mission</h3>
+            <p class="text-slate-300 leading-relaxed">We believe wellbeing and learning go hand-in-hand. ThriveHub connects you with practical tools and strategies that support student engagement and foster inclusive classrooms across Australia and beyond.</p>
         </div>
-    </nav>
-
-    <section class="hero-mesh text-white py-24 px-6 overflow-hidden relative">
-        <div class="max-w-5xl mx-auto text-center relative z-10">
-            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-full">For Teachers & Staff</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">
-                Empowering <span class="text-gradient">Every Learner</span><br>Supporting Every Staff.
-            </h1>
-            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12">
-                Access a curated ecosystem of free, high-quality resources designed to foster inclusive classrooms and vibrant mental health.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#resources" class="bg-[#22d3ee] text-[#1a2a3a] px-10 py-4 rounded-xl font-bold shadow-lg shadow-cyan-500/20 hover:scale-105 transition underline-none">Explore 50+ Free Tools</a>
-                <a href="https://www.mentallyhealthyschools.org.uk/" target="_blank" class="bg-white/5 border border-white/10 px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition">Urgent Wellbeing Support</a>
-            </div>
+        <div class="info-card">
+            <h3 class="text-2xl font-bold mb-4 accent-teal italic">Staff Support</h3>
+            <p class="text-slate-300 leading-relaxed">Our site is designed to connect you with materials and ideas that make a real difference for students and help our teams deliver their very best every single day.</p>
         </div>
     </section>
-
-    <section id="resources" class="max-w-7xl mx-auto py-24 px-6">
-        <div class="flex justify-between items-end mb-16">
-            <div>
-                <h2 class="text-4xl font-extrabold text-[#1a2a3a] mb-4">The Live Library</h2>
-                <p class="text-gray-500">Instant access to the web's best free educational assets.</p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass-card p-8 rounded-3xl">
-                <div class="w-14 h-14 bg-cyan-50 rounded-2xl flex items-center justify-center mb-6">
-                    <i data-lucide="book-open-check" class="text-[#22d3ee] w-8 h-8"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 italic underline decoration-cyan-400 decoration-2">Literacy & English</h3>
-                <p class="text-gray-600 mb-6 text-sm leading-relaxed">Boost reading ages with high-impact, evidence-based scaffolds.</p>
-                <ul class="space-y-3 mb-8">
-                    <li class="flex items-center text-sm font-semibold text-gray-700">
-                        <i data-lucide="external-link" class="w-4 h-4 mr-2 text-cyan-500"></i>
-                        <a href="https://pobble365.com/" target="_blank" class="hover:underline">Pobble 365 (Daily Writing)</a>
-                    </li>
-                    <li class="flex items-center text-sm font-semibold text-gray-700">
-                        <i data-lucide="external-link" class="w-4 h-4 mr-2 text-cyan-500"></i>
-                        <a href="https://literacyshed.com/" target="_blank" class="hover:underline">The Literacy Shed</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="glass-card p-8 rounded-3xl">
-                <div class="w-14 h-14 bg-rose-50 rounded-2xl flex items-center justify-center mb-6">
-                    <i data-lucide="heart-pulse" class="text-rose-400 w-8 h-8"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 italic underline decoration-rose-300 decoration-2">Wellbeing Center</h3>
-                <p class="text-gray-600 mb-6 text-sm leading-relaxed">Tools for emotional regulation and mindfulness in the classroom.</p>
-                <ul class="space-y-3 mb-8">
-                    <li class="flex items-center text-sm font-semibold text-gray-700">
-                        <i data-lucide="external-link" class="w-4 h-4 mr-2 text-rose-400"></i>
-                        <a href="https://www.annafreud.org/schools-and-colleges/" target="_blank" class="hover:underline">Anna Freud Toolkit</a>
-                    </li>
-                    <li class="flex items-center text-sm font-semibold text-gray-700">
-                        <i data-lucide="external-link" class="w-4 h-4 mr-2 text-rose-400"></i>
-                        <a href="https://www.headspace.com/educators" target="_blank" class="hover:underline">Headspace for Educators</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="glass-card p-8 rounded-3xl">
-                <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-6">
-                    <i data-lucide="shield-check" class="text-amber-500 w-8 h-8"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 italic underline decoration-amber-300 decoration-2">Inclusion & SEND</h3>
-                <p class="text-gray-600 mb-6 text-sm leading-relaxed">Ensure no student is left behind with adapted learning tools.</p>
-                <ul class="space-y-3 mb-8">
-                    <li class="flex items-center text-sm font-semibold text-gray-700">
-                        <i data-lucide="external-link" class="w-4 h-4 mr-2 text-amber-500"></i>
-                        <a href="https://www.widgit.com/resources/" target="_blank" class="hover:underline">Widgit Visual Symbols</a>
-                    </li>
-                    <li class="flex items-center text-sm font-semibold text-gray-700">
-                        <i data-lucide="external-link" class="w-4 h-4 mr-2 text-amber-500"></i>
-                        <a href="https://www.tes.com/teaching-resources/hub/send" target="_blank" class="hover:underline">TES SEND Collection</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-7xl mx-auto px-6 pb-24">
-        <div class="bg-[#1a2a3a] rounded-[2rem] p-12 text-center text-white relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-3xl font-bold mb-4">Have a resource to share?</h2>
-                <p class="text-gray-400 mb-8 max-w-xl mx-auto text-lg">ThriveHub is built by educators, for educators. Help us grow our directory of free tools.</p>
-                <a href="mailto:hello@thrivehub.com" class="inline-flex items-center bg-white text-[#1a2a3a] px-8 py-3 rounded-xl font-bold hover:bg-[#22d3ee] hover:text-white transition">
-                    <i data-lucide="mail" class="mr-2"></i> Submit a Resource
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        lucide.createIcons();
-    </script>
-</body>
-</html>
-<!doctype html>
-<html lang="en">
-<head>
-  <title>ThriveHub · Home</title>
-  <meta name="description" content="Free, teacher‑ready resources for inclusive practice — one click." />
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="theme-color" content="#0E7C86" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="ThriveHub · Inclusive, free & classroom‑ready" />
-<meta property="og:description" content="Free, teacher‑ready resources and practical tools for inclusive classrooms in South Australia." />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="ThriveHub · Inclusive, free & classroom‑ready" />
-<meta name="twitter:description" content="Free, teacher‑ready resources and practical tools for inclusive classrooms in South Australia." />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
-<style>
-:root{ --brand:#0E7C86; --accent:#673AB7; --bg:#0b1220; --surface:#0f172a; --text:#e5e7eb; --muted:#9ca3af; --radius:16px; --shadow: 0 18px 40px rgba(0,0,0,.45), 0 2px 10px rgba(0,0,0,.35);} 
-@media (prefers-color-scheme: light){ :root{ --bg:#f7fafc; --surface:#ffffff; --text:#1f2937; --muted:#64748b; --shadow: 0 10px 24px rgba(2,12,27,.08), 0 2px 6px rgba(2,12,27,.06);} }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial}
-a{color:var(--brand);text-decoration:none}
-a:hover{text-decoration:underline}
-a:focus, button:focus { outline: 2px solid #fff; outline-offset: 2px; }
-@media (prefers-color-scheme: light){ a:focus, button:focus { outline: 2px solid #111; } }
-.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-.skip:focus{left:12px;top:12px;width:auto;height:auto;background:#fff;color:#111;padding:8px 10px;border-radius:8px;z-index:9999}
-.container{max-width:1100px;margin:0 auto;padding:18px}
-header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.7);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
-@media (prefers-color-scheme: light){header{background:rgba(255,255,255,.7);border-color:rgba(0,0,0,.06)}}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;align-items:center;gap:12px;color:var(--brand);font-weight:800}
-.brand .logobox{width:30px;height:30px}
-.links a{margin:0 6px;padding:8px 12px;border-radius:10px;color:var(--text)}
-.links a.active{background:var(--brand);color:white}
-.links a:hover{background:rgba(103,58,183,.12)}
-.hero{margin:26px 0}
-.card{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center;padding:22px;border-radius:20px;background:radial-gradient(900px 520px at 20% 0%, rgba(14,124,134,.25), transparent), linear-gradient(180deg, rgba(103,58,183,.15), rgba(103,58,183,.10) 30%, rgba(14,124,134,.12)); box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.08);}
-@media (max-width: 860px){.card{grid-template-columns:1fr;}}
-.card h1{font-size:clamp(26px,4.2vw,42px);line-height:1.1;margin:8px 0 10px}
-.card p{color:var(--muted);margin:0 0 16px}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{appearance:none;border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;color:#031018;background:linear-gradient(180deg,#7edbff,#21b8d6);box-shadow:0 6px 16px rgba(0,0,0,.25)}
-.btn.secondary{color:white;background:linear-gradient(180deg,#7b5ae4,#6d38d9)}
-.hero-visual{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:12px}
-@media (prefers-color-scheme: light){.hero-visual{background:rgba(103,58,183,.06);border-color:rgba(0,0,0,.06)}}
-.mission{margin:24px 0;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
-.mission .img{min-height:220px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop stop-color='%230E7C86'/%3E%3Cstop offset='1' stop-color='%23673AB7'/%3E%3C/linearGradient%3E%3C/filter%3E%3C/defs%3E%3Crect width='1200' height='400' fill='%230b1220'/%3E%3Crect width='1200' height='400' fill='url(%23g)' opacity='0.12'/%3E%3Ccircle cx='180' cy='120' r='70' fill='%23ffffff' opacity='0.08'/%3E%3Ccircle cx='980' cy='260' r='120' fill='%23ffffff' opacity='0.06'/%3E%3Crect x='720' y='90' rx='18' ry='18' width='320' height='190' fill='%23ffffff' opacity='0.08'/%3E%3C/svg%3E"); background-size: cover; background-position: center;}
-.mission .body{padding:18px;background:var(--surface)}
-footer{opacity:.8;margin:14px 0}
-</style>
-
-</head>
-<body>
-  <a class="skip" href="#main">Skip to main content</a>
-  <header>
-    <div class="container nav">
-      <div class="brand" aria-label="ThriveHub">
-        <svg class="logobox" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><linearGradient id="lg" x1="0" x2="1"><stop stop-color="var(--brand)"/><stop offset="1" stop-color="var(--accent)"/></linearGradient></defs>
-          <rect rx="12" ry="12" width="64" height="64" fill="url(#lg)"/>
-          <path d="M16 22h32v6H34v22h-6V28H16z" fill="#fff" opacity=".95"/>
-          <path d="M40 28h8v16c0 4.4-3.6 8-8 8h-6v-6h6c1.1 0 2-.9 2-2V28z" fill="#fff" opacity=".9"/>
-        </svg>
-        <span>ThriveHub</span>
-      </div>
-      <nav class="links" aria-label="Primary">
-        <a class="active" href="index.html" aria-current="page">Home</a>
-        <a  href="library.html" >Library</a>
-        <a  href="resources.html" >Calm Space</a>
-        <a href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ" target="_blank" rel="noopener">YouTube</a>
-        <a href="teams.html">Microsoft Teams</a>
-        <a href="https://thestudentwellbeing.wordpress.com/" target="_blank" rel="noopener">Student Wellbeing Blog</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main" class="container">
-    <section class="hero">
-      <div class="card">
-        <div>
-          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(14,124,134,.15);color:#c7f5ff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.4px">ThriveHub</div>
-          <h1 style="margin-top:10px">Free, teacher‑ready resources — one click</h1>
-          <p style="max-width:560px">Quick access to classroom‑ready tools, inclusive strategies, study‑skills supports, and wellbeing resources — designed for South Australian educators.</p>
-          <div class="btns">
-            <a class="btn" href="library.html">Open Library</a>
-            <a class="btn secondary" href="resources.html">Calm Space</a>
-          </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <svg viewBox="0 0 440 250" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="vgrad" x1="0" x2="1" y1="0" y2="1">
-                <stop stop-color="var(--brand)" offset="0"/><stop stop-color="var(--accent)" offset="1"/>
-              </linearGradient>
-              <filter id="blur" x="-10%" y="-10%" width="120%" height="120%">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" />
-              </filter>
-            </defs>
-            <rect x="0" y="0" width="100%" height="100%" rx="18" fill="url(#vgrad)" opacity=".22"/>
-            <g filter="url(#blur)" opacity=".55">
-              <rect x="44" y="50" width="150" height="70" rx="14" fill="#fff"/>
-              <rect x="214" y="50" width="110" height="70" rx="14" fill="#fff" opacity=".55"/>
-              <circle cx="365" cy="90" r="12" fill="#4ade80"/>
-              <rect x="70" y="140" width="200" height="20" rx="10" fill="#fff"/>
-              <rect x="70" y="170" width="130" height="20" rx="10" fill="#fff" opacity=".65"/>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <section class="mission" aria-labelledby="mission-title">
-      <div class="img" role="img" aria-label="Abstract education-themed background (inline SVG)"></div>
-      <div class="body">
-        <h2 id="mission-title" style="margin:0 0 8px">Our mission</h2>
-        <p style="margin:0;max-width:88ch">We believe every student deserves to thrive—both in their learning and wellbeing. Our mission is to empower education staff with free, high-quality resources and practical tools that support student engagement, foster positive mental health, and create vibrant, inclusive classrooms. This site is designed to connect you with materials, ideas, and strategies that make a real difference for students and help our teams deliver their very best every day.</p>
-        <p style="margin:12px 0 0;color:var(--muted);font-size:14px">Visuals on this page are inline SVGs, so they always render—even on restricted networks.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="card" style="grid-template-columns:1fr">
-        <h2 style="margin:0 0 10px">What you’ll find inside</h2>
-        <ul style="margin:0;padding-left:18px;color:var(--muted);line-height:1.6">
-          <li>Inclusive literacy & numeracy resources</li>
-          <li>Study skills & executive function strategies</li>
-          <li>Wellbeing and self‑regulation tools</li>
-          <li>Assessment templates & NCCD evidence helpers</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="container"><p>Created by Teresa · ThriveHub</p></footer>
 </body>
 </html>

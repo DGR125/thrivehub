@@ -6,6 +6,66 @@
     <title>ThriveHub | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        :root { --navy: #0f172a; --teal: #22d3ee; --card: #1e293b; }
+        body { background-color: var(--navy); color: #f8fafc; font-family: sans-serif; }
+        .hero-vibrant { background: radial-gradient(circle at top right, rgba(34, 211, 238, 0.2), transparent); }
+        .platform-btn { background: var(--card); border: 2px solid #334155; transition: 0.3s; }
+        .platform-btn:hover { border-color: var(--teal); background: #2d3a4f; transform: translateY(-3px); }
+    </style>
+</head>
+<body class="hero-vibrant min-h-screen">
+    <nav class="flex justify-between items-center p-8 max-w-7xl mx-auto">
+        <div class="text-3xl font-black">Thrive<span class="text-[#22d3ee]">Hub</span></div>
+        <div class="flex gap-8 items-center">
+            <a href="library.html" class="font-bold hover:text-[#22d3ee]">Library</a>
+            <a href="mailto:teresa.bruno@sa.gov.au" class="bg-[#22d3ee] text-[#0f172a] px-6 py-2 rounded-lg font-bold">Connect</a>
+        </div>
+    </nav>
+
+    <header class="py-16 px-6 text-center">
+        <h1 class="text-6xl font-black mb-6">Empowering <span class="text-[#22d3ee]">Australian</span> Educators.</h1>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto mb-12">Every student deserves to thrive. We empower education staff with practical tools that support student engagement and foster positive mental health.</p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-16">
+            <a href="#" class="platform-btn p-6 rounded-2xl">
+                <div class="text-4xl mb-2">📺</div>
+                <div class="font-bold">YouTube</div>
+            </a>
+            <a href="#" class="platform-btn p-6 rounded-2xl">
+                <div class="text-4xl mb-2">👥</div>
+                <div class="font-bold">MS Teams</div>
+            </a>
+            <a href="#" class="platform-btn p-6 rounded-2xl">
+                <div class="text-4xl mb-2">🏫</div>
+                <div class="font-bold">Google Classroom</div>
+            </a>
+            <a href="#" class="platform-btn p-6 rounded-2xl">
+                <div class="text-4xl mb-2">✍️</div>
+                <div class="font-bold">Our Blog</div>
+            </a>
+        </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 pb-20">
+        <div class="p-10 rounded-3xl bg-slate-800/50 border border-slate-700">
+            <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Our Mission</h2>
+            <p class="text-lg text-slate-300">This site is designed to connect you with materials, ideas, and strategies that make a real difference for students and help our teams deliver their very best every day.</p>
+        </div>
+        <div class="p-10 rounded-3xl bg-gradient-to-br from-cyan-900/40 to-slate-900 border border-cyan-500/30">
+            <h2 class="text-3xl font-bold mb-4">Inclusion & Growth</h2>
+            <p class="text-lg text-slate-300">Foster vibrant, inclusive classrooms with free, high-quality resources and practical tools that support student learning and wellbeing.</p>
+        </div>
+    </section>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThriveHub | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
         :root { --navy: #1a2a3a; --teal: #22d3ee; }
         body { background-color: var(--navy); color: #f8fafc; font-family: 'Inter', sans-serif; }
         .hero-mesh { 

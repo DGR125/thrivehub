@@ -7,75 +7,78 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #020617; color: #ffffff; font-family: sans-serif; }
-        .res-card { background: #1e293b; border: 2px solid #334155; padding: 2rem; border-radius: 1.5rem; transition: 0.3s; display: block; text-decoration: none; color: white; height: 100%; border-bottom: 6px solid #22d3ee; }
-        .res-card:hover { border-color: #ffffff; transform: translateY(-5px); background: #0f172a; }
-        .tag { background: #22d3ee; color: #020617; padding: 4px 12px; border-radius: 6px; font-weight: 900; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 1rem; display: inline-block; }
+        .logo-circle { width: 30px; height: 30px; background: #22d3ee; border-radius: 50% 50% 0 50%; display: inline-block; margin-right: 10px; }
+        .res-card { background: #1e293b; border: 2px solid #334155; padding: 2rem; border-radius: 1.5rem; transition: 0.3s; height: 100%; border-bottom: 5px solid #22d3ee; position: relative; overflow: hidden; }
+        .res-card:hover { border-color: #ffffff; transform: scale(1.02); }
+        .tag { background: #22d3ee; color: #020617; padding: 4px 10px; border-radius: 5px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 1rem; display: inline-block; }
+        .visual-bg { position: absolute; right: -10px; bottom: -10px; font-size: 4rem; opacity: 0.1; transform: rotate(-15deg); }
     </style>
 </head>
-<body class="p-8 md:p-16">
+<body class="p-8">
     <div class="max-w-7xl mx-auto">
-        <header class="flex justify-between items-end mb-20 border-b-8 border-[#22d3ee] pb-10">
-            <div>
-                <h1 class="text-5xl md:text-8xl font-black italic tracking-tighter">The <span class="text-[#22d3ee]">Library</span></h1>
-                <p class="text-2xl font-bold text-slate-400 mt-2">Comprehensive Resources for SA Educators</p>
+        <header class="flex justify-between items-center mb-16 border-b-4 border-[#22d3ee] pb-10">
+            <div class="flex items-center text-5xl font-black italic">
+                <div class="logo-circle"></div> Resource <span class="text-[#22d3ee] ml-3">Library</span>
             </div>
-            <a href="index.html" class="text-[#22d3ee] font-black text-2xl hover:underline mb-2">← HOME</a>
+            <a href="index.html" class="text-[#22d3ee] font-black text-xl hover:underline">← HOME</a>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <a href="https://www.narragunnawali.org.au/" target="_blank" class="res-card">
-                <span class="tag">Aboriginal Education 🇦🇺</span>
-                <h3 class="text-2xl font-black mb-3">Narragunnawali</h3>
-                <p class="text-slate-300">Reconciliation through curriculum resources and professional learning for Australian schools.</p>
+                <span class="tag">Aboriginal Education</span>
+                <h3 class="text-2xl font-bold mb-2">Narragunnawali</h3>
+                <p class="text-slate-400">Reconciliation through curriculum resources and professional learning.</p>
+                <div class="visual-bg">🐨</div>
+            </a>
+
+            <a href="https://www.tes.com/teaching-resources/hub/eal" target="_blank" class="res-card">
+                <span class="tag">EALD / ESL</span>
+                <h3 class="text-2xl font-bold mb-2">EALD Resource Hub</h3>
+                <p class="text-slate-400">Support for English as an Additional Language/Dialect students.</p>
+                <div class="visual-bg">🌏</div>
             </a>
 
             <a href="https://www.positivepartnerships.com.au/" target="_blank" class="res-card">
-                <span class="tag">ASD & ADHD 🇦🇺</span>
-                <h3 class="text-2xl font-black mb-3">Positive Partnerships</h3>
-                <p class="text-slate-300">National project supporting school-aged students on the autism spectrum.</p>
+                <span class="tag">ASD & ADHD</span>
+                <h3 class="text-2xl font-bold mb-2">Positive Partnerships</h3>
+                <p class="text-slate-400">Supporting school-aged students on the autism spectrum.</p>
+                <div class="visual-bg">🧠</div>
             </a>
 
             <a href="https://www.childhood.org.au" target="_blank" class="res-card">
-                <span class="tag">Trauma Informed 🇦🇺</span>
-                <h3 class="text-2xl font-black mb-3">Trauma-Informed Practice</h3>
-                <p class="text-slate-300">Strategies and professional tools from the Australian Childhood Foundation.</p>
-            </a>
-
-            <a href="https://www.education.sa.gov.au/students/curriculum-and-learning/eald" target="_blank" class="res-card">
-                <span class="tag">EALD / ESL 🇦🇺</span>
-                <h3 class="text-2xl font-black mb-3">SA EALD Tools</h3>
-                <p class="text-slate-300">Official South Australian framework for English as an Additional Language/Dialect.</p>
+                <span class="tag">Trauma Informed</span>
+                <h3 class="text-2xl font-bold mb-2">Childhood Foundation</h3>
+                <p class="text-slate-400">Trauma-informed practice in education and child support.</p>
+                <div class="visual-bg">🤝</div>
             </a>
 
             <a href="https://www.speldsa.org.au" target="_blank" class="res-card">
-                <span class="tag">Literacy 🇦🇺</span>
-                <h3 class="text-2xl font-black mb-3">SPELD SA</h3>
-                <p class="text-slate-300">Essential decodable books and literacy support for SA primary and secondary learners.</p>
+                <span class="tag">Literacy</span>
+                <h3 class="text-2xl font-bold mb-2">SPELD SA</h3>
+                <p class="text-slate-400">Free phonic and decodable readers and literacy support.</p>
+                <div class="visual-bg">📚</div>
             </a>
 
             <a href="https://beyou.edu.au" target="_blank" class="res-card">
-                <span class="tag">Staff Wellbeing 🇦🇺</span>
-                <h3 class="text-2xl font-black mb-3">Be You Portal</h3>
-                <p class="text-slate-300">The national mental health initiative for educators. Tools for burnout and regulation.</p>
+                <span class="tag">Wellbeing</span>
+                <h3 class="text-2xl font-bold mb-2">Be You (Beyond Blue)</h3>
+                <p class="text-slate-400">Mental health initiative for educators and students.</p>
+                <div class="visual-bg">🧘</div>
             </a>
 
             <a href="https://mathsbot.com/" target="_blank" class="res-card">
                 <span class="tag">Numeracy</span>
-                <h3 class="text-2xl font-black mb-3">MathsBot</h3>
-                <p class="text-slate-300">Interactive tools, manipulatives, and generators for modern math classrooms.</p>
+                <h3 class="text-2xl font-bold mb-2">MathsBot</h3>
+                <p class="text-slate-400">Virtual manipulatives and interactive math tools.</p>
+                <div class="visual-bg">🧮</div>
             </a>
 
             <a href="https://www.abc.net.au/education" target="_blank" class="res-card">
-                <span class="tag">Curriculum 🇦🇺</span>
-                <h3 class="text-2xl font-black mb-3">ABC Education</h3>
-                <p class="text-slate-300">Extensive library of high-quality Australian videos and interactive games.</p>
-            </a>
-
-            <a href="https://www.adhdaustralia.org.au/" target="_blank" class="res-card">
-                <span class="tag">ADHD 🇦🇺</span>
-                <h3 class="text-2xl font-black mb-3">ADHD Australia</h3>
-                <p class="text-slate-300">Evidence-based classroom accommodations and student support strategies.</p>
+                <span class="tag">Curriculum</span>
+                <h3 class="text-2xl font-bold mb-2">ABC Education</h3>
+                <p class="text-slate-400">Thousands of free curriculum-linked videos and games.</p>
+                <div class="visual-bg">🇦🇺</div>
             </a>
 
         </div>

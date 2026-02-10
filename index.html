@@ -6,227 +6,62 @@
     <title>ThriveHub | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --navy: #0f172a; --teal: #22d3ee; --card: #1e293b; }
-        body { background-color: var(--navy); color: #ffffff; font-family: sans-serif; line-height: 1.6; }
-        .platform-btn { background: var(--card); border: 2px solid #334155; transition: 0.3s; text-align: center; }
-        .platform-btn:hover { border-color: var(--teal); background: #2d3a4f; transform: translateY(-3px); }
-        .accent-text { color: var(--teal); font-weight: 800; }
-    </style>
-</head>
-<body class="min-h-screen">
-    <nav class="flex justify-between items-center p-8 max-w-7xl mx-auto border-b border-slate-800">
-        <div class="text-3xl font-black tracking-tighter">Thrive<span class="accent-text">Hub</span></div>
-        <div class="flex gap-8 items-center">
-            <a href="library.html" class="font-bold hover:text-[#22d3ee] text-white">Library</a>
-            <a href="mailto:teresa.bruno@sa.gov.au" class="bg-[#22d3ee] text-[#0f172a] px-6 py-2 rounded-lg font-bold">Connect</a>
-        </div>
-    </nav>
-
-    <header class="py-20 px-6 text-center max-w-5xl mx-auto">
-        <h1 class="text-5xl md:text-7xl font-black mb-8">Empowering <span class="accent-text">Australian</span> Educators.</h1>
-        <p class="text-xl text-slate-200 mb-12 leading-relaxed">Every student deserves to thrive. We empower education staff with high-quality resources and practical tools that support student engagement and foster positive mental health.</p>
+        body { background-color: #0f172a; color: #ffffff; font-family: sans-serif; overflow-x: hidden; }
+        .platform-card { background: #1e293b; border: 2px solid #334155; transition: 0.3s; text-align: center; border-radius: 1rem; padding: 1.5rem; text-decoration: none; color: white; }
+        .platform-card:hover { border-color: #22d3ee; transform: translateY(-5px); }
+        .accent-teal { color: #22d3ee; }
         
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
-            <a href="https://www.youtube.com/@thrivehub" target="_blank" class="platform-btn p-8 rounded-2xl block">
-                <div class="text-5xl mb-3">📺</div>
-                <div class="font-bold text-white uppercase tracking-wider text-sm">YouTube</div>
-            </a>
-            <a href="#" class="platform-btn p-8 rounded-2xl block">
-                <div class="text-5xl mb-3">👥</div>
-                <div class="font-bold text-white uppercase tracking-wider text-sm">MS Teams</div>
-            </a>
-            <a href="#" class="platform-btn p-8 rounded-2xl block">
-                <div class="text-5xl mb-3">🏫</div>
-                <div class="font-bold text-white uppercase tracking-wider text-sm">Google Classroom</div>
-            </a>
-            <a href="#" class="platform-btn p-8 rounded-2xl block">
-                <div class="text-5xl mb-3">✍️</div>
-                <div class="font-bold text-white uppercase tracking-wider text-sm">Our Blog</div>
-            </a>
-        </div>
-    </header>
-
-    <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 pb-20">
-        <div class="p-10 rounded-3xl bg-slate-800 border-2 border-slate-700">
-            <h2 class="text-3xl font-bold mb-4 accent-text italic">Our Intent</h2>
-            <p class="text-lg text-white">Connecting you with materials, ideas, and strategies that make a real difference for students and help our teams deliver their very best every day.</p>
-        </div>
-        <div class="p-10 rounded-3xl bg-slate-800 border-2 border-cyan-900">
-            <h2 class="text-3xl font-bold mb-4 text-white">Vibrant Classrooms</h2>
-            <p class="text-lg text-white">Foster inclusive spaces with free, high-quality resources and practical tools designed specifically for the Australian education landscape.</p>
-        </div>
-    </section>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThriveHub | Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        :root { --navy: #0f172a; --teal: #22d3ee; --card: #1e293b; }
-        body { background-color: var(--navy); color: #f8fafc; font-family: sans-serif; }
-        .hero-vibrant { background: radial-gradient(circle at top right, rgba(34, 211, 238, 0.2), transparent); }
-        .platform-btn { background: var(--card); border: 2px solid #334155; transition: 0.3s; }
-        .platform-btn:hover { border-color: var(--teal); background: #2d3a4f; transform: translateY(-3px); }
-    </style>
-</head>
-<body class="hero-vibrant min-h-screen">
-    <nav class="flex justify-between items-center p-8 max-w-7xl mx-auto">
-        <div class="text-3xl font-black">Thrive<span class="text-[#22d3ee]">Hub</span></div>
-        <div class="flex gap-8 items-center">
-            <a href="library.html" class="font-bold hover:text-[#22d3ee]">Library</a>
-            <a href="mailto:teresa.bruno@sa.gov.au" class="bg-[#22d3ee] text-[#0f172a] px-6 py-2 rounded-lg font-bold">Connect</a>
-        </div>
-    </nav>
-
-    <header class="py-16 px-6 text-center">
-        <h1 class="text-6xl font-black mb-6">Empowering <span class="text-[#22d3ee]">Australian</span> Educators.</h1>
-        <p class="text-xl text-slate-300 max-w-3xl mx-auto mb-12">Every student deserves to thrive. We empower education staff with practical tools that support student engagement and foster positive mental health.</p>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-16">
-            <a href="#" class="platform-btn p-6 rounded-2xl">
-                <div class="text-4xl mb-2">📺</div>
-                <div class="font-bold">YouTube</div>
-            </a>
-            <a href="#" class="platform-btn p-6 rounded-2xl">
-                <div class="text-4xl mb-2">👥</div>
-                <div class="font-bold">MS Teams</div>
-            </a>
-            <a href="#" class="platform-btn p-6 rounded-2xl">
-                <div class="text-4xl mb-2">🏫</div>
-                <div class="font-bold">Google Classroom</div>
-            </a>
-            <a href="#" class="platform-btn p-6 rounded-2xl">
-                <div class="text-4xl mb-2">✍️</div>
-                <div class="font-bold">Our Blog</div>
-            </a>
-        </div>
-    </header>
-
-    <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 pb-20">
-        <div class="p-10 rounded-3xl bg-slate-800/50 border border-slate-700">
-            <h2 class="text-3xl font-bold mb-4 text-[#22d3ee]">Our Mission</h2>
-            <p class="text-lg text-slate-300">This site is designed to connect you with materials, ideas, and strategies that make a real difference for students and help our teams deliver their very best every day.</p>
-        </div>
-        <div class="p-10 rounded-3xl bg-gradient-to-br from-cyan-900/40 to-slate-900 border border-cyan-500/30">
-            <h2 class="text-3xl font-bold mb-4">Inclusion & Growth</h2>
-            <p class="text-lg text-slate-300">Foster vibrant, inclusive classrooms with free, high-quality resources and practical tools that support student learning and wellbeing.</p>
-        </div>
-    </section>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThriveHub | Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        :root { --navy: #1a2a3a; --teal: #22d3ee; }
-        body { background-color: var(--navy); color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .hero-mesh { 
-            background: radial-gradient(circle at top right, rgba(34, 211, 238, 0.15), transparent), 
-                        radial-gradient(circle at bottom left, rgba(34, 211, 238, 0.05), transparent);
+        /* Interactive Calm Space - Breathing Animation */
+        .breath-circle {
+            width: 150px; height: 150px; border-radius: 50%;
+            background: rgba(34, 211, 238, 0.2);
+            border: 2px solid #22d3ee;
+            margin: 0 auto;
+            animation: breathe 8s infinite ease-in-out;
         }
-        .platform-card { background: #1e293b; border: 1px solid #334155; transition: all 0.3s; }
-        .platform-card:hover { border-color: var(--teal); background: #2d3a4f; transform: scale(1.02); }
-    </style>
-</head>
-<body class="hero-mesh">
-    <nav class="flex justify-between items-center px-10 py-8 max-w-7xl mx-auto">
-        <div class="text-3xl font-black">Thrive<span class="text-[#22d3ee]">Hub</span></div>
-        <div class="flex gap-8 font-bold items-center">
-            <a href="library.html" class="hover:text-[#22d3ee]">Library</a>
-            <a href="mailto:teresa.bruno@sa.gov.au" class="bg-[#22d3ee] text-[#1a2a3a] px-6 py-2 rounded-lg shadow-lg shadow-cyan-500/20">Connect</a>
-        </div>
-    </nav>
-
-    <header class="py-20 px-10 text-center">
-        <h1 class="text-6xl font-black mb-6">Empowering <span class="text-[#22d3ee]">Australian</span> Educators.</h1>
-        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12">Every student deserves to thrive. Access our professional networks and high-quality tools below.</p>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-20">
-            <a href="#" class="platform-card p-6 rounded-2xl">
-                <div class="text-3xl mb-2">📺</div>
-                <span class="font-bold">YouTube</span>
-            </a>
-            <a href="#" class="platform-card p-6 rounded-2xl">
-                <div class="text-3xl mb-2">👥</div>
-                <span class="font-bold">MS Teams</span>
-            </a>
-            <a href="#" class="platform-card p-6 rounded-2xl">
-                <div class="text-3xl mb-2">🏫</div>
-                <span class="font-bold">Classroom</span>
-            </a>
-            <a href="#" class="platform-card p-6 rounded-2xl">
-                <div class="text-3xl mb-2">📝</div>
-                <span class="font-bold">Our Blog</span>
-            </a>
-        </div>
-    </header>
-
-    <section class="max-w-6xl mx-auto px-10 pb-20 grid md:grid-cols-2 gap-12 border-t border-slate-800 pt-20">
-        <div>
-            <h2 class="text-4xl font-bold mb-6 italic text-[#22d3ee]">Our Intent</h2>
-            <p class="text-lg text-slate-300 leading-relaxed">Connecting you with materials and strategies that make a real difference. We empower staff with tools that support student engagement and foster positive mental health.</p>
-        </div>
-        <div class="bg-gradient-to-br from-cyan-500/20 to-transparent p-10 rounded-3xl border border-cyan-500/30">
-            <h4 class="text-xl font-bold mb-4">Why ThriveHub?</h4>
-            <ul class="space-y-4 text-slate-400">
-                <li>✓ Free, high-quality Australian resources</li>
-                <li>✓ Practical classroom strategies</li>
-                <li>✓ Staff & Student wellbeing focus</li>
-            </ul>
-        </div>
-    </section>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThriveHub | Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        :root { --navy: #1a2a3a; --teal: #22d3ee; }
-        body { background-color: var(--navy); color: #f8fafc; font-family: 'Inter', sans-serif; margin: 0; }
-        .hero-section { background: linear-gradient(180deg, #1e293b 0%, var(--navy) 100%); }
-        .accent-teal { color: var(--teal); }
-        .btn-teal { background-color: var(--teal); color: var(--navy); transition: all 0.3s ease; }
-        .btn-teal:hover { box-shadow: 0 0 20px rgba(34, 211, 238, 0.4); transform: translateY(-2px); }
-        .info-card { background: #1e293b; border: 1px solid #334155; padding: 2rem; border-radius: 1rem; }
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.8); opacity: 1; }
+        }
     </style>
 </head>
 <body>
-    <nav class="flex justify-between items-center px-10 py-8 max-w-7xl mx-auto">
-        <div class="text-3xl font-extrabold tracking-tighter">Thrive<span class="accent-teal">Hub</span></div>
-        <div class="flex gap-10 font-bold items-center">
-            <a href="library.html" class="hover:text-[#22d3ee] transition">Library</a>
-            <a href="mailto:hello@thrivehub.com" class="btn-teal px-6 py-2 rounded-lg text-sm font-bold">Connect</a>
+    <nav class="flex justify-between items-center p-8 max-w-7xl mx-auto">
+        <div class="text-3xl font-black">Thrive<span class="accent-teal">Hub</span></div>
+        <div class="flex gap-6 items-center font-bold">
+            <a href="library.html" class="hover:accent-teal">Library</a>
+            <a href="#calm" class="hover:accent-teal">Calm Space</a>
+            <a href="mailto:teresa.bruno@sa.gov.au" class="bg-[#22d3ee] text-[#0f172a] px-5 py-2 rounded-lg text-sm">Connect</a>
         </div>
     </nav>
 
-    <header class="hero-section py-24 px-10 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-6xl font-extrabold mb-8 leading-tight">Every student deserves <br><span class="accent-teal">to thrive.</span></h1>
-            <p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">Empowering educators with high-quality Australian and global resources to foster engagement, mental health, and vibrant classrooms.</p>
-            <a href="library.html" class="btn-teal px-10 py-4 rounded-xl font-bold text-lg">Enter Resource Library</a>
+    <header class="py-12 px-6 text-center max-w-5xl mx-auto">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 italic">Empowering <span class="accent-teal">SA</span> Educators.</h1>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <a href="https://youtube.com" class="platform-card">📺 <div class="text-xs font-bold mt-2">YOUTUBE</div></a>
+            <a href="#" class="platform-card">👥 <div class="text-xs font-bold mt-2">TEAMS</div></a>
+            <a href="#" class="platform-card">🏫 <div class="text-xs font-bold mt-2">CLASSROOM</div></a>
+            <a href="#tutorials" class="platform-card">🎥 <div class="text-xs font-bold mt-2">TUTORIALS</div></a>
         </div>
     </header>
 
-    <section class="max-w-6xl mx-auto px-10 py-20 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div class="info-card">
-            <h3 class="text-2xl font-bold mb-4 accent-teal italic">Our Mission</h3>
-            <p class="text-slate-300 leading-relaxed">We believe wellbeing and learning go hand-in-hand. ThriveHub connects you with practical tools and strategies that support student engagement and foster inclusive classrooms across Australia and beyond.</p>
+    <section id="calm" class="max-w-4xl mx-auto px-6 py-16 bg-slate-900/50 rounded-3xl border border-cyan-500/20 text-center mb-20">
+        <h2 class="text-3xl font-bold mb-4 accent-teal">The Calm Space</h2>
+        <p class="text-slate-400 mb-10">Project this on your board for a 60-second classroom reset. Breathe with the bubble.</p>
+        <div class="breath-circle"></div>
+        <p class="mt-10 font-bold tracking-widest text-cyan-500/50 uppercase">Inhale ... Exhale</p>
+    </section>
+
+    <section id="tutorials" class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 pb-20">
+        <div class="p-8 rounded-2xl bg-slate-800 border-2 border-slate-700">
+            <h2 class="text-2xl font-bold mb-4 accent-teal italic">Staff Mental Health</h2>
+            <p class="text-slate-200 mb-4">Dedicated tools for educator burnout prevention and emotional regulation.</p>
+            <a href="https://beyou.edu.au" target="_blank" class="text-sm font-bold underline">Access Staff Portal</a>
         </div>
-        <div class="info-card">
-            <h3 class="text-2xl font-bold mb-4 accent-teal italic">Staff Support</h3>
-            <p class="text-slate-300 leading-relaxed">Our site is designed to connect you with materials and ideas that make a real difference for students and help our teams deliver their very best every single day.</p>
+        <div class="p-8 rounded-2xl bg-slate-800 border-2 border-slate-700">
+            <h2 class="text-2xl font-bold mb-4 accent-teal italic">Video Tutorials</h2>
+            <p class="text-slate-200 mb-4">Quick 60-second strategy clips for inclusive classroom management.</p>
+            <div class="bg-black/40 aspect-video rounded-lg flex items-center justify-center text-slate-500 font-bold">Tutorial Feed Coming Soon</div>
         </div>
     </section>
 </body>

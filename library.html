@@ -1,3 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library | ThriveHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .thrive-navy { background-color: #1a2a3a; }
+        .thrive-teal { color: #22d3ee; }
+        .bg-thrive-teal { background-color: #22d3ee; }
+        .card-hover:hover { transform: translateY(-4px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <nav class="p-6 bg-white shadow-sm flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 bg-thrive-teal rounded-full flex items-center justify-center">
+                <i data-lucide="sprout" class="text-white w-5 h-5"></i>
+            </div>
+            <span class="text-xl font-bold text-[#1a2a3a]">Thrive<span class="text-[#22d3ee]">Hub</span></span>
+        </div>
+        <a href="index.html" class="text-sm font-medium text-gray-500 hover:text-cyan-500">Back to Home</a>
+    </nav>
+
+    <header class="thrive-navy text-white py-12 px-6 text-center">
+        <h1 class="text-3xl font-bold mb-2">Resource Library</h1>
+        <p class="text-cyan-100 opacity-80">High-quality tools, zero fluff.</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto py-12 px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover">
+                <div class="w-12 h-12 bg-cyan-50 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="book-open" class="text-[#22d3ee]"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-1">Literacy Scaffolds</h3>
+                <p class="text-gray-500 text-sm mb-4">Writing frames and sentence starters for all levels.</p>
+                <button class="w-full py-2 bg-gray-100 hover:bg-[#22d3ee] hover:text-white rounded-md text-sm font-bold transition">View Assets</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover">
+                <div class="w-12 h-12 bg-cyan-50 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="brain-circuit" class="text-[#22d3ee]"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-1">Mindset Toolkit</h3>
+                <p class="text-gray-500 text-sm mb-4">Growth mindset posters and student reflection sheets.</p>
+                <button class="w-full py-2 bg-gray-100 hover:bg-[#22d3ee] hover:text-white rounded-md text-sm font-bold transition">Download Pack</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover">
+                <div class="w-12 h-12 bg-cyan-50 rounded-lg flex items-center justify-center mb-4">
+                    <i data-lucide="users" class="text-[#22d3ee]"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-1">Inclusion Guide</h3>
+                <p class="text-gray-500 text-sm mb-4">Best practices for diverse classroom engagement.</p>
+                <button class="w-full py-2 bg-gray-100 hover:bg-[#22d3ee] hover:text-white rounded-md text-sm font-bold transition">Read Online</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // Initializes the icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
 <!doctype html>
 <html lang="en">
 <head>

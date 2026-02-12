@@ -2,12 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ThriveHub | Home</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3062/3062634.png">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root { --navy: #0f172a; --teal: #22d3ee; }
-        body { background-color: var(--navy); color: #ffffff; font-family: sans-serif; }
+        html { touch-action: manipulation; scroll-behavior: smooth; }
+        body { background-color: var(--navy); color: #ffffff; font-family: sans-serif; -webkit-tap-highlight-color: transparent; }
         .hero-image { 
             height: 450px; 
             background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), 
@@ -15,7 +24,7 @@
             background-size: cover; background-position: center; border-radius: 2.5rem;
             display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
         }
-        .platform-card { background: #1e293b; border: 2px solid #334155; transition: 0.3s; border-radius: 1.5rem; padding: 2rem; text-decoration: none; color: white; text-align: center; height: 100%; }
+        .platform-card { background: #1e293b; border: 2px solid #334155; transition: 0.3s; border-radius: 1.5rem; padding: 2rem; text-decoration: none; color: white; text-align: center; }
         .platform-card:hover { border-color: var(--teal); transform: translateY(-5px); }
         .logo-mark { width: 35px; height: 35px; background: var(--teal); border-radius: 50% 50% 0 50%; display: inline-block; margin-right: 12px; }
     </style>
@@ -53,9 +62,9 @@
                 <div class="text-6xl mb-4">👥</div>
                 <div class="font-black uppercase tracking-widest mb-4">Teams Hubs</div>
                 <div class="flex flex-col gap-2 text-xs font-bold text-[#22d3ee]">
-                    <a href="https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="hover:underline">1. Complex Needs Hub</a>
-                    <a href="https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="hover:underline">2. Educator Support Hub</a>
-                    <a href="https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="hover:underline">3. Engagement Hub</a>
+                    <a href="https://teams.microsoft.com/..." target="_blank" class="hover:underline">1. Complex Needs Hub</a>
+                    <a href="https://teams.microsoft.com/..." target="_blank" class="hover:underline">2. Educator Support Hub</a>
+                    <a href="https://teams.microsoft.com/..." target="_blank" class="hover:underline">3. Engagement Hub</a>
                 </div>
             </div>
         </div>
@@ -65,84 +74,44 @@
             <p class="text-xl text-slate-300 leading-relaxed text-center max-w-5xl mx-auto italic">
                 Our mission is to empower education staff with free, high-quality resources and practical tools that support student engagement, foster positive mental health, and create vibrant, inclusive classrooms. This site is designed to connect you with materials, ideas, and strategies that make a real difference for students and help our teams deliver their very best every day.
             </p>
-            <div class="mt-12 text-center text-slate-500 text-[10px] tracking-[0.3em] uppercase">© TERESA BRUNO™</div>
         </div>
     </main>
-    <footer class="text-center py-10 border-t border-slate-800 mt-20">
-        <a href="privacy.html" class="text-slate-500 hover:text-[#22d3ee] text-xs font-bold uppercase tracking-widest">Privacy Policy</a>
-    </footer>
 
-</body> ```
-
----
-
-### 2. The "Install App" Welcome Popup
-Since many users don't know they can "install" a website as an app, this popup will show up to help them. It’s designed to be modern, non-intrusive, and looks great on both mobile and desktop.
-
-
-
-**Add this code to the bottom of your `index.html` (just above the footer we just discussed):**
-
-```html
-<div id="install-popup" class="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-md bg-[#1e293b] border-2 border-[#22d3ee] p-6 rounded-3xl shadow-2xl hidden">
-    <div class="flex items-center gap-4 mb-4">
-        <div class="w-12 h-12 bg-[#22d3ee] rounded-xl flex items-center justify-center text-2xl">📲</div>
-        <div>
-            <h4 class="font-black italic text-white leading-none">Install ThriveHub</h4>
-            <p class="text-xs text-slate-400 mt-1">Access the Vault instantly from your home screen.</p>
+    <div id="install-popup" class="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-md bg-[#1e293b] border-2 border-[#22d3ee] p-6 rounded-3xl shadow-2xl hidden">
+        <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-[#22d3ee] rounded-xl flex items-center justify-center text-2xl">📲</div>
+            <div>
+                <h4 class="font-black italic text-white leading-none">Install ThriveHub</h4>
+                <p class="text-xs text-slate-400 mt-1">Access the Vault instantly from your home screen.</p>
+            </div>
+        </div>
+        <div class="flex gap-3">
+            <button onclick="closePopup()" class="flex-1 bg-slate-700 text-white py-2 rounded-xl font-bold text-sm">Maybe Later</button>
+            <button onclick="showInstructions()" class="flex-1 bg-[#22d3ee] text-[#0f172a] py-2 rounded-xl font-bold text-sm">How to Install</button>
         </div>
     </div>
-    <div class="flex gap-3">
-        <button onclick="closePopup()" class="flex-1 bg-slate-700 text-white py-2 rounded-xl font-bold text-sm">Maybe Later</button>
-        <button onclick="showInstructions()" class="flex-1 bg-[#22d3ee] text-[#0f172a] py-2 rounded-xl font-bold text-sm">How to Install</button>
-    </div>
-</div>
-
-<script>
-    // Show popup after 3 seconds if they haven't seen it
-    window.onload = function() {
-        if (!localStorage.getItem('popupShown')) {
-            setTimeout(() => {
-                document.getElementById('install-popup').classList.remove('hidden');
-            }, 3000);
-        }
-    }
-
-    function closePopup() {
-        document.getElementById('install-popup').classList.add('hidden');
-        localStorage.setItem('popupShown', 'true');
-    }
-
-    function showInstructions() {
-        alert("On iPhone: Tap 'Share' (box with arrow) and select 'Add to Home Screen'.\n\nOn Android/Chrome: Tap the three dots and select 'Install App' or 'Add to Home Screen'.");
-        closePopup();
-    }
-</script>
-</body>
-</html>
-<div id="install-popup" class="fixed bottom-10 ...">
-        ... (all that popup code) ...
-    </div>
 
     <footer class="text-center py-10 border-t border-slate-800 mt-20">
-        <a href="privacy.html" class="text-slate-500 ...">Privacy Policy</a>
+        <a href="privacy.html" class="text-slate-500 hover:text-[#22d3ee] text-xs font-bold uppercase tracking-widest">Privacy Policy</a>
+        <div class="mt-4 text-slate-600 text-[10px] tracking-widest">© TERESA BRUNO™</div>
     </footer>
 
-</body> ```
-
----
-
-### Why is this important?
-Because **ThriveHub** is a website, most people will just look at it and leave. By adding this code, you are teaching them how to "install" it. 
-
-
-
-Once they follow those instructions:
-* **The browser bars disappear:** It looks like a real, full-screen app.
-* **It gets an Icon:** It will sit on their phone screen next to Instagram, Teams, or Outlook.
-* **Faster Access:** They don't have to type the URL every time; they just tap the ThriveHub icon.
-
-### To recap the "Folder" question:
-You are **not** creating a new folder for this. You are just editing the **`index.html`** file that is already in your main repository. 
-
-**Would you like me to give you the full, completed `index.html` code one last time with everything (Popup, Footer, and PWA links) already in the right place so you can just copy and paste the whole thing?**
+    <script>
+        window.onload = function() {
+            if (!localStorage.getItem('popupShown')) {
+                setTimeout(() => {
+                    document.getElementById('install-popup').classList.remove('hidden');
+                }, 3000);
+            }
+        }
+        function closePopup() {
+            document.getElementById('install-popup').classList.add('hidden');
+            localStorage.setItem('popupShown', 'true');
+        }
+        function showInstructions() {
+            alert("On iPhone: Tap 'Share' and select 'Add to Home Screen'.\n\nOn Android: Tap the three dots and select 'Install App'.");
+            closePopup();
+        }
+    </script>
+</body>
+</html>

@@ -2,31 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Library | ThriveHub</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3062/3062634.png">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #020617; color: #ffffff; font-family: sans-serif; }
+        :root { --navy: #020617; --slate: #1e293b; --teal: #22d3ee; }
+        html { touch-action: manipulation; scroll-behavior: smooth; }
+        body { background-color: var(--navy); color: #ffffff; font-family: sans-serif; -webkit-tap-highlight-color: transparent; }
+        
         .res-card { 
-            background: #1e293b; border: 1px solid #334155; padding: 1.5rem; 
+            background: var(--slate); border: 1px solid #334155; padding: 1.5rem; 
             border-radius: 1.5rem; transition: 0.3s; position: relative; 
             overflow: hidden; display: flex; flex-direction: column; min-height: 280px;
         }
-        .res-card:hover { border-color: #22d3ee; transform: translateY(-5px); background: #0f172a; }
+        .res-card:hover { border-color: var(--teal); transform: translateY(-5px); background: #0f172a; }
+        
         .visual-foil { 
             position: absolute; right: -10px; bottom: -10px; font-size: 5rem; 
-            opacity: 0.05; transform: rotate(-15deg); pointer-events: none; 
+            opacity: 0.07; transform: rotate(-15deg); pointer-events: none; 
         }
-        .tag { background: #22d3ee; color: #020617; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.65rem; text-transform: uppercase; margin-bottom: 0.75rem; width: fit-content; z-index: 10; }
+        
+        .tag { background: var(--teal); color: #020617; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.65rem; text-transform: uppercase; margin-bottom: 0.75rem; width: fit-content; z-index: 10; }
         .link-item { color: #94a3b8; font-weight: 700; font-size: 0.8rem; margin-top: 0.5rem; display: block; transition: 0.2s; z-index: 10; }
-        .link-item:hover { color: #22d3ee; padding-left: 5px; }
+        .link-item:hover { color: var(--teal); padding-left: 5px; }
         h3 { z-index: 10; position: relative; }
     </style>
 </head>
 <body class="p-6 md:p-12">
     <div class="max-w-[1600px] mx-auto">
         <header class="flex justify-between items-center mb-12 border-b border-slate-800 pb-8">
-            <h1 class="text-5xl font-black italic tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
+            <h1 class="text-5xl font-black italic tracking-tighter uppercase">The <span class="text-[#22d3ee]">Vault</span></h1>
             <a href="index.html" class="text-[#22d3ee] font-black text-xl hover:underline">← HOME</a>
         </header>
 
@@ -146,7 +159,7 @@
                 <span class="tag">Engagement</span>
                 <h3 class="text-xl font-bold mb-2">Positive Behaviour</h3>
                 <a href="https://www.pbis.org/" target="_blank" class="link-item">• PBIS National Center</a>
-                <a href="https://www.livesinthebalance.org/" target="_blank" class="link-item">• Lives in the Balance (Dr. Greene)</a>
+                <a href="https://www.livesinthebalance.org/" target="_blank" class="link-item">• Lives in the Balance</a>
                 <a href="https://www.pbisworld.com/" target="_blank" class="link-item">• PBIS World Tiers</a>
                 <a href="https://www.behavioursupport.com.au/" target="_blank" class="link-item">• Behaviour Support Hub</a>
                 <div class="visual-foil">🌟</div>
@@ -193,56 +206,21 @@
             </div>
 
         </div>
-    </div>
-    <footer class="text-center py-10 border-t border-slate-800 mt-20">
-        <a href="privacy.html" class="text-slate-500 hover:text-[#22d3ee] text-xs font-bold uppercase tracking-widest">Privacy Policy</a>
-    </footer>
 
-</body> ```
-
----
-
-### 2. The "Install App" Welcome Popup
-Since many users don't know they can "install" a website as an app, this popup will show up to help them. It’s designed to be modern, non-intrusive, and looks great on both mobile and desktop.
-
-
-
-**Add this code to the bottom of your `index.html` (just above the footer we just discussed):**
-
-```html
-<div id="install-popup" class="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-md bg-[#1e293b] border-2 border-[#22d3ee] p-6 rounded-3xl shadow-2xl hidden">
-    <div class="flex items-center gap-4 mb-4">
-        <div class="w-12 h-12 bg-[#22d3ee] rounded-xl flex items-center justify-center text-2xl">📲</div>
-        <div>
-            <h4 class="font-black italic text-white leading-none">Install ThriveHub</h4>
-            <p class="text-xs text-slate-400 mt-1">Access the Vault instantly from your home screen.</p>
+        <div class="mt-12 text-center opacity-50">
+             <ins class="adsbygoogle"
+                  style="display:block"
+                  data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                  data-ad-slot="YYYYYYYYYY"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"></ins>
+             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
+
+        <footer class="text-center py-10 border-t border-slate-800 mt-20">
+            <a href="privacy.html" class="text-slate-500 hover:text-[#22d3ee] text-xs font-bold uppercase tracking-widest">Privacy Policy</a>
+            <div class="mt-4 text-slate-600 text-[10px] tracking-widest">© TERESA BRUNO™</div>
+        </footer>
     </div>
-    <div class="flex gap-3">
-        <button onclick="closePopup()" class="flex-1 bg-slate-700 text-white py-2 rounded-xl font-bold text-sm">Maybe Later</button>
-        <button onclick="showInstructions()" class="flex-1 bg-[#22d3ee] text-[#0f172a] py-2 rounded-xl font-bold text-sm">How to Install</button>
-    </div>
-</div>
-
-<script>
-    // Show popup after 3 seconds if they haven't seen it
-    window.onload = function() {
-        if (!localStorage.getItem('popupShown')) {
-            setTimeout(() => {
-                document.getElementById('install-popup').classList.remove('hidden');
-            }, 3000);
-        }
-    }
-
-    function closePopup() {
-        document.getElementById('install-popup').classList.add('hidden');
-        localStorage.setItem('popupShown', 'true');
-    }
-
-    function showInstructions() {
-        alert("On iPhone: Tap 'Share' (box with arrow) and select 'Add to Home Screen'.\n\nOn Android/Chrome: Tap the three dots and select 'Install App' or 'Add to Home Screen'.");
-        closePopup();
-    }
-</script>
 </body>
 </html>

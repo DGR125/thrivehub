@@ -68,5 +68,55 @@
             <div class="mt-12 text-center text-slate-500 text-[10px] tracking-[0.3em] uppercase">© TERESA BRUNO™</div>
         </div>
     </main>
+    <footer class="text-center py-10 border-t border-slate-800 mt-20">
+        <a href="privacy.html" class="text-slate-500 hover:text-[#22d3ee] text-xs font-bold uppercase tracking-widest">Privacy Policy</a>
+    </footer>
+
+</body> ```
+
+---
+
+### 2. The "Install App" Welcome Popup
+Since many users don't know they can "install" a website as an app, this popup will show up to help them. It’s designed to be modern, non-intrusive, and looks great on both mobile and desktop.
+
+
+
+**Add this code to the bottom of your `index.html` (just above the footer we just discussed):**
+
+```html
+<div id="install-popup" class="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-md bg-[#1e293b] border-2 border-[#22d3ee] p-6 rounded-3xl shadow-2xl hidden">
+    <div class="flex items-center gap-4 mb-4">
+        <div class="w-12 h-12 bg-[#22d3ee] rounded-xl flex items-center justify-center text-2xl">📲</div>
+        <div>
+            <h4 class="font-black italic text-white leading-none">Install ThriveHub</h4>
+            <p class="text-xs text-slate-400 mt-1">Access the Vault instantly from your home screen.</p>
+        </div>
+    </div>
+    <div class="flex gap-3">
+        <button onclick="closePopup()" class="flex-1 bg-slate-700 text-white py-2 rounded-xl font-bold text-sm">Maybe Later</button>
+        <button onclick="showInstructions()" class="flex-1 bg-[#22d3ee] text-[#0f172a] py-2 rounded-xl font-bold text-sm">How to Install</button>
+    </div>
+</div>
+
+<script>
+    // Show popup after 3 seconds if they haven't seen it
+    window.onload = function() {
+        if (!localStorage.getItem('popupShown')) {
+            setTimeout(() => {
+                document.getElementById('install-popup').classList.remove('hidden');
+            }, 3000);
+        }
+    }
+
+    function closePopup() {
+        document.getElementById('install-popup').classList.add('hidden');
+        localStorage.setItem('popupShown', 'true');
+    }
+
+    function showInstructions() {
+        alert("On iPhone: Tap 'Share' (box with arrow) and select 'Add to Home Screen'.\n\nOn Android/Chrome: Tap the three dots and select 'Install App' or 'Add to Home Screen'.");
+        closePopup();
+    }
+</script>
 </body>
 </html>

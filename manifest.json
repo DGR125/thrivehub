@@ -1,15 +1,18 @@
 {
-  "name": "ThriveHub Educator Vault",
+  "name": "ThriveHub: Educator Vault",
   "short_name": "ThriveHub",
+  "description": "Evidence-based resources for student engagement and wellbeing.",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#22d3ee",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "https://cdn-icons-png.flaticon.com/512/3062/3062634.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

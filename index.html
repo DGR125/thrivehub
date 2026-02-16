@@ -14,30 +14,64 @@
     </script>
 
     <link rel="manifest" href="manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6726258681467242" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root { --navy: #0f172a; --teal: #22d3ee; }
         body { background-color: var(--navy); color: #ffffff; font-family: sans-serif; }
-        .hero-image { height: 450px; background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('https://images.pexels.com/photos/8499547/pexels-photo-8499547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center; border-radius: 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-        .platform-card { background: #1e293b; border: 2px solid #334155; transition: 0.3s; border-radius: 1.5rem; padding: 2rem; text-decoration: none; color: white; text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .hero-image { 
+            height: 400px; 
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), 
+            url('https://images.pexels.com/photos/8499547/pexels-photo-8499547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover; background-position: center; border-radius: 2rem;
+            display: flex; align-items: center; justify-content: center; text-align: center;
+        }
+        .platform-card { background: #1e293b; border: 2px solid #334155; transition: 0.3s; border-radius: 1.5rem; padding: 2rem; text-decoration: none; color: white; text-align: center; }
         .platform-card:hover { border-color: var(--teal); transform: translateY(-5px); }
     </style>
 </head>
-<body>
-    <nav class="flex justify-between items-center p-8 max-w-7xl mx-auto">
+<body class="p-6">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center py-8">
         <div class="text-3xl font-black italic">Thrive<span class="text-[#22d3ee]">Hub</span></div>
         <div class="flex gap-8 items-center font-bold text-sm uppercase tracking-widest">
             <a href="library.html" class="hover:text-[#22d3ee]">Library</a>
             <a href="calm.html" class="hover:text-[#22d3ee]">Calm Space</a>
         </div>
     </nav>
-    <header class="max-w-7xl mx-auto px-6 mb-16">
+
+    <header class="max-w-7xl mx-auto mb-12">
         <div class="hero-image">
-            <h1 class="text-6xl md:text-8xl font-black mb-6 italic tracking-tighter uppercase leading-none text-center">Empowering<br>Educators.</h1>
-            <p class="text-xl md:text-2xl text-slate-200 max-w-3xl font-light mt-4 px-4 text-center">Evidence-based resources for student engagement and wellbeing.</p>
+            <h1 class="text-5xl md:text-7xl font-black italic uppercase text-white px-4">Empowering<br>Educators.</h1>
         </div>
     </header>
-    <main class="max-w-7xl mx-auto px-6 pb-20">
+
+    <main class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <a href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ" target="_blank" class="platform-card">
+                <div class="text-5xl mb-4">📺</div>
+                <div class="font-black uppercase tracking-widest">YouTube Playlist</div>
+            </a>
+            <a href="https://thestudentwellbeing.wordpress.com/" target="_blank" class="platform-card">
+                <div class="text-5xl mb-4">✍️</div>
+                <div class="font-black uppercase tracking-widest">Wellbeing Blog</div>
+            </a>
+            <a href="teams.html" class="platform-card">
+                <div class="text-5xl mb-4">👥</div>
+                <div class="font-black uppercase tracking-widest">Teams Hubs</div>
+            </a>
+        </div>
+
+        <div class="bg-slate-800/50 p-12 rounded-3xl border border-slate-700 text-center">
+            <h2 class="text-4xl font-black mb-6 italic text-[#22d3ee]">Our Intent</h2>
+            <p class="text-xl text-slate-300 italic max-w-4xl mx-auto">
+                Our mission is to empower education staff with free, high-quality resources and practical tools that support student engagement and foster inclusive classrooms.
+            </p>
+        </div>
+    </main>
+
+    <footer class="text-center py-20 border-t border-slate-800 mt-12">
+        <a href="privacy.html" class="text-slate-500 hover:text-[#22d3ee] text-xs font-bold uppercase tracking-widest">Privacy Policy</a>
+        <div class="mt-4 text-slate-600 text-[10px] tracking-widest">© 2026 TERESA BRUNO™</div>
+    </footer>
+</body>
+</html>

@@ -1,5 +1,3 @@
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6726258681467242"
-     crossorigin="anonymous"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +8,7 @@
     <link rel="manifest" href="manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="ThriveHub">
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3062/3062634.png">
-    <meta name="theme-color" content="#0f172a">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 
@@ -21,7 +17,6 @@
         :root { --navy: #0f172a; --teal: #22d3ee; }
         html { touch-action: manipulation; scroll-behavior: smooth; }
         body { background-color: var(--navy); color: #ffffff; font-family: sans-serif; -webkit-tap-highlight-color: transparent; }
-        
         .hero-image { 
             height: 450px; 
             background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), 
@@ -48,8 +43,8 @@
 
     <header class="max-w-7xl mx-auto px-6 mb-16">
         <div class="hero-image">
-            <h1 class="text-6xl md:text-8xl font-black mb-6 italic tracking-tighter uppercase leading-none">Empowering<br>Educators.</h1>
-            <p class="text-xl md:text-2xl text-slate-200 max-w-3xl font-light mt-4">Supporting student engagement and mental health through evidence-based practice.</p>
+            <h1 class="text-6xl md:text-8xl font-black mb-6 italic tracking-tighter uppercase leading-none text-center">Empowering<br>Educators.</h1>
+            <p class="text-xl md:text-2xl text-slate-200 max-w-3xl font-light mt-4 text-center px-4">Supporting student engagement and mental health through evidence-based practice.</p>
         </div>
     </header>
 
@@ -66,7 +61,7 @@
             <a href="teams.html" class="platform-card">
                 <div class="text-6xl mb-4">👥</div>
                 <div class="font-black uppercase tracking-widest">Teams Hubs</div>
-                <p class="text-[#22d3ee] text-xs font-bold mt-2">View Specialized Channels →</p>
+                <p class="text-[#22d3ee] text-xs font-bold mt-2">Specialized Channels →</p>
             </a>
         </div>
 
@@ -94,25 +89,17 @@
 
     <footer class="text-center py-10 border-t border-slate-800 mt-20">
         <a href="privacy.html" class="text-slate-500 hover:text-[#22d3ee] text-xs font-bold uppercase tracking-widest">Privacy Policy</a>
-        <div class="mt-4 text-slate-600 text-[10px] tracking-widest italic">© 2026 TERESA BRUNO™</div>
+        <div class="mt-4 text-slate-600 text-[10px] tracking-widest">© 2026 TERESA BRUNO™</div>
     </footer>
 
     <script>
         window.onload = function() {
             if (!localStorage.getItem('popupShown')) {
-                setTimeout(() => {
-                    document.getElementById('install-popup').classList.remove('hidden');
-                }, 3000);
+                setTimeout(() => { document.getElementById('install-popup').classList.remove('hidden'); }, 3000);
             }
         }
-        function closePopup() {
-            document.getElementById('install-popup').classList.add('hidden');
-            localStorage.setItem('popupShown', 'true');
-        }
-        function showInstructions() {
-            alert("On iPhone: Tap 'Share' and select 'Add to Home Screen'.\n\nOn Android: Tap the three dots and select 'Install App'.");
-            closePopup();
-        }
+        function closePopup() { document.getElementById('install-popup').classList.add('hidden'); localStorage.setItem('popupShown', 'true'); }
+        function showInstructions() { alert("On iPhone: Tap 'Share' and select 'Add to Home Screen'.\n\nOn Android: Tap the three dots and select 'Install App'."); closePopup(); }
     </script>
 </body>
 </html>

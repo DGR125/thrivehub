@@ -14,39 +14,67 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root { --navy: #0f172a; --teal: #22d3ee; }
-        body { background-color: var(--navy); color: #ffffff; font-family: sans-serif; }
-        .hero-image { height: 450px; background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('https://images.pexels.com/photos/8499547/pexels-photo-8499547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center; border-radius: 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-        .platform-card { background: #1e293b; border: 2px solid #334155; transition: 0.3s; border-radius: 1.5rem; padding: 2rem; text-decoration: none; color: white; text-align: center; }
+        body { background-color: var(--navy); color: #ffffff; font-family: sans-serif; -webkit-tap-highlight-color: transparent; }
+        .hero-image { 
+            height: 450px; 
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), 
+            url('https://images.pexels.com/photos/8499547/pexels-photo-8499547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover; background-position: center; border-radius: 2.5rem;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+        }
+        .platform-card { background: #1e293b; border: 2px solid #334155; transition: 0.3s; border-radius: 1.5rem; padding: 2rem; text-decoration: none; color: white; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;}
         .platform-card:hover { border-color: var(--teal); transform: translateY(-5px); }
     </style>
 </head>
 <body>
     <nav class="flex justify-between items-center p-8 max-w-7xl mx-auto">
-        <div class="flex items-center text-3xl font-black italic">Thrive<span class="text-[#22d3ee]">Hub</span></div>
+        <div class="text-3xl font-black italic">Thrive<span class="text-[#22d3ee]">Hub</span></div>
         <div class="flex gap-8 items-center font-bold text-sm uppercase tracking-widest">
             <a href="library.html" class="hover:text-[#22d3ee]">Library</a>
             <a href="calm.html" class="hover:text-[#22d3ee]">Calm Space</a>
+            <a href="mailto:teresa.bruno@sa.gov.au" class="bg-[#22d3ee] text-[#0f172a] px-6 py-2 rounded-xl">Connect</a>
         </div>
     </nav>
 
     <header class="max-w-7xl mx-auto px-6 mb-16">
         <div class="hero-image">
             <h1 class="text-6xl md:text-8xl font-black mb-6 italic tracking-tighter uppercase leading-none">Empowering<br>Educators.</h1>
-            <p class="text-xl md:text-2xl text-slate-200 max-w-3xl font-light mt-4">Evidence-based resources for student engagement.</p>
+            <p class="text-xl md:text-2xl text-slate-200 max-w-3xl font-light mt-4 px-4">Evidence-based resources for student engagement and wellbeing.</p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-6 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <a href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ" target="_blank" class="platform-card">
+                <div class="text-6xl mb-4">📺</div>
+                <div class="font-black uppercase tracking-widest">YouTube Playlist</div>
+                <p class="text-xs text-slate-400 mt-2 font-bold italic">Watch Resources →</p>
+            </a>
+
+            <a href="https://thestudentwellbeing.wordpress.com/" target="_blank" class="platform-card">
+                <div class="text-6xl mb-4">✍️</div>
+                <div class="font-black uppercase tracking-widest">Wellbeing Blog</div>
+                <p class="text-xs text-slate-400 mt-2 font-bold italic">Read Articles →</p>
+            </a>
+
+            <a href="teams.html" class="platform-card">
+                <div class="text-6xl mb-4">👥</div>
+                <div class="font-black uppercase tracking-widest">Teams Hubs</div>
+                <p class="text-[#22d3ee] text-xs font-bold mt-2 italic text-center">Complex Needs & Inclusive Ed Channels →</p>
+            </a>
+        </div>
+
         <div class="bg-slate-800/50 p-12 rounded-3xl border border-slate-700">
             <h2 class="text-4xl font-black mb-6 italic text-[#22d3ee] text-center">Our Intent</h2>
             <p class="text-xl text-slate-300 leading-relaxed text-center max-w-5xl mx-auto italic">
-                Our mission is to empower education staff with free, high-quality resources and practical tools that support student engagement, foster positive mental health, and create vibrant, inclusive classrooms.
+                Our mission is to empower education staff with free, high-quality resources and practical tools that support student engagement, foster positive mental health, and create vibrant, inclusive classrooms. This site is designed to connect you with materials, ideas, and strategies that make a real difference for students.
             </p>
         </div>
     </main>
 
-    <footer class="text-center py-10 border-t border-slate-800">
+    <footer class="text-center py-10 border-t border-slate-800 mt-20">
         <a href="privacy.html" class="text-slate-500 hover:text-[#22d3ee] text-xs font-bold uppercase tracking-widest">Privacy Policy</a>
+        <div class="mt-4 text-slate-600 text-[10px] tracking-widest italic">© 2026 TERESA BRUNO™</div>
     </footer>
 </body>
 </html>

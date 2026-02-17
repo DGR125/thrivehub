@@ -5,73 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThriveHub | Home</title>
     <style>
-        body { background-color: #0f172a; color: white; font-family: sans-serif; margin: 0; padding: 20px; line-height: 1.5; }
-        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto 50px; }
-        .logo { font-size: 32px; font-weight: 900; text-transform: uppercase; italic: true; }
+        body, html { margin: 0; padding: 0; height: 100%; font-family: sans-serif; background: #0f172a; color: white; }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('hero.jpg');
+            background-size: cover; background-position: center; min-height: 80vh;
+            display: flex; flex-direction: column; justify-content: center; padding: 0 10%;
+        }
+        nav { position: absolute; top: 40px; left: 10%; right: 10%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 32px; font-weight: 900; text-transform: uppercase; letter-spacing: -2px; }
         .logo span { color: #22d3ee; }
-        .nav-links a { color: #22d3ee; text-decoration: none; font-weight: bold; margin-left: 20px; border: 2px solid #22d3ee; padding: 8px 20px; border-radius: 50px; font-size: 12px; }
+        .nav-btns a { color: #22d3ee; text-decoration: none; border: 2px solid #22d3ee; padding: 10px 25px; border-radius: 50px; font-weight: bold; margin-left: 15px; font-size: 14px; }
         
-        .hero { display: grid; grid-template-cols: 1fr; gap: 40px; max-width: 1200px; margin: 0 auto; align-items: center; }
-        @media (min-width: 768px) { .hero { grid-template-columns: 1fr 1fr; } }
-        
-        h1 { font-size: 80px; font-weight: 900; text-transform: uppercase; line-height: 0.9; margin: 0; }
+        h1 { font-size: clamp(4rem, 10vw, 8rem); font-weight: 900; text-transform: uppercase; italic: true; line-height: 0.8; margin-bottom: 20px; }
         .cyan { color: #22d3ee; }
-        
-        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .photo-frame { border: 2px solid #334155; border-radius: 30px; overflow: hidden; aspect-ratio: 3/4; background: #1e293b; }
-        .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+        .subtitle { font-size: 24px; font-style: italic; color: #94a3b8; max-width: 600px; margin-bottom: 40px; }
+        .cta-btn { background: #22d3ee; color: #000; padding: 20px 50px; border-radius: 50px; text-decoration: none; font-weight: 900; text-transform: uppercase; display: inline-block; }
 
-        .intent-box { border-left: 12px solid #22d3ee; background: #1e293b; padding: 60px 40px; border-radius: 0 40px 40px 0; max-width: 1100px; margin: 80px auto; }
-        .intent-box h2 { text-transform: uppercase; color: #22d3ee; letter-spacing: 5px; font-size: 14px; }
-        .intent-text { font-size: 48px; font-weight: 300; margin-top: 20px; }
-        .intent-text b { font-weight: 900; font-style: italic; }
+        .intent-box { border-left: 12px solid #22d3ee; background: #1e293b; padding: 60px 40px; margin: -50px 10% 80px 10%; border-radius: 0 40px 40px 0; position: relative; z-index: 10; }
+        .intent-box h2 { color: #22d3ee; text-transform: uppercase; letter-spacing: 4px; font-size: 14px; }
+        .intent-text { font-size: 42px; font-weight: 300; line-height: 1.2; margin-top: 20px; }
 
-        .bottom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto 100px; }
-        .card { background: #1e293b; padding: 30px; border-radius: 30px; border: 1px solid #334155; text-decoration: none; color: white; transition: 0.3s; }
-        .card:hover { border-color: #22d3ee; transform: translateY(-5px); }
-        .card h4 { margin: 0 0 10px 0; text-transform: uppercase; font-size: 20px; }
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 10% 100px 10%; }
+        .link-card { background: #1e293b; padding: 40px; border-radius: 30px; text-decoration: none; color: white; border: 1px solid #334155; transition: 0.3s; }
+        .link-card:hover { border-color: #22d3ee; transform: translateY(-5px); }
+        .link-card h4 { margin: 0 0 10px 0; text-transform: uppercase; font-size: 22px; }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="logo">Thrive<span>Hub</span></div>
-        <div class="nav-links">
+        <div class="nav-btns">
             <a href="https://thestudentwellbeing.wordpress.com/" target="_blank">STAFF BLOG</a>
             <a href="vault.html">THE VAULT</a>
         </div>
     </nav>
 
-    <div class="hero">
-        <div>
-            <p style="color:#22d3ee; font-weight:900; letter-spacing:3px;">WAVE ONE MASTERY</p>
-            <h1>Empower <br><span class="cyan">Every</span> Learner.</h1>
-            <p style="font-size:24px; color:#94a3b8; font-style:italic; margin: 30px 0;">The unified portal for inclusive practice.</p>
-            <a href="vault.html" style="background:#22d3ee; color:black; padding: 20px 40px; border-radius: 50px; font-weight:900; text-decoration:none; display:inline-block; font-size:18px;">OPEN THE VAULT</a>
-        </div>
-        <div class="photo-grid">
-            <div class="photo-frame"><img src="hero.jpg" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400'"></div>
-            <div class="photo-frame"><img src="thrivehub-logo.png" onerror="this.src='https://via.placeholder.com/400x500/0f172a/22d3ee?text=LOGO'"></div>
-        </div>
+    <div class="hero-bg">
+        <p style="color:#22d3ee; font-weight:bold; letter-spacing:5px;">WAVE ONE MASTERY</p>
+        <h1>Empower <br><span class="cyan">Every</span> Learner.</h1>
+        <p class="subtitle">The unified portal for inclusive practice and community collaboration.</p>
+        <a href="vault.html" class="cta-btn">Open The Vault</a>
     </div>
 
     <div class="intent-box">
         <h2>The Intent</h2>
-        <div class="intent-text">To move beyond "accommodation" and toward <b>authentic inclusion</b>. We equip educators with Wave One universal supports to ensure the environment fits the child.</div>
+        <div class="intent-text">To move beyond "accommodation" and toward <span style="font-weight:900; font-style:italic;">authentic inclusion</span>. We equip educators with Wave One universal supports to ensure the environment fits the child.</div>
     </div>
 
-    <div class="bottom-grid">
-        <a href="https://teams.microsoft.com" class="card" style="border-color:#3b82f6;">
+    <div class="links-grid">
+        <a href="https://teams.microsoft.com" class="link-card" style="border-color:#3b82f6;">
             <h4 style="color:#3b82f6;">Teams</h4>
-            <p style="color:#94a3b8; font-size:14px;">Staff Collaboration Hub</p>
+            <p style="color:#94a3b8;">Staff Collaboration Hub</p>
         </a>
-        <a href="https://youtube.com" class="card" style="border-color:#ef4444;">
+        <a href="https://youtube.com" class="link-card" style="border-color:#ef4444;">
             <h4 style="color:#ef4444;">YouTube</h4>
-            <p style="color:#94a3b8; font-size:14px;">Training & VoiceIt Videos</p>
+            <p style="color:#94a3b8;">Training & VoiceIt Videos</p>
         </a>
-        <a href="calm.html" class="card" style="border-color:#ec4899;">
+        <a href="calm.html" class="link-card" style="border-color:#ec4899;">
             <h4 style="color:#ec4899;">Calm Space</h4>
-            <p style="color:#94a3b8; font-size:14px;">Sensory & Regulation Tools</p>
+            <p style="color:#94a3b8;">Sensory & Regulation Tools</p>
         </a>
     </div>
 

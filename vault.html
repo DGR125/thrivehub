@@ -6,94 +6,182 @@
     <title>The Vault | ThriveHub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0f172a; color: white; font-family: sans-serif; }
-        .card { background: #1e293b; border: 1px solid #334155; border-radius: 1.5rem; overflow: hidden; height: 100%; display: flex; flex-direction: column; }
-        .card-img { height: 160px; width: 100%; object-fit: cover; border-bottom: 2px solid #334155; }
-        .card-body { padding: 1.5rem; }
-        .res-link { color: #94a3b8; display: block; font-size: 0.85rem; margin-top: 0.5rem; text-decoration: none; }
-        .res-link:hover { color: #22d3ee; }
+        body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; }
+        .grid-card { background: #1e293b; border: 1px solid #334155; border-radius: 2rem; overflow: hidden; transition: 0.4s; height: 100%; display: flex; flex-direction: column; }
+        .grid-card:hover { border-color: #22d3ee; transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .card-image { height: 180px; width: 100%; object-fit: cover; border-bottom: 2px solid #334155; }
+        .card-content { padding: 1.5rem; flex-grow: 1; }
+        .tag { color: #22d3ee; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 0.5rem; display: block; letter-spacing: 0.1em; }
+        .res-link { color: #94a3b8; text-decoration: none; font-size: 0.85rem; display: block; margin-top: 0.5rem; transition: 0.2s; }
+        .res-link:hover { color: #22d3ee; padding-left: 5px; }
     </style>
 </head>
-<body class="p-8">
-    <header class="max-w-7xl mx-auto flex justify-between items-center mb-12 border-b border-slate-700 pb-6">
-        <h1 class="text-6xl font-black italic uppercase">The <span class="text-[#22d3ee]">Vault</span></h1>
-        <a href="index.html" class="text-[#22d3ee] font-bold uppercase text-sm">← Home</a>
+<body class="p-8 md:p-16 bg-[#0f172a]">
+    <header class="max-w-[1600px] mx-auto flex justify-between items-end mb-16 border-b-4 border-[#22d3ee] pb-8">
+        <h1 class="text-7xl md:text-8xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
+        <div class="flex gap-4">
+            <a href="https://thestudentwellbeing.wordpress.com/" target="_blank" class="border-2 border-slate-600 text-slate-400 px-6 py-3 rounded-full font-black uppercase text-xs no-underline hover:text-white transition">Blog</a>
+            <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-8 py-3 rounded-full font-black uppercase text-xs no-underline hover:bg-[#22d3ee] hover:text-black transition">← Home</a>
+        </div>
     </header>
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
-        <div class="card"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400" class="card-img"><div class="card-body">
-            <span class="text-[#22d3ee] text-[10px] font-black uppercase">Inclusion</span>
-            <h3 class="font-black uppercase mb-3">Wellbeing</h3>
-            <a href="https://sies.sa.edu.au/" class="res-link">→ SIES SA</a><a href="https://shinesa.org.au/" class="res-link">→ ShineSA</a><a href="https://www.sttars.org.au/" class="res-link">→ STTARS</a><a href="https://inclusioned.edu.au/" class="res-link">→ inclusionED</a><a href="https://culturalatlas.sbs.com.au/" class="res-link">→ Cultural Atlas</a>
-        </div></div>
+        <div class="grid-card">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500" class="card-image">
+            <div class="card-content">
+                <span class="tag">Foundation</span>
+                <h3 class="text-xl font-black uppercase mb-4 italic">Wellbeing</h3>
+                <a href="https://sies.sa.edu.au/" class="res-link">→ SIES South Australia</a>
+                <a href="https://shinesa.org.au/" class="res-link">→ ShineSA Resources</a>
+                <a href="https://www.sttars.org.au/" class="res-link">→ STTARS Support</a>
+                <a href="https://inclusioned.edu.au/" class="res-link">→ inclusionED Australia</a>
+                <a href="https://culturalatlas.sbs.com.au/" class="res-link">→ Cultural Atlas</a>
+            </div>
+        </div>
 
-        <div class="card"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400" class="card-img"><div class="card-body">
-            <span class="text-[#22d3ee] text-[10px] font-black uppercase">Engagement</span>
-            <h3 class="font-black uppercase mb-3">Attendance</h3>
-            <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" class="res-link">→ Behavior Iceberg</a><a href="https://www.attendanceworks.org/" class="res-link">→ Attendance Works</a><a href="https://www.pbis.org/" class="res-link">→ PBIS Engagement</a><a href="https://www.pbisworld.com/" class="res-link">→ PBIS World</a><a href="https://be-you.edu.au/" class="res-link">→ Be You</a>
-        </div></div>
+        <div class="grid-card">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500" class="card-image">
+            <div class="card-content">
+                <span class="tag">Engagement</span>
+                <h3 class="text-xl font-black uppercase mb-4 italic">Attendance</h3>
+                <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" class="res-link">→ Behavior Iceberg</a>
+                <a href="https://www.attendanceworks.org/" class="res-link">→ Attendance Works</a>
+                <a href="https://www.pbis.org/" class="res-link">→ PBIS Engagement</a>
+                <a href="https://www.pbisworld.com/" class="res-link">→ PBIS World Tiers</a>
+                <a href="https://be-you.edu.au/" class="res-link">→ Be You Attendance</a>
+            </div>
+        </div>
 
-        <div class="card"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400" class="card-img"><div class="card-body">
-            <span class="text-[#22d3ee] text-[10px] font-black uppercase">Regulation</span>
-            <h3 class="font-black uppercase mb-3">Interoception</h3>
-            <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" class="res-link">→ SA Curriculum</a><a href="https://kelly-mahler.com/" class="res-link">→ Kelly Mahler</a><a href="https://www.zonesofregulation.com/" class="res-link">→ Zones</a><a href="https://www.alertprogram.com/" class="res-link">→ Alert Program</a><a href="https://www.sensorysmarts.com/" class="res-link">→ Sensory Smarts</a>
-        </div></div>
+        <div class="grid-card">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500" class="card-image">
+            <div class="card-content">
+                <span class="tag">Regulation</span>
+                <h3 class="text-xl font-black uppercase mb-4 italic">Interoception</h3>
+                <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" class="res-link">→ SA Dept Curriculum</a>
+                <a href="https://kelly-mahler.com/" class="res-link">→ Kelly Mahler Hub</a>
+                <a href="https://www.zonesofregulation.com/" class="res-link">→ Zones of Regulation</a>
+                <a href="https://www.alertprogram.com/" class="res-link">→ Alert Program</a>
+                <a href="https://www.sensorysmarts.com/" class="res-link">→ Sensory Smarts</a>
+            </div>
+        </div>
 
-        <div class="card"><img src="https://images.unsplash.com/photo-1551841283-d52153e5ff19?w=400" class="card-img"><div class="card-body">
-            <span class="text-[#22d3ee] text-[10px] font-black uppercase">ND Focus</span>
-            <h3 class="font-black uppercase mb-3">Neurodiversity</h3>
-            <a href="https://suelarkey.com.au" class="res-link">→ Sue Larkey</a><a href="https://www.positivepartnerships.com.au" class="res-link">→ Positive Partnerships</a><a href="https://www.yellowladybugs.com.au/" class="res-link">→ Yellow Ladybugs</a><a href="https://www.autismspectrum.org.au/" class="res-link">→ Aspect</a><a href="https://www.adhdaustralia.org.au/" class="res-link">→ ADHD Australia</a>
-        </div></div>
+        <div class="grid-card">
+            <img src="https://images.unsplash.com/photo-1551841283-d52153e5ff19?w=500" class="card-image">
+            <div class="card-content">
+                <span class="tag">ND Focus</span>
+                <h3 class="text-xl font-black uppercase mb-4 italic">ADHD & Autism</h3>
+                <a href="https://suelarkey.com.au" class="res-link">→ Sue Larkey Resources</a>
+                <a href="https://www.positivepartnerships.com.au" class="res-link">→ Positive Partnerships</a>
+                <a href="https://www.yellowladybugs.com.au/" class="res-link">→ Yellow Ladybugs</a>
+                <a href="https://www.autismspectrum.org.au/" class="res-link">→ Aspect Australia</a>
+                <a href="https://www.adhdaustralia.org.au/" class="res-link">→ ADHD Australia</a>
+            </div>
+        </div>
 
-        <div class="card"><img src="https://images.unsplash.com/photo-1573497620053-ea5310f94f17?w=400" class="card-img"><div class="card-body">
-            <span class="text-[#22d3ee] text-[10px] font-black uppercase">Comm</span>
-            <h3 class="font-black uppercase mb-3">Speech</h3>
-            <a href="https://www.assistiveware.com/learn-aac" class="res-link">→ AAC Hub</a><a href="https://praacticalaac.org/" class="res-link">→ PrAACtical AAC</a><a href="https://www.speechpathologyaustralia.org.au/" class="res-link">→ SPA</a><a href="https://www.hanen.org/" class="res-link">→ Hanen</a><a href="https://pld-literacy.org/" class="res-link">→ Oral Lang</a>
-        </div></div>
+        <div class="grid-card">
+            <img src="https://images.unsplash.com/photo-1573497620053-ea5310f94f17?w=500" class="card-image">
+            <div class="card-content">
+                <span class="tag">Comm</span>
+                <h3 class="text-xl font-black uppercase mb-4 italic">Speech & Language</h3>
+                <a href="https://www.assistiveware.com/learn-aac" class="res-link">→ AAC Learning Hub</a>
+                <a href="https://praacticalaac.org/" class="res-link">→ PrAACtical AAC</a>
+                <a href="https://www.speechpathologyaustralia.org.au/" class="res-link">→ SPA Resources</a>
+                <a href="https://www.hanen.org/" class="res-link">→ Hanen Programs</a>
+                <a href="https://pld-literacy.org/" class="res-link">→ Oral Language Hub</a>
+            </div>
+        </div>
 
-        <div class="card"><img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400" class="card-img"><div class="card-body">
-            <span class="text-[#22d3ee] text-[10px] font-black uppercase">Literacy</span>
-            <h3 class="font-black uppercase mb-3">Literacy</h3>
-            <a href="https://www.speldsa.org.au" class="res-link">→ SPELD SA</a><a href="https://pld-literacy.org/" class="res-link">→ PLD Hub</a><a href="https://www.readingrockets.org" class="res-link">→ Reading Rockets</a><a href="https://www.fivefromfive.com.au/" class="res-link">→ Five from Five</a><a href="https://www.ldaustralia.org/" class="res-link">→ LDA</a>
-        </div></div>
+        <div class="grid-card">
+            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=500" class="card-image">
+            <div class="card-content">
+                <span class="tag">Literacy</span>
+                <h3 class="text-xl font-black uppercase mb-4 italic">Literacy</h3>
+                <a href="https://www.speldsa.org.au" class="res-link">→ SPELD SA</a>
+                <a href="https://pld-literacy.org/" class="res-link">→ PLD Literacy Hub</a>
+                <a href="https://www.readingrockets.org" class="res-link">→ Reading Rockets</a>
+                <a href="https://www.fivefromfive.com.au/" class="res-link">→ Five from Five</a>
+                <a href="https://www.ldaustralia.org/" class="res-link">→ Learning Diff AU</a>
+            </div>
+        </div>
 
-        <div class="card"><img src="https://images.unsplash.com/photo-1499209974431-9dac3adaf471?w=400" class="card-img"><div class="card-body">
-            <span class="text-[#22d3ee] text-[10px] font-black uppercase">Safety</span>
-            <h3 class="font-black uppercase mb-3">Trauma</h3>
-            <a href="https://www.childhood.org.au/" class="res-link">→ Childhood Foundation</a><a href="https://www.berrystreet.org.au/" class="res-link">→ Berry Street</a><a href="https://www.blueknot.org.au/" class="res-link">→ Blue Knot</a><a href="https://traumasensitiveschools.org/" class="res-link">→ TSS</a><a href="https://traumaawareschools.org/" class="res-link">→ Trauma Aware</a>
-        </div></div>
+        <div class="grid-card">
+            <img src="https://images.unsplash.com/photo-1499209974431-9dac3adaf471?w=500" class="card-image">
+            <div class="card-content">
+                <span class="tag">Safety</span>
+                <h3 class="text-xl font-black uppercase mb-4 italic">Trauma Informed</h3>
+                <a href="https://www.childhood.org.au/" class="res-link">→ Childhood Foundation</a>
+                <a href="https://www.berrystreet.org.au/" class="res-link">→ Berry Street Model</a>
+                <a href="https://www.blueknot.org.au/" class="res-link">→ Blue Knot</a>
+                <a href="https://traumasensitiveschools.org/" class="res-link">→ TSS Project</a>
+                <a href="https://traumaawareschools.org/" class="res-link">→ Trauma Aware Hub</a>
+            </div>
+        </div>
 
-        <div class="card"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400" class="card-img"><div class="card-body">
-            <span class="text-[#22d3ee] text-[10px] font-black uppercase">Psych</span>
-            <h3 class="font-black uppercase mb-3">Psychology</h3>
-            <a href="https://self-reg.ca/" class="res-link">→ Self-Reg</a><a href="https://developingchild.harvard.edu/" class="res-link">→ Harvard</a><a href="https://consciousdiscipline.com/" class="res-link">→ Conscious Discipline</a><a href="https://www.psychology.org.au/" class="res-link">→ APS</a><a href="https://kidshelpline.com.au/" class="res-link">→ Kids Helpline</a>
-        </div></div>
+        <div class="grid-card">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500" class="card-image">
+            <div class="card-content">
+                <span class="tag">Psych</span>
+                <h3 class="text-xl font-black uppercase mb-4 italic">Psychology</h3>
+                <a href="https://self-reg.ca/" class="res-link">→ Shanker Self-Reg</a>
+                <a href="https://developingchild.harvard.edu/" class="res-link">→ Harvard Center</a>
+                <a href="https://consciousdiscipline.com/" class="res-link">→ Conscious Discipline</a>
+                <a href="https://www.psychology.org.au/" class="res-link">→ APS Resources</a>
+                <a href="https://kidshelpline.com.au/" class="res-link">→ Kids Helpline</a>
+            </div>
+        </div>
 
-        <div class="card"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" class="card-img"><div class="card-body">
-            <span class="text-[#22d3ee] text-[10px] font-black uppercase">Culture</span>
-            <h3 class="font-black uppercase mb-3">Aboriginal Ed</h3>
-            <a href="https://www.narragunnawali.org.au/" class="res-link">→ Narragunnawali</a><a href="https://aiatsis.gov.au/" class="res-link">→ AIATSIS</a><a href="https://www.8ways.online/" class="res-link">→ 8 Ways</a><a href="https://www.indigenous.gov.au/" class="res-link">→ Indigenous.gov</a><a href="https://reconciliation.org.au/" class="res-link">→ Reconciliation</a>
-        </div></div>
+        <div class="grid-card">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500" class="card-image">
+            <div class="card-content">
+                <span class="tag">Culture</span>
+                <h3 class="text-xl font-black uppercase mb-4 italic">Aboriginal Ed</h3>
+                <a href="https://www.narragunnawali.org.au/" class="res-link">→ Narragunnawali</a>
+                <a href="https://aiatsis.gov.au/" class="res-link">→ AIATSIS Hub</a>
+                <a href="https://www.8ways.online/" class="res-link">→ 8 Ways Pedagogy</a>
+                <a href="https://www.indigenous.gov.au/" class="res-link">→ Indigenous.gov.au</a>
+                <a href="https://reconciliation.org.au/" class="res-link">→ Reconciliation AU</a>
+            </div>
+        </div>
 
-        <div class="card"><img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=400" class="card-img"><div class="card-body">
-            <span class="text-[#22d3ee] text-[10px] font-black uppercase">Agency</span>
-            <h3 class="font-black uppercase mb-3">VoiceIt</h3>
-            <a href="https://vimeo.com/channels/voiceit" class="res-link">→ VoiceIt Videos</a><a href="https://www.fya.org.au/" class="res-link">→ FYA</a><a href="https://www.studentvoicehub.org.au/" class="res-link">→ Voice Hub</a><a href="https://www.vicstudentrepresentatives.org.au/" class="res-link">→ VicSRC</a><a href="https://amplify.education.vic.gov.au/" class="res-link">→ Amplify</a>
-        </div></div>
+        <div class="grid-card">
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=500" class="card-image">
+            <div class="card-content">
+                <span class="tag">Agency</span>
+                <h3 class="text-xl font-black uppercase mb-4 italic">VoiceIt</h3>
+                <a href="https://vimeo.com/channels/voiceit" class="res-link">→ VoiceIt Videos</a>
+                <a href="https://www.fya.org.au/" class="res-link">→ Youth Foundation</a>
+                <a href="https://www.studentvoicehub.org.au/" class="res-link">→ Student Voice Hub</a>
+                <a href="https://www.vicstudentrepresentatives.org.au/" class="res-link">→ VicSRC Hub</a>
+                <a href="https://amplify.education.vic.gov.au/" class="res-link">→ Amplify Toolkit</a>
+            </div>
+        </div>
 
-        <div class="card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400" class="card-img"><div class="card-body">
-            <span class="text-[#22d3ee] text-[10px] font-black uppercase">Staff</span>
-            <h3 class="font-black uppercase mb-3">Staff Well</h3>
-            <a href="https://beyou.edu.au" class="res-link">→ Be You</a><a href="https://www.smilingmind.com.au/" class="res-link">→ Smiling Mind</a><a href="https://www.blackdoginstitute.org.au/" class="res-link">→ Black Dog</a><a href="https://www.headspace.com/educators" class="res-link">→ Headspace</a><a href="https://www.teacherwellbeing.com.au/" class="res-link">→ Wellbeing Hub</a>
-        </div></div>
+        <div class="grid-card">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500" class="card-image">
+            <div class="card-content">
+                <span class="tag">Staff</span>
+                <h3 class="text-xl font-black uppercase mb-4 italic">Staff Wellbeing</h3>
+                <a href="https://beyou.edu.au" class="res-link">→ Be You Staff Hub</a>
+                <a href="https://www.smilingmind.com.au/" class="res-link">→ Smiling Mind</a>
+                <a href="https://www.blackdoginstitute.org.au/" class="res-link">→ Black Dog Institute</a>
+                <a href="https://www.headspace.com/educators" class="res-link">→ Headspace for Ed</a>
+                <a href="https://www.teacherwellbeing.com.au/" class="res-link">→ Teacher Wellbeing</a>
+            </div>
+        </div>
 
-        <div class="card"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=400" class="card-img"><div class="card-body">
-            <span class="text-[#22d3ee] text-[10px] font-black uppercase">Sensory</span>
-            <h3 class="font-black uppercase mb-3">OT & Sensory</h3>
-            <a href="https://www.theottoolbox.com/" class="res-link">→ OT Toolbox</a><a href="https://theinspiredtreehouse.com/" class="res-link">→ Treehouse</a><a href="https://www.sensoryprocessingdisorder.com/" class="res-link">→ SPD Foundation</a><a href="https://www.growinghandsonkids.com/" class="res-link">→ Growing Hands</a><a href="https://www.toolstogrowot.com/" class="res-link">→ Tools to Grow</a>
-        </div></div>
-
+        <div class="grid-card">
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=500" class="card-image">
+            <div class="card-content">
+                <span class="tag">Sensory</span>
+                <h3 class="text-xl font-black uppercase mb-4 italic">OT & Sensory</h3>
+                <a href="https://www.theottoolbox.com/" class="res-link">→ OT Toolbox</a>
+                <a href="https://theinspiredtreehouse.com/" class="res-link">→ Inspired Treehouse</a>
+                <a href="https://www.sensoryprocessingdisorder.com/" class="res-link">→ SPD Foundation</a>
+                <a href="https://www.growinghandsonkids.com/" class="res-link">→ Hands-on Kids</a>
+                <a href="https://www.toolstogrowot.com/" class="res-link">→ Tools to Grow</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

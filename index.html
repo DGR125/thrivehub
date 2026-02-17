@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThriveHub | Home</title>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ1PG5NVM4"></script>
@@ -12,66 +12,53 @@
       gtag('js', new Date());
       gtag('config', 'G-TZ1PG5NVM4');
     </script>
-
-    <link rel="manifest" href="manifest.json">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6726258681467242" crossorigin="anonymous"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --navy: #0f172a; --teal: #22d3ee; }
-        body { background-color: var(--navy); color: #ffffff; font-family: sans-serif; }
-        .hero-image { 
-            height: 400px; 
-            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), 
-            url('https://images.pexels.com/photos/8499547/pexels-photo-8499547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-            background-size: cover; background-position: center; border-radius: 2rem;
-            display: flex; align-items: center; justify-content: center; text-align: center;
-        }
-        .platform-card { background: #1e293b; border: 2px solid #334155; transition: 0.3s; border-radius: 1.5rem; padding: 2rem; text-decoration: none; color: white; text-align: center; }
-        .platform-card:hover { border-color: var(--teal); transform: translateY(-5px); }
+        body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .teal-glow { color: #22d3ee; text-shadow: 0 0 20px rgba(34, 211, 238, 0.4); }
+        .btn-main { background: #22d3ee; color: #0f172a; padding: 1rem 2rem; border-radius: 99px; font-weight: 900; transition: 0.3s; text-transform: uppercase; }
+        .btn-main:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(34, 211, 238, 0.6); }
     </style>
 </head>
-<body class="p-6">
-    <nav class="max-w-7xl mx-auto flex justify-between items-center py-8">
-        <div class="text-3xl font-black italic">Thrive<span class="text-[#22d3ee]">Hub</span></div>
-        <div class="flex gap-8 items-center font-bold text-sm uppercase tracking-widest">
-            <a href="library.html" class="hover:text-[#22d3ee]">Library</a>
-            <a href="calm.html" class="hover:text-[#22d3ee]">Calm Space</a>
-        </div>
-    </nav>
+<body>
 
-    <header class="max-w-7xl mx-auto mb-12">
-        <div class="hero-image">
-            <h1 class="text-5xl md:text-7xl font-black italic uppercase text-white px-4">Empowering<br>Educators.</h1>
+    <section class="hero-gradient min-h-[70vh] flex flex-col items-center justify-center text-center p-6 border-b border-slate-800">
+        <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter uppercase mb-4">Thrive<span class="teal-glow">Hub</span></h1>
+        <p class="text-xl md:text-2xl text-slate-400 font-bold max-w-2xl mb-12 uppercase tracking-widest">Empowering Educators. Supporting Students. Building Community.</p>
+        
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="library.html" class="btn-main">Enter The Vault</a>
+            <a href="#intent" class="border-2 border-[#22d3ee] text-[#22d3ee] px-8 py-4 rounded-full font-black uppercase hover:bg-[#22d3ee] hover:text-[#0f172a] transition">Our Mission</a>
         </div>
-    </header>
+    </section>
 
-    <main class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <a href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ" target="_blank" class="platform-card">
-                <div class="text-5xl mb-4">📺</div>
-                <div class="font-black uppercase tracking-widest">YouTube Playlist</div>
-            </a>
-            <a href="https://thestudentwellbeing.wordpress.com/" target="_blank" class="platform-card">
-                <div class="text-5xl mb-4">✍️</div>
-                <div class="font-black uppercase tracking-widest">Wellbeing Blog</div>
-            </a>
-            <a href="teams.html" class="platform-card">
-                <div class="text-5xl mb-4">👥</div>
-                <div class="font-black uppercase tracking-widest">Teams Hubs</div>
-            </a>
-        </div>
+    <section class="w-full h-[400px] overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1600" 
+             alt="Collaborative Education" 
+             class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition duration-700">
+    </section>
 
-        <div class="bg-slate-800/50 p-12 rounded-3xl border border-slate-700 text-center">
-            <h2 class="text-4xl font-black mb-6 italic text-[#22d3ee]">Our Intent</h2>
-            <p class="text-xl text-slate-300 italic max-w-4xl mx-auto">
-                Our mission is to empower education staff with free, high-quality resources and practical tools that support student engagement and foster inclusive classrooms.
+    <section id="intent" class="max-w-4xl mx-auto py-24 px-6 text-center">
+        <h2 class="text-3xl font-black uppercase tracking-widest text-[#22d3ee] mb-8">Full Intent</h2>
+        <div class="space-y-6 text-lg md:text-xl text-slate-300 leading-relaxed font-medium">
+            <p>
+                <span class="text-white font-bold text-2xl">ThriveHub</span> was created to bridge the gap between complex pedagogical theory and the daily reality of the classroom. We believe that when teachers are supported with the right tools, every student has the opportunity to succeed.
+            </p>
+            <p>
+                Our intent is to provide a <span class="text-white">centralised, high-density repository</span> of evidence-based practices—from Interoception and Trauma-Informed care to the latest in Speech Pathology and Psychology. 
+            </p>
+            <p>
+                By reducing the "search time" for educators, we allow more time for what matters most: <span class="italic text-[#22d3ee]">connection and instruction.</span>
             </p>
         </div>
-    </main>
+    </section>
 
-    <footer class="text-center py-20 border-t border-slate-800 mt-12">
-        <a href="privacy.html" class="text-slate-500 hover:text-[#22d3ee] text-xs font-bold uppercase tracking-widest">Privacy Policy</a>
-        <div class="mt-4 text-slate-600 text-[10px] tracking-widest">© 2026 TERESA BRUNO™</div>
+    <footer class="text-center py-12 border-t border-slate-800">
+        <div class="mt-4 text-slate-600 text-[10px] tracking-widest italic font-bold uppercase">© 2026 TERESA BRUNO™</div>
     </footer>
+
 </body>
 </html>

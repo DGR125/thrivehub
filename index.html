@@ -3,68 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThriveHub | Home</title>
+    <title>ThriveHub | Command Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; }
-        .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0f172a); }
-        .intent-box { border-left: 12px solid #22d3ee; background: rgba(30, 41, 59, 0.9); padding: 5rem; border-radius: 0 3rem 3rem 0; margin: 6rem 0; box-shadow: 25px 0 50px rgba(34, 211, 238, 0.1); }
-        .nav-card { background: #1e293b; border: 1px solid #334155; border-radius: 2.5rem; transition: 0.4s; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-        .nav-card:hover { border-color: #22d3ee; transform: translateY(-10px); box-shadow: 0 20px 40px rgba(34, 211, 238, 0.2); }
+        body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; overflow-x: hidden; }
+        .hero-title { font-size: clamp(4rem, 10vw, 9rem); line-height: 0.85; }
+        .intent-section { 
+            background: linear-gradient(90deg, #1e293b 0%, #0f172a 100%);
+            border-left: 10px solid #22d3ee;
+            margin: 4rem 0;
+            padding: 5rem 3rem;
+            border-radius: 0 2rem 2rem 0;
+        }
+        .photo-box {
+            border: 2px solid #334155;
+            border-radius: 2.5rem;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: #1e293b;
+        }
     </style>
 </head>
-<body class="hero-gradient min-h-screen">
-    <nav class="p-10 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-4xl font-black italic uppercase tracking-tighter">Thrive<span class="text-[#22d3ee]">Hub</span></div>
-        <div class="flex gap-6">
-            <a href="calm.html" class="text-xs font-black uppercase text-pink-400 border-2 border-pink-400 px-8 py-3 rounded-full no-underline hover:bg-pink-400 hover:text-white transition">Calm Space</a>
-            <a href="vault.html" class="text-xs font-black uppercase text-[#22d3ee] border-2 border-[#22d3ee] px-8 py-3 rounded-full no-underline hover:bg-[#22d3ee] hover:text-black transition">The Vault</a>
+<body class="min-h-screen">
+    <nav class="p-8 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="text-3xl font-black italic uppercase tracking-tighter">Thrive<span class="text-[#22d3ee]">Hub</span></div>
+        <div class="flex gap-4">
+            <a href="calm.html" class="text-xs font-black border-2 border-pink-500 text-pink-500 px-6 py-2 rounded-full uppercase hover:bg-pink-500 hover:text-white transition">Calm Space</a>
+            <a href="vault.html" class="text-xs font-black border-2 border-[#22d3ee] text-[#22d3ee] px-6 py-2 rounded-full uppercase hover:bg-[#22d3ee] hover:text-black transition">The Vault</a>
         </div>
     </nav>
 
-    <header class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-20 items-center">
-        <div>
-            <span class="bg-[#22d3ee] text-[#0f172a] px-4 py-1 rounded text-xs font-black uppercase mb-8 inline-block tracking-[0.3em]">Wave One Mastery</span>
-            <h1 class="text-8xl md:text-[10rem] font-black uppercase italic leading-[0.8] tracking-tighter mb-10">Empower <br><span class="text-[#22d3ee]">Every</span> Learner.</h1>
-            <p class="text-slate-400 text-3xl mb-12 italic font-light">The unified portal for inclusive practice and community collaboration.</p>
-            <a href="vault.html" class="bg-[#22d3ee] text-[#0f172a] px-16 py-6 rounded-full font-black uppercase text-xl no-underline inline-block shadow-2xl hover:scale-105 transition">Open The Vault</a>
+    <header class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-12 items-center">
+        <div class="z-10">
+            <span class="text-[#22d3ee] font-black uppercase tracking-[0.3em] text-xs mb-4 block">Wave One Mastery</span>
+            <h1 class="hero-title font-black uppercase italic tracking-tighter mb-8">
+                Empower <br><span class="text-[#22d3ee]">Every</span> Learner.
+            </h1>
+            <p class="text-slate-400 text-2xl italic mb-10 max-w-md">Unified portal for inclusive practice and community collaboration.</p>
+            <a href="vault.html" class="bg-[#22d3ee] text-black px-10 py-4 rounded-full font-black uppercase hover:scale-105 transition inline-block">Explore The Vault</a>
         </div>
-        
-        <div class="grid grid-cols-2 gap-8">
-            <div class="rounded-[3rem] overflow-hidden border-2 border-slate-700 aspect-[3/4] shadow-2xl">
-                <img src="hero.jpg" class="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition duration-700" alt="Inclusive Education">
+
+        <div class="grid grid-cols-2 gap-4">
+            <div class="photo-box shadow-2xl">
+                <img src="hero.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" alt="Classroom environment">
             </div>
-            <div class="rounded-[3rem] overflow-hidden border-2 border-slate-700 aspect-[3/4] bg-slate-900 flex items-center justify-center p-12 shadow-2xl">
+            <div class="photo-box shadow-2xl flex items-center justify-center p-6">
                 <img src="thrivehub-logo.png" class="w-full h-full object-contain" alt="ThriveHub Logo">
             </div>
         </div>
     </header>
 
-    <section class="max-w-7xl mx-auto px-6">
-        <div class="intent-box">
-            <h2 class="text-[#22d3ee] font-black uppercase tracking-[0.5em] text-sm mb-8 italic underline decoration-4">The Intent</h2>
-            <p class="text-5xl md:text-8xl font-light leading-tight text-slate-100 tracking-tighter">
-                To move beyond "accommodation" and toward <span class="text-white font-black italic">authentic inclusion</span>. We equip educators with Wave One universal supports to ensure the environment fits the child.
+    <section class="max-w-6xl mx-auto px-4">
+        <div class="intent-section shadow-2xl">
+            <h2 class="text-[#22d3ee] font-black uppercase tracking-widest text-sm mb-6 italic underline">The Intent</h2>
+            <p class="text-4xl md:text-6xl font-light leading-tight tracking-tight">
+                To move beyond "accommodation" and toward <span class="italic font-black text-white">authentic inclusion</span>. We equip educators with Wave One universal supports to ensure the environment fits the child.
             </p>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-4 gap-10">
-        <a href="vault.html" class="nav-card p-12 no-underline">
-            <h4 class="text-3xl font-black uppercase mb-4 text-white">The Vault</h4>
-            <p class="text-slate-400 text-sm">12 Master categories of inclusive resources.</p>
+    <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-6">
+        <a href="vault.html" class="bg-slate-800/50 p-8 rounded-[2rem] border border-slate-700 hover:border-[#22d3ee] transition group">
+            <h4 class="text-xl font-black uppercase mb-2">The Vault</h4>
+            <p class="text-slate-500 text-sm group-hover:text-slate-300">12 Master categories of inclusive resources.</p>
         </a>
-        <a href="calm.html" class="nav-card p-12 no-underline border-pink-900/40">
-            <h4 class="text-3xl font-black uppercase mb-4 text-pink-400">Calm Space</h4>
-            <p class="text-slate-400 text-sm">Regulation tools and sensory grounding.</p>
+        <a href="calm.html" class="bg-slate-800/50 p-8 rounded-[2rem] border border-slate-700 hover:border-pink-500 transition group">
+            <h4 class="text-xl font-black uppercase mb-2 text-pink-500">Calm Space</h4>
+            <p class="text-slate-500 text-sm group-hover:text-slate-300">Regulation tools and sensory grounding aids.</p>
         </a>
-        <a href="https://teams.microsoft.com" target="_blank" class="nav-card p-12 no-underline">
-            <h4 class="text-3xl font-black uppercase mb-4 text-white">Teams</h4>
-            <p class="text-slate-400 text-sm">Staff collaboration and data sharing.</p>
+        <a href="https://teams.microsoft.com" target="_blank" class="bg-slate-800/50 p-8 rounded-[2rem] border border-slate-700 hover:border-white transition group">
+            <h4 class="text-xl font-black uppercase mb-2">Teams</h4>
+            <p class="text-slate-500 text-sm group-hover:text-slate-300">Staff collaboration and data sharing hub.</p>
         </a>
-        <div class="nav-card p-12 border-dashed border-slate-700 opacity-50">
-            <h4 class="text-3xl font-black uppercase mb-4 text-white italic underline">The Blog</h4>
-            <p class="text-slate-400 text-sm italic">Coming Soon: Insights into practice.</p>
+        <div class="bg-slate-900/50 p-8 rounded-[2rem] border border-slate-800 opacity-60">
+            <h4 class="text-xl font-black uppercase mb-2 italic underline">The Blog</h4>
+            <p class="text-slate-500 text-sm italic">Coming Soon: Deep dives into practice.</p>
         </div>
     </section>
 </body>

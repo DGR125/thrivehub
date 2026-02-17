@@ -8,18 +8,19 @@
         body { background-color: #0f172a; color: white; font-family: sans-serif; padding: 40px; margin: 0; }
         .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; border-bottom: 4px solid #22d3ee; padding-bottom: 20px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .card { background: #1e293b; border-radius: 25px; overflow: hidden; border: 1px solid #334155; }
-        .card img { height: 160px; width: 100%; object-fit: cover; filter: brightness(0.8); }
-        .content { padding: 20px; }
-        h3 { margin: 0 0 12px 0; text-transform: uppercase; font-style: italic; color: #22d3ee; font-size: 18px; }
-        .links a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 6px; font-size: 13px; border-bottom: 1px solid #334155; padding-bottom: 4px; }
-        .links a:hover { color: white; border-color: #22d3ee; }
+        .card { background: #1e293b; border-radius: 25px; overflow: hidden; border: 1px solid #334155; display: flex; flex-direction: column; }
+        .card img { height: 160px; width: 100%; object-fit: cover; }
+        .content { padding: 20px; flex-grow: 1; }
+        h3 { margin: 0 0 15px 0; text-transform: uppercase; font-style: italic; color: #22d3ee; font-size: 18px; border-bottom: 1px solid #334155; padding-bottom: 10px;}
+        .links { display: flex; flex-direction: column; gap: 8px; }
+        .links a { background: #0f172a; color: #22d3ee; text-decoration: none; padding: 8px 12px; border-radius: 8px; font-size: 13px; font-weight: bold; border: 1px solid #334155; }
+        .links a:hover { background: #22d3ee; color: black; }
     </style>
 </head>
 <body>
     <div class="header">
         <h1 style="font-size: 50px; font-weight: 900; text-transform: uppercase; margin:0;">The <span style="color:#22d3ee">Vault</span></h1>
-        <a href="index.html" style="color:#22d3ee; text-decoration:none; font-weight:bold; border: 2px solid #22d3ee; padding: 10px 25px; border-radius: 50px;">← HOME</a>
+        <a href="index.html" style="color:#22d3ee; text-decoration:none; font-weight:bold; border: 2px solid #22d3ee; padding: 10px 25px; border-radius: 50px;">← BACK HOME</a>
     </div>
     <div class="grid">
         <div class="card">
@@ -46,14 +47,54 @@
                 <a href="https://www.childhood.org.au/">→ Childhood Foundation</a><a href="https://www.berrystreet.org.au/">→ Berry Street</a><a href="https://www.traumasensitiveschools.org/">→ TSS Hub</a><a href="https://www.blueknot.org.au/">→ Blue Knot</a><a href="https://www.emergingminds.com.au/">→ Emerging Minds</a>
             </div></div>
         </div>
-        <div class="card"><img src="https://www.gstatic.com/classroom/themes/img_bookstack.jpg"><div class="content"><h3>Attendance</h3><div class="links"><a href="#">→ Link 1</a><a href="#">→ Link 2</a><a href="#">→ Link 3</a><a href="#">→ Link 4</a><a href="#">→ Link 5</a></div></div></div>
-        <div class="card"><img src="https://www.gstatic.com/classroom/themes/img_breakfast.jpg"><div class="content"><h3>Interoception</h3><div class="links"><a href="#">→ Link 1</a><a href="#">→ Link 2</a><a href="#">→ Link 3</a><a href="#">→ Link 4</a><a href="#">→ Link 5</a></div></div></div>
-        <div class="card"><img src="https://www.gstatic.com/classroom/themes/img_graduation.jpg"><div class="content"><h3>Literacy</h3><div class="links"><a href="#">→ Link 1</a><a href="#">→ Link 2</a><a href="#">→ Link 3</a><a href="#">→ Link 4</a><a href="#">→ Link 5</a></div></div></div>
-        <div class="card"><img src="https://www.gstatic.com/classroom/themes/img_hobby.jpg"><div class="content"><h3>Psychology</h3><div class="links"><a href="#">→ Link 1</a><a href="#">→ Link 2</a><a href="#">→ Link 3</a><a href="#">→ Link 4</a><a href="#">→ Link 5</a></div></div></div>
-        <div class="card"><img src="https://www.gstatic.com/classroom/themes/img_backtoschool.jpg"><div class="content"><h3>Culture</h3><div class="links"><a href="#">→ Link 1</a><a href="#">→ Link 2</a><a href="#">→ Link 3</a><a href="#">→ Link 4</a><a href="#">→ Link 5</a></div></div></div>
-        <div class="card"><img src="https://www.gstatic.com/classroom/themes/img_arts.jpg"><div class="content"><h3>VoiceIt</h3><div class="links"><a href="#">→ Link 1</a><a href="#">→ Link 2</a><a href="#">→ Link 3</a><a href="#">→ Link 4</a><a href="#">→ Link 5</a></div></div></div>
-        <div class="card"><img src="https://www.gstatic.com/classroom/themes/img_breakfast.jpg"><div class="content"><h3>Staff Wellbeing</h3><div class="links"><a href="#">→ Link 1</a><a href="#">→ Link 2</a><a href="#">→ Link 3</a><a href="#">→ Link 4</a><a href="#">→ Link 5</a></div></div></div>
-        <div class="card"><img src="https://www.gstatic.com/classroom/themes/img_code.jpg"><div class="content"><h3>OT Sensory</h3><div class="links"><a href="#">→ Link 1</a><a href="#">→ Link 2</a><a href="#">→ Link 3</a><a href="#">→ Link 4</a><a href="#">→ Link 5</a></div></div></div>
+        <div class="card">
+            <img src="https://www.gstatic.com/classroom/themes/img_bookstack.jpg">
+            <div class="content"><h3>Attendance</h3><div class="links">
+                <a href="https://www.attendanceworks.org/">→ Attendance Works</a><a href="https://be-you.edu.au/">→ Be You School Hub</a><a href="https://www.education.sa.gov.au">→ Dept Education</a><a href="#">→ Policy Hub</a><a href="#">→ Engagement Strategy</a>
+            </div></div>
+        </div>
+        <div class="card">
+            <img src="https://www.gstatic.com/classroom/themes/img_breakfast.jpg">
+            <div class="content"><h3>Interoception</h3><div class="links">
+                <a href="https://kelly-mahler.com/">→ Kelly Mahler</a><a href="#">→ Sensory Activities</a><a href="#">→ Regulation Tools</a><a href="#">→ Classroom Guides</a><a href="#">→ Curriculum Links</a>
+            </div></div>
+        </div>
+        <div class="card">
+            <img src="https://www.gstatic.com/classroom/themes/img_graduation.jpg">
+            <div class="content"><h3>Literacy</h3><div class="links">
+                <a href="https://www.speldsa.org.au">→ SPELD SA</a><a href="#">→ Decodable Texts</a><a href="#">→ Phonics Hub</a><a href="#">→ Writing Support</a><a href="#">→ Literacy Planet</a>
+            </div></div>
+        </div>
+        <div class="card">
+            <img src="https://www.gstatic.com/classroom/themes/img_hobby.jpg">
+            <div class="content"><h3>Psychology</h3><div class="links">
+                <a href="https://self-reg.ca/">→ Self-Reg Institute</a><a href="#">→ Cognitive Tools</a><a href="#">→ Behavioral Support</a><a href="#">→ Clinical Resources</a><a href="#">→ School Psych Hub</a>
+            </div></div>
+        </div>
+        <div class="card">
+            <img src="https://www.gstatic.com/classroom/themes/img_backtoschool.jpg">
+            <div class="content"><h3>Culture</h3><div class="links">
+                <a href="https://www.8ways.online/">→ 8 Ways Pedagogy</a><a href="#">→ AIATSIS</a><a href="#">→ Narragunnawali</a><a href="#">→ Reconciliation Aus</a><a href="#">→ Local Context</a>
+            </div></div>
+        </div>
+        <div class="card">
+            <img src="https://www.gstatic.com/classroom/themes/img_arts.jpg">
+            <div class="content"><h3>VoiceIt</h3><div class="links">
+                <a href="https://vimeo.com/channels/voiceit">→ VoiceIt Vimeo</a><a href="#">→ Student Agency</a><a href="#">→ Participation Hub</a><a href="#">→ Feedback Tools</a><a href="#">→ VoiceIt Strategy</a>
+            </div></div>
+        </div>
+        <div class="card">
+            <img src="https://www.gstatic.com/classroom/themes/img_breakfast.jpg">
+            <div class="content"><h3>Staff Wellbeing</h3><div class="links">
+                <a href="https://beyou.edu.au">→ Be You Staff</a><a href="#">→ EAP Services</a><a href="#">→ Mindfulness</a><a href="#">→ Work-Life Bal.</a><a href="#">→ Professional Care</a>
+            </div></div>
+        </div>
+        <div class="card">
+            <img src="https://www.gstatic.com/classroom/themes/img_code.jpg">
+            <div class="content"><h3>OT Sensory</h3><div class="links">
+                <a href="https://www.theottoolbox.com/">→ OT Toolbox</a><a href="#">→ Sensory Profiles</a><a href="#">→ Motor Skills</a><a href="#">→ Heavy Work Hub</a><a href="#">→ OT Resources</a>
+            </div></div>
+        </div>
     </div>
 </body>
 </html>

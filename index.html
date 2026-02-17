@@ -9,21 +9,11 @@
         body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; }
         .intent-box { 
             border-left: 12px solid #22d3ee; 
-            background: rgba(30, 41, 59, 0.95); 
-            padding: 5rem 3rem; 
+            background: rgba(30, 41, 59, 0.9); 
+            padding: 4rem; 
             border-radius: 0 3rem 3rem 0; 
-            margin: 6rem 0;
-            box-shadow: 40px 0 100px -20px rgba(34, 211, 238, 0.2);
-        }
-        .photo-frame {
-            border: 2px solid #334155;
-            border-radius: 3rem;
-            overflow: hidden;
-            background: #1e293b;
-            aspect-ratio: 3/4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin: 5rem 0; 
+            box-shadow: 20px 0 50px rgba(34, 211, 238, 0.1);
         }
         .nav-card { background: #1e293b; border: 1px solid #334155; border-radius: 2rem; transition: 0.4s; height: 100%; text-decoration: none; }
         .nav-card:hover { border-color: #22d3ee; transform: translateY(-10px); }
@@ -31,7 +21,7 @@
 </head>
 <body class="min-h-screen">
     <nav class="p-8 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-4xl font-black italic uppercase tracking-tighter">Thrive<span class="text-[#22d3ee]">Hub</span></div>
+        <div class="text-3xl font-black italic uppercase tracking-tighter">Thrive<span class="text-[#22d3ee]">Hub</span></div>
         <div class="flex gap-4">
             <a href="calm.html" class="text-xs font-black border-2 border-pink-500 text-pink-500 px-6 py-2 rounded-full uppercase">Calm Space</a>
             <a href="vault.html" class="text-xs font-black border-2 border-[#22d3ee] text-[#22d3ee] px-6 py-2 rounded-full uppercase">The Vault</a>
@@ -41,50 +31,46 @@
     <header class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-16 items-center">
         <div>
             <span class="bg-[#22d3ee] text-black px-4 py-1 rounded font-black uppercase text-xs tracking-widest mb-6 inline-block">Wave One Mastery</span>
-            <h1 class="text-8xl md:text-9xl font-black uppercase italic leading-[0.8] tracking-tighter mb-8">Empower <br><span class="text-[#22d3ee]">Every</span> Learner.</h1>
-            <p class="text-slate-400 text-2xl italic mb-10">Unified portal for inclusive practice and community collaboration.</p>
-            <a href="vault.html" class="bg-[#22d3ee] text-black px-12 py-5 rounded-full font-black uppercase text-lg hover:scale-105 transition inline-block">Open The Vault</a>
+            <h1 class="text-7xl md:text-9xl font-black uppercase italic leading-[0.8] tracking-tighter mb-8">Empower <br><span class="text-[#22d3ee]">Every</span> Learner.</h1>
+            <p class="text-slate-400 text-2xl italic mb-10">The unified portal for inclusive practice and community collaboration.</p>
+            <a href="vault.html" class="bg-[#22d3ee] text-black px-12 py-5 rounded-full font-black uppercase shadow-2xl hover:scale-105 transition inline-block">Open The Vault</a>
         </div>
         
         <div class="grid grid-cols-2 gap-6">
-            <div class="photo-frame">
-                <img src="hero.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800'">
+            <div class="rounded-[2.5rem] overflow-hidden border-2 border-slate-700 aspect-[3/4] bg-slate-800">
+                <img src="./hero.jpg" class="w-full h-full object-cover" alt="Hero Image">
             </div>
-            <div class="photo-frame p-8">
-                <img src="thrivehub-logo.png" class="w-full h-full object-contain" alt="Logo">
+            <div class="rounded-[2.5rem] overflow-hidden border-2 border-slate-700 aspect-[3/4] bg-slate-900 flex items-center justify-center p-8">
+                <img src="./thrivehub-logo.png" class="w-full h-full object-contain" alt="Logo">
             </div>
         </div>
     </header>
 
     <section class="max-w-7xl mx-auto px-6">
         <div class="intent-box">
-            <h2 class="text-[#22d3ee] font-black uppercase tracking-[0.4em] text-sm mb-8">The Intent</h2>
-            <p class="text-5xl md:text-7xl font-light leading-[1.1] text-white tracking-tight">
-                To move beyond "accommodation" and toward <span class="italic font-black">authentic inclusion</span>. We equip educators with Wave One universal supports to ensure the environment fits the child.
+            <h2 class="text-[#22d3ee] font-black uppercase tracking-[0.4em] text-sm mb-6 italic">The Intent</h2>
+            <p class="text-4xl md:text-7xl font-light leading-tight text-white tracking-tight">
+                To move beyond "accommodation" and toward <span class="italic font-black text-[#22d3ee]">authentic inclusion</span>. We equip educators with Wave One universal supports to ensure the environment fits the child.
             </p>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-8">
         <a href="vault.html" class="nav-card p-10">
             <h4 class="text-2xl font-black uppercase text-white mb-2">The Vault</h4>
-            <p class="text-slate-400 text-sm mb-6">12 Master categories of inclusive resources.</p>
-            <span class="text-[#22d3ee] font-black text-xs uppercase">Browse →</span>
+            <p class="text-slate-400 text-sm">12 Master categories of inclusive resources.</p>
         </a>
         <a href="calm.html" class="nav-card p-10 border-pink-500/20">
             <h4 class="text-2xl font-black uppercase text-pink-500 mb-2">Calm Space</h4>
-            <p class="text-slate-400 text-sm mb-6">Regulation tools and sensory grounding aids.</p>
-            <span class="text-pink-500 font-black text-xs uppercase">Enter →</span>
+            <p class="text-slate-400 text-sm">Regulation tools and sensory grounding aids.</p>
         </a>
         <a href="https://teams.microsoft.com" target="_blank" class="nav-card p-10">
             <h4 class="text-2xl font-black uppercase text-white mb-2">Teams</h4>
-            <p class="text-slate-400 text-sm mb-6">Staff collaboration and data sharing hub.</p>
-            <span class="text-white font-black text-xs uppercase">Launch →</span>
+            <p class="text-slate-400 text-sm">Staff collaboration and data sharing hub.</p>
         </a>
-        <div class="nav-card p-10 bg-slate-800/50">
-            <h4 class="text-2xl font-black uppercase text-white mb-2 italic underline">The Blog</h4>
-            <p class="text-slate-400 text-sm mb-6">Weekly insights into neuro-affirming school practice.</p>
-            <span class="text-slate-500 font-black text-xs uppercase italic underline">Coming Soon</span>
+        <div class="nav-card p-10 opacity-50">
+            <h4 class="text-2xl font-black uppercase text-white mb-2 italic">The Blog</h4>
+            <p class="text-slate-400 text-sm italic">Coming Soon: Deep dives into practice.</p>
         </div>
     </section>
 </body>

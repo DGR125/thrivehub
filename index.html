@@ -3,99 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThriveHub | Home</title>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ1PG5NVM4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-TZ1PG5NVM4');
-    </script>
-
+    <title>ThriveHub | Command Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0f172a; color: white; font-family: system-ui, -apple-system, sans-serif; scroll-behavior: smooth; margin: 0; padding: 0; }
-        
-        /* ORIGINAL HERO IMAGE (TOP) */
-        .hero-bg { 
-            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), 
-                        url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1600');
-            background-size: cover; background-position: center; min-height: 65vh;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        body { background-color: #0f172a; color: white; font-family: system-ui, -apple-system, sans-serif; }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
         }
-
-        /* BOLDER NAVIGATION TABS */
-        .nav-container {
-            max-width: 1100px; margin: -40px auto 0; display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; padding: 0 1.5rem;
-            position: relative; z-index: 50;
+        .nav-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .nav-tab {
-            background: #1e293b; border: 3px solid #334155; padding: 18px;
-            border-radius: 16px; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 12px;
-            text-decoration: none; color: white; font-weight: 900; text-transform: uppercase;
-            letter-spacing: 0.05em; font-size: 0.95rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        .nav-card:hover {
+            border-color: #22d3ee;
+            transform: scale(1.02);
+            box-shadow: 0 20px 50px -12px rgba(34, 211, 238, 0.2);
         }
-        .nav-tab:hover { border-color: #22d3ee; background: #0f172a; transform: translateY(-5px); }
-        .nav-icon { width: 32px; height: 32px; }
-
-        .teal-glow { color: #22d3ee; text-shadow: 0 0 20px rgba(34, 211, 238, 0.4); }
-        .btn-main { background: #22d3ee; color: #0f172a; padding: 1.25rem 3rem; border-radius: 99px; font-weight: 900; transition: 0.3s; text-transform: uppercase; text-decoration: none; display: inline-block; margin-top: 2rem; }
-        .btn-main:hover { transform: scale(1.05); box-shadow: 0 0 40px rgba(34, 211, 238, 0.6); }
+        .glow-text { text-shadow: 0 0 20px rgba(34, 211, 238, 0.4); }
     </style>
 </head>
-<body>
+<body class="hero-gradient min-h-screen">
 
-    <section class="hero-bg text-center px-6">
-        <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter uppercase mb-4">Thrive<span class="teal-glow">Hub</span></h1>
-        <p class="text-xl md:text-2xl text-slate-200 font-bold max-w-2xl uppercase tracking-widest bg-black/40 px-6 py-2 rounded-lg">
-            Empowering Educators. Supporting Students.
-        </p>
-        <a href="library.html" class="btn-main">Open The Vault</a>
-    </section>
-
-    <nav class="nav-container">
-        <a href="blog.html" class="nav-tab">
-            <img src="https://img.icons8.com/fluency/48/news.png" class="nav-icon" alt="blog"> Blog
-        </a>
-        <a href="#" class="nav-tab">
-            <img src="https://img.icons8.com/fluency/48/microsoft-teams-2019.png" class="nav-icon" alt="teams"> Teams Page
-        </a>
-        <a href="https://www.youtube.com/@ThriveHub" target="_blank" class="nav-tab">
-            <img src="https://img.icons8.com/color/48/youtube-play.png" class="nav-icon" alt="youtube"> YouTube
-        </a>
-        <a href="library.html" class="nav-tab border-[#22d3ee] bg-slate-900">
-            <img src="https://img.icons8.com/fluency/48/safe.png" class="nav-icon" alt="vault"> The Vault
-        </a>
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="text-2xl font-black italic tracking-tighter uppercase">Thrive<span class="text-[#22d3ee]">Hub</span></div>
+        <div class="space-x-6 hidden md:block text-xs font-bold uppercase tracking-widest text-slate-400">
+            <a href="#" class="hover:text-[#22d3ee]">Strategy</a>
+            <a href="#" class="hover:text-[#22d3ee]">Wave One</a>
+            <a href="library.html" class="text-[#22d3ee] border-b-2 border-[#22d3ee] pb-1">The Vault</a>
+        </div>
     </nav>
 
-    <section id="intent" class="max-w-4xl mx-auto py-24 px-6 text-center">
-        <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter text-[#22d3ee] mb-10 italic">Full Intent</h2>
-        <div class="space-y-8 text-xl md:text-2xl text-slate-300 leading-relaxed font-medium">
-            <p>
-                <span class="text-white font-black uppercase">ThriveHub</span> is a practitioner-led initiative dedicated to offering <span class="text-white border-b-2 border-[#22d3ee]">Wave One intervention</span>. 
-            </p>
-            <p>
-                We provide proactive, school-wide support to strengthen wellbeing and engagement for all students, ensuring that high-quality evidence-based tools are accessible to every educator.
-            </p>
-            <p>
-                By centralising resources for <span class="text-white">Aboriginal Education, Neurodiversity, and Attendance Engagement</span>, we bridge the gap between complex pedagogy and classroom reality.
-            </p>
-            <p class="italic text-slate-400 text-lg">
-                Proactive Support. School-Wide Impact.
-            </p>
+    <header class="max-w-7xl mx-auto px-6 py-20 text-center md:text-left">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-[#22d3ee] text-[#0f172a] px-3 py-1 rounded text-xs font-black uppercase mb-4 inline-block">Wave One Intervention</span>
+                <h1 class="text-6xl md:text-8xl font-black uppercase italic leading-none tracking-tighter mb-6 glow-text">
+                    Empower <br><span class="text-[#22d3ee]">Every</span> Learner.
+                </h1>
+                <p class="text-slate-400 text-lg md:text-xl max-w-xl mb-10 font-medium">
+                    Welcome to the central nervous system for inclusive education. High-impact strategies, evidence-based resources, and universal supports—all in one place.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="library.html" class="bg-[#22d3ee] text-[#0f172a] px-10 py-4 rounded-full font-black uppercase text-center hover:bg-white transition duration-300">
+                        Open The Vault
+                    </a>
+                    <a href="#vision" class="border-2 border-slate-700 px-10 py-4 rounded-full font-black uppercase text-center hover:border-[#22d3ee] transition duration-300">
+                        Our Vision
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:block relative">
+                <div class="absolute -inset-4 bg-[#22d3ee] opacity-10 blur-3xl rounded-full"></div>
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="Collaboration" class="rounded-2xl shadow-2xl relative z-10 grayscale hover:grayscale-0 transition duration-500">
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="nav-card p-8 rounded-3xl">
+                <div class="text-[#22d3ee] mb-4 text-3xl">✦</div>
+                <h3 class="text-xl font-black uppercase mb-2">Universal Support</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Access Wave One tools designed to improve outcomes for 100% of your classroom population.</p>
+            </div>
+
+            <div class="nav-card p-8 rounded-3xl">
+                <div class="text-[#22d3ee] mb-4 text-3xl">✦</div>
+                <h3 class="text-xl font-black uppercase mb-2">The Vault</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Our curated library of 12 critical categories, from Interoception to Aboriginal Education.</p>
+                <a href="library.html" class="text-[#22d3ee] font-bold text-xs uppercase mt-4 inline-block hover:underline">Browse Resources →</a>
+            </div>
+
+            <div class="nav-card p-8 rounded-3xl">
+                <div class="text-[#22d3ee] mb-4 text-3xl">✦</div>
+                <h3 class="text-xl font-black uppercase mb-2">Staff Wellbeing</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Because you can't pour from an empty cup. Dedicated resources for educator mental health.</p>
+            </div>
+
         </div>
     </section>
 
-    <div class="w-full h-[450px] overflow-hidden border-y border-slate-800">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1600" 
-             alt="Collaborative Space" class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition duration-1000">
-    </div>
-
-    <footer class="text-center py-20 bg-[#0a0f1d]">
-        <a href="privacy.html" class="text-slate-500 text-xs font-bold uppercase no-underline hover:text-[#22d3ee]">Privacy Policy</a>
-        <div class="mt-4 text-slate-700 text-[10px] tracking-widest italic font-bold uppercase">© 2026 TERESA BRUNO™</div>
+    <footer class="text-center py-10 border-t border-slate-800 opacity-50">
+        <p class="text-[10px] font-bold uppercase tracking-[0.3em]">© 2026 TERESA BRUNO • ThriveHub Education</p>
     </footer>
 
 </body>

@@ -7,80 +7,59 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; }
-        .vault-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
         .category-card { 
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); 
+            background: #1e293b; 
             border: 1px solid #334155; 
-            border-radius: 2.5rem; 
-            padding: 3rem; 
-            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
-            min-height: 450px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            position: relative;
-            overflow: hidden;
+            border-radius: 2rem; 
+            padding: 2.5rem; 
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            height: 100%;
         }
-        .category-card:hover { border-color: #22d3ee; transform: translateY(-15px); }
-        /* This simulates the "Photographic" feel with a visual overlay */
-        .card-bg-visual { 
-            position: absolute; top: 0; left: 0; width: 100%; height: 60%; 
-            background: linear-gradient(to bottom, rgba(34, 211, 238, 0.1), transparent); 
-            opacity: 0.5;
-        }
-        .tag { color: #22d3ee; font-weight: 900; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem; display: block; }
-        .res-link { color: #94a3b8; text-decoration: none; font-size: 1rem; margin-top: 1rem; display: block; transition: 0.3s; }
-        .res-link:hover { color: #22d3ee; transform: translateX(10px); }
+        .category-card:hover { border-color: #22d3ee; transform: scale(1.03); box-shadow: 0 25px 50px -12px rgba(34, 211, 238, 0.3); }
+        .tag { background: #22d3ee; color: #0f172a; padding: 4px 12px; border-radius: 6px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 1.5rem; display: inline-block; }
+        .res-link { color: #94a3b8; text-decoration: none; font-size: 0.95rem; display: block; margin-top: 0.8rem; transition: 0.2s; }
+        .res-link:hover { color: #22d3ee; padding-left: 8px; }
     </style>
 </head>
-<body class="p-10 md:p-20">
-    <header class="max-w-[1600px] mx-auto flex justify-between items-end mb-24 border-b border-slate-800 pb-12">
+<body class="p-8 md:p-20">
+    <header class="max-w-[1600px] mx-auto flex justify-between items-end mb-20 border-b border-slate-800 pb-12">
         <div>
-            <h1 class="text-8xl font-black italic uppercase tracking-tighter leading-none">The <span class="text-[#22d3ee]">Vault</span></h1>
-            <p class="text-slate-500 font-black uppercase tracking-[0.4em] mt-4">Wave One Mastery Resource Hub</p>
+            <h1 class="text-7xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
+            <p class="text-slate-500 font-black uppercase tracking-[0.4em] mt-4">Wave One Resource Mastery</p>
         </div>
-        <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-12 py-4 rounded-full font-black uppercase text-xs no-underline hover:bg-[#22d3ee] hover:text-[#0f172a] transition tracking-[0.2em]">← Return to Command</a>
+        <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-10 py-3 rounded-full font-black uppercase text-xs no-underline hover:bg-[#22d3ee] hover:text-[#0f172a] transition">← Home</a>
     </header>
 
-    <div class="max-w-[1600px] mx-auto vault-grid">
+    <div class="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
         <div class="category-card">
-            <div class="card-bg-visual"></div>
-            <span class="tag">Foundation</span>
-            <h3 class="text-3xl font-black uppercase mb-6">Inclusion & Wellbeing</h3>
-            <div class="space-y-2">
-                <a href="https://sies.sa.edu.au/" target="_blank" class="res-link">→ SIES South Australia</a>
-                <a href="https://brave4you.psy.uq.edu.au/" target="_blank" class="res-link">→ The BRAVE Program</a>
-                <a href="https://shinesa.org.au/" target="_blank" class="res-link">→ ShineSA Resources</a>
-                <a href="https://www.sttars.org.au/" target="_blank" class="res-link">→ STTARS Support</a>
-                <a href="https://culturalatlas.sbs.com.au/" target="_blank" class="res-link">→ Cultural Atlas</a>
-            </div>
+            <span class="tag">Inclusion</span>
+            <h3 class="text-2xl font-black uppercase mb-4">Wellbeing</h3>
+            <a href="https://sies.sa.edu.au/" target="_blank" class="res-link">→ SIES South Australia</a>
+            <a href="https://shinesa.org.au/" target="_blank" class="res-link">→ ShineSA Resources</a>
+            <a href="https://www.sttars.org.au/" target="_blank" class="res-link">→ STTARS Support</a>
+            <a href="https://culturalatlas.sbs.com.au/" target="_blank" class="res-link">→ Cultural Atlas</a>
+            <a href="https://brave4you.psy.uq.edu.au/" target="_blank" class="res-link">→ The BRAVE Program</a>
         </div>
 
         <div class="category-card">
-            <div class="card-bg-visual"></div>
             <span class="tag">Engagement</span>
-            <h3 class="text-3xl font-black uppercase mb-6">Attendance</h3>
-            <div class="space-y-2">
-                <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" target="_blank" class="res-link">→ Behavior Iceberg</a>
-                <a href="https://www.attendanceworks.org/" target="_blank" class="res-link">→ Attendance Works</a>
-                <a href="https://www.pbis.org/" target="_blank" class="res-link">→ PBIS Engagement</a>
-                <a href="https://www.pbisworld.com/" target="_blank" class="res-link">→ PBIS World</a>
-                <a href="https://be-you.edu.au/" target="_blank" class="res-link">→ Be You Attendance</a>
-            </div>
+            <h3 class="text-2xl font-black uppercase mb-4">Attendance</h3>
+            <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" target="_blank" class="res-link">→ Behavior Iceberg</a>
+            <a href="https://www.attendanceworks.org/" target="_blank" class="res-link">→ Attendance Works</a>
+            <a href="https://www.pbis.org/" target="_blank" class="res-link">→ PBIS Engagement</a>
+            <a href="https://www.pbisworld.com/" target="_blank" class="res-link">→ PBIS World</a>
+            <a href="https://be-you.edu.au/" target="_blank" class="res-link">→ Be You Attendance</a>
         </div>
 
         <div class="category-card" style="border-color: #22d3ee;">
-            <div class="card-bg-visual" style="background: rgba(34, 211, 238, 0.2);"></div>
             <span class="tag">Regulation</span>
-            <h3 class="text-3xl font-black uppercase mb-6 text-[#22d3ee]">Interoception</h3>
-            <div class="space-y-2">
-                <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" target="_blank" class="res-link">→ SA Dept Curriculum</a>
-                <a href="https://kelly-mahler.com/" target="_blank" class="res-link">→ Kelly Mahler Hub</a>
-                <a href="https://www.zonesofregulation.com/" target="_blank" class="res-link">→ Zones of Regulation</a>
-                <a href="https://www.alertprogram.com/" target="_blank" class="res-link">→ Alert Program</a>
-                <a href="https://www.sensorysmarts.com/" target="_blank" class="res-link">→ Sensory Smarts</a>
-            </div>
+            <h3 class="text-2xl font-black uppercase mb-4 text-[#22d3ee]">Interoception</h3>
+            <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" target="_blank" class="res-link">→ SA Dept Curriculum</a>
+            <a href="https://kelly-mahler.com/" target="_blank" class="res-link">→ Kelly Mahler Hub</a>
+            <a href="https://www.zonesofregulation.com/" target="_blank" class="res-link">→ Zones of Regulation</a>
+            <a href="https://www.alertprogram.com/" target="_blank" class="res-link">→ Alert Program</a>
+            <a href="https://www.sensorysmarts.com/" target="_blank" class="res-link">→ Sensory Smarts</a>
         </div>
 
         </div>

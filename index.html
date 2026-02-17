@@ -6,31 +6,38 @@
     <title>ThriveHub | Home</title>
     <style>
         * { box-sizing: border-box; }
-        body, html { margin: 0; padding: 0; background: #0f172a; color: white; font-family: sans-serif; }
+        body, html { margin: 0; padding: 0; background: #0f172a; color: white; font-family: sans-serif; overflow-x: hidden; }
+        
+        /* Fixed the overlay feel by deepening the gradient */
         .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.95)), 
-                        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600');
+            position: relative;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.98)), 
+                        url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1600');
             background-size: cover; background-position: center;
-            min-height: 70vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%;
+            min-height: 80vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%;
         }
-        nav { position: absolute; top: 30px; left: 10%; right: 10%; display: flex; justify-content: space-between; align-items: center; z-index: 10; }
-        .logo { font-size: 32px; font-weight: 900; text-transform: uppercase; }
-        .nav-links a { color: #22d3ee; text-decoration: none; font-weight: 800; border: 2px solid #22d3ee; padding: 10px 25px; border-radius: 50px; font-size: 13px; margin-left: 10px; }
-        h1 { font-size: clamp(3rem, 8vw, 7rem); font-weight: 900; text-transform: uppercase; line-height: 0.9; margin: 0; font-style: italic; }
+
+        nav { position: absolute; top: 40px; left: 10%; right: 10%; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+        .logo { font-size: 28px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
+        .nav-links a { color: #22d3ee; text-decoration: none; font-weight: 800; border: 2px solid #22d3ee; padding: 12px 25px; border-radius: 50px; font-size: 12px; margin-left: 10px; transition: 0.3s; }
+        .nav-links a:hover { background: #22d3ee; color: black; }
+        
+        h1 { font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 900; text-transform: uppercase; line-height: 0.85; margin: 0; font-style: italic; position: relative; z-index: 10; }
         .cyan { color: #22d3ee; }
 
         .intent-section { 
-            background: #1e293b; border-left: 14px solid #22d3ee; padding: 60px; 
-            margin: -60px 10% 40px 10%; border-radius: 0 40px 40px 0; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            background: #1e293b; border-left: 14px solid #22d3ee; padding: 50px; 
+            margin: -80px 10% 40px 10%; border-radius: 0 40px 40px 0; position: relative; z-index: 20; box-shadow: 0 30px 60px rgba(0,0,0,0.5);
         }
-        .section-title { padding: 40px 10% 20px 10%; font-size: 24px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: #22d3ee; }
-        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 0 10% 80px 10%; }
-        .card { background: #1e293b; padding: 30px; border-radius: 30px; text-decoration: none; color: white; border: 1px solid #334155; }
-        .card h4 { margin: 0 0 10px 0; text-transform: uppercase; font-size: 18px; color: #22d3ee; }
-        .card p { margin: 0; font-size: 14px; color: #94a3b8; line-height: 1.4; }
 
-        footer { padding: 60px 10%; border-top: 1px solid #334155; font-size: 13px; color: #64748b; line-height: 1.8; }
-        .footer-flex { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
+        .section-title { padding: 40px 10% 20px 10%; font-size: 22px; font-weight: 900; text-transform: uppercase; color: #22d3ee; letter-spacing: 2px; }
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 0 10% 80px 10%; }
+        .card { background: #1e293b; padding: 30px; border-radius: 30px; text-decoration: none; color: white; border: 1px solid #334155; transition: 0.3s; }
+        .card:hover { border-color: #22d3ee; transform: translateY(-5px); }
+        .card h4 { margin: 0 0 10px 0; text-transform: uppercase; font-size: 18px; color: #22d3ee; }
+
+        footer { padding: 60px 10%; border-top: 1px solid #334155; font-size: 13px; color: #64748b; }
+        .footer-flex { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
         footer a { color: #22d3ee; text-decoration: none; }
     </style>
 </head>
@@ -44,32 +51,34 @@
     </nav>
 
     <div class="hero">
-        <p style="color:#22d3ee; font-weight:bold; letter-spacing:5px;">WAVE ONE MASTERY</p>
+        <p style="color:#22d3ee; font-weight:bold; letter-spacing:5px; margin-bottom:20px;">WAVE ONE MASTERY</p>
         <h1>Empower <br><span class="cyan">Every</span> Learner.</h1>
-        <a href="vault.html" style="background:#22d3ee; color:black; padding:20px 50px; border-radius:50px; font-weight:900; text-decoration:none; display:inline-block; margin-top:40px; text-transform: uppercase;">Open The Vault</a>
+        <div>
+            <a href="vault.html" style="background:#22d3ee; color:black; padding:20px 50px; border-radius:50px; font-weight:900; text-decoration:none; display:inline-block; margin-top:40px; text-transform: uppercase;">Open The Vault</a>
+        </div>
     </div>
 
     <div class="intent-section">
-        <div style="font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 300; line-height: 1.2;">To move beyond "accommodation" and toward <span style="font-weight:900; font-style:italic;">authentic inclusion</span>. We equip educators with Wave One universal supports to ensure the environment fits the child.</div>
+        <div style="font-size: clamp(1.2rem, 2.5vw, 2.2rem); font-weight: 300; line-height: 1.3;">To move beyond "accommodation" and toward <span style="font-weight:900; font-style:italic;">authentic inclusion</span>. We equip educators with Wave One universal supports to ensure the environment fits the child.</div>
     </div>
 
-    <div class="section-title">Teams Channels & YouTube</div>
+    <div class="section-title">External Links & Teams Channels</div>
     <div class="links-grid">
         <a href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ" target="_blank" class="card" style="border-left: 8px solid #ef4444;">
             <h4>YouTube Channel</h4>
-            <p>Explore highlights, resources, and past presentations on our dedicated channel.</p>
+            <p style="color:#94a3b8;">Highlights, resources, and past presentations.</p>
         </a>
         <a href="https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="card" style="border-left: 8px solid #3b82f6;">
             <h4>Wellbeing Connections</h4>
-            <p>Direct access to our primary collaboration and news hub on Microsoft Teams.</p>
+            <p style="color:#94a3b8;">Primary collaboration hub on Teams.</p>
         </a>
         <a href="https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="card" style="border-left: 8px solid #3b82f6;">
             <h4>SWD Teams</h4>
-            <p>Students with Disabilities (SWD) specific resources and staff discussion.</p>
+            <p style="color:#94a3b8;">Students with Disabilities hub.</p>
         </a>
         <a href="https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="card" style="border-left: 8px solid #3b82f6;">
             <h4>Social Work / Truancy</h4>
-            <p>Engagement and support channels for Social Work and Truancy teams.</p>
+            <p style="color:#94a3b8;">Support for engagement and social work.</p>
         </a>
     </div>
 
@@ -79,7 +88,7 @@
                 <strong>Teresa Bruno &trade;</strong><br>
                 Contact: <a href="mailto:teresa.bruno@sa.gov.au">teresa.bruno@sa.gov.au</a>
             </div>
-            <div>
+            <div style="text-align: right;">
                 &copy; 2026 ThriveHub. All rights reserved.<br>
                 <a href="privacy.html">Privacy Policy</a>
             </div>

@@ -7,74 +7,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; }
-        .grid-card { background: #1e293b; border: 1px solid #334155; border-radius: 2.5rem; overflow: hidden; transition: 0.4s; height: 100%; display: flex; flex-direction: column; }
-        .grid-card:hover { border-color: #22d3ee; transform: scale(1.03); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-        .card-image { height: 200px; width: 100%; object-cover: cover; background: #0f172a; border-bottom: 2px solid #334155; }
-        .card-content { padding: 2rem; flex-grow: 1; }
-        .tag { color: #22d3ee; font-weight: 900; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 1rem; display: block; tracking-widest; }
-        .res-link { color: #94a3b8; text-decoration: none; font-size: 0.9rem; display: block; margin-top: 0.8rem; transition: 0.2s; border-bottom: 1px solid transparent; width: fit-content; }
-        .res-link:hover { color: #22d3ee; border-color: #22d3ee; padding-left: 8px; }
+        .grid-card { background: #1e293b; border: 1px solid #334155; border-radius: 2rem; overflow: hidden; transition: 0.4s; height: 100%; display: flex; flex-direction: column; }
+        .grid-card:hover { border-color: #22d3ee; transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .card-image { height: 180px; width: 100%; object-fit: cover; border-bottom: 2px solid #334155; }
+        .card-content { padding: 1.5rem; flex-grow: 1; }
+        .tag { color: #22d3ee; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 0.5rem; display: block; letter-spacing: 0.1em; }
+        .res-link { color: #94a3b8; text-decoration: none; font-size: 0.85rem; display: block; margin-top: 0.5rem; transition: 0.2s; }
+        .res-link:hover { color: #22d3ee; padding-left: 5px; }
     </style>
 </head>
-<body class="p-10 md:p-20">
-    <header class="max-w-[1600px] mx-auto flex justify-between items-end mb-24 border-b-4 border-[#22d3ee] pb-12">
-        <h1 class="text-9xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
-        <a href="index.html" class="border-4 border-[#22d3ee] text-[#22d3ee] px-12 py-4 rounded-full font-black uppercase text-sm no-underline hover:bg-[#22d3ee] hover:text-black transition">← Return Home</a>
+<body class="p-8 md:p-16 bg-[#0f172a]">
+    <header class="max-w-[1600px] mx-auto flex justify-between items-end mb-16 border-b-4 border-[#22d3ee] pb-8">
+        <h1 class="text-7xl md:text-8xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
+        <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-8 py-3 rounded-full font-black uppercase text-xs no-underline hover:bg-[#22d3ee] hover:text-black transition">← Home</a>
     </header>
 
-    <div class="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div class="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
         <div class="grid-card">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" class="card-image" alt="Inclusion">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=500" class="card-image" alt="Wellbeing">
             <div class="card-content">
                 <span class="tag">Foundation</span>
-                <h3 class="text-2xl font-black uppercase mb-6 italic">Wellbeing</h3>
-                <a href="https://sies.sa.edu.au/" class="res-link">SIES South Australia</a>
-                <a href="https://shinesa.org.au/" class="res-link">ShineSA Resources</a>
-                <a href="https://www.sttars.org.au/" class="res-link">STTARS Support</a>
-                <a href="https://inclusioned.edu.au/" class="res-link">inclusionED Australia</a>
-                <a href="https://culturalatlas.sbs.com.au/" class="res-link">Cultural Atlas</a>
+                <h3 class="text-xl font-black uppercase mb-4 italic">Wellbeing</h3>
+                <a href="https://sies.sa.edu.au/" class="res-link">→ SIES South Australia</a>
+                <a href="https://shinesa.org.au/" class="res-link">→ ShineSA Resources</a>
+                <a href="https://www.sttars.org.au/" class="res-link">→ STTARS Support</a>
+                <a href="https://inclusioned.edu.au/" class="res-link">→ inclusionED Australia</a>
+                <a href="https://culturalatlas.sbs.com.au/" class="res-link">→ Cultural Atlas</a>
             </div>
         </div>
 
         <div class="grid-card">
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" class="card-image" alt="Attendance">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500" class="card-image" alt="Attendance">
             <div class="card-content">
                 <span class="tag">Engagement</span>
-                <h3 class="text-2xl font-black uppercase mb-6 italic">Attendance</h3>
-                <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" class="res-link">Behavior Iceberg</a>
-                <a href="https://www.attendanceworks.org/" class="res-link">Attendance Works</a>
-                <a href="https://www.pbis.org/" class="res-link">PBIS Engagement</a>
-                <a href="https://www.pbisworld.com/" class="res-link">PBIS World Tiers</a>
-                <a href="https://be-you.edu.au/" class="res-link">Be You Attendance</a>
-            </div>
-        </div>
-
-        <div class="grid-card">
-            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80" class="card-image" alt="Interoception">
-            <div class="card-content">
-                <span class="tag">Regulation</span>
-                <h3 class="text-2xl font-black uppercase mb-6 italic">Interoception</h3>
-                <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" class="res-link">SA Dept Curriculum</a>
-                <a href="https://kelly-mahler.com/" class="res-link">Kelly Mahler Hub</a>
-                <a href="https://www.zonesofregulation.com/" class="res-link">Zones of Regulation</a>
-                <a href="https://www.alertprogram.com/" class="res-link">Alert Program</a>
-                <a href="https://www.sensorysmarts.com/" class="res-link">Sensory Smarts</a>
-            </div>
-        </div>
-
-        <div class="grid-card">
-            <img src="https://images.unsplash.com/photo-1551841283-d52153e5ff19?auto=format&fit=crop&w=800&q=80" class="card-image" alt="Neurodiversity">
-            <div class="card-content">
-                <span class="tag">ND Focus</span>
-                <h3 class="text-2xl font-black uppercase mb-6 italic">ADHD & Autism</h3>
-                <a href="https://suelarkey.com.au" class="res-link">Sue Larkey Resources</a>
-                <a href="https://www.positivepartnerships.com.au" class="res-link">Positive Partnerships</a>
-                <a href="https://www.yellowladybugs.com.au/" class="res-link">Yellow Ladybugs</a>
-                <a href="https://www.autismspectrum.org.au/" class="res-link">Aspect Australia</a>
-                <a href="https://www.adhdaustralia.org.au/" class="res-link">ADHD Australia</a>
-            </div>
-        </div>
-
-        </div>
-</body>
-</html>

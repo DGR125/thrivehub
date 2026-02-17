@@ -6,33 +6,42 @@
     <title>The Vault | ThriveHub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0f172a; color: white; font-family: system-ui, -apple-system, sans-serif; }
-        .res-card { background: #1e293b; border: 1px solid #334155; border-radius: 1.25rem; overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; height: 100%; }
+        body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; }
+        .res-card { background: #1e293b; border: 1px solid #334155; border-radius: 1.25rem; overflow: hidden; transition: 0.3s; height: 100%; display: flex; flex-direction: column; }
         .res-card:hover { border-color: #22d3ee; transform: translateY(-4px); box-shadow: 0 10px 40px -10px rgba(34, 211, 238, 0.3); }
-        .card-content { padding: 1.5rem; flex-grow: 1; }
         .tag { background: #22d3ee; color: #0f172a; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.6rem; text-transform: uppercase; margin-bottom: 0.5rem; display: inline-block; }
-        .link-item { color: #94a3b8; font-weight: 600; font-size: 0.8rem; margin-top: 0.5rem; display: block; text-decoration: none; line-height: 1.4; }
+        .link-item { color: #94a3b8; font-weight: 600; font-size: 0.8rem; margin-top: 0.5rem; display: block; text-decoration: none; }
         .link-item:hover { color: #22d3ee; padding-left: 4px; transition: 0.2s; }
     </style>
 </head>
-<body class="p-4 md:p-8">
+<body class="p-8">
     <div class="max-w-[1600px] mx-auto">
-        <header class="flex flex-col md:flex-row justify-between items-center mb-10 border-b border-slate-800 pb-8 gap-4">
-            <div>
-                <h1 class="text-5xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
-                <p class="text-slate-400 font-bold mt-1 uppercase tracking-widest text-xs">Wave One Mastery Library • South Australia Inclusive Education</p>
-            </div>
-            <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-8 py-2 rounded-full font-black uppercase hover:bg-[#22d3ee] hover:text-[#0f172a] transition no-underline">← BACK TO COMMAND CENTER</a>
+        <header class="flex justify-between items-center mb-12 border-b border-slate-800 pb-8">
+            <h1 class="text-5xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
+            <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-8 py-2 rounded-full font-black hover:bg-[#22d3ee] hover:text-[#0f172a] transition">← HOME</a>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-
-            <div class="res-card">
-                <div class="card-content">
-                    <span class="tag">Wave One</span>
-                    <h3 class="font-bold text-white uppercase text-sm mb-2">Inclusion & Wellbeing</h3>
-                    <a href="https://sies.sa.edu.au/" target="_blank" class="link-item">• SIES South Australia</a>
-                    <a href="https://brave4you.psy.uq.edu.au/" target="_blank" class="link-item">• The BRAVE Program</a>
-                    <a href="https://shinesa.org.au/" target="_blank" class="link-item">• ShineSA Resources</a>
-                    <a href="https://www.sttars.org.au/" target="_blank" class="link-item">• STTARS Support</a>
-                    <a href
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="res-card p-6">
+                <span class="tag">Wave One</span>
+                <h3 class="font-bold text-white uppercase text-sm mb-2">Inclusion & Wellbeing</h3>
+                <a href="https://sies.sa.edu.au/" target="_blank" class="link-item">• SIES South Australia</a>
+                <a href="https://brave4you.psy.uq.edu.au/" target="_blank" class="link-item">• The BRAVE Program</a>
+                <a href="https://shinesa.org.au/" target="_blank" class="link-item">• ShineSA Resources</a>
+            </div>
+            <div class="res-card p-6">
+                <span class="tag">Regulation</span>
+                <h3 class="font-bold text-white uppercase text-sm mb-2">Interoception</h3>
+                <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" target="_blank" class="link-item">• SA Dept Curriculum</a>
+                <a href="https://kelly-mahler.com/" target="_blank" class="link-item">• Kelly Mahler Guide</a>
+            </div>
+            <div class="res-card p-6">
+                <span class="tag">ND Affirming</span>
+                <h3 class="font-bold text-white uppercase text-sm mb-2">ADHD & Autism</h3>
+                <a href="https://suelarkey.com.au" target="_blank" class="link-item">• Sue Larkey Strategies</a>
+                <a href="https://www.positivepartnerships.com.au" target="_blank" class="link-item">• Positive Partnerships</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

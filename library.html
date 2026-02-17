@@ -6,41 +6,145 @@
     <title>The Vault | ThriveHub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; }
+        body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; scroll-behavior: smooth; }
         .res-card { background: #1e293b; border: 1px solid #334155; border-radius: 1.25rem; overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; height: 100%; }
-        .res-card:hover { border-color: #22d3ee; transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(34, 211, 238, 0.4); }
-        .card-img { width: 100%; height: 110px; object-fit: cover; opacity: 0.6; background-color: #334155; }
-        .card-content { padding: 1.25rem; }
-        .tag { background: #22d3ee; color: #0f172a; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.65rem; text-transform: uppercase; margin-bottom: 0.5rem; display: inline-block; }
-        .link-item { color: #94a3b8; font-weight: 600; font-size: 0.8rem; margin-top: 0.5rem; display: block; text-decoration: none; border-bottom: 1px solid transparent; width: fit-content; }
-        .link-item:hover { color: #22d3ee; border-bottom: 1px solid #22d3ee; }
+        .res-card:hover { border-color: #22d3ee; transform: translateY(-5px); box-shadow: 0 10px 40px -10px rgba(34, 211, 238, 0.3); }
+        .card-img { width: 100%; height: 110px; object-fit: cover; opacity: 0.5; background-color: #0f172a; }
+        .card-content { padding: 1.25rem; flex-grow: 1; }
+        .tag { background: #22d3ee; color: #0f172a; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.6rem; text-transform: uppercase; margin-bottom: 0.5rem; display: inline-block; }
+        .link-item { color: #94a3b8; font-weight: 600; font-size: 0.75rem; margin-top: 0.5rem; display: block; text-decoration: none; line-height: 1.2; }
+        .link-item:hover { color: #22d3ee; padding-left: 4px; }
     </style>
 </head>
-<body class="p-4 md:p-10">
-    <div class="max-w-[1500px] mx-auto">
-        <header class="flex flex-col md:flex-row justify-between items-center mb-10 border-b border-slate-800 pb-8 gap-6">
+<body class="p-4 md:p-8">
+    <div class="max-w-[1600px] mx-auto">
+        <header class="flex flex-col md:flex-row justify-between items-center mb-10 border-b border-slate-800 pb-8 gap-4">
             <div>
                 <h1 class="text-5xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
-                <p class="text-slate-400 font-bold mt-1 uppercase tracking-widest text-xs">Full Wave One Practitioner Library</p>
+                <p class="text-slate-400 font-bold mt-1 uppercase tracking-widest text-xs">Wave One Mastery Library • 12 Categories</p>
             </div>
             <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-8 py-2 rounded-full font-black uppercase hover:bg-[#22d3ee] hover:text-[#0f172a] transition no-underline">← HOME</a>
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <div class="res-card"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400" class="card-img"><div class="card-content"><span class="tag">Engagement</span><h3 class="font-bold text-white uppercase">Attendance & Inclusion</h3><a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" target="_blank" class="link-item">• Iceberg Model</a><a href="https://www.attendanceworks.org/resources/" target="_blank" class="link-item">• Attendance Toolkit</a></div></div>
-            <div class="res-card"><img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?w=400" class="card-img"><div class="card-content"><span class="tag">Comm</span><h3 class="font-bold text-white uppercase">Speech & Language</h3><a href="https://www.assistiveware.com/learn-aac" target="_blank" class="link-item">• AAC Hub</a><a href="https://thrivetherapyandwellness.com/free-speech-pathology-screening-tools/" target="_blank" class="link-item">• [TOOL] Screeners</a></div></div>
-            <div class="res-card"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400" class="card-img"><div class="card-content"><span class="tag">Psych</span><h3 class="font-bold text-white uppercase">Psychology & Self-Reg</h3><a href="https://self-reg.ca/resources/" target="_blank" class="link-item">• Shanker Self-Reg</a><a href="https://www.panoramaed.com/blog/comprehensive-guide-sel-assessments" target="_blank" class="link-item">• [TOOL] SEL Assessment</a></div></div>
-            <div class="res-card"><img src="https://images.unsplash.com/photo-1523050335456-adaba834597c?w=400" class="card-img"><div class="card-content"><span class="tag">First Nations</span><h3 class="font-bold text-white uppercase">Aboriginal Education</h3><a href="https://www.narragunnawali.org.au/" target="_blank" class="link-item">• Narragunnawali</a><a href="https://aiatsis.gov.au/teaching-resources" target="_blank" class="link-item">• AIATSIS Tools</a></div></div>
-            <div class="res-card"><img src="https://images.unsplash.com/photo-1499209974431-9dac3adaf471?w=400" class="card-img"><div class="card-content"><span class="tag">Regulation</span><h3 class="font-bold text-white uppercase">Interoception</h3><a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" target="_blank" class="link-item">• SA Curriculum</a><a href="https://kelly-mahler.com/what-is-interoception/" target="_blank" class="link-item">• Mahler Guide</a></div></div>
-            <div class="res-card"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400" class="card-img"><div class="card-content"><span class="tag">Safety</span><h3 class="font-bold text-white uppercase">Trauma Informed</h3><a href="https://www.childhood.org.au/" target="_blank" class="link-item">• Childhood Foundation</a><a href="https://traumasensitiveschools.org/" target="_blank" class="link-item">• Sensitive Schools</a></div></div>
-            <div class="res-card"><img src="https://images.unsplash.com/photo-1551847677-dc82d764e1eb?w=400" class="card-img"><div class="card-content"><span class="tag">ND</span><h3 class="font-bold text-white uppercase">ADHD & Autism</h3><a href="https://www.adhdaustralia.org.au/" target="_blank" class="link-item">• ADHD Australia</a><a href="https://suelarkey.com.au" target="_blank" class="link-item">• Sue Larkey</a></div></div>
-            <div class="res-card"><img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=400" class="card-img"><div class="card-content"><span class="tag">Instruction</span><h3 class="font-bold text-white uppercase">Literacy Toolkit</h3><a href="https://www.speldsa.org.au" target="_blank" class="link-item">• SPELD SA</a><a href="https://pld-literacy.org/" target="_blank" class="link-item">• PLD Literacy Hub</a></div></div>
-            <div class="res-card"><img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=400" class="card-img"><div class="card-content"><span class="tag">Agency</span><h3 class="font-bold text-white uppercase">VoiceIt & Agency</h3><a href="https://edi.sa.edu.au/educating/curriculum/child-protection-and-wellbeing/voiceit-student-voice-toolkit" target="_blank" class="link-item">• VoiceIt (SA Dept)</a><a href="https://vimeo.com/channels/voiceit" target="_blank" class="link-item">• Video Library</a></div></div>
-            <div class="res-card"><img src="https://images.unsplash.com/photo-1493839523149-2864fca44919?w=400" class="card-img"><div class="card-content"><span class="tag">Self-Care</span><h3 class="font-bold text-white uppercase">Staff Wellbeing</h3><a href="https://beyou.edu.au" target="_blank" class="link-item">• Be You Learning</a><a href="https://www.smilingmind.com.au/at-work" target="_blank" class="link-item">• Smiling Mind</a></div></div>
-            <div class="res-card border-dashed border-[#22d3ee]"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400" class="card-img"><div class="card-content"><span class="tag">Next Phase</span><h3 class="font-bold text-white uppercase">Occupational Therapy</h3><a href="#" class="link-item">• Sensory Profiles</a><a href="#" class="link-item">• Motor Skills</a></div></div>
-        </div>
 
-        <footer class="text-center py-20 border-t border-slate-800 mt-20"><div class="text-slate-600 text-[10px] italic font-bold uppercase tracking-widest">© 2026 TERESA BRUNO™</div></footer>
-    </div>
-</body>
-</html>
+            <div class="res-card">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400" class="card-img">
+                <div class="card-content">
+                    <span class="tag">Inclusion</span>
+                    <h3 class="font-bold text-white uppercase text-sm mb-2">Inclusion & Wellbeing</h3>
+                    <a href="https://brave4you.psy.uq.edu.au/" target="_blank" class="link-item">• The BRAVE Program</a>
+                    <a href="https://sies.sa.edu.au/shop-learn/presentations/" target="_blank" class="link-item">• Inclusive Education Expo</a>
+                    <a href="https://sies.sa.edu.au/" target="_blank" class="link-item">• SIES South Australia</a>
+                    <a href="https://www.inclusioned.edu.au/" target="_blank" class="link-item">• inclusionED Australia</a>
+                    <a href="https://shinesa.org.au/" target="_blank" class="link-item">• ShineSA Resources</a>
+                    <a href="https://adultssupportingkids.com.au/" target="_blank" class="link-item">• Adults Supporting Kids</a>
+                </div>
+            </div>
+
+            <div class="res-card">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400" class="card-img">
+                <div class="card-content">
+                    <span class="tag">Engagement</span>
+                    <h3 class="font-bold text-white uppercase text-sm mb-2">Attendance & Inclusion</h3>
+                    <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" target="_blank" class="link-item">• Iceberg Model of Behavior</a>
+                    <a href="https://www.attendanceworks.org/resources/" target="_blank" class="link-item">• Attendance Works Toolkit</a>
+                    <a href="https://www.pbis.org/topics/student-engagement" target="_blank" class="link-item">• PBIS Engagement Strategies</a>
+                    <a href="https://mrspspecialties.com/student-engagement-strategies-for-disengaged-students/" target="_blank" class="link-item">• Disengaged Learner Support</a>
+                    <a href="https://engagingalllearners.ca/ip/working-with-disengaged-students/" target="_blank" class="link-item">• Support Strategies Hub</a>
+                </div>
+            </div>
+
+            <div class="res-card">
+                <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?w=400" class="card-img">
+                <div class="card-content">
+                    <span class="tag">Comm</span>
+                    <h3 class="font-bold text-white uppercase text-sm mb-2">Speech & Language</h3>
+                    <a href="https://www.assistiveware.com/learn-aac" target="_blank" class="link-item">• Aided Language & AAC Hub</a>
+                    <a href="https://thrivetherapyandwellness.com/free-speech-pathology-screening-tools/" target="_blank" class="link-item">• [TOOL] Free Speech Screeners</a>
+                    <a href="https://praacticalaac.org/" target="_blank" class="link-item">• PrAACtical AAC Resources</a>
+                    <a href="https://www.asha.org/public/speech/disorders/" target="_blank" class="link-item">• Language Disorders Guide</a>
+                    <a href="https://prentrom.com/education/aac-evaluation-tools" target="_blank" class="link-item">• [TOOL] AAC Evaluation Forms</a>
+                </div>
+            </div>
+
+            <div class="res-card">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400" class="card-img">
+                <div class="card-content">
+                    <span class="tag">Psych</span>
+                    <h3 class="font-bold text-white uppercase text-sm mb-2">Psychology & Self-Reg</h3>
+                    <a href="https://self-reg.ca/resources/" target="_blank" class="link-item">• Stuart Shanker Self-Reg Hub</a>
+                    <a href="https://www.panoramaed.com/blog/comprehensive-guide-sel-assessments" target="_blank" class="link-item">• [TOOL] SEL Assessment Guide</a>
+                    <a href="https://developingchild.harvard.edu/resources/" target="_blank" class="link-item">• Harvard Development Center</a>
+                    <a href="https://www.attachmenttraumanetwork.org/resources/" target="_blank" class="link-item">• Attachment & Trauma Hub</a>
+                    <a href="https://www.psychologytoday.com/au/tests/personality/emotional-intelligence-test" target="_blank" class="link-item">• [TOOL] EQ Assessment</a>
+                </div>
+            </div>
+
+            <div class="res-card">
+                <img src="https://images.unsplash.com/photo-1523050335456-adaba834597c?w=400" class="card-img">
+                <div class="card-content">
+                    <span class="tag">Culture</span>
+                    <h3 class="font-bold text-white uppercase text-sm mb-2">Aboriginal Education</h3>
+                    <a href="https://www.narragunnawali.org.au/" target="_blank" class="link-item">• Narragunnawali (RAPs)</a>
+                    <a href="https://aiatsis.gov.au/teaching-resources" target="_blank" class="link-item">• AIATSIS Teaching Tools</a>
+                    <a href="https://www.reconciliation.org.au/" target="_blank" class="link-item">• Reconciliation Australia</a>
+                    <a href="https://www.aboriginaleducation.sa.edu.au/" target="_blank" class="link-item">• SA Aboriginal Ed Strategy</a>
+                    <a href="https://www.indigenouspsychology.com.au/" target="_blank" class="link-item">• Indigenous Psychology Hub</a>
+                </div>
+            </div>
+
+            <div class="res-card">
+                <img src="https://images.unsplash.com/photo-1499209974431-9dac3adaf471?w=400" class="card-img">
+                <div class="card-content">
+                    <span class="tag">Reg</span>
+                    <h3 class="font-bold text-white uppercase text-sm mb-2">Interoception</h3>
+                    <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" target="_blank" class="link-item">• SA Dept Curriculum</a>
+                    <a href="https://kelly-mahler.com/what-is-interoception/" target="_blank" class="link-item">• Kelly Mahler Guide</a>
+                    <a href="https://www.zonesofregulation.com/free-downloadable-resources.html" target="_blank" class="link-item">• Zones of Regulation</a>
+                    <a href="https://www.theottoolbox.com/interoception-activities/" target="_blank" class="link-item">• OT Toolbox Activities</a>
+                    <a href="https://www.sensoryprocessinghub.hertsforlearning.co.uk/" target="_blank" class="link-item">• Sensory Processing Hub</a>
+                </div>
+            </div>
+
+            <div class="res-card">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400" class="card-img">
+                <div class="card-content">
+                    <span class="tag">Safety</span>
+                    <h3 class="font-bold text-white uppercase text-sm mb-2">Trauma Informed</h3>
+                    <a href="https://www.childhood.org.au/" target="_blank" class="link-item">• Childhood Foundation</a>
+                    <a href="https://traumasensitiveschools.org/" target="_blank" class="link-item">• Trauma Sensitive Schools</a>
+                    <a href="https://www.berrystreet.org.au/learning-model" target="_blank" class="link-item">• Berry Street Model</a>
+                    <a href="https://www.blueknot.org.au/" target="_blank" class="link-item">• Blue Knot Foundation</a>
+                    <a href="https://www.sttars.org.au/about/about-sttars" target="_blank" class="link-item">• STTARS Support</a>
+                </div>
+            </div>
+
+            <div class="res-card">
+                <img src="https://images.unsplash.com/photo-1551847677-dc82d764e1eb?w=400" class="card-img">
+                <div class="card-content">
+                    <span class="tag">ND</span>
+                    <h3 class="font-bold text-white uppercase text-sm mb-2">ADHD & Autism</h3>
+                    <a href="https://www.adhdaustralia.org.au/" target="_blank" class="link-item">• ADHD Australia Hub</a>
+                    <a href="https://suelarkey.com.au" target="_blank" class="link-item">• Sue Larkey Strategies</a>
+                    <a href="https://www.positivepartnerships.com.au" target="_blank" class="link-item">• Positive Partnerships AU</a>
+                    <a href="https://www.additudemag.com" target="_blank" class="link-item">• ADDitude Educator Portal</a>
+                    <a href="https://www.autismspectrum.org.au" target="_blank" class="link-item">• ASPECT Resources</a>
+                </div>
+            </div>
+
+            <div class="res-card">
+                <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=400" class="card-img">
+                <div class="card-content">
+                    <span class="tag">Literacy</span>
+                    <h3 class="font-bold text-white uppercase text-sm mb-2">Literacy Toolkit</h3>
+                    <a href="https://www.speldsa.org.au" target="_blank" class="link-item">• SPELD SA (Phonics)</a>
+                    <a href="https://pld-literacy.org/" target="_blank" class="link-item">• PLD Literacy Hub</a>
+                    <a href="https://www.readingrockets.org" target="_blank" class="link-item">• Reading Rockets</a>
+                    <a href="https://www.fivefromfive.com.au/" target="_blank" class="link-item">• Five from Five Reading</a>
+                    <a href="https://www.dyslexiaasociation.org.au/" target="_blank" class="link-item">• Dyslexia AU Hub</a>
+                </div>
+            </div>
+
+            <div class="res-card">
+                <img src="https://images.

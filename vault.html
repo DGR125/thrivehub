@@ -6,40 +6,129 @@
     <title>The Vault | ThriveHub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; }
-        .res-card { background: #1e293b; border: 1px solid #334155; border-radius: 1.25rem; overflow: hidden; transition: 0.3s; height: 100%; display: flex; flex-direction: column; }
-        .res-card:hover { border-color: #22d3ee; transform: translateY(-4px); box-shadow: 0 10px 40px -10px rgba(34, 211, 238, 0.3); }
-        .tag { background: #22d3ee; color: #0f172a; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.6rem; text-transform: uppercase; margin-bottom: 0.5rem; display: inline-block; }
-        .link-item { color: #94a3b8; font-weight: 600; font-size: 0.8rem; margin-top: 0.5rem; display: block; text-decoration: none; }
+        body { background-color: #0f172a; color: white; font-family: sans-serif; }
+        .res-card { background: #1e293b; border: 1px solid #334155; border-radius: 1.25rem; padding: 1.5rem; transition: 0.3s; height: 100%; }
+        .res-card:hover { border-color: #22d3ee; transform: translateY(-4px); }
+        .tag { background: #22d3ee; color: #0f172a; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.6rem; text-transform: uppercase; display: inline-block; margin-bottom: 0.5rem; }
+        .link-item { color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem; display: block; text-decoration: none; }
         .link-item:hover { color: #22d3ee; padding-left: 4px; transition: 0.2s; }
     </style>
 </head>
 <body class="p-8">
     <div class="max-w-[1600px] mx-auto">
         <header class="flex justify-between items-center mb-12 border-b border-slate-800 pb-8">
-            <h1 class="text-5xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
-            <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-8 py-2 rounded-full font-black hover:bg-[#22d3ee] hover:text-[#0f172a] transition">← HOME</a>
+            <h1 class="text-4xl font-black italic uppercase italic">The <span class="text-[#22d3ee]">Vault</span></h1>
+            <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-6 py-2 rounded-full font-black no-underline hover:bg-[#22d3ee] hover:text-[#0f172a] transition">← HOME</a>
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="res-card p-6">
-                <span class="tag">Wave One</span>
-                <h3 class="font-bold text-white uppercase text-sm mb-2">Inclusion & Wellbeing</h3>
-                <a href="https://sies.sa.edu.au/" target="_blank" class="link-item">• SIES South Australia</a>
-                <a href="https://brave4you.psy.uq.edu.au/" target="_blank" class="link-item">• The BRAVE Program</a>
-                <a href="https://shinesa.org.au/" target="_blank" class="link-item">• ShineSA Resources</a>
+            <div class="res-card">
+                <span class="tag">Inclusion</span>
+                <h3 class="font-bold uppercase text-sm mb-2">Inclusion & Wellbeing</h3>
+                <a href="https://sies.sa.edu.au/" class="link-item">• SIES South Australia</a>
+                <a href="https://brave4you.psy.uq.edu.au/" class="link-item">• The BRAVE Program</a>
+                <a href="https://shinesa.org.au/" class="link-item">• ShineSA</a>
+                <a href="https://www.inclusioned.edu.au/" class="link-item">• inclusionED</a>
+                <a href="https://culturalatlas.sbs.com.au/" class="link-item">• Cultural Atlas</a>
             </div>
-            <div class="res-card p-6">
+            <div class="res-card">
+                <span class="tag">Engagement</span>
+                <h3 class="font-bold uppercase text-sm mb-2">Attendance</h3>
+                <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" class="link-item">• Iceberg Model</a>
+                <a href="https://www.attendanceworks.org/" class="link-item">• Attendance Works</a>
+                <a href="https://www.pbis.org/" class="link-item">• PBIS Engagement</a>
+                <a href="https://www.pbisworld.com/" class="link-item">• PBIS World</a>
+                <a href="https://be-you.edu.au/" class="link-item">• Be You Attendance</a>
+            </div>
+            <div class="res-card">
+                <span class="tag">Comm</span>
+                <h3 class="font-bold uppercase text-sm mb-2">Speech & Language</h3>
+                <a href="https://www.assistiveware.com/learn-aac" class="link-item">• AAC Learning Hub</a>
+                <a href="https://praacticalaac.org/" class="link-item">• PrAACtical AAC</a>
+                <a href="https://www.speechpathologyaustralia.org.au/" class="link-item">• SPA Resources</a>
+                <a href="https://www.communicationmatters.org.uk/" class="link-item">• Comm Matters</a>
+                <a href="https://www.hanen.org/" class="link-item">• Hanen Programs</a>
+            </div>
+            <div class="res-card">
+                <span class="tag">Psych</span>
+                <h3 class="font-bold uppercase text-sm mb-2">Psychology</h3>
+                <a href="https://self-reg.ca/" class="link-item">• Shanker Self-Reg</a>
+                <a href="https://developingchild.harvard.edu/" class="link-item">• Harvard Center</a>
+                <a href="https://consciousdiscipline.com/" class="link-item">• Conscious Discipline</a>
+                <a href="https://www.psychology.org.au/" class="link-item">• APS Resources</a>
+                <a href="https://kidshelpline.com.au/" class="link-item">• Kids Helpline</a>
+            </div>
+            <div class="res-card">
+                <span class="tag">Culture</span>
+                <h3 class="font-bold uppercase text-sm mb-2">Aboriginal Ed</h3>
+                <a href="https://www.narragunnawali.org.au/" class="link-item">• Narragunnawali</a>
+                <a href="https://aiatsis.gov.au/" class="link-item">• AIATSIS</a>
+                <a href="https://www.8ways.online/" class="link-item">• 8 Ways Pedagogy</a>
+                <a href="https://www.indigenouspsychology.com.au/" class="link-item">• AIPA</a>
+                <a href="https://www.reconciliation.org.au/" class="link-item">• Reconciliation AU</a>
+            </div>
+            <div class="res-card">
                 <span class="tag">Regulation</span>
-                <h3 class="font-bold text-white uppercase text-sm mb-2">Interoception</h3>
-                <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" target="_blank" class="link-item">• SA Dept Curriculum</a>
-                <a href="https://kelly-mahler.com/" target="_blank" class="link-item">• Kelly Mahler Guide</a>
+                <h3 class="font-bold uppercase text-sm mb-2">Interoception</h3>
+                <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" class="link-item">• SA Dept Curriculum</a>
+                <a href="https://kelly-mahler.com/" class="link-item">• Kelly Mahler</a>
+                <a href="https://www.zonesofregulation.com/" class="link-item">• Zones of Regulation</a>
+                <a href="https://www.alertprogram.com/" class="link-item">• Alert Program</a>
+                <a href="https://www.sensorysmarts.com/" class="link-item">• Sensory Smarts</a>
             </div>
-            <div class="res-card p-6">
-                <span class="tag">ND Affirming</span>
-                <h3 class="font-bold text-white uppercase text-sm mb-2">ADHD & Autism</h3>
-                <a href="https://suelarkey.com.au" target="_blank" class="link-item">• Sue Larkey Strategies</a>
-                <a href="https://www.positivepartnerships.com.au" target="_blank" class="link-item">• Positive Partnerships</a>
+            <div class="res-card">
+                <span class="tag">Safety</span>
+                <h3 class="font-bold uppercase text-sm mb-2">Trauma Informed</h3>
+                <a href="https://www.childhood.org.au/" class="link-item">• Childhood Foundation</a>
+                <a href="https://www.berrystreet.org.au/" class="link-item">• Berry Street</a>
+                <a href="https://www.blueknot.org.au/" class="link-item">• Blue Knot</a>
+                <a href="https://traumasensitiveschools.org/" class="link-item">• TSS Project</a>
+                <a href="https://www.traumainformedcare.chcs.org/" class="link-item">• TIC Center</a>
+            </div>
+            <div class="res-card">
+                <span class="tag">ND</span>
+                <h3 class="font-bold uppercase text-sm mb-2">ADHD & Autism</h3>
+                <a href="https://suelarkey.com.au" class="link-item">• Sue Larkey</a>
+                <a href="https://www.positivepartnerships.com.au" class="link-item">• Positive Partnerships</a>
+                <a href="https://www.yellowladybugs.com.au/" class="link-item">• Yellow Ladybugs</a>
+                <a href="https://www.autismspectrum.org.au/" class="link-item">• Aspect Australia</a>
+                <a href="https://www.adhdaustralia.org.au/" class="link-item">• ADHD Australia</a>
+            </div>
+            <div class="res-card">
+                <span class="tag">Literacy</span>
+                <h3 class="font-bold uppercase text-sm mb-2">Literacy</h3>
+                <a href="https://www.speldsa.org.au" class="link-item">• SPELD SA</a>
+                <a href="https://pld-literacy.org/" class="link-item">• PLD Literacy</a>
+                <a href="https://www.readingrockets.org" class="link-item">• Reading Rockets</a>
+                <a href="https://www.fivefromfive.com.au/" class="link-item">• Five from Five</a>
+                <a href="https://www.ldaustralia.org/" class="link-item">• Learning Diff AU</a>
+            </div>
+            <div class="res-card">
+                <span class="tag">Agency</span>
+                <h3 class="font-bold uppercase text-sm mb-2">VoiceIt</h3>
+                <a href="https://edi.sa.edu.au/educating/curriculum/child-protection-and-wellbeing/voiceit-student-voice-toolkit" class="link-item">• VoiceIt Toolkit</a>
+                <a href="https://vimeo.com/channels/voiceit" class="link-item">• VoiceIt Videos</a>
+                <a href="https://www.fya.org.au/" class="link-item">• Foundation for Youth</a>
+                <a href="https://www.vicstudentvoice.org.au/" class="link-item">• VIC Student Voice</a>
+                <a href="https://www.unicef.org.au/" class="link-item">• Child Rights</a>
+            </div>
+            <div class="res-card">
+                <span class="tag">Staff</span>
+                <h3 class="font-bold uppercase text-sm mb-2">Wellbeing</h3>
+                <a href="https://beyou.edu.au" class="link-item">• Be You</a>
+                <a href="https://www.smilingmind.com.au/" class="link-item">• Smiling Mind</a>
+                <a href="https://www.blackdoginstitute.org.au/" class="link-item">• Black Dog</a>
+                <a href="https://www.beyondblue.org.au/" class="link-item">• Beyond Blue</a>
+                <a href="https://www.headspace.org.au/" class="link-item">• Headspace</a>
+            </div>
+            <div class="res-card">
+                <span class="tag">OT</span>
+                <h3 class="font-bold uppercase text-sm mb-2">Occupational Therapy</h3>
+                <a href="https://www.theottoolbox.com/" class="link-item">• OT Toolbox</a>
+                <a href="https://theinspiredtreehouse.com/" class="link-item">• Inspired Treehouse</a>
+                <a href="https://www.otaus.com.au/" class="link-item">• OT Australia</a>
+                <a href="https://www.sensoryprocessingdisorder.com/" class="link-item">• SPD Hub</a>
+                <a href="https://www.toolstogrowot.com/" class="link-item">• Tools to Grow</a>
             </div>
         </div>
     </div>

@@ -7,37 +7,72 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; }
-        .res-card { background: #1e293b; border: 1px solid #334155; border-radius: 1.5rem; padding: 2rem; transition: 0.3s; }
-        .res-card:hover { border-color: #22d3ee; transform: scale(1.02); }
-        .tag { color: #22d3ee; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem; }
-        .link-item { color: #94a3b8; font-size: 0.85rem; margin-top: 0.8rem; display: block; text-decoration: none; }
-        .link-item:hover { color: #22d3ee; }
-        .category-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+        .grid-visual { background: #1e293b; border: 1px solid #334155; border-radius: 2rem; padding: 2.5rem; transition: 0.3s; position: relative; overflow: hidden; }
+        .grid-visual:hover { border-color: #22d3ee; transform: scale(1.03); box-shadow: 0 30px 60px -15px rgba(34, 211, 238, 0.2); }
+        .icon-box { background: rgba(34, 211, 238, 0.1); width: 60px; height: 60px; border-radius: 1rem; display: flex; items-center; justify-content: center; font-size: 2rem; margin-bottom: 1.5rem; }
+        .res-link { color: #94a3b8; text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 0.75rem; font-weight: 500; transition: 0.2s; }
+        .res-link:hover { color: #22d3ee; padding-left: 8px; }
     </style>
 </head>
-<body class="p-8">
-    <header class="max-w-7xl mx-auto flex justify-between items-center mb-16 border-b border-slate-800 pb-8">
-        <h1 class="text-5xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
-        <a href="index.html" class="text-xs font-black border-2 border-[#22d3ee] px-6 py-2 rounded-full text-[#22d3ee] no-underline">← HOME</a>
+<body class="p-8 md:p-16 hero-gradient min-h-screen">
+    <header class="max-w-[1400px] mx-auto flex justify-between items-end mb-20 border-b border-slate-800 pb-12">
+        <div>
+            <h1 class="text-7xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
+            <p class="text-slate-500 font-bold uppercase tracking-[0.3em] mt-2">Resource Mastery Library</p>
+        </div>
+        <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-10 py-3 rounded-full font-black uppercase text-xs tracking-widest hover:bg-[#22d3ee] hover:text-[#0f172a] transition no-underline">← Back to Hub</a>
     </header>
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="res-card">
-            <span class="category-icon">🤝</span>
-            <span class="tag">Foundation</span>
-            <h3 class="font-black uppercase text-xl mb-4 text-white">Inclusion & Wellbeing</h3>
-            <a href="https://sies.sa.edu.au/" target="_blank" class="link-item">→ SIES South Australia</a>
-            <a href="https://brave4you.psy.uq.edu.au/" target="_blank" class="link-item">→ The BRAVE Program</a>
-            <a href="https://shinesa.org.au/" target="_blank" class="link-item">→ ShineSA Resources</a>
+    <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        
+        <div class="grid-visual">
+            <div class="icon-box">🤝</div>
+            <h3 class="text-2xl font-black uppercase mb-6 tracking-tight">Inclusion & Wellbeing</h3>
+            <a href="https://sies.sa.edu.au/" target="_blank" class="res-link">→ SIES South Australia</a>
+            <a href="https://shinesa.org.au/" target="_blank" class="res-link">→ ShineSA Resources</a>
+            <a href="https://www.sttars.org.au/" target="_blank" class="res-link">→ STTARS Support</a>
         </div>
-        <div class="res-card">
-            <span class="category-icon">🧘</span>
-            <span class="tag">Regulation</span>
-            <h3 class="font-black uppercase text-xl mb-4 text-white">Interoception</h3>
-            <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" target="_blank" class="link-item">→ SA Dept Curriculum</a>
-            <a href="https://kelly-mahler.com/" target="_blank" class="link-item">→ Kelly Mahler Hub</a>
-            <a href="https://www.zonesofregulation.com/" target="_blank" class="link-item">→ Zones of Regulation</a>
+
+        <div class="grid-visual">
+            <div class="icon-box">🕒</div>
+            <h3 class="text-2xl font-black uppercase mb-6 tracking-tight">Attendance</h3>
+            <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" target="_blank" class="res-link">→ Behavior Iceberg</a>
+            <a href="https://www.attendanceworks.org/" target="_blank" class="res-link">→ Attendance Works</a>
+            <a href="https://be-you.edu.au/" target="_blank" class="res-link">→ Be You Attendance</a>
         </div>
+
+        <div class="grid-visual">
+            <div class="icon-box">🧘</div>
+            <h3 class="text-2xl font-black uppercase mb-6 tracking-tight">Interoception</h3>
+            <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" target="_blank" class="res-link">→ SA Dept Curriculum</a>
+            <a href="https://kelly-mahler.com/" target="_blank" class="res-link">→ Kelly Mahler Hub</a>
+            <a href="https://www.zonesofregulation.com/" target="_blank" class="res-link">→ Zones of Regulation</a>
+        </div>
+
+        <div class="grid-visual">
+            <div class="icon-box">🧠</div>
+            <h3 class="text-2xl font-black uppercase mb-6 tracking-tight">Neurodiversity</h3>
+            <a href="https://suelarkey.com.au" target="_blank" class="res-link">→ Sue Larkey</a>
+            <a href="https://www.positivepartnerships.com.au" target="_blank" class="res-link">→ Positive Partnerships</a>
+            <a href="https://www.yellowladybugs.com.au/" target="_blank" class="res-link">→ Yellow Ladybugs</a>
+        </div>
+
+        <div class="grid-visual">
+            <div class="icon-box">📖</div>
+            <h3 class="text-2xl font-black uppercase mb-6 tracking-tight">Literacy</h3>
+            <a href="https://www.speldsa.org.au" target="_blank" class="res-link">→ SPELD SA</a>
+            <a href="https://pld-literacy.org/" target="_blank" class="res-link">→ PLD Literacy Hub</a>
+            <a href="https://www.readingrockets.org" target="_blank" class="res-link">→ Reading Rockets</a>
+        </div>
+
+        <div class="grid-visual">
+            <div class="icon-box">🛡️</div>
+            <h3 class="text-2xl font-black uppercase mb-6 tracking-tight">Trauma Informed</h3>
+            <a href="https://www.childhood.org.au/" target="_blank" class="res-link">→ Childhood Foundation</a>
+            <a href="https://www.berrystreet.org.au/" target="_blank" class="res-link">→ Berry Street Model</a>
+            <a href="https://traumasensitiveschools.org/" target="_blank" class="res-link">→ TSS Project</a>
+        </div>
+
         </div>
 </body>
 </html>

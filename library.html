@@ -6,52 +6,42 @@
     <title>The Vault | ThriveHub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; }
-        .res-card { background: #1e293b; border: 1px solid #334155; border-radius: 1.25rem; overflow: hidden; transition: 0.3s; height: 100%; display: flex; flex-direction: column; }
-        .res-card:hover { border-color: #22d3ee; transform: translateY(-5px); box-shadow: 0 10px 40px -10px rgba(34, 211, 238, 0.3); }
-        .tag { background: #22d3ee; color: #0f172a; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.6rem; text-transform: uppercase; margin-bottom: 0.5rem; display: inline-block; }
-        .link-item { color: #94a3b8; font-weight: 600; font-size: 0.75rem; margin-top: 0.4rem; display: block; text-decoration: none; }
-        .link-item:hover { color: #22d3ee; padding-left: 4px; transition: 0.2s; }
+        body { background-color: #0f172a; color: white; font-family: sans-serif; }
+        .res-card { background: #1e293b; border: 1px solid #334155; border-radius: 1.25rem; padding: 1.5rem; transition: 0.3s; }
+        .res-card:hover { border-color: #22d3ee; }
+        .tag { background: #22d3ee; color: #0f172a; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.6rem; text-transform: uppercase; }
+        .link-item { color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem; display: block; text-decoration: none; }
+        .link-item:hover { color: #22d3ee; }
     </style>
 </head>
 <body class="p-8">
     <div class="max-w-[1600px] mx-auto">
         <header class="flex justify-between items-center mb-12 border-b border-slate-800 pb-8">
-            <h1 class="text-5xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
-            <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-8 py-2 rounded-full font-black uppercase hover:bg-[#22d3ee] hover:text-[#0f172a] transition">← HOME</a>
+            <h1 class="text-4xl font-black italic uppercase">The <span class="text-[#22d3ee]">Vault</span></h1>
+            <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-6 py-2 rounded-full font-black hover:bg-[#22d3ee] hover:text-[#0f172a] transition">← HOME</a>
         </header>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="res-card">
-                <div class="p-6">
-                    <span class="tag">Inclusion</span>
-                    <h3 class="font-bold text-white uppercase text-sm mb-2">Inclusion & Wellbeing</h3>
-                    <a href="https://brave4you.psy.uq.edu.au/" target="_blank" class="link-item">• The BRAVE Program</a>
-                    <a href="https://sies.sa.edu.au/shop-learn/presentations/" target="_blank" class="link-item">• Inclusive Education Expo</a>
-                    <a href="https://sies.sa.edu.au/" target="_blank" class="link-item">• SIES South Australia</a>
-                    <a href="https://www.inclusioned.edu.au/" target="_blank" class="link-item">• inclusionED Australia</a>
-                    <a href="https://shinesa.org.au/" target="_blank" class="link-item">• ShineSA Resources</a>
-                </div>
+                <span class="tag">SA Inclusion</span>
+                <h3 class="font-bold uppercase text-sm mt-2">Inclusion & Wellbeing</h3>
+                <a href="https://brave4you.psy.uq.edu.au/" class="link-item">• The BRAVE Program</a>
+                <a href="https://sies.sa.edu.au/" class="link-item">• SIES South Australia</a>
+                <a href="https://shinesa.org.au/" class="link-item">• ShineSA Resources</a>
+                <a href="https://culturalatlas.sbs.com.au/" class="link-item">• Cultural Atlas</a>
             </div>
             <div class="res-card">
-                <div class="p-6">
-                    <span class="tag">Communication</span>
-                    <h3 class="font-bold text-white uppercase text-sm mb-2">Speech & Language</h3>
-                    <a href="https://www.assistiveware.com/learn-aac" target="_blank" class="link-item">• AAC Learning Hub</a>
-                    <a href="https://thrivetherapyandwellness.com/free-speech-pathology-screening-tools/" target="_blank" class="link-item">• [TOOL] Free Screeners</a>
-                    <a href="https://praacticalaac.org/" target="_blank" class="link-item">• PrAACtical AAC</a>
-                </div>
+                <span class="tag">Engagement</span>
+                <h3 class="font-bold uppercase text-sm mt-2">Attendance</h3>
+                <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" class="link-item">• Iceberg Model</a>
+                <a href="https://www.attendanceworks.org/resources/" class="link-item">• Attendance Works</a>
             </div>
             <div class="res-card">
-                <div class="p-6">
-                    <span class="tag">Literacy</span>
-                    <h3 class="font-bold text-white uppercase text-sm mb-2">Literacy Toolkit</h3>
-                    <a href="https://www.speldsa.org.au" target="_blank" class="link-item">• SPELD SA (Phonics)</a>
-                    <a href="https://pld-literacy.org/" target="_blank" class="link-item">• PLD Literacy Hub</a>
-                    <a href="https://www.readingrockets.org" target="_blank" class="link-item">• Reading Rockets</a>
-                </div>
+                <span class="tag">Comm</span>
+                <h3 class="font-bold uppercase text-sm mt-2">Speech & Language</h3>
+                <a href="https://www.assistiveware.com/learn-aac" class="link-item">• AAC Learning Hub</a>
+                <a href="https://praacticalaac.org/" class="link-item">• PrAACtical AAC</a>
             </div>
-        </div>
+            </div>
     </div>
 </body>
 </html>

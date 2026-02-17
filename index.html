@@ -7,74 +7,46 @@
     <style>
         * { box-sizing: border-box; }
         body, html { margin: 0; padding: 0; background: #0f172a; color: white; font-family: sans-serif; }
-        
-        .hero-underlay {
-            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.9)), 
+        .hero {
+            background: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.9)), 
                         url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1600');
             background-size: cover; background-position: center;
             min-height: 85vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%;
         }
-
         nav { position: absolute; top: 30px; left: 10%; right: 10%; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 32px; font-weight: 900; text-transform: uppercase; letter-spacing: -2px; }
-        .logo span { color: #22d3ee; }
+        .logo { font-size: 32px; font-weight: 900; text-transform: uppercase; }
         .nav-links a { color: #22d3ee; text-decoration: none; font-weight: 800; border: 2px solid #22d3ee; padding: 10px 25px; border-radius: 50px; font-size: 13px; margin-left: 10px; }
-
         h1 { font-size: clamp(3.5rem, 8vw, 7.5rem); font-weight: 900; text-transform: uppercase; line-height: 0.85; margin: 0; font-style: italic; }
         .cyan { color: #22d3ee; }
-        .subtitle { font-size: 24px; color: #94a3b8; font-style: italic; margin: 25px 0 45px 0; max-width: 600px; }
-        
-        .btn-vault { background: #22d3ee; color: black; padding: 22px 55px; border-radius: 50px; font-weight: 900; text-decoration: none; text-transform: uppercase; display: inline-block; font-size: 18px; }
-
         .intent-overlay { 
-            background: #1e293b; border-left: 14px solid #22d3ee; padding: 70px 50px; 
-            margin: -70px 10% 80px 10%; border-radius: 0 40px 40px 0; position: relative; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            background: #1e293b; border-left: 14px solid #22d3ee; padding: 60px; 
+            margin: -60px 10% 60px 10%; border-radius: 0 40px 40px 0; position: relative;
         }
-        .intent-overlay h2 { color: #22d3ee; text-transform: uppercase; letter-spacing: 5px; font-size: 14px; margin-bottom: 25px; }
-        .intent-text { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.1; }
-
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 0 10% 100px 10%; }
-        .card { background: #1e293b; padding: 40px; border-radius: 35px; text-decoration: none; color: white; border: 1px solid #334155; transition: 0.3s; }
-        .card:hover { border-color: #22d3ee; transform: translateY(-8px); }
-        .card h4 { margin: 0 0 12px 0; text-transform: uppercase; font-size: 22px; }
+        .intent-text { font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 300; line-height: 1.2; }
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 0 10% 100px 10%; }
+        .card { background: #1e293b; padding: 40px; border-radius: 35px; text-decoration: none; color: white; border: 1px solid #334155; }
+        .card h4 { margin: 0 0 10px 0; text-transform: uppercase; font-size: 22px; }
     </style>
 </head>
 <body>
-
-    <nav>
-        <div class="logo">Thrive<span>Hub</span></div>
+    <nav><div class="logo">Thrive<span class="cyan">Hub</span></div>
         <div class="nav-links">
             <a href="https://thestudentwellbeing.wordpress.com/" target="_blank">STAFF BLOG</a>
             <a href="vault.html">THE VAULT</a>
         </div>
     </nav>
-
-    <div class="hero-underlay">
-        <p style="color:#22d3ee; font-weight:bold; letter-spacing:6px; margin-bottom:15px;">WAVE ONE MASTERY</p>
+    <div class="hero">
+        <p style="color:#22d3ee; font-weight:bold; letter-spacing:5px;">WAVE ONE MASTERY</p>
         <h1>Empower <br><span class="cyan">Every</span> Learner.</h1>
-        <p class="subtitle">The unified portal for inclusive practice and community collaboration.</p>
-        <a href="vault.html" class="btn-vault">Open The Vault</a>
+        <a href="vault.html" style="background:#22d3ee; color:black; padding:20px 50px; border-radius:50px; font-weight:900; text-decoration:none; display:inline-block; margin-top:40px;">OPEN THE VAULT</a>
     </div>
-
     <div class="intent-overlay">
-        <h2>The Intent</h2>
-        <div class="intent-text">To move beyond "accommodation" and toward <span style="font-weight:900; font-style:italic; color: white;">authentic inclusion</span>. We equip educators with Wave One universal supports to ensure the environment fits the child.</div>
+        <div class="intent-text">To move beyond "accommodation" and toward <span style="font-weight:900; font-style:italic; color: white;">authentic inclusion</span>. We equip educators with Wave One universal supports.</div>
     </div>
-
-    <div class="footer-grid">
-        <a href="https://teams.microsoft.com" class="card" style="border-color:#3b82f6;">
-            <h4 style="color:#3b82f6;">Teams Hub</h4>
-            <p style="color:#94a3b8; font-size: 15px;">Official staff collaboration and secure file sharing.</p>
-        </a>
-        <a href="https://youtube.com" class="card" style="border-color:#ef4444;">
-            <h4 style="color:#ef4444;">YouTube</h4>
-            <p style="color:#94a3b8; font-size: 15px;">Access VoiceIt training and educational video series.</p>
-        </a>
-        <a href="calm.html" class="card" style="border-color:#ec4899;">
-            <h4 style="color:#ec4899;">Calm Space</h4>
-            <p style="color:#94a3b8; font-size: 15px;">Sensory grounding, timers, and regulation tools.</p>
-        </a>
+    <div class="links-grid">
+        <a href="https://teams.microsoft.com" class="card" style="border-color:#3b82f6;"><h4 style="color:#3b82f6;">Teams</h4><p style="color:#94a3b8;">Collaboration Hub</p></a>
+        <a href="https://youtube.com" class="card" style="border-color:#ef4444;"><h4 style="color:#ef4444;">YouTube</h4><p style="color:#94a3b8;">Training Videos</p></a>
+        <a href="calm.html" class="card" style="border-color:#ec4899;"><h4 style="color:#ec4899;">Calm Space</h4><p style="color:#94a3b8;">Sensory Tools</p></a>
     </div>
-
 </body>
 </html>

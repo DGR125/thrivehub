@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Vault | ThriveHub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -12,12 +11,12 @@
             background: #1e293b; border: 1px solid #334155; border-radius: 1.25rem; 
             overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; height: 100%;
         }
-        .res-card:hover { border-color: #22d3ee; transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(34, 211, 238, 0.2); }
-        .card-img { width: 100%; h-32; height: 120px; object-fit: cover; opacity: 0.6; filter: grayscale(40%); }
+        .res-card:hover { border-color: #22d3ee; transform: translateY(-5px); }
+        .card-img { width: 100%; height: 140px; object-fit: cover; opacity: 0.7; }
         .card-content { padding: 1.5rem; }
-        .tag { background: #22d3ee; color: #0f172a; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 0.75rem; display: inline-block; }
-        .link-item { color: #94a3b8; font-weight: 600; font-size: 0.85rem; margin-top: 0.6rem; display: block; text-decoration: none; }
-        .link-item:hover { color: #22d3ee; padding-left: 5px; }
+        .tag { background: #22d3ee; color: #0f172a; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 0.5rem; display: inline-block; }
+        .link-item { color: #94a3b8; font-weight: 600; font-size: 0.85rem; margin-top: 0.6rem; display: block; text-decoration: none; border-bottom: 1px solid transparent; width: fit-content; }
+        .link-item:hover { color: #22d3ee; border-bottom: 1px solid #22d3ee; }
     </style>
 </head>
 <body class="p-6 md:p-12">
@@ -37,10 +36,9 @@
                 <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=400" class="card-img" alt="engagement">
                 <div class="card-content">
                     <span class="tag">Wave 1</span>
-                    <h3 class="text-xl font-bold mb-2">Attendance & Inclusion</h3>
-                    <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" target="_blank" class="link-item">• Iceberg Model of Behavior</a>
-                    <a href="https://www.attendanceworks.org/resources/" target="_blank" class="link-item">• Attendance Works Toolkit</a>
-                    <a href="https://www.pbis.org/topics/student-engagement" target="_blank" class="link-item">• PBIS Engagement Strategies</a>
+                    <h3 class="text-xl font-bold mb-2 text-white">Attendance & Inclusion</h3>
+                    <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" target="_blank" class="link-item">Iceberg Model of Behavior</a>
+                    <a href="https://www.attendanceworks.org/resources/" target="_blank" class="link-item">Attendance Works Toolkit</a>
                 </div>
             </div>
 
@@ -48,10 +46,9 @@
                 <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&q=80&w=400" class="card-img" alt="speech">
                 <div class="card-content">
                     <span class="tag">Comm</span>
-                    <h3 class="text-xl font-bold mb-2">Speech & Language</h3>
-                    <a href="https://www.assistiveware.com/learn-aac" target="_blank" class="link-item">• Aided Language & AAC Hub</a>
-                    <a href="https://thrivetherapyandwellness.com/free-speech-pathology-screening-tools/" target="_blank" class="link-item">• [TOOL] Free Speech Screeners</a>
-                    <a href="https://praacticalaac.org/" target="_blank" class="link-item">• PrAACtical AAC Resources</a>
+                    <h3 class="text-xl font-bold mb-2 text-white">Speech & Language</h3>
+                    <a href="https://www.assistiveware.com/learn-aac" target="_blank" class="link-item">Aided Language & AAC Hub</a>
+                    <a href="https://thrivetherapyandwellness.com/free-speech-pathology-screening-tools/" target="_blank" class="link-item">[TOOL] Free Screeners</a>
                 </div>
             </div>
 
@@ -59,10 +56,9 @@
                 <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=400" class="card-img" alt="psych">
                 <div class="card-content">
                     <span class="tag">Psych</span>
-                    <h3 class="text-xl font-bold mb-2">Psychology & Self-Reg</h3>
-                    <a href="https://self-reg.ca/resources/" target="_blank" class="link-item">• Stuart Shanker Self-Reg</a>
-                    <a href="https://www.panoramaed.com/blog/comprehensive-guide-sel-assessments" target="_blank" class="link-item">• [TOOL] SEL Assessment Guide</a>
-                    <a href="https://developingchild.harvard.edu/resources/" target="_blank" class="link-item">• Harvard Development Center</a>
+                    <h3 class="text-xl font-bold mb-2 text-white">Psychology & Self-Reg</h3>
+                    <a href="https://self-reg.ca/resources/" target="_blank" class="link-item">Stuart Shanker Self-Reg</a>
+                    <a href="https://www.panoramaed.com/blog/comprehensive-guide-sel-assessments" target="_blank" class="link-item">[TOOL] SEL Assessment</a>
                 </div>
             </div>
 
@@ -70,10 +66,9 @@
                 <img src="https://images.unsplash.com/photo-1523050335456-adaba834597c?auto=format&fit=crop&q=80&w=400" class="card-img" alt="culture">
                 <div class="card-content">
                     <span class="tag">First Nations</span>
-                    <h3 class="text-xl font-bold mb-2">Aboriginal Education</h3>
-                    <a href="https://www.narragunnawali.org.au/" target="_blank" class="link-item">• Narragunnawali (RAPs)</a>
-                    <a href="https://aiatsis.gov.au/teaching-resources" target="_blank" class="link-item">• AIATSIS Teaching Tools</a>
-                    <a href="https://www.reconciliation.org.au/" target="_blank" class="link-item">• Reconciliation Australia</a>
+                    <h3 class="text-xl font-bold mb-2 text-white">Aboriginal Education</h3>
+                    <a href="https://www.narragunnawali.org.au/" target="_blank" class="link-item">Narragunnawali (RAPs)</a>
+                    <a href="https://aiatsis.gov.au/teaching-resources" target="_blank" class="link-item">AIATSIS Teaching Tools</a>
                 </div>
             </div>
 
@@ -81,10 +76,9 @@
                 <img src="https://images.unsplash.com/photo-1499209974431-9dac3adaf471?auto=format&fit=crop&q=80&w=400" class="card-img" alt="regulation">
                 <div class="card-content">
                     <span class="tag">Regulation</span>
-                    <h3 class="text-xl font-bold mb-2">Interoception</h3>
-                    <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" target="_blank" class="link-item">• SA Dept Curriculum</a>
-                    <a href="https://kelly-mahler.com/what-is-interoception/" target="_blank" class="link-item">• Kelly Mahler Guide</a>
-                    <a href="https://www.zonesofregulation.com/free-downloadable-resources.html" target="_blank" class="link-item">• Zones of Regulation</a>
+                    <h3 class="text-xl font-bold mb-2 text-white">Interoception</h3>
+                    <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" target="_blank" class="link-item">SA Dept Curriculum</a>
+                    <a href="https://kelly-mahler.com/what-is-interoception/" target="_blank" class="link-item">Kelly Mahler Guide</a>
                 </div>
             </div>
 
@@ -92,17 +86,16 @@
                 <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=400" class="card-img" alt="trauma">
                 <div class="card-content">
                     <span class="tag">Safety</span>
-                    <h3 class="text-xl font-bold mb-2">Trauma Informed</h3>
-                    <a href="https://www.childhood.org.au/" target="_blank" class="link-item">• Childhood Foundation</a>
-                    <a href="https://traumasensitiveschools.org/" target="_blank" class="link-item">• Trauma Sensitive Schools</a>
-                    <a href="https://traumaawareschools.org/gaslo" target="_blank" class="link-item">• Trauma Aware Education</a>
+                    <h3 class="text-xl font-bold mb-2 text-white">Trauma Informed</h3>
+                    <a href="https://www.childhood.org.au/" target="_blank" class="link-item">Childhood Foundation</a>
+                    <a href="https://traumasensitiveschools.org/" target="_blank" class="link-item">Trauma Sensitive Schools</a>
                 </div>
             </div>
 
         </div>
 
         <footer class="text-center py-20 border-t border-slate-800 mt-20">
-            <div class="text-slate-600 text-[10px] italic font-bold">© 2026 TERESA BRUNO™</div>
+            <div class="text-slate-600 text-[10px] italic font-bold uppercase tracking-widest">© 2026 TERESA BRUNO™</div>
         </footer>
     </div>
 </body>

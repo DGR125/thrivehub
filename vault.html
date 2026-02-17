@@ -3,37 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Vault</title>
+    <title>The Vault | ThriveHub</title>
     <style>
-        body { background-color: #0f172a; color: white; font-family: sans-serif; padding: 40px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1400px; margin: auto; }
-        .card { background: #1e293b; border-radius: 20px; overflow: hidden; border: 1px solid #334155; }
-        .img { height: 200px; width: 100%; object-fit: cover; background: #0f172a; }
-        .content { padding: 20px; }
-        .res-link { color: #22d3ee; display: block; margin-top: 10px; text-decoration: none; font-size: 14px; }
-        h3 { margin: 0; text-transform: uppercase; font-style: italic; }
+        body { background-color: #0f172a; color: white; font-family: sans-serif; margin: 0; padding: 50px; }
+        .header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px; border-bottom: 4px solid #22d3ee; padding-bottom: 20px; }
+        .vault-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .card { background: #1e293b; border-radius: 25px; overflow: hidden; border: 1px solid #334155; display: flex; flex-direction: column; }
+        .card img { height: 200px; width: 100%; object-fit: cover; border-bottom: 2px solid #334155; }
+        .content { padding: 25px; }
+        .tag { color: #22d3ee; font-weight: bold; font-size: 12px; text-transform: uppercase; display: block; margin-bottom: 10px; }
+        h3 { margin: 0 0 15px 0; text-transform: uppercase; font-style: italic; font-size: 22px; }
+        .links a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 8px; font-size: 14px; }
+        .links a:hover { color: #22d3ee; text-decoration: underline; }
     </style>
 </head>
 <body>
-    <h1 style="font-size:60px; font-weight:900; text-transform:uppercase;">The <span style="color:#22d3ee">Vault</span></h1>
-    <a href="index.html" style="color:#22d3ee; text-decoration:none; font-weight:bold;">← HOME</a>
-    <div class="grid" style="margin-top:50px;">
+
+    <div class="header">
+        <h1 style="font-size: 80px; font-weight: 900; margin: 0; text-transform: uppercase; italic: true;">The <span style="color:#22d3ee">Vault</span></h1>
+        <a href="index.html" style="color:#22d3ee; text-decoration:none; font-weight:bold; border: 2px solid #22d3ee; padding: 10px 30px; border-radius: 50px;">← BACK HOME</a>
+    </div>
+
+    <div class="vault-grid">
         <div class="card">
-            <img class="img" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500">
-            <div class="content"><h3>Wellbeing</h3><a href="https://sies.sa.edu.au/" class="res-link">→ SIES SA</a></div>
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500">
+            <div class="content">
+                <span class="tag">Inclusion</span>
+                <h3>Wellbeing</h3>
+                <div class="links">
+                    <a href="https://sies.sa.edu.au/">→ SIES SA</a>
+                    <a href="https://shinesa.org.au/">→ ShineSA</a>
+                </div>
+            </div>
         </div>
+
         <div class="card">
-            <img class="img" src="https://images.unsplash.com/photo-1551841283-d52153e5ff19?w=500">
-            <div class="content"><h3>Neurodiversity</h3><a href="https://suelarkey.com.au" class="res-link">→ Sue Larkey</a></div>
+            <img src="https://images.unsplash.com/photo-1551841283-d52153e5ff19?w=500">
+            <div class="content">
+                <span class="tag">ND Focus</span>
+                <h3>Neurodiversity</h3>
+                <div class="links">
+                    <a href="https://suelarkey.com.au">→ Sue Larkey</a>
+                    <a href="https://www.positivepartnerships.com.au">→ Positive Partnerships</a>
+                </div>
+            </div>
         </div>
+
         <div class="card">
-            <img class="img" src="https://images.unsplash.com/photo-1573497620053-ea5310f94f17?w=500">
-            <div class="content"><h3>Speech</h3><a href="https://www.assistiveware.com/learn-aac" class="res-link">→ AAC Hub</a></div>
+            <img src="https://images.unsplash.com/photo-1573497620053-ea5310f94f17?w=500">
+            <div class="content">
+                <span class="tag">Comm</span>
+                <h3>Speech & Language</h3>
+                <div class="links">
+                    <a href="https://www.assistiveware.com/learn-aac">→ AAC Hub</a>
+                    <a href="https://pld-literacy.org/">→ Oral Language</a>
+                </div>
+            </div>
         </div>
+
         <div class="card">
-            <img class="img" src="https://images.unsplash.com/photo-1499209974431-9dac3adaf471?w=500">
-            <div class="content"><h3>Trauma</h3><a href="https://www.berrystreet.org.au/" class="res-link">→ Berry Street</a></div>
+            <img src="https://images.unsplash.com/photo-1499209974431-9dac3adaf471?w=500">
+            <div class="content">
+                <span class="tag">Safety</span>
+                <h3>Trauma Informed</h3>
+                <div class="links">
+                    <a href="https://www.childhood.org.au/">→ Childhood Foundation</a>
+                    <a href="https://www.berrystreet.org.au/">→ Berry Street</a>
+                </div>
+            </div>
         </div>
     </div>
+
 </body>
 </html>

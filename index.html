@@ -11,25 +11,27 @@
         .nav-card { background: #1e293b; border: 1px solid #334155; transition: 0.3s; border-radius: 1.5rem; height: 100%; }
         .nav-card:hover { border-color: #22d3ee; transform: translateY(-5px); box-shadow: 0 20px 50px -12px rgba(34, 211, 238, 0.2); }
         .intent-box { border-left: 4px solid #22d3ee; background: rgba(34, 211, 238, 0.05); padding: 2rem; border-radius: 0 1.5rem 1.5rem 0; }
-        .glow { text-shadow: 0 0 20px rgba(34, 211, 238, 0.4); }
     </style>
 </head>
 <body class="hero-gradient min-h-screen">
-    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-2xl font-black italic tracking-tighter uppercase">Thrive<span class="text-[#22d3ee]">Hub</span></div>
-        <a href="vault.html" class="text-xs font-black uppercase text-[#22d3ee] border-2 border-[#22d3ee] px-4 py-2 rounded-full hover:bg-[#22d3ee] hover:text-[#0f172a] transition">The Vault</a>
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto text-2xl font-black italic uppercase">
+        <div>Thrive<span class="text-[#22d3ee]">Hub</span></div>
+        <a href="vault.html" class="text-xs font-black uppercase text-[#22d3ee] border-2 border-[#22d3ee] px-4 py-2 rounded-full hover:bg-[#22d3ee] hover:text-[#0f172a] transition no-underline">The Vault</a>
     </nav>
 
-    <header class="max-w-7xl mx-auto px-6 py-16">
+    <header class="max-w-7xl mx-auto px-6 py-16 text-center md:text-left">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <span class="bg-[#22d3ee] text-[#0f172a] px-3 py-1 rounded text-xs font-black uppercase mb-4 inline-block tracking-widest">Wave One Mastery</span>
-                <h1 class="text-6xl md:text-8xl font-black uppercase italic leading-none tracking-tighter mb-6 glow">Empower <br><span class="text-[#22d3ee]">Every</span> Learner.</h1>
+                <span class="bg-[#22d3ee] text-[#0f172a] px-3 py-1 rounded text-xs font-black uppercase mb-4 inline-block">Wave One Mastery</span>
+                <h1 class="text-6xl md:text-8xl font-black uppercase italic leading-none tracking-tighter mb-6">Empower <br><span class="text-[#22d3ee]">Every</span> Learner.</h1>
                 <p class="text-slate-400 text-lg mb-10 italic">Your unified portal for inclusive practice and community collaboration.</p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="vault.html" class="bg-[#22d3ee] text-[#0f172a] px-10 py-4 rounded-full font-black uppercase hover:scale-105 transition shadow-lg">Open The Vault</a>
-                    <a href="https://teams.microsoft.com" target="_blank" class="border-2 border-slate-700 px-10 py-4 rounded-full font-black uppercase hover:border-[#22d3ee] transition">Join Teams</a>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="vault.html" class="bg-[#22d3ee] text-[#0f172a] px-10 py-4 rounded-full font-black uppercase hover:scale-105 transition no-underline shadow-lg">Open The Vault</a>
+                    <a href="https://teams.microsoft.com" target="_blank" class="border-2 border-slate-700 px-10 py-4 rounded-full font-black uppercase hover:border-[#22d3ee] transition no-underline">Join Teams</a>
                 </div>
+            </div>
+            <div class="hidden md:block">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" class="rounded-3xl grayscale opacity-70 shadow-2xl">
             </div>
         </div>
     </header>
@@ -50,18 +52,18 @@
             <a href="vault.html" class="text-white font-bold text-xs uppercase hover:underline">Browse →</a>
         </div>
         <div class="nav-card p-8">
-            <h4 class="text-xl font-black uppercase mb-3">The Blog</h4>
+            <h4 class="text-xl font-black uppercase mb-3 text-white">The Blog</h4>
             <p class="text-slate-400 text-sm mb-6">Weekly deep-dives into neuro-affirming practice.</p>
-            <a href="#" class="text-white font-bold text-xs uppercase hover:underline">Read Stories →</a>
+            <a href="#" class="text-white font-bold text-xs uppercase hover:underline">Read →</a>
         </div>
         <div class="nav-card p-8">
-            <h4 class="text-xl font-black uppercase mb-3">Teams</h4>
-            <p class="text-slate-400 text-sm mb-6">Collaborate with the Inclusion Team in real-time.</p>
-            <a href="https://teams.microsoft.com" target="_blank" class="text-white font-bold text-xs uppercase hover:underline">Launch →</a>
+            <h4 class="text-xl font-black uppercase mb-3 text-white">Teams Hub</h4>
+            <p class="text-slate-400 text-sm mb-6">Internal collaboration and data sharing.</p>
+            <a href="https://teams.microsoft.com" target="_blank" class="text-white font-bold text-xs uppercase hover:underline">Join →</a>
         </div>
         <div class="nav-card p-8">
-            <h4 class="text-xl font-black uppercase mb-3">YouTube</h4>
-            <p class="text-slate-400 text-sm mb-6">Video walkthroughs of inclusive pedagogy.</p>
+            <h4 class="text-xl font-black uppercase mb-3 text-white">YouTube</h4>
+            <p class="text-slate-400 text-sm mb-6">Training video library for inclusive pedagogy.</p>
             <a href="https://www.youtube.com/@ThriveHub" target="_blank" class="text-white font-bold text-xs uppercase hover:underline">Watch →</a>
         </div>
     </section>

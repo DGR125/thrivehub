@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ1PG5NVM4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TZ1PG5NVM4');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThriveHub | Home</title>
+    <title>ThriveHub | Inclusive Education Resources</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0f172a">
     <style>
@@ -26,11 +34,29 @@
         h1 { font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 900; text-transform: uppercase; line-height: 0.85; margin: 0; font-style: italic; position: relative; z-index: 10; }
         .cyan { color: #22d3ee; }
 
+        /* Fixed Button Proportions */
+        .vault-btn {
+            background: #22d3ee; 
+            color: #0f172a; 
+            padding: 18px 40px; 
+            border-radius: 50px; 
+            font-weight: 900; 
+            text-decoration: none; 
+            display: inline-block; 
+            margin-top: 40px; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 16px;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(34, 211, 238, 0.2);
+        }
+        .vault-btn:hover { transform: scale(1.05); background: white; }
+
         .intent-section { 
             background: #1e293b; 
             border-left: 14px solid #22d3ee; 
             padding: 50px; 
-            margin: -80px 10% 60px 10%; 
+            margin: -90px 10% 60px 10%; 
             border-radius: 0 40px 40px 0; 
             position: relative; 
             z-index: 50; 
@@ -61,7 +87,7 @@
         <p style="color:#22d3ee; font-weight:bold; letter-spacing:5px; margin-bottom:20px;">WAVE ONE MASTERY</p>
         <h1>Empower <br><span class="cyan">Every</span> Learner.</h1>
         <div>
-            <a href="vault.html" style="background:#22d3ee; color:black; padding:20px 50px; border-radius:50px; font-weight:900; text-decoration:none; display:inline-block; margin-top:40px; text-transform: uppercase;">Open The Vault</a>
+            <a href="vault.html" class="vault-btn">Open The Vault</a>
         </div>
     </div>
 
@@ -71,19 +97,23 @@
         </div>
     </div>
 
-    <div class="section-title">Teams Channels & YouTube</div>
+    <div class="section-title">Collaboration & Support</div>
     <div class="links-grid">
+        <a href="https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="card" style="border-left-color: #a855f7;">
+            <h4>Students with Disabilities</h4>
+            <p style="color:#94a3b8;">Primary TEAMS hub for specialized support and resources.</p>
+        </a>
         <a href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ" target="_blank" class="card" style="border-left-color: #ef4444;">
             <h4>YouTube Channel</h4>
-            <p style="color:#94a3b8;">Resource highlights and pedagogical presentations.</p>
+            <p style="color:#94a3b8;">Pedagogical highlights and video presentations.</p>
         </a>
         <a href="https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="card">
             <h4>Wellbeing Connections</h4>
-            <p style="color:#94a3b8;">Our professional collaboration hub on Microsoft Teams.</p>
+            <p style="color:#94a3b8;">Our collaborative hub on Microsoft Teams.</p>
         </a>
         <a href="https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="card">
             <h4>Social Work / Truancy</h4>
-            <p style="color:#94a3b8;">Support channels for engagement and attendance.</p>
+            <p style="color:#94a3b8;">Support channels for attendance and engagement.</p>
         </a>
     </div>
 

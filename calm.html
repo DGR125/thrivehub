@@ -2,68 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calm Space | ThriveHub</title>
-    
-    <link rel="manifest" href="manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3062/3062634.png">
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --navy: #0f172a; --teal: #22d3ee; }
-        html { touch-action: manipulation; }
-        body { 
-            background-color: var(--navy); 
-            color: #ffffff; 
-            font-family: sans-serif; 
-            min-height: 100vh; 
-            display: flex; 
-            flex-direction: column;
-            align-items: center; 
-            justify-content: center; 
-            overflow-x: hidden;
-            -webkit-tap-highlight-color: transparent;
-        }
-        
-        /* Breathing Animation */
-        .circle {
-            width: 200px; height: 200px; border-radius: 50%;
-            background: radial-gradient(circle, var(--teal) 0%, transparent 70%);
-            border: 4px solid var(--teal);
-            animation: breathe 8s infinite ease-in-out;
-            box-shadow: 0 0 50px rgba(34, 211, 238, 0.3);
-            margin: 2rem auto;
-        }
-        @keyframes breathe { 
-            0%, 100% { transform: scale(1); opacity: 0.4; } 
-            50% { transform: scale(1.5); opacity: 1; } 
-        }
-
-        .nav-btn { 
-            background: #1e293b; 
-            padding: 1rem; 
-            border-radius: 1.25rem; 
-            border: 1px solid #334155; 
-            transition: 0.3s; 
-            font-weight: bold; 
-            font-size: 0.85rem;
-            text-align: center;
-        }
-        .nav-btn:hover { border-color: var(--teal); background: #2d3a4f; transform: translateY(-2px); }
+        body { background-color: #0f172a; color: #f472b6; font-family: system-ui, sans-serif; text-align: center; }
+        .calm-card { background: #1e293b; border: 2px solid #f472b6; border-radius: 2rem; padding: 3rem; margin: 2rem auto; max-width: 600px; }
     </style>
 </head>
-<body class="p-6">
-
-    <a href="index.html" class="absolute top-8 left-8 text-[#22d3ee] font-black tracking-widest uppercase text-sm hover:underline">← EXIT SPACE</a>
-
-    <main class="max-w-4xl mx-auto text-center mt-12">
-        <h1 class="text-4xl md:text-6xl font-black italic mb-2 text-[#22d3ee] uppercase tracking-tighter">Breath Work</h1>
-        <p class="text-slate-400 mb-8 tracking-[0.3em] font-bold uppercase text-xs italic">Focus on the expand and contract</p>
-        
-        <div class="circle"></div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 w-full max-w-2
+<body class="p-12">
+    <a href="index.html" class="text-xs font-black uppercase no-underline text-slate-500 mb-8 block tracking-widest">← Back to Hub</a>
+    <h1 class="text-6xl font-black italic uppercase mb-12">Calm Space</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="calm-card">
+            <h3 class="text-2xl font-black uppercase mb-4">Breathing Tool</h3>
+            <p class="text-slate-400 mb-6">Visual guide for box breathing.</p>
+            <a href="https://www.calm.com/breathe" target="_blank" class="bg-pink-400 text-[#0f172a] px-8 py-3 rounded-full font-black uppercase no-underline">Begin</a>
+        </div>
+        <div class="calm-card">
+            <h3 class="text-2xl font-black uppercase mb-4">Mindful Chime</h3>
+            <p class="text-slate-400 mb-6">Reset the room with sound.</p>
+            <a href="https://insighttimer.com/meditation-timer" target="_blank" class="bg-pink-400 text-[#0f172a] px-8 py-3 rounded-full font-black uppercase no-underline">Listen</a>
+        </div>
+    </div>
+</body>
+</html>

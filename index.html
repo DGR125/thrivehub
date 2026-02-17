@@ -15,46 +15,52 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0f172a; color: white; font-family: system-ui, sans-serif; scroll-behavior: smooth; margin: 0; }
+        body { background-color: #0f172a; color: white; font-family: system-ui, -apple-system, sans-serif; scroll-behavior: smooth; margin: 0; padding: 0; }
         
-        /* 1. ORIGINAL HERO IMAGE */
+        /* ORIGINAL HERO IMAGE */
         .hero-bg { 
             background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), 
                         url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1600');
-            background-size: cover; background-position: center; min-height: 60vh;
+            background-size: cover; background-position: center; min-height: 65vh;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
 
-        /* 2. BOLDER NAVIGATION TABS */
-        .nav-tab {
-            background: #1e293b; border: 2px solid #334155; padding: 12px 24px;
-            border-radius: 12px; transition: 0.3s; display: flex; align-items: center; gap: 10px;
-            text-decoration: none; color: white; font-weight: 900; text-transform: uppercase;
-            letter-spacing: 0.05em; font-size: 0.9rem;
+        /* BOLDER NAVIGATION TABS */
+        .nav-container {
+            max-width: 1100px; margin: -40px auto 0; display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; padding: 0 1.5rem;
+            position: relative; z-index: 50;
         }
-        .nav-tab:hover { border-color: #22d3ee; background: #0f172a; transform: translateY(-3px); }
-        .nav-icon { width: 24px; height: 24px; border-radius: 4px; object-fit: cover; }
+        .nav-tab {
+            background: #1e293b; border: 3px solid #334155; padding: 16px;
+            border-radius: 16px; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 12px;
+            text-decoration: none; color: white; font-weight: 900; text-transform: uppercase;
+            letter-spacing: 0.05em; font-size: 0.9rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .nav-tab:hover { border-color: #22d3ee; background: #0f172a; transform: translateY(-5px); }
+        .nav-icon { width: 28px; height: 28px; }
 
         .teal-glow { color: #22d3ee; text-shadow: 0 0 20px rgba(34, 211, 238, 0.4); }
-        .btn-main { background: #22d3ee; color: #0f172a; padding: 1rem 2.5rem; border-radius: 99px; font-weight: 900; transition: 0.3s; text-transform: uppercase; text-decoration: none; display: inline-block; }
-        .btn-main:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(34, 211, 238, 0.6); }
+        .btn-main { background: #22d3ee; color: #0f172a; padding: 1.25rem 3rem; border-radius: 99px; font-weight: 900; transition: 0.3s; text-transform: uppercase; text-decoration: none; display: inline-block; margin-top: 2rem; }
+        .btn-main:hover { transform: scale(1.05); box-shadow: 0 0 40px rgba(34, 211, 238, 0.6); }
     </style>
 </head>
 <body>
 
-    <section class="hero-bg flex flex-col items-center justify-center text-center p-6 border-b border-slate-800">
+    <section class="hero-bg text-center px-6">
         <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter uppercase mb-4">Thrive<span class="teal-glow">Hub</span></h1>
-        <p class="text-xl md:text-2xl text-slate-200 font-bold max-w-2xl mb-10 uppercase tracking-widest bg-black/40 px-6 py-2 rounded-full">
+        <p class="text-xl md:text-2xl text-slate-200 font-bold max-w-2xl uppercase tracking-widest bg-black/40 px-6 py-2 rounded-lg">
             Empowering Educators. Supporting Students.
         </p>
         <a href="library.html" class="btn-main">Open The Vault</a>
     </section>
 
-    <nav class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 px-6 -mt-8 relative z-10">
+    <nav class="nav-container">
         <a href="blog.html" class="nav-tab">
-            <img src="https://img.icons8.com/fluency/48/create-new.png" class="nav-icon" alt="blog"> Blog
+            <img src="https://img.icons8.com/fluency/48/news.png" class="nav-icon" alt="blog"> Blog
         </a>
-        <a href="#" class="nav-link nav-tab">
-            <img src="https://img.icons8.com/fluency/48/microsoft-teams.png" class="nav-icon" alt="teams"> Teams Page
+        <a href="#" class="nav-tab">
+            <img src="https://img.icons8.com/fluency/48/microsoft-teams-2019.png" class="nav-icon" alt="teams"> Teams Page
         </a>
         <a href="https://www.youtube.com/@ThriveHub" target="_blank" class="nav-tab">
             <img src="https://img.icons8.com/color/48/youtube-play.png" class="nav-icon" alt="youtube"> YouTube
@@ -65,26 +71,26 @@
     </nav>
 
     <section class="max-w-4xl mx-auto py-24 px-6 text-center">
-        <h2 class="text-4xl font-black uppercase tracking-tighter text-[#22d3ee] mb-8 italic">Full Intent</h2>
+        <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter text-[#22d3ee] mb-10 italic">Full Intent</h2>
         <div class="space-y-8 text-xl md:text-2xl text-slate-300 leading-relaxed font-medium">
             <p>
-                <span class="text-white font-black uppercase">ThriveHub</span> bridges the gap between complex pedagogy and the fast-paced reality of the classroom.
+                <span class="text-white font-black uppercase">ThriveHub</span> is designed to bridge the gap between complex pedagogical theory and the daily reality of the classroom.
             </p>
             <p>
-                We centralise evidence-based resources across <span class="text-white border-b-2 border-[#22d3ee]">Aboriginal Education, Neurodiversity, and Student Wellbeing</span> to reduce teacher burnout and provide immediate clarity.
+                By centralising high-quality, evidence-based resources for <span class="text-white border-b-2 border-[#22d3ee]">Aboriginal Education, Neurodiversity, and Attendance Engagement</span>, we empower teachers to work smarter, not harder.
             </p>
             <p class="italic text-slate-400 text-lg">
-                Built by practitioners. Driven by impact. For every student.
+                Built by practitioners. Driven by student impact.
             </p>
         </div>
     </section>
 
     <div class="w-full h-[450px] overflow-hidden border-y border-slate-800">
         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1600" 
-             alt="Collaborative Education" class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition duration-1000">
+             alt="Collaborative Space" class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition duration-1000">
     </div>
 
-    <footer class="text-center py-16 bg-[#0a0f1d]">
+    <footer class="text-center py-20 bg-[#0a0f1d]">
         <a href="privacy.html" class="text-slate-500 text-xs font-bold uppercase no-underline hover:text-[#22d3ee]">Privacy Policy</a>
         <div class="mt-4 text-slate-700 text-[10px] tracking-widest italic font-bold uppercase">© 2026 TERESA BRUNO™</div>
     </footer>

@@ -11,11 +11,9 @@
         .nav-card { background: #1e293b; border: 1px solid #334155; transition: 0.3s; border-radius: 1.5rem; height: 100%; }
         .nav-card:hover { border-color: #22d3ee; transform: translateY(-5px); box-shadow: 0 20px 50px -12px rgba(34, 211, 238, 0.2); }
         .intent-box { border-left: 4px solid #22d3ee; background: rgba(34, 211, 238, 0.05); padding: 3rem; border-radius: 0 2rem 2rem 0; margin: 4rem 0; }
-        .glow-text { text-shadow: 0 0 20px rgba(34, 211, 238, 0.4); }
     </style>
 </head>
 <body class="hero-gradient min-h-screen">
-
     <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
         <div class="text-2xl font-black italic uppercase tracking-tighter">Thrive<span class="text-[#22d3ee]">Hub</span></div>
         <div class="flex gap-4">
@@ -28,59 +26,50 @@
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <span class="bg-[#22d3ee] text-[#0f172a] px-3 py-1 rounded text-xs font-black uppercase mb-4 inline-block tracking-widest">Wave One Mastery</span>
-                <h1 class="text-6xl md:text-8xl font-black uppercase italic leading-none tracking-tighter mb-6 glow-text">Empower <br><span class="text-[#22d3ee]">Every</span> Learner.</h1>
-                <p class="text-slate-400 text-xl max-w-xl mb-10 font-medium italic leading-relaxed">Your unified portal for inclusive practice, evidence-based strategy, and community collaboration.</p>
+                <h1 class="text-6xl md:text-8xl font-black uppercase italic leading-none tracking-tighter mb-6">Empower <br><span class="text-[#22d3ee]">Every</span> Learner.</h1>
+                <p class="text-slate-400 text-xl max-w-xl mb-10 font-medium italic leading-relaxed">Your unified portal for inclusive practice and community collaboration.</p>
                 <div class="flex flex-wrap gap-4">
                     <a href="library.html" class="bg-[#22d3ee] text-[#0f172a] px-10 py-4 rounded-full font-black uppercase hover:scale-105 transition shadow-lg no-underline">Open The Vault</a>
                     <a href="https://teams.microsoft.com" target="_blank" class="border-2 border-slate-700 px-10 py-4 rounded-full font-black uppercase hover:border-[#22d3ee] transition no-underline text-white">Join Teams</a>
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-4">
-                <img src="hero.jpg" class="rounded-3xl grayscale opacity-60 border border-slate-700 aspect-square object-cover shadow-2xl" alt="Education">
-                <img src="thrivehub-logo.png" class="rounded-3xl border border-slate-700 aspect-square object-contain bg-slate-900 p-8 shadow-2xl" alt="Logo">
+                <img src="hero.jpg" class="rounded-3xl grayscale opacity-60 border border-slate-700 aspect-square object-cover shadow-2xl">
+                <img src="thrivehub-logo.png" class="rounded-3xl border border-slate-700 aspect-square object-contain bg-slate-900 p-8 shadow-2xl">
             </div>
         </div>
     </header>
 
     <section class="max-w-7xl mx-auto px-6">
         <div class="intent-box">
-            <h2 class="text-[#22d3ee] font-black uppercase tracking-widest text-sm mb-6 italic">The ThriveHub Intent</h2>
+            <h2 class="text-[#22d3ee] font-black uppercase tracking-widest text-sm mb-6 italic">The Intent</h2>
             <p class="text-3xl md:text-5xl font-light leading-tight text-slate-100">
                 To move beyond "accommodation" and toward <span class="text-white font-bold italic">authentic inclusion</span>. We equip educators with Wave One universal supports to ensure the environment fits the child.
             </p>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <section class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-6">
         <div class="nav-card p-8">
-            <h3 class="text-[#22d3ee] font-black uppercase text-xs mb-4 tracking-widest">Universal</h3>
-            <h4 class="text-2xl font-black uppercase mb-4 text-white">The Vault</h4>
-            <p class="text-slate-400 text-sm mb-8 leading-relaxed">12 Master categories of Wave One resources and SA inclusion toolkits.</p>
-            <a href="library.html" class="text-white font-black text-xs uppercase hover:underline no-underline tracking-widest">Browse Vault →</a>
+            <h4 class="text-xl font-black uppercase mb-3 text-[#22d3ee]">The Vault</h4>
+            <p class="text-slate-400 text-sm mb-6">12 Master categories of inclusive resources.</p>
+            <a href="library.html" class="text-white font-bold text-xs uppercase no-underline">Browse →</a>
         </div>
         <div class="nav-card p-8">
-            <h3 class="text-pink-400 font-black uppercase text-xs mb-4 tracking-widest">Regulation</h3>
-            <h4 class="text-2xl font-black uppercase mb-4 text-white">Calm Space</h4>
-            <p class="text-slate-400 text-sm mb-8 leading-relaxed">Interactive regulation tools, chimes, and sensory grounding exercises.</p>
-            <a href="calm.html" class="text-white font-black text-xs uppercase hover:underline no-underline tracking-widest">Find Calm →</a>
+            <h4 class="text-xl font-black uppercase mb-3 text-pink-400">Calm Space</h4>
+            <p class="text-slate-400 text-sm mb-6">Regulation tools and breathing exercises.</p>
+            <a href="calm.html" class="text-white font-black text-xs uppercase no-underline">Enter →</a>
         </div>
         <div class="nav-card p-8">
-            <h3 class="text-slate-500 font-black uppercase text-xs mb-4 tracking-widest">Internal</h3>
-            <h4 class="text-2xl font-black uppercase mb-4 text-white">Teams</h4>
-            <p class="text-slate-400 text-sm mb-8 leading-relaxed">Connect with the Inclusion Team, share data, and collaborate.</p>
-            <a href="https://teams.microsoft.com" target="_blank" class="text-white font-black text-xs uppercase hover:underline no-underline tracking-widest">Launch →</a>
+            <h4 class="text-xl font-black uppercase mb-3">Teams</h4>
+            <p class="text-slate-400 text-sm mb-6">Staff collaboration hub.</p>
+            <a href="https://teams.microsoft.com" class="text-white font-black text-xs uppercase no-underline">Launch →</a>
         </div>
         <div class="nav-card p-8">
-            <h3 class="text-slate-500 font-black uppercase text-xs mb-4 tracking-widest">Insights</h3>
-            <h4 class="text-2xl font-black uppercase mb-4 text-white">The Blog</h4>
-            <p class="text-slate-400 text-sm mb-8 leading-relaxed">Weekly deep-dives into neuro-affirming practice and strategies.</p>
-            <a href="#" class="text-white font-black text-xs uppercase hover:underline no-underline tracking-widest">Read Stories →</a>
+            <h4 class="text-xl font-black uppercase mb-3">The Blog</h4>
+            <p class="text-slate-400 text-sm mb-6">Neuro-affirming insights.</p>
+            <a href="#" class="text-white font-black text-xs uppercase no-underline">Read →</a>
         </div>
     </section>
-
-    <footer class="text-center py-20 opacity-30 border-t border-slate-800 mt-12">
-        <p class="text-[10px] font-black uppercase tracking-[0.5em]">© 2026 TERESA BRUNO • ThriveHub Education</p>
-    </footer>
-
 </body>
 </html>

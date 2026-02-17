@@ -20,14 +20,13 @@
         .res-card { 
             background: #1e293b; border: 1px solid #334155; padding: 1.5rem; 
             border-radius: 1.25rem; transition: 0.3s; display: flex; flex-direction: column;
-            min-height: 450px;
+            min-height: 520px;
         }
         .res-card.hidden { display: none; }
-        .res-card:hover { border-color: #22d3ee; transform: translateY(-5px); }
+        .res-card:hover { border-color: #22d3ee; transform: translateY(-5px); box-shadow: 0 10px 30px -15px rgba(34, 211, 238, 0.3); }
         .tag { background: #22d3ee; color: #0f172a; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 1rem; width: fit-content; }
-        .link-item { color: #94a3b8; font-weight: 600; font-size: 0.85rem; margin-top: 0.7rem; display: block; text-decoration: none; }
+        .link-item { color: #94a3b8; font-weight: 600; font-size: 0.85rem; margin-top: 0.7rem; display: block; text-decoration: none; line-height: 1.4; }
         .link-item:hover { color: #22d3ee; padding-left: 5px; }
-        #searchInput::placeholder { color: #64748b; }
     </style>
 </head>
 <body class="p-6 md:p-12">
@@ -35,11 +34,11 @@
         <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 border-b border-slate-800 pb-8 gap-6">
             <div>
                 <h1 class="text-4xl md:text-5xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
-                <p class="text-slate-400 font-bold mt-2">RESOURCE LIBRARY</p>
+                <p class="text-slate-400 font-bold mt-2 uppercase tracking-widest">Master Resource Library</p>
             </div>
             
             <div class="w-full md:w-96">
-                <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Search categories or resources..." 
+                <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Search by topic (e.g. AAC, Iceberg)..." 
                 class="w-full bg-[#1e293b] border border-slate-700 text-white rounded-xl px-5 py-3 focus:outline-none focus:border-[#22d3ee] font-bold">
             </div>
 
@@ -82,76 +81,5 @@
                 <span class="tag">First Nations</span>
                 <h3 class="text-xl font-bold mb-2">Aboriginal Education</h3>
                 <a href="https://www.narragunnawali.org.au/" target="_blank" class="link-item">• Narragunnawali (RAPs)</a>
-                <a href="https://www.indigenouspsychology.com.au/" target="_blank" class="link-item">• Indigenous Psychology</a>
-                <a href="https://aiatsis.gov.au/teaching-resources" target="_blank" class="link-item">• AIATSIS Teaching Tools</a>
-                <a href="https://www.aboriginaleducation.sa.edu.au/" target="_blank" class="link-item">• SA Aboriginal Ed Strategy</a>
-                <a href="https://www.reconciliation.org.au/" target="_blank" class="link-item">• Reconciliation Australia</a>
-            </div>
-
-            <div class="res-card">
-                <span class="tag">Regulation</span>
-                <h3 class="text-xl font-bold mb-2">Interoception</h3>
-                <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" target="_blank" class="link-item">• SA Dept Curriculum</a>
-                <a href="https://kelly-mahler.com/what-is-interoception/" target="_blank" class="link-item">• Kelly Mahler Guide</a>
-                <a href="https://www.theottoolbox.com/interoception-activities/" target="_blank" class="link-item">• OT Toolbox Activities</a>
-                <a href="https://www.zonesofregulation.com/free-downloadable-resources.html" target="_blank" class="link-item">• Zones of Regulation</a>
-                <a href="https://www.sensoryprocessinghub.hertsforlearning.co.uk/" target="_blank" class="link-item">• Sensory Hub</a>
-            </div>
-
-            <div class="res-card">
-                <span class="tag">Safety</span>
-                <h3 class="text-xl font-bold mb-2">Trauma Informed</h3>
-                <a href="https://www.childhood.org.au/" target="_blank" class="link-item">• Childhood Foundation</a>
-                <a href="https://www.berrystreet.org.au/learning-model" target="_blank" class="link-item">• Berry Street Model</a>
-                <a href="https://traumasensitiveschools.org/" target="_blank" class="link-item">• Trauma Sensitive Schools</a>
-                <a href="https://www.blueknot.org.au/" target="_blank" class="link-item">• Blue Knot Foundation</a>
-                <a href="https://www.phoenixaustralia.org/recovery/helping-others/children/" target="_blank" class="link-item">• Phoenix Australia Hub</a>
-            </div>
-
-            <div class="res-card">
-                <span class="tag">Neurodiversity</span>
-                <h3 class="text-xl font-bold mb-2">ADHD & Autism</h3>
-                <a href="https://www.adhdaustralia.org.au/" target="_blank" class="link-item">• ADHD Australia Hub</a>
-                <a href="https://www.additudemag.com" target="_blank" class="link-item">• ADDitude Educator Portal</a>
-                <a href="https://www.positivepartnerships.com.au" target="_blank" class="link-item">• Positive Partnerships AU</a>
-                <a href="https://suelarkey.com.au" target="_blank" class="link-item">• Sue Larkey Strategies</a>
-                <a href="https://www.autismspectrum.org.au" target="_blank" class="link-item">• ASPECT Resources</a>
-            </div>
-
-            <div class="res-card">
-                <span class="tag">Instruction</span>
-                <h3 class="text-xl font-bold mb-2">Literacy & Wellbeing</h3>
-                <a href="https://www.speldsa.org.au" target="_blank" class="link-item">• SPELD SA (Phonics)</a>
-                <a href="https://www.readingrockets.org" target="_blank" class="link-item">• Reading Rockets</a>
-                <a href="https://beyou.edu.au" target="_blank" class="link-item">• Be You Staff Wellbeing</a>
-                <a href="https://www.smilingmind.com.au/at-work" target="_blank" class="link-item">• Smiling Mind for Staff</a>
-                <a href="https://www.blackdoginstitute.org.au/" target="_blank" class="link-item">• Black Dog Institute</a>
-            </div>
-
-        </div>
-
-        <footer class="text-center py-20 border-t border-slate-800 mt-20">
-            <a href="privacy.html" class="text-slate-500 hover:text-[#22d3ee] text-xs font-bold uppercase no-underline">Privacy Policy</a>
-            <div class="mt-4 text-slate-600 text-[10px] italic font-bold">© 2026 TERESA BRUNO™</div>
-        </footer>
-    </div>
-
-    <script>
-        function filterCards() {
-            const input = document.getElementById('searchInput');
-            const filter = input.value.toLowerCase();
-            const grid = document.getElementById('vaultGrid');
-            const cards = grid.getElementsByClassName('res-card');
-
-            for (let i = 0; i < cards.length; i++) {
-                const cardContent = cards[i].textContent || cards[i].innerText;
-                if (cardContent.toLowerCase().indexOf(filter) > -1) {
-                    cards[i].classList.remove('hidden');
-                } else {
-                    cards[i].classList.add('hidden');
-                }
-            }
-        }
-    </script>
-</body>
-</html>
+                <a href="https://www.indigenouspsychology.com.au/" target="_blank" class="link-item">• Indigenous Psychology Hub</a>
+                <a href="

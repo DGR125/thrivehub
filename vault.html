@@ -8,10 +8,11 @@
         body { background-color: #0f172a; color: white; font-family: sans-serif; padding: 40px; margin: 0; }
         .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; border-bottom: 4px solid #22d3ee; padding-bottom: 20px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #1e293b; border-radius: 25px; overflow: hidden; border: 1px solid #334155; display: flex; flex-direction: column; }
+        .card { background: #1e293b; border-radius: 25px; overflow: hidden; border: 1px solid #334155; display: flex; flex-direction: column; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: #22d3ee; }
         .card img { height: 160px; width: 100%; object-fit: cover; border-bottom: 1px solid #334155; background: #334155; }
         .content { padding: 20px; flex-grow: 1; }
-        h3 { margin: 0 0 15px 0; text-transform: uppercase; font-style: italic; color: #22d3ee; font-size: 18px; }
+        h3 { margin: 0 0 15px 0; text-transform: uppercase; font-style: italic; color: #22d3ee; font-size: 18px; border-bottom: 1px solid #334155; padding-bottom: 10px;}
         .links { display: flex; flex-direction: column; gap: 8px; }
         .links a { background: #0f172a; color: #22d3ee; text-decoration: none; padding: 10px; border-radius: 8px; font-size: 13px; font-weight: bold; border: 1px solid #334155; transition: 0.2s; }
         .links a:hover { background: #22d3ee; color: black; }
@@ -19,14 +20,142 @@
 </head>
 <body>
     <div class="header">
-        <h1 style="font-size: 50px; font-weight: 900; text-transform: uppercase; margin:0;">THE <span style="color:#22d3ee">VAULT</span></h1>
+        <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; text-transform: uppercase; margin:0;">The <span style="color:#22d3ee">Vault</span></h1>
         <a href="index.html" style="color:#22d3ee; text-decoration:none; font-weight:bold; border: 2px solid #22d3ee; padding: 10px 25px; border-radius: 50px;">← BACK HOME</a>
     </div>
+
     <div class="grid">
-        <div class="card"><img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&w=400"><div class="content"><h3>Wellbeing</h3><div class="links"><a href="https://sies.sa.edu.au/" target="_blank">→ SIES SA</a><a href="https://shinesa.org.au/" target="_blank">→ ShineSA</a></div></div></div>
-        <div class="card"><img src="https://images.pexels.com/photos/7063784/pexels-photo-7063784.jpeg?auto=compress&w=400"><div class="content"><h3>Neurodiversity</h3><div class="links"><a href="https://suelarkey.com.au" target="_blank">→ Sue Larkey</a><a href="https://www.positivepartnerships.com.au" target="_blank">→ Partnerships</a></div></div></div>
-        <div class="card"><img src="https://images.pexels.com/photos/1015568/pexels-photo-1015568.jpeg?auto=compress&w=400"><div class="content"><h3>Speech & Language</h3><div class="links"><a href="https://www.assistiveware.com/learn-aac" target="_blank">→ AAC Hub</a><a href="https://pld-literacy.org/" target="_blank">→ Oral Language</a></div></div></div>
-        <div class="card"><img src="https://images.pexels.com/photos/2083556/pexels-photo-2083556.jpeg?auto=compress&w=400"><div class="content"><h3>Trauma Informed</h3><div class="links"><a href="https://www.childhood.org.au/" target="_blank">→ Childhood Foundation</a><a href="https://www.berrystreet.org.au/" target="_blank">→ Berry Street</a></div></div></div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&w=400">
+            <div class="content"><h3>Wellbeing</h3><div class="links">
+                <a href="https://sies.sa.edu.au/" target="_blank">→ SIES SA</a>
+                <a href="https://shinesa.org.au/" target="_blank">→ ShineSA</a>
+                <a href="https://www.beyondblue.org.au/" target="_blank">→ Beyond Blue</a>
+                <a href="https://headspace.org.au/" target="_blank">→ Headspace</a>
+                <a href="https://be-you.edu.au/" target="_blank">→ Be You Portal</a>
+            </div></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/7063784/pexels-photo-7063784.jpeg?auto=compress&w=400">
+            <div class="content"><h3>Neurodiversity</h3><div class="links">
+                <a href="https://suelarkey.com.au" target="_blank">→ Sue Larkey</a>
+                <a href="https://www.positivepartnerships.com.au" target="_blank">→ Partnerships</a>
+                <a href="https://www.amaze.org.au/" target="_blank">→ Amaze Autism</a>
+                <a href="https://www.adhdaustralia.org.au/" target="_blank">→ ADHD Australia</a>
+                <a href="https://yellowladybugs.com.au/" target="_blank">→ Yellow Ladybugs</a>
+            </div></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/1015568/pexels-photo-1015568.jpeg?auto=compress&w=400">
+            <div class="content"><h3>Speech & Language</h3><div class="links">
+                <a href="https://www.assistiveware.com/learn-aac" target="_blank">→ AAC Hub</a>
+                <a href="https://pld-literacy.org/" target="_blank">→ Oral Language</a>
+                <a href="https://www.speechpathologyaustralia.org.au/" target="_blank">→ SPA Resources</a>
+                <a href="https://www.thecommunicationtrust.org.uk/" target="_blank">→ Comm Trust</a>
+                <a href="https://www.afasic.org.uk/" target="_blank">→ Afasic Support</a>
+            </div></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/2083556/pexels-photo-2083556.jpeg?auto=compress&w=400">
+            <div class="content"><h3>Trauma Informed</h3><div class="links">
+                <a href="https://www.childhood.org.au/" target="_blank">→ Childhood Foundation</a>
+                <a href="https://www.berrystreet.org.au/" target="_blank">→ Berry Street</a>
+                <a href="https://www.traumasensitiveschools.org/" target="_blank">→ TSS Hub</a>
+                <a href="https://www.blueknot.org.au/" target="_blank">→ Blue Knot</a>
+                <a href="https://www.emergingminds.com.au/" target="_blank">→ Emerging Minds</a>
+            </div></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&w=400">
+            <div class="content"><h3>Attendance</h3><div class="links">
+                <a href="https://www.attendanceworks.org/" target="_blank">→ Attendance Works</a>
+                <a href="https://be-you.edu.au/" target="_blank">→ Be You Hub</a>
+                <a href="https://www.education.sa.gov.au" target="_blank">→ Dept Education</a>
+                <a href="#">→ Policy Hub</a>
+                <a href="#">→ Engagement Strategy</a>
+            </div></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/1108117/pexels-photo-1108117.jpeg?auto=compress&w=400">
+            <div class="content"><h3>Interoception</h3><div class="links">
+                <a href="https://kelly-mahler.com/" target="_blank">→ Kelly Mahler</a>
+                <a href="#">→ Sensory Activities</a>
+                <a href="#">→ Regulation Tools</a>
+                <a href="#">→ Classroom Guides</a>
+                <a href="#">→ Curriculum Links</a>
+            </div></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&w=400">
+            <div class="content"><h3>Literacy</h3><div class="links">
+                <a href="https://www.speldsa.org.au" target="_blank">→ SPELD SA</a>
+                <a href="#">→ Decodable Texts</a>
+                <a href="#">→ Phonics Hub</a>
+                <a href="#">→ Writing Support</a>
+                <a href="#">→ Literacy Planet</a>
+            </div></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&w=400">
+            <div class="content"><h3>Psychology</h3><div class="links">
+                <a href="https://self-reg.ca/" target="_blank">→ Self-Reg Institute</a>
+                <a href="#">→ Cognitive Tools</a>
+                <a href="#">→ Behavioral Support</a>
+                <a href="#">→ Clinical Resources</a>
+                <a href="#">→ School Psych Hub</a>
+            </div></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/1114425/pexels-photo-1114425.jpeg?auto=compress&w=400">
+            <div class="content"><h3>Culture</h3><div class="links">
+                <a href="https://www.8ways.online/" target="_blank">→ 8 Ways Pedagogy</a>
+                <a href="#">→ AIATSIS</a>
+                <a href="#">→ Narragunnawali</a>
+                <a href="#">→ Reconciliation Aus</a>
+                <a href="#">→ Local Context</a>
+            </div></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&w=400">
+            <div class="content"><h3>VoiceIt</h3><div class="links">
+                <a href="https://vimeo.com/channels/voiceit" target="_blank">→ VoiceIt Vimeo</a>
+                <a href="#">→ Student Agency</a>
+                <a href="#">→ Participation Hub</a>
+                <a href="#">→ Feedback Tools</a>
+                <a href="#">→ VoiceIt Strategy</a>
+            </div></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&w=400">
+            <div class="content"><h3>Staff Wellbeing</h3><div class="links">
+                <a href="https://beyou.edu.au" target="_blank">→ Be You Staff</a>
+                <a href="#">→ EAP Services</a>
+                <a href="#">→ Mindfulness</a>
+                <a href="#">→ Work-Life Bal.</a>
+                <a href="#">→ Professional Care</a>
+            </div></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&w=400">
+            <div class="content"><h3>OT Sensory</h3><div class="links">
+                <a href="https://www.theottoolbox.com/" target="_blank">→ OT Toolbox</a>
+                <a href="#">→ Sensory Profiles</a>
+                <a href="#">→ Motor Skills</a>
+                <a href="#">→ Heavy Work Hub</a>
+                <a href="#">→ OT Resources</a>
+            </div></div>
+        </div>
     </div>
 </body>
 </html>

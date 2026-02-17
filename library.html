@@ -11,92 +11,70 @@
             background: #1e293b; border: 1px solid #334155; border-radius: 1.25rem; 
             overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; height: 100%;
         }
-        .res-card:hover { border-color: #22d3ee; transform: translateY(-5px); }
-        .card-img { width: 100%; height: 140px; object-fit: cover; opacity: 0.7; }
-        .card-content { padding: 1.5rem; }
-        .tag { background: #22d3ee; color: #0f172a; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 0.5rem; display: inline-block; }
-        .link-item { color: #94a3b8; font-weight: 600; font-size: 0.85rem; margin-top: 0.6rem; display: block; text-decoration: none; border-bottom: 1px solid transparent; width: fit-content; }
-        .link-item:hover { color: #22d3ee; border-bottom: 1px solid #22d3ee; }
+        .res-card:hover { border-color: #22d3ee; transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(34, 211, 238, 0.4); }
+        .card-img { width: 100%; height: 120px; object-fit: cover; opacity: 0.6; }
+        .card-content { padding: 1.25rem; }
+        .tag { background: #22d3ee; color: #0f172a; padding: 2px 8px; border-radius: 4px; font-weight: 900; font-size: 0.65rem; text-transform: uppercase; margin-bottom: 0.5rem; display: inline-block; }
+        .link-item { color: #94a3b8; font-weight: 600; font-size: 0.8rem; margin-top: 0.5rem; display: block; text-decoration: none; }
+        .link-item:hover { color: #22d3ee; padding-left: 4px; transition: 0.2s; }
     </style>
 </head>
-<body class="p-6 md:p-12">
-    <div class="max-w-[1400px] mx-auto">
+<body class="p-6 md:p-10">
+    <div class="max-w-[1500px] mx-auto">
         
-        <header class="flex flex-col md:flex-row justify-between items-center mb-16 border-b border-slate-800 pb-8 gap-6">
+        <header class="flex flex-col md:flex-row justify-between items-center mb-12 border-b border-slate-800 pb-8 gap-6">
             <div>
                 <h1 class="text-5xl font-black italic uppercase tracking-tighter">The <span class="text-[#22d3ee]">Vault</span></h1>
-                <p class="text-slate-400 font-bold mt-2 uppercase tracking-widest text-xs">Wave One Mastery Library</p>
+                <p class="text-slate-400 font-bold mt-1 uppercase tracking-widest text-xs">Full Wave One Practitioner Library</p>
             </div>
-            <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-6 py-2 rounded-full font-black uppercase hover:bg-[#22d3ee] hover:text-[#0f172a] transition no-underline">← HOME</a>
+            <a href="index.html" class="border-2 border-[#22d3ee] text-[#22d3ee] px-8 py-2 rounded-full font-black uppercase hover:bg-[#22d3ee] hover:text-[#0f172a] transition no-underline">← HOME</a>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             
             <div class="res-card">
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=400" class="card-img" alt="engagement">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=400" class="card-img">
                 <div class="card-content">
-                    <span class="tag">Wave 1</span>
-                    <h3 class="text-xl font-bold mb-2 text-white">Attendance & Inclusion</h3>
-                    <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" target="_blank" class="link-item">Iceberg Model of Behavior</a>
-                    <a href="https://www.attendanceworks.org/resources/" target="_blank" class="link-item">Attendance Works Toolkit</a>
+                    <span class="tag">Engagement</span>
+                    <h3 class="font-bold text-white uppercase">Attendance & Inclusion</h3>
+                    <a href="https://blog.calm.com/blog/the-iceberg-model-of-behavior" target="_blank" class="link-item">• Iceberg Model of Behavior</a>
+                    <a href="https://www.attendanceworks.org/resources/" target="_blank" class="link-item">• Attendance Works Toolkit</a>
                 </div>
             </div>
 
             <div class="res-card">
-                <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&q=80&w=400" class="card-img" alt="speech">
+                <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&q=80&w=400" class="card-img">
                 <div class="card-content">
                     <span class="tag">Comm</span>
-                    <h3 class="text-xl font-bold mb-2 text-white">Speech & Language</h3>
-                    <a href="https://www.assistiveware.com/learn-aac" target="_blank" class="link-item">Aided Language & AAC Hub</a>
-                    <a href="https://thrivetherapyandwellness.com/free-speech-pathology-screening-tools/" target="_blank" class="link-item">[TOOL] Free Screeners</a>
+                    <h3 class="font-bold text-white uppercase">Speech & Language</h3>
+                    <a href="https://www.assistiveware.com/learn-aac" target="_blank" class="link-item">• Aided Language & AAC Hub</a>
+                    <a href="https://thrivetherapyandwellness.com/free-speech-pathology-screening-tools/" target="_blank" class="link-item">• [TOOL] Free Screeners</a>
                 </div>
             </div>
 
             <div class="res-card">
-                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=400" class="card-img" alt="psych">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=400" class="card-img">
                 <div class="card-content">
                     <span class="tag">Psych</span>
-                    <h3 class="text-xl font-bold mb-2 text-white">Psychology & Self-Reg</h3>
-                    <a href="https://self-reg.ca/resources/" target="_blank" class="link-item">Stuart Shanker Self-Reg</a>
-                    <a href="https://www.panoramaed.com/blog/comprehensive-guide-sel-assessments" target="_blank" class="link-item">[TOOL] SEL Assessment</a>
+                    <h3 class="font-bold text-white uppercase">Psychology & Self-Reg</h3>
+                    <a href="https://self-reg.ca/resources/" target="_blank" class="link-item">• Stuart Shanker Self-Reg</a>
+                    <a href="https://www.panoramaed.com/blog/comprehensive-guide-sel-assessments" target="_blank" class="link-item">• [TOOL] SEL Assessment</a>
                 </div>
             </div>
 
             <div class="res-card">
-                <img src="https://images.unsplash.com/photo-1523050335456-adaba834597c?auto=format&fit=crop&q=80&w=400" class="card-img" alt="culture">
+                <img src="https://images.unsplash.com/photo-1523050335456-adaba834597c?auto=format&fit=crop&q=80&w=400" class="card-img">
                 <div class="card-content">
                     <span class="tag">First Nations</span>
-                    <h3 class="text-xl font-bold mb-2 text-white">Aboriginal Education</h3>
-                    <a href="https://www.narragunnawali.org.au/" target="_blank" class="link-item">Narragunnawali (RAPs)</a>
-                    <a href="https://aiatsis.gov.au/teaching-resources" target="_blank" class="link-item">AIATSIS Teaching Tools</a>
+                    <h3 class="font-bold text-white uppercase">Aboriginal Education</h3>
+                    <a href="https://www.narragunnawali.org.au/" target="_blank" class="link-item">• Narragunnawali (RAPs)</a>
+                    <a href="https://aiatsis.gov.au/teaching-resources" target="_blank" class="link-item">• AIATSIS Teaching Tools</a>
                 </div>
             </div>
 
             <div class="res-card">
-                <img src="https://images.unsplash.com/photo-1499209974431-9dac3adaf471?auto=format&fit=crop&q=80&w=400" class="card-img" alt="regulation">
+                <img src="https://images.unsplash.com/photo-1499209974431-9dac3adaf471?auto=format&fit=crop&q=80&w=400" class="card-img">
                 <div class="card-content">
                     <span class="tag">Regulation</span>
-                    <h3 class="text-xl font-bold mb-2 text-white">Interoception</h3>
-                    <a href="https://www.education.sa.gov.au/students/health-and-wellbeing/interoception-curriculum-resources" target="_blank" class="link-item">SA Dept Curriculum</a>
-                    <a href="https://kelly-mahler.com/what-is-interoception/" target="_blank" class="link-item">Kelly Mahler Guide</a>
-                </div>
-            </div>
-
-            <div class="res-card">
-                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=400" class="card-img" alt="trauma">
-                <div class="card-content">
-                    <span class="tag">Safety</span>
-                    <h3 class="text-xl font-bold mb-2 text-white">Trauma Informed</h3>
-                    <a href="https://www.childhood.org.au/" target="_blank" class="link-item">Childhood Foundation</a>
-                    <a href="https://traumasensitiveschools.org/" target="_blank" class="link-item">Trauma Sensitive Schools</a>
-                </div>
-            </div>
-
-        </div>
-
-        <footer class="text-center py-20 border-t border-slate-800 mt-20">
-            <div class="text-slate-600 text-[10px] italic font-bold uppercase tracking-widest">© 2026 TERESA BRUNO™</div>
-        </footer>
-    </div>
-</body>
-</html>
+                    <h3 class="font-bold text-white uppercase">Interoception</h3>
+                    <a href

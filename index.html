@@ -23,10 +23,10 @@
             background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.98)), 
                         url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&w=1600');
             background-size: cover; background-position: center;
-            min-height: 80vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%;
+            min-height: 85vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%;
         }
 
-        nav { position: absolute; top: 40px; left: 10%; right: 10%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+        nav { position: absolute; top: 40px; left: 10%; right: 10%; display: flex; justify-content: space-between; align-items: center; z-index: 2000; }
         .logo { font-size: 28px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
         .nav-links a { color: #22d3ee; text-decoration: none; font-weight: 800; border: 2px solid #22d3ee; padding: 12px 25px; border-radius: 50px; font-size: 11px; margin-left: 10px; transition: 0.3s; }
         .nav-links a:hover { background: #22d3ee; color: black; }
@@ -36,15 +36,16 @@
 
         .vault-btn {
             background: #22d3ee; color: #0f172a; padding: 18px 45px; border-radius: 50px; 
-            font-weight: 900; text-decoration: none; display: inline-block; margin-top: 30px; 
+            font-weight: 900; text-decoration: none; display: inline-block; margin-top: 40px; 
             text-transform: uppercase; letter-spacing: 1px; font-size: 16px; transition: 0.3s;
-            position: relative; z-index: 1001;
+            position: relative; z-index: 1500; /* Ensures it sits above everything */
+            box-shadow: 0 10px 20px rgba(34, 211, 238, 0.3);
         }
         .vault-btn:hover { background: white; transform: scale(1.05); }
 
         .intent-section { 
             background: #1e293b; border-left: 14px solid #22d3ee; padding: 50px; 
-            margin: 40px 10% 60px 10%; /* Removed negative margin to ensure no overlap */
+            margin: 50px 10% 60px 10%; /* Spacing fixed to prevent overlap */
             border-radius: 0 40px 40px 0; position: relative; z-index: 50; box-shadow: 0 30px 60px rgba(0,0,0,0.6);
         }
 
@@ -53,7 +54,7 @@
         .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 0 10% 80px 10%; }
         .card { background: #1e293b; border-radius: 30px; text-decoration: none; color: white; border: 1px solid #334155; transition: 0.3s; overflow: hidden; display: flex; flex-direction: column; }
         .card:hover { border-color: #22d3ee; transform: translateY(-5px); }
-        .card img { height: 150px; width: 100%; object-fit: cover; }
+        .card img { height: 160px; width: 100%; object-fit: cover; }
         .card-content { padding: 25px; }
         .card h4 { margin: 0 0 10px 0; text-transform: uppercase; font-size: 18px; color: #22d3ee; }
         .card p { color: #94a3b8; font-size: 14px; margin: 0; }
@@ -84,34 +85,34 @@
         </div>
     </div>
 
-    <div class="section-title">Collaboration & Community</div>
+    <div class="section-title">Collaboration & Support</div>
     <div class="links-grid">
         <a href="https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="card">
             <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&w=400">
             <div class="card-content">
                 <h4>Students with Disabilities</h4>
-                <p>Specialist support and systemic inclusion resources on Teams.</p>
+                <p>Access specialized support and systemic resources on Teams.</p>
             </div>
         </a>
         <a href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ" target="_blank" class="card">
             <img src="https://images.pexels.com/photos/2510428/pexels-photo-2510428.jpeg?auto=compress&w=400">
             <div class="card-content">
                 <h4>YouTube Channel</h4>
-                <p>On-demand video pedagogy and classroom highlights.</p>
+                <p>On-demand video pedagogy and classroom strategy highlights.</p>
             </div>
         </a>
         <a href="https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="card">
             <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&w=400">
             <div class="card-content">
                 <h4>Wellbeing Connections</h4>
-                <p>Our primary professional collaboration hub for all staff.</p>
+                <p>Our primary professional collaboration hub for all staff members.</p>
             </div>
         </a>
         <a href="https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="card">
             <img src="https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg?auto=compress&w=400">
             <div class="card-content">
                 <h4>Social Work / Truancy</h4>
-                <p>Support channels for student engagement and attendance.</p>
+                <p>Direct support channels for student engagement and attendance.</p>
             </div>
         </a>
     </div>

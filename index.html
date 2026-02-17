@@ -10,7 +10,7 @@
         * { box-sizing: border-box; }
         body, html { margin: 0; padding: 0; background: #0f172a; color: white; font-family: sans-serif; overflow-x: hidden; }
         
-        /* Fixed Overlay: Deepened the gradient for maximum text legibility */
+        /* Hero Section with high-contrast overlay for text legibility */
         .hero {
             position: relative;
             background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.98)), 
@@ -27,12 +27,12 @@
         h1 { font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 900; text-transform: uppercase; line-height: 0.85; margin: 0; font-style: italic; position: relative; z-index: 10; }
         .cyan { color: #22d3ee; }
 
-        /* The Intent Section - Restored with 'Overlay' styling */
+        /* The Intent Section - Perfectly overlayed and restored */
         .intent-section { 
             background: #1e293b; 
             border-left: 14px solid #22d3ee; 
             padding: 50px; 
-            margin: -100px 10% 40px 10%; /* Negative margin creates the 'overlay' effect */
+            margin: -100px 10% 40px 10%; 
             border-radius: 0 40px 40px 0; 
             position: relative; 
             z-index: 50; 
@@ -45,10 +45,12 @@
         .card { background: #1e293b; padding: 30px; border-radius: 30px; text-decoration: none; color: white; border: 1px solid #334155; transition: 0.3s; border-left: 8px solid #3b82f6; }
         .card:hover { border-color: #22d3ee; transform: translateY(-5px); }
         .card h4 { margin: 0 0 10px 0; text-transform: uppercase; font-size: 18px; color: #22d3ee; }
+        .card p { color: #94a3b8; font-size: 14px; margin: 0; }
 
-        footer { padding: 60px 10%; border-top: 1px solid #334155; font-size: 13px; color: #64748b; }
+        footer { padding: 60px 10%; border-top: 1px solid #334155; font-size: 13px; color: #64748b; line-height: 1.6; }
         .footer-flex { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
         footer a { color: #22d3ee; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -78,15 +80,15 @@
     <div class="links-grid">
         <a href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ" target="_blank" class="card" style="border-left-color: #ef4444;">
             <h4>YouTube Channel</h4>
-            <p style="color:#94a3b8;">Highlights and presentations.</p>
+            <p>Resource highlights and video presentations.</p>
         </a>
         <a href="https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="card">
             <h4>Wellbeing Connections</h4>
-            <p style="color:#94a3b8;">Collaboration hub on Microsoft Teams.</p>
+            <p>Direct access to our Microsoft Teams news hub.</p>
         </a>
         <a href="https://teams.microsoft.com/l/team/19%3ASQvUswIw8-EXCiBiHmw1zr9IhZv-5FxQ4sMR4hsdtC01%40thread.tacv2/conversations?groupId=8c9a07d6-2e63-400d-87e0-830b192a7873&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" class="card">
             <h4>Social Work / Truancy</h4>
-            <p style="color:#94a3b8;">Engagement and support channels.</p>
+            <p>Engagement and social work support channels.</p>
         </a>
     </div>
 
@@ -94,11 +96,12 @@
         <div class="footer-flex">
             <div>
                 <strong>Teresa Bruno &trade;</strong><br>
+                Leader in Education & Student Wellbeing<br>
                 Contact: <a href="mailto:teresa.bruno@sa.gov.au">teresa.bruno@sa.gov.au</a>
             </div>
             <div style="text-align: right;">
                 &copy; 2026 ThriveHub. All rights reserved.<br>
-                <a href="privacy.html">Privacy Policy</a>
+                <a href="about.html">About Us</a> | <a href="privacy.html">Privacy Policy</a>
             </div>
         </div>
     </footer>

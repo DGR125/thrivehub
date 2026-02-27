@@ -3,50 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThriveHub | Inclusive Education Resources</title>
+    <title>The Vault | ThriveHub Resources</title>
     <style>
-        body { background-color: #0f172a; color: #e2e8f0; font-family: sans-serif; margin: 0; line-height: 1.6; }
-        .hero { padding: 80px 10%; text-align: center; background: linear-gradient(to bottom, #1e293b, #0f172a); }
-        h1 { font-size: 3.5rem; color: #22d3ee; margin-bottom: 20px; }
-        .welcome-text { font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px; color: #cbd5e1; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 40px 10%; }
-        .card { background: #1e293b; padding: 30px; border-radius: 20px; text-align: center; border-top: 6px solid #22d3ee; }
-        .card h3 { color: #fff; margin-bottom: 15px; }
-        .card a { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #22d3ee; color: #0f172a; text-decoration: none; font-weight: bold; border-radius: 8px; }
-        .card a:hover { background: #fff; }
-        footer { text-align: center; padding: 40px; color: #64748b; }
+        body { background-color: #0f172a; color: #e2e8f0; font-family: sans-serif; padding: 40px 10%; margin: 0; line-height: 1.6; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; border-bottom: 4px solid #22d3ee; padding-bottom: 20px; }
+        .category-block { margin-bottom: 60px; padding: 30px; background: #1e293b; border-radius: 20px; border-left: 8px solid #22d3ee; }
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; text-transform: uppercase; margin: 0; }
+        h2 { color: #22d3ee; margin-top: 0; text-transform: uppercase; font-style: italic; }
+        .description { margin-bottom: 20px; font-size: 1.1rem; color: #cbd5e1; }
+        .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .link-btn { background: #0f172a; color: #22d3ee; text-decoration: none; padding: 12px; border-radius: 8px; font-size: 14px; font-weight: bold; border: 1px solid #334155; text-align: center; transition: 0.3s; }
+        .link-btn:hover { background: #22d3ee; color: #0f172a; }
+        .back-link { color: #22d3ee; text-decoration: none; font-weight: bold; border: 2px solid #22d3ee; padding: 10px 25px; border-radius: 50px; }
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>The <span style="color:#22d3ee">Vault</span></h1>
+        <a href="index.html" class="back-link">← BACK HOME</a>
+    </div>
 
-    <header class="hero">
-        <h1>ThriveHub</h1>
-        <p class="welcome-text">The essential toolkit for inclusive educators. Bridging the gap between theory and classroom reality by providing high-impact, evidence-based resources that help educators design for the margins.</p>
-    </header>
-
-    <main class="grid">
-        <div class="card">
-            <h3>The Vault</h3>
-            <p>Access our curated database of pedagogical resources and specialized teaching tools.</p>
-            <a href="vault.html">ENTER THE VAULT</a>
+    <section class="category-block">
+        <h2>Aboriginal Education</h2>
+        <p class="description">Cultural responsiveness isn't an add-on; it is the foundation. Using the 8 Ways of Learning framework, we shift from teaching 'about' culture to embedding it in the pedagogical structure of our classrooms.</p>
+        <div class="link-grid">
+            <a href="https://www.8ways.online/" class="link-btn">8 Ways Pedagogy</a>
+            <a href="https://www.narragunnawali.org.au/" class="link-btn">Narragunnawali</a>
+            <a href="https://aiatsis.gov.au/explore/map-indigenous-australia" class="link-btn">AIATSIS Map</a>
+            <a href="https://www.reconciliation.org.au/" class="link-btn">Reconciliation Aus</a>
+            <a href="https://www.indigenous.gov.au/" class="link-btn">Indigenous.gov.au</a>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Calm Space</h3>
-            <p>Techniques and tools for emotional regulation, sensory support, and creating safe zones.</p>
-            <a href="calm-space.html">VISIT CALM SPACE</a>
+    <section class="category-block">
+        <h2>EALD Learners</h2>
+        <p class="description">English as an Additional Language or Dialect (EALD) students bring diverse linguistic assets. Our goal is to provide high-challenge, high-support environments where language acquisition happens in context.</p>
+        <div class="link-grid">
+            <a href="https://www.tesol.org.au/" class="link-btn">TESOL Australia</a>
+            <a href="https://www.scootle.edu.au/" class="link-btn">Scootle EALD</a>
+            <a href="https://www.education.sa.gov.au" class="link-btn">SA EALD Hub</a>
+            <a href="https://www.britishcouncil.org.au/" class="link-btn">English Learning</a>
+            <a href="https://www.colorincolorado.org/" class="link-btn">Colorín Colorado</a>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>About Us</h3>
-            <p>Learn more about our mission to foster inclusive classroom environments for every learner.</p>
-            <a href="about.html">LEARN MORE</a>
+    <section class="category-block">
+        <h2>Wellbeing</h2>
+        <p class="description">Wellbeing is the baseline for academic success. We utilize the 'Be You' framework to ensure mental health support is embedded into the classroom daily.</p>
+        <div class="link-grid">
+            <a href="https://sies.sa.edu.au/" class="link-btn">SIES SA</a>
+            <a href="https://shinesa.org.au/" class="link-btn">ShineSA</a>
+            <a href="https://www.beyondblue.org.au/" class="link-btn">Beyond Blue</a>
+            <a href="https://headspace.org.au/" class="link-btn">Headspace</a>
+            <a href="https://be-you.edu.au/" class="link-btn">Be You Portal</a>
         </div>
-    </main>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 ThriveHub. All rights reserved. | <a href="privacy.html" style="color:#64748b;">Privacy Policy</a></p>
-    </footer>
+    <section class="category-block">
+        <h2>Neurodiversity</h2>
+        <p class="description">We treat neurodivergence as a natural variation of the human brain. By adopting neuro-affirming practices, we move from trying to 'fix' students to optimizing the environment.</p>
+        <div class="link-grid">
+            <a href="https://suelarkey.com.au" class="link-btn">Sue Larkey</a>
+            <a href="https://www.positivepartnerships.com.au" class="link-btn">Partnerships</a>
+            <a href="https://www.amaze.org.au/" class="link-btn">Amaze Autism</a>
+            <a href="https://www.adhdaustralia.org.au/" class="link-btn">ADHD Australia</a>
+            <a href="https://yellowladybugs.com.au/" class="link-btn">Yellow Ladybugs</a>
+        </div>
+    </section>
 
+    <section class="category-block">
+        <h2>Speech & Language</h2>
+        <p class="description">Communication is a human right. We focus on functional communication, AAC, and oral language scaffolding to ensure every student has a voice in our classroom.</p>
+        <div class="link-grid">
+            <a href="https://www.assistiveware.com/learn-aac" class="link-btn">AAC Hub</a>
+            <a href="https://pld-literacy.org/" class="link-btn">Oral Language</a>
+            <a href="https://www.speechpathologyaustralia.org.au/" class="link-btn">SPA Resources</a>
+            <a href="https://www.thecommunicationtrust.org.uk/" class="link-btn">Comm Trust</a>
+            <a href="https://www.afasic.org.uk/" class="link-btn">Afasic Support</a>
+        </div>
+    </section>
+
+    <section class="category-block">
+        <h2>Trauma Informed</h2>
+        <p class="description">Trauma changes the brain, but it doesn't define the child. Our trauma-informed approach centers on co-regulation, safety, and predictability.</p>
+        <div class="link-grid">
+            <a href="https://www.childhood.org.au/" class="link-btn">Childhood Foundation</a>
+            <a href="https://www.berrystreet.org.au/" class="link-btn">Berry Street</a>
+            <a href="https://www.traumasensitiveschools.org/" class="link-btn">TSS Hub</a>
+            <a href="https://www.blueknot.org.au/" class="link-btn">Blue Knot</a>
+            <a href="https://www.emergingminds.com.au/" class="link-btn">Emerging Minds</a>
+        </div>
+    </section>
+
+    <section class="category-block">
+        <h2>Attendance</h2>
+        <p class="description">Chronic absenteeism is a symptom, not a cause. We investigate the underlying barriers to engagement, creating a sense of belonging.</p>
+        <div class="link-grid">
+            <a href="https://www.attendanceworks.org/" class="link-btn">Attendance Works</a>
+            <a href="https://be-you.edu.au/" class="link-btn">Be You Hub</a>
+            <a href="https://www.education.sa.gov.au" class="link-btn">Dept Education</a>
+        </div>
+    </section>
+
+    <section class="category-block">
+        <h2>Interoception</h2>
+        <p class="description">Interoception—the ability to understand internal bodily signals—is the foundation of emotional regulation.</p>
+        <div class="link-grid">
+            <a href="https://kelly-mahler.com/" class="link-btn">Kelly Mahler</a>
+        </div>
+    </section>
+
+    <section class="category-block">
+        <h2>Literacy</h2>
+        <p class="description">Literacy is about agency and access. We utilize evidence-based systematic synthetic phonics.</p>
+        <div class="link-grid">
+            <a href="https://www.speldsa.org.au" class="link-btn">SPELD SA</a>
+        </div>
+    </section>
+
+    <section class="category-block">
+        <h2>Psychology</h2>
+        <p class="description">Understanding the psychology of the learner allows us to be proactive. We draw on self-regulation frameworks.</p>
+        <div class="link-grid">
+            <a href="https://self-reg.ca/" class="link-btn">Self-Reg Institute</a>
+        </div>
+    </section>
+
+    <section class="category-block">
+        <h2>Culture</h2>
+        <p class="description">Inclusive education is culturally situated. We embrace a diverse range of cultural backgrounds.</p>
+        <div class="link-grid">
+            <a href="https://www.8ways.online/" class="link-btn">8 Ways Pedagogy</a>
+        </div>
+    </section>
+
+    <section class="category-block">
+        <h2>VoiceIt</h2>
+        <p class="description">We empower student agency through the VoiceIt philosophy.</p>
+        <div class="link-grid">
+            <a href="https://vimeo.com/channels/voiceit" class="link-btn">VoiceIt Vimeo</a>
+        </div>
+    </section>
+
+    <section class="category-block">
+        <h2>Staff Wellbeing</h2>
+        <p class="description">We cannot pour from an empty cup. Sustaining inclusive practice requires support.</p>
+        <div class="link-grid">
+            <a href="https://beyou.edu.au" class="link-btn">Be You Staff</a>
+        </div>
+    </section>
+
+    <section class="category-block">
+        <h2>OT Sensory</h2>
+        <p class="description">Occupational Therapy strategies help us create sensory-safe classrooms.</p>
+        <div class="link-grid">
+            <a href="https://www.theottoolbox.com/" class="link-btn">OT Toolbox</a>
+        </div>
+    </section>
 </body>
 </html>

@@ -5,36 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThriveHub | Home</title>
     <style>
-        body { background-color: #0f172a; color: #e2e8f0; font-family: sans-serif; margin: 0; line-height: 1.6; padding: 0 10%; }
-        header { padding: 40px 0; text-align: center; border-bottom: 2px solid #334155; }
-        h1 { font-size: 3rem; color: #22d3ee; margin-bottom: 10px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px 0; }
-        .card { background: #1e293b; padding: 30px; border-radius: 15px; text-align: center; border-top: 5px solid #22d3ee; }
-        .card a { display: inline-block; margin-top: 20px; padding: 10px 20px; background: #22d3ee; color: #0f172a; text-decoration: none; font-weight: bold; border-radius: 5px; }
+        body { background-color: #0f172a; color: #e2e8f0; font-family: sans-serif; margin: 0; padding: 0 5%; }
+        header { padding: 60px 0; text-align: center; }
+        h1 { font-size: 3.5rem; color: #22d3ee; margin-bottom: 20px; }
+        .welcome-text { font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px; color: #cbd5e1; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding-bottom: 60px; }
+        .card { background: #1e293b; padding: 30px; border-radius: 20px; text-align: center; border-top: 6px solid #22d3ee; }
+        .card a { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #22d3ee; color: #0f172a; text-decoration: none; font-weight: bold; border-radius: 8px; }
     </style>
 </head>
 <body>
     <header>
         <h1>ThriveHub</h1>
-        <p>Empowering educators, supporting learners.</p>
+        <p class="welcome-text">The essential toolkit for inclusive educators. We bridge the gap between theory and classroom reality by providing high-impact, evidence-based resources that help educators design for the margins.</p>
     </header>
 
-    <div class="grid">
+    <main class="grid">
         <div class="card">
             <h3>The Vault</h3>
-            <p>Curated database of pedagogical resources.</p>
+            <p>Access our curated database of pedagogical resources and teaching tools.</p>
             <a href="vault.html">ENTER THE VAULT</a>
         </div>
         <div class="card">
             <h3>Calm Space</h3>
-            <p>Tools for emotional regulation.</p>
+            <p>Techniques and tools for emotional regulation, sensory support, and safe zones.</p>
             <a href="calm-space.html">VISIT CALM SPACE</a>
         </div>
         <div class="card">
             <h3>About Us</h3>
-            <p>Our mission and inclusive practice.</p>
+            <p>Learn more about our mission to foster inclusive classroom environments.</p>
             <a href="about.html">LEARN MORE</a>
         </div>
-    </div>
+    </main>
 </body>
 </html>

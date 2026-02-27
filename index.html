@@ -2,22 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThriveHub</title>
+    <title>ThriveHub | Home</title>
     <style>
-        body { font-family: sans-serif; background-color: #0f172a; color: white; margin: 0; text-align: center; }
-        .hero { padding: 50px; background: #1e293b; }
-        .grid { display: flex; justify-content: center; gap: 20px; padding: 20px; }
-        .btn { padding: 15px 30px; background: #22d3ee; color: #0f172a; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        body { margin: 0; font-family: sans-serif; background: #0f172a; color: #e2e8f0; }
+        .hero { height: 400px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600'); background-size: cover; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+        h1 { font-size: 3rem; color: #22d3ee; }
+        .nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 40px; }
+        .btn { padding: 15px; background: #22d3ee; color: #0f172a; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid #334155; }
     </style>
 </head>
 <body>
     <div class="hero">
         <h1>ThriveHub</h1>
-        <p>Empowering educators, supporting learners.</p>
+        <p>Inclusive Educational Resources</p>
     </div>
-    <div class="grid">
-        <a href="vault.html" class="btn">ENTER THE VAULT</a>
+    <div class="nav-grid">
+        <a href="vault.html" class="btn">The Vault</a>
+        <a href="calm-space.html" class="btn">Calm Space</a>
+        <a href="https://thestudentwellbeing.wordpress.com/" class="btn">Wellbeing Blog</a>
+        <a href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ" class="btn">YouTube Channel</a>
     </div>
+    <footer>
+        <a href="about.html">About</a> | <a href="privacy.html">Privacy</a> | <a href="disclaimer.html">Disclaimer</a>
+        <p>&copy; 2026 Teresa Bruno | ThriveHub</p>
+    </footer>
 </body>
 </html>

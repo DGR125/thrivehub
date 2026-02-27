@@ -4,25 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThriveHub | Home</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR-PUBLISHER-ID" crossorigin="anonymous"></script>
     <style>
-        body { margin: 0; font-family: sans-serif; background-color: #0f172a; color: white; }
-        .hero { height: 50vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600') center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 40px; }
-        .card { background: #1e293b; padding: 20px; border-radius: 10px; text-align: center; }
-        .btn { display: inline-block; padding: 10px 20px; background: #22d3ee; color: #0f172a; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
+        body { background-color: #0d1117; color: #e6edf3; font-family: sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px; }
+        .hero { text-align: center; padding: 60px 0; }
+        h1 { font-size: 3rem; color: #22d3ee; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .card { background: #161b22; padding: 20px; border-radius: 10px; border: 1px solid #30363d; text-align: center; }
+        .btn { display: inline-block; padding: 15px 30px; background: #22d3ee; color: #0d1117; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px; }
     </style>
 </head>
 <body>
-    <header class="hero">
-        <h1>ThriveHub</h1>
-        <p>Empowering educators, supporting learners.</p>
-    </header>
-    <main class="grid">
-        <div class="card"><h3>The Vault</h3><p>Curated resources.</p><a href="vault.html" class="btn">ENTER VAULT</a></div>
-        <div class="card"><h3>Calm Space</h3><p>Regulation tools.</p><a href="calm-space.html" class="btn">VISIT SPACE</a></div>
-        <div class="card"><h3>Blog</h3><p>Read insights.</p><a href="https://thestudentwellbeing.wordpress.com/" class="btn">VISIT BLOG</a></div>
-        <div class="card"><h3>YouTube</h3><p>Video tutorials.</p><a href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ" class="btn">WATCH</a></div>
-    </main>
+    <div class="container">
+        <header class="hero">
+            <h1>ThriveHub</h1>
+            <p>The essential toolkit for inclusive educators. Bridging the gap between theory and classroom reality.</p>
+        </header>
+        <main class="grid">
+            <div class="card">
+                <h3>The Vault</h3>
+                <p>Access our curated database of pedagogical resources and teaching tools.</p>
+                <a href="vault.html" class="btn">ENTER THE VAULT</a>
+            </div>
+            <div class="card">
+                <h3>Calm Space</h3>
+                <p>Techniques and tools for emotional regulation, sensory support, and safe zones.</p>
+                <a href="#" class="btn">VISIT CALM SPACE</a>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

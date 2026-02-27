@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Vault</title>
+    <title>The Vault | ThriveHub Library</title>
     <style>
-        body { background: #0f172a; color: white; font-family: sans-serif; padding: 20px; }
-        .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .category { background: #1e293b; padding: 15px; border-radius: 10px; border: 1px solid #334155; }
-        .cat-img { width: 100%; height: 150px; background: #334155; border-radius: 5px; margin-bottom: 10px; }
-        .links { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
-        .btn { padding: 8px; background: #0f172a; color: #22d3ee; border: 1px solid #22d3ee; text-align: center; text-decoration: none; border-radius: 3px; font-size: 12px; }
+        body { background-color: #0f172a; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; padding: 40px 10%; margin: 0; line-height: 1.6; }
+        .header { border-bottom: 4px solid #22d3ee; padding-bottom: 20px; margin-bottom: 50px; text-align: center; }
+        .category-section { margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .link-card { background: #1e293b; padding: 15px; border-radius: 8px; border: 1px solid #334155; }
+        a { color: #22d3ee; text-decoration: none; }
     </style>
 </head>
 <body>
-    <h1>The Vault</h1>
-    <a href="index.html" style="color: #22d3ee;">← Back Home</a>
-    <div class="container">
-        <div class="category">
-            <div class="cat-img"></div>
-            <h2>Aboriginal Ed</h2>
-            <div class="links"><a href="#" class="btn">8 Ways</a><a href="#" class="btn">Narragunnawali</a></div>
+    <div class="header">
+        <h1>The Vault</h1>
+        <a href="index.html">← Back Home</a>
+    </div>
+    <div class="category-section">
+        <h2>Aboriginal Education</h2>
+        <div class="grid">
+            <div class="link-card"><a href="https://example.com">Resource 1</a></div>
+            <div class="link-card"><a href="https://example.com">Resource 2</a></div>
+            <div class="link-card"><a href="https://example.com">Resource 3</a></div>
+            <div class="link-card"><a href="https://example.com">Resource 4</a></div>
+            <div class="link-card"><a href="https://example.com">Resource 5</a></div>
         </div>
-        </div>
-</body>
+    </div>
+    </body>
 </html>

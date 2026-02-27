@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThriveHub | The Vault</title>
+    <title>The Vault | ThriveHub Resources</title>
     <style>
-        body { background-color: #0d1117; color: #e6edf3; font-family: sans-serif; padding: 20px; }
-        .container { max-width: 900px; margin: 0 auto; }
-        .card { background: #161b22; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #30363d; }
-        h1 { color: #58a6ff; }
+        body { background-color: #0f172a; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; padding: 0; margin: 0; }
+        .content { padding: 40px 10%; max-width: 900px; margin: auto; }
+        .category-block { background: #1e293b; border-radius: 15px; padding: 25px; margin-bottom: 30px; border-left: 5px solid #22d3ee; }
+        .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 15px; }
+        .link-btn { background: #0f172a; color: #22d3ee; padding: 12px; text-decoration: none; border-radius: 5px; text-align: center; border: 1px solid #22d3ee; transition: 0.3s; }
+        .link-btn:hover { background: #22d3ee; color: #0f172a; }
+        footer { padding: 40px; text-align: center; border-top: 1px solid #334155; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html">← Back Home</a>
+    <div class="content">
+        <a href="index.html">← Back to Home</a>
         <h1>The Vault</h1>
         
-        <div class="card">
+        <div class="category-block">
             <h2>Neurodiversity</h2>
-            <p>We treat neurodivergence as a natural variation.</p>
-            
+            <p>Resources for neuro-affirming practices.</p>
+            <div class="link-grid">
+                <a href="https://suelarkey.com.au" class="link-btn">Sue Larkey</a>
+                <a href="https://yellowladybugs.com.au/" class="link-btn">Yellow Ladybugs</a>
+                <a href="https://www.amaze.org.au/" class="link-btn">Amaze Autism</a>
             </div>
+        </div>
     </div>
+    <footer>
+        <p>&copy; 2026 ThriveHub</p>
+    </footer>
 </body>
 </html>

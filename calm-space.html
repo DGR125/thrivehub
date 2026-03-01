@@ -17,7 +17,7 @@
       line-height:1.6; overflow-x:hidden;
     }
 
-    /* Top nav (consistent with Home) */
+    /* Top nav (same pattern as Home) */
     nav{
       position:absolute; top:28px; left:10%; right:10%;
       display:flex; justify-content:space-between; align-items:center; z-index:10;
@@ -31,14 +31,18 @@
     }
     .nav-links a:hover{background:var(--accent); color:var(--accent-ink)}
 
-    /* HERO with visual */
+    /* HERO with ocean visual (swap url for forest if you prefer) */
     .hero{
       position:relative; min-height:58vh;
       display:flex; flex-direction:column; justify-content:flex-end;
       padding:0 10% 28px;
       background:
         linear-gradient(rgba(15,23,42,.85), rgba(15,23,42,.96)),
-        url('https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&w=1600')
+        /* OCEAN image */
+        url('https://images.pexels.com/photos/3571267/pexels-photo-3571267.jpeg?auto=compress&w=1600')
+        /* FOREST alternative (uncomment next line and comment ocean line above)
+        url('https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&w=1600')
+        */
         center/cover no-repeat;
       border-bottom:4px solid var(--accent);
     }
@@ -49,9 +53,9 @@
     }
     .hero h1 .cyan{color:var(--accent)}
     .crumbs{
-      position:absolute; right:10%; top:18px; font-size:12px; color:#c7d2fe80;
+      position:absolute; right:10%; top:18px; font-size:12px; color:#e2e8f0b3;
     }
-    .crumbs a{color:var(--text); opacity:.8; text-decoration:none}
+    .crumbs a{color:#e2e8f0; text-decoration:none; opacity:.85}
     .crumbs a:hover{opacity:1; text-decoration:underline}
 
     /* Content layout */
@@ -64,8 +68,7 @@
       box-shadow:0 10px 30px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.02) inset;
     }
     .panel h2{
-      margin:0 0 8px; color:var(--accent); text-transform:uppercase; font-size:18px;
-      letter-spacing:.5px;
+      margin:0 0 8px; color:var(--accent); text-transform:uppercase; font-size:18px; letter-spacing:.5px;
     }
     .panel p{margin:0 0 12px; color:var(--muted)}
 
@@ -79,8 +82,7 @@
     }
     .btn:hover{transform:translateY(-1px)}
     .btn.alt{
-      background:transparent; color:var(--accent); border:2px solid var(--accent);
-      box-shadow:none;
+      background:transparent; color:var(--accent); border:2px solid var(--accent); box-shadow:none;
     }
 
     /* Breathing visual (gentle pulsing circle) */
@@ -103,27 +105,24 @@
       .wrap{grid-template-columns:1fr 1fr}
       .panel.span2{grid-column:1 / -1}
     }
-
-    /* Footer (match theme if you decide to add later) */
   </style>
 </head>
 <body>
 
-  <!-- NAV (matches Home) -->
+  <!-- NAV (fixed anchors so no stray text prints) -->
   <nav aria-label="Primary">
     <div class="logo">Thrive<span class="cyan">HUB</span></div>
     <div class="nav-links">
-      index.htmlHOME</a>
-      vault.htmlTHE VAULT</a>
-      about.htmlABOUT</a>
+      <a href="index.html">HOME</a>
+      <a href="vault.html">THE VAULT</a>
+      <a href="about.html">ABOUT</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <header class="hero" role="banner">
     <div class="crumbs">
-      index.htmlHome</a>  ·  
-      vault.htmlThe Vault</a>
+      <a href="index.html">Home</a> · <a href="vault.html">The Vault</a>
     </div>
     <h1>Calm <span class="cyan">Space</span></h1>
   </header>
@@ -149,7 +148,7 @@
       <p>Play a soft chime to mark a reset.</p>
       <button class="btn" onclick="document.getElementById('chime').play()">Play Chime</button>
       <audio id="chime">
-        https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3
+        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3" type="audio/mpeg">
       </audio>
     </section>
 
@@ -160,9 +159,21 @@
       <p style="margin-top:8px;color:var(--muted)">Tip: read the list slowly, or do one pass per minute while the timer runs.</p>
     </section>
 
+    <!-- Optional 4–7–8 (collapsed by default) -->
+    <details class="panel span2">
+      <summary style="cursor:pointer;color:var(--accent);text-transform:uppercase;font-weight:800">Add 4–7–8 Breathing</summary>
+      <p style="margin-top:8px">In 4 — hold 7 — out 8. Try 3–4 cycles.</p>
+      <div class="timer-row">
+        <span class="time" id="readout478">01:04</span>
+        <button class="btn" onclick="startTimer478(64)">Start</button>
+        <button class="btn alt" onclick="resetTimer478()">Reset</button>
+      </div>
+    </details>
+
   </main>
 
   <script>
+    /* 4-4-4-4 */
     let t=null, left=120;
     function f(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
     function startTimer(sec){
@@ -174,7 +185,22 @@
       },1000);
     }
     function resetTimer(){ clearInterval(t); left=120; document.getElementById('readout').textContent=f(left); }
+
+    /* 4–7–8 (one-minute guide) */
+    let t478=null, left478=64;
+    function f478(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
+    function startTimer478(sec){
+      clearInterval(t478); left478=sec; document.getElementById('readout478').textContent=f478(left478);
+      t478=setInterval(()=>{ left478--; document.getElementById('readout478').textContent=f478(left478);
+        if(left478<=0){ clearInterval(t478); left478=0; document.getElementById('readout478').textContent=f478(left478); }
+      },1000);
+    }
+    function resetTimer478(){ clearInterval(t478); left478=64; document.getElementById('readout478').textContent=f478(left478); }
   </script>
 </body>
 </html>
 ``
+   
+     
+
+

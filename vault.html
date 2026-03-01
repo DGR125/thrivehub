@@ -5,30 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="The Vault — curated, classroom-ready resources across 14 inclusion categories." />
   <title>The Vault · ThriveHub</title>
-
   <style>
     :root{
-      --bg:#0f172a; --panel:#1e293b; --text:#e2e8f0; --muted:#cbd5e1; --line:#334155; --accent:#22d3ee; --accent-ink:#0f172a;
+      --bg:#0f172a; --panel:#1e293b; --text:#e2e8f0; --muted:#cbd5e1;
+      --line:#334155; --accent:#22d3ee; --accent-ink:#0f172a;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+    html,body{margin:0;background:var(--bg);color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
 
     /* Header */
-    .header{display:flex;justify-content:space-between;align-items:center;padding:28px 10%;border-bottom:4px solid var(--accent)}
+    .header{display:flex;justify-content:space-between;align-items:center;
+      padding:28px 10%;border-bottom:4px solid var(--accent)}
     .header h1{margin:0;font-size:clamp(2rem,4.5vw,3rem);font-weight:900;text-transform:uppercase}
     .header h1 span{color:var(--accent)}
-    .back{color:var(--accent);text-decoration:none;font-weight:800;border:2px solid var(--accent);padding:10px 20px;border-radius:999px;transition:.2s}
+    .back{color:var(--accent);text-decoration:none;font-weight:800;border:2px solid var(--accent);
+      padding:10px 20px;border-radius:999px;transition:.2s}
     .back:hover{background:var(--accent);color:var(--accent-ink)}
 
-    /* Category “cards” (Option A) */
+    /* Card grid (Option A) */
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;padding:32px 10% 60px}
-    .card{background:var(--panel);border-radius:24px;border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+    .card{background:var(--panel);border-radius:24px;border:1px solid var(--line);overflow:hidden;
+      display:flex;flex-direction:column;transition:.25s}
     .card:hover{transform:translateY(-4px);border-color:var(--accent)}
     .card img{height:160px;width:100%;object-fit:cover;border-bottom:1px solid var(--line)}
     .content{padding:22px;flex:1}
-    .content h3{margin:0 0 12px;text-transform:uppercase;font-style:italic;color:var(--accent);font-size:18px;border-bottom:1px solid var(--line);padding-bottom:8px}
+    .content h3{margin:0 0 12px;text-transform:uppercase;font-style:italic;color:var(--accent);
+      font-size:18px;border-bottom:1px solid var(--line);padding-bottom:8px}
     .links{display:flex;flex-direction:column;gap:8px}
-    .links a{background:var(--bg);color:var(--accent);text-decoration:none;padding:10px 12px;border-radius:8px;font-size:13px;font-weight:700;border:1px solid var(--line);transition:.2s}
+    .links a{background:var(--bg);color:var(--accent);text-decoration:none;padding:10px 12px;border-radius:8px;
+      font-size:13px;font-weight:700;border:1px solid var(--line);transition:.2s;word-break:break-word}
     .links a:hover{background:var(--accent);color:var(--accent-ink)}
 
     /* Footer */
@@ -42,218 +48,221 @@
   <!-- Header -->
   <header class="header">
     <h1>The <span>Vault</span></h1>
-    index.html← Back Home</a>
+    <nav>
+      <a class="back" href="index.html">← Back Home</a>
+      <a class="back" href="calm-space.html" style="margin-left:10px">Calm Space</a>
+    </nav>
   </header>
 
-  <!-- CARD GRID (Option A) -->
+  <!-- CARD GRID -->
   <main class="grid" aria-label="Vault categories">
 
     <!-- 1. Aboriginal Education -->
     <article class="card">
-      https://images.pexels.com/photos/1114425/pexels-photo-1114425.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/1114425/pexels-photo-1114425.jpeg?auto=compress&w=1200" alt="Aboriginal Education">
       <div class="content">
         <h3>Aboriginal Education</h3>
         <div class="links">
-          https://www.8ways.online/→ 8 Ways Pedagogy</a>
-          https://www.narragunnawali.org.au/→ Narragunnawali</a>
-          https://aiatsis.gov.au/explore/map-indigenous-australia→ AIATSIS Map</a>
-          https://www.reconciliation.org.au/→ Reconciliation Australia</a>
-          https://www.indigenous.gov.au/→ Indigenous.gov.au</a>
+          <a href="https://www.8ways.online/" target="_blank" rel="noopener">→ 8 Ways Pedagogy</a>
+          <a href="https://www.narragunnawali.org.au/" target="_blank" rel="noopener">→ Narragunnawali</a>
+          <a href="https://aiatsis.gov.au/explore/map-indigenous-australia" target="_blank" rel="noopener">→ AIATSIS Map</a>
+          <a href="https://www.reconciliation.org.au/" target="_blank" rel="noopener">→ Reconciliation Australia</a>
+          <a href="https://www.indigenous.gov.au/" target="_blank" rel="noopener">→ Indigenous.gov.au</a>
         </div>
       </div>
     </article>
 
     <!-- 2. EALD Learners -->
     <article class="card">
-      https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&w=1200" alt="EALD Learners">
       <div class="content">
         <h3>EALD Learners</h3>
         <div class="links">
-          https://www.tesol.org.au/→ TESOL Australia</a>
-          https://www.scootle.edu.au/→ Scootle EALD</a>
-          https://www.education.sa.gov.au→ SA EALD Hub</a>
-          https://www.britishcouncil.org.au/→ British Council</a>
-          https://www.colorincolorado.org/→ Colorín Colorado</a>
+          <a href="https://www.tesol.org.au/" target="_blank" rel="noopener">→ TESOL Australia</a>
+          <a href="https://www.scootle.edu.au/" target="_blank" rel="noopener">→ Scootle EALD</a>
+          <a href="https://www.education.sa.gov.au" target="_blank" rel="noopener">→ SA EALD Hub</a>
+          <a href="https://www.britishcouncil.org.au/" target="_blank" rel="noopener">→ British Council</a>
+          <a href="https://www.colorincolorado.org/" target="_blank" rel="noopener">→ Colorín Colorado</a>
         </div>
       </div>
     </article>
 
     <!-- 3. Wellbeing -->
     <article class="card">
-      https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&w=1200" alt="Wellbeing">
       <div class="content">
         <h3>Wellbeing</h3>
         <div class="links">
-          https://be-you.edu.au/→ Be You Portal</a>
-          https://headspace.org.au/→ Headspace</a>
-          https://www.beyondblue.org.au/→ Beyond Blue</a>
-          https://emergingminds.com.au/→ Emerging Minds</a>
-          https://au.reachout.com/→ ReachOut</a>
+          <a href="https://be-you.edu.au/" target="_blank" rel="noopener">→ Be You Portal</a>
+          <a href="https://headspace.org.au/" target="_blank" rel="noopener">→ Headspace</a>
+          <a href="https://www.beyondblue.org.au/" target="_blank" rel="noopener">→ Beyond Blue</a>
+          <a href="https://emergingminds.com.au/" target="_blank" rel="noopener">→ Emerging Minds</a>
+          <a href="https://au.reachout.com/" target="_blank" rel="noopener">→ ReachOut</a>
         </div>
       </div>
     </article>
 
     <!-- 4. Neurodiversity -->
     <article class="card">
-      https://images.pexels.com/photos/7063784/pexels-photo-7063784.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/7063784/pexels-photo-7063784.jpeg?auto=compress&w=1200" alt="Neurodiversity">
       <div class="content">
         <h3>Neurodiversity</h3>
         <div class="links">
-          https://suelarkey.com.au→ Sue Larkey</a>
-          https://www.positivepartnerships.com.au→ Positive Partnerships</a>
-          https://www.amaze.org.au/→ Amaze Autism</a>
-          https://www.adhdaustralia.org.au/→ ADHD Australia</a>
-          https://yellowladybugs.com.au/→ Yellow Ladybugs</a>
+          <a href="https://suelarkey.com.au" target="_blank" rel="noopener">→ Sue Larkey</a>
+          <a href="https://www.positivepartnerships.com.au" target="_blank" rel="noopener">→ Positive Partnerships</a>
+          <a href="https://www.amaze.org.au/" target="_blank" rel="noopener">→ Amaze Autism</a>
+          <a href="https://www.adhdaustralia.org.au/" target="_blank" rel="noopener">→ ADHD Australia</a>
+          <a href="https://yellowladybugs.com.au/" target="_blank" rel="noopener">→ Yellow Ladybugs</a>
         </div>
       </div>
     </article>
 
     <!-- 5. Speech & Language -->
     <article class="card">
-      https://images.pexels.com/photos/1015568/pexels-photo-1015568.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/1015568/pexels-photo-1015568.jpeg?auto=compress&w=1200" alt="Speech and Language">
       <div class="content">
         <h3>Speech &amp; Language</h3>
         <div class="links">
-          https://www.assistiveware.com/learn-aac→ AAC Hub</a>
-          https://www.speechpathologyaustralia.org.au/→ Speech Pathology Australia</a>
-          https://pld-literacy.org/→ PLD Literacy</a>
-          https://thecommunicationtrust.org.uk/→ Communication Trust</a>
-          https://www.afasic.org.uk/→ Afasic</a>
+          <a href="https://www.assistiveware.com/learn-aac" target="_blank" rel="noopener">→ AAC Hub</a>
+          <a href="https://www.speechpathologyaustralia.org.au/" target="_blank" rel="noopener">→ Speech Pathology Australia</a>
+          <a href="https://pld-literacy.org/" target="_blank" rel="noopener">→ PLD Literacy</a>
+          <a href="https://thecommunicationtrust.org.uk/" target="_blank" rel="noopener">→ Communication Trust</a>
+          <a href="https://www.afasic.org.uk/" target="_blank" rel="noopener">→ Afasic</a>
         </div>
       </div>
     </article>
 
     <!-- 6. Trauma Informed -->
     <article class="card">
-      https://images.pexels.com/photos/2083556/pexels-photo-2083556.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/2083556/pexels-photo-2083556.jpeg?auto=compress&w=1200" alt="Trauma Informed">
       <div class="content">
         <h3>Trauma Informed</h3>
         <div class="links">
-          https://www.childhood.org.au/→ Childhood Foundation</a>
-          https://www.berrystreet.org.au/→ Berry Street</a>
-          https://traumasensitiveschools.org/→ Trauma Sensitive Schools</a>
-          https://www.blueknot.org.au/→ Blue Knot</a>
-          https://emergingminds.com.au/→ Emerging Minds</a>
+          <a href="https://www.childhood.org.au/" target="_blank" rel="noopener">→ Childhood Foundation</a>
+          <a href="https://www.berrystreet.org.au/" target="_blank" rel="noopener">→ Berry Street</a>
+          <a href="https://traumasensitiveschools.org/" target="_blank" rel="noopener">→ Trauma Sensitive Schools</a>
+          <a href="https://www.blueknot.org.au/" target="_blank" rel="noopener">→ Blue Knot</a>
+          <a href="https://emergingminds.com.au/" target="_blank" rel="noopener">→ Emerging Minds</a>
         </div>
       </div>
     </article>
 
     <!-- 7. Attendance -->
     <article class="card">
-      https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&w=1200" alt="Attendance">
       <div class="content">
         <h3>Attendance</h3>
         <div class="links">
-          https://www.attendanceworks.org/→ Attendance Works</a>
-          https://www.education.sa.gov.au→ SA Dept for Education</a>
-          https://be-you.edu.au/→ Be You (Attendance)</a>
-          https://schoolgovernance.net.au/→ School Governance</a>
-          https://www.education.gov.au/→ Federal Education</a>
+          <a href="https://www.attendanceworks.org/" target="_blank" rel="noopener">→ Attendance Works</a>
+          <a href="https://www.education.sa.gov.au" target="_blank" rel="noopener">→ SA Dept for Education</a>
+          <a href="https://be-you.edu.au/" target="_blank" rel="noopener">→ Be You (Attendance)</a>
+          <a href="https://schoolgovernance.net.au/" target="_blank" rel="noopener">→ School Governance</a>
+          <a href="https://www.education.gov.au/" target="_blank" rel="noopener">→ Federal Education</a>
         </div>
       </div>
     </article>
 
     <!-- 8. Interoception -->
     <article class="card">
-      https://images.pexels.com/photos/1108117/pexels-photo-1108117.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/1108117/pexels-photo-1108117.jpeg?auto=compress&w=1200" alt="Interoception">
       <div class="content">
         <h3>Interoception</h3>
         <div class="links">
-          https://kelly-mahler.com/→ Kelly Mahler</a>
-          https://www.theottoolbox.com/→ OT Toolbox</a>
-          https://www.sensoryprocessing.org/→ SPD Foundation</a>
-          https://www.star.institute/→ STAR Institute</a>
-          https://self-reg.ca/→ Self‑Reg Institute</a>
+          <a href="https://kelly-mahler.com/" target="_blank" rel="noopener">→ Kelly Mahler</a>
+          <a href="https://www.theottoolbox.com/" target="_blank" rel="noopener">→ OT Toolbox</a>
+          <a href="https://www.sensoryprocessing.org/" target="_blank" rel="noopener">→ SPD Foundation</a>
+          <a href="https://www.star.institute/" target="_blank" rel="noopener">→ STAR Institute</a>
+          <a href="https://self-reg.ca/" target="_blank" rel="noopener">→ Self‑Reg Institute</a>
         </div>
       </div>
     </article>
 
     <!-- 9. Literacy -->
     <article class="card">
-      https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&w=1200" alt="Literacy">
       <div class="content">
         <h3>Literacy</h3>
         <div class="links">
-          https://www.speldsa.org.au→ SPELD SA</a>
-          https://www.readingrockets.org/→ Reading Rockets</a>
-          https://www.decodablereadersaustralia.com.au/→ Decodable Readers</a>
-          https://www.literacyplanet.com/→ Literacy Planet</a>
-          https://www.phonicsplay.co.uk/→ PhonicsPlay</a>
+          <a href="https://www.speldsa.org.au" target="_blank" rel="noopener">→ SPELD SA</a>
+          <a href="https://www.readingrockets.org/" target="_blank" rel="noopener">→ Reading Rockets</a>
+          <a href="https://www.decodablereadersaustralia.com.au/" target="_blank" rel="noopener">→ Decodable Readers</a>
+          <a href="https://www.literacyplanet.com/" target="_blank" rel="noopener">→ Literacy Planet</a>
+          <a href="https://www.phonicsplay.co.uk/" target="_blank" rel="noopener">→ PhonicsPlay</a>
         </div>
       </div>
     </article>
 
     <!-- 10. Psychology -->
     <article class="card">
-      https://images.pexels.com/photos/5428830/pexels-photo-5428830.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/5428830/pexels-photo-5428830.jpeg?auto=compress&w=1200" alt="Psychology">
       <div class="content">
         <h3>Psychology</h3>
         <div class="links">
-          https://self-reg.ca/→ Self‑Reg Institute</a>
-          https://psychology.org.au/→ Australian Psychological Society</a>
-          https://emergingminds.com.au/→ Emerging Minds</a>
-          https://www.childmind.org/→ Child Mind Institute</a>
-          https://www.schoolpsychology.net.au/→ School Psych Hub</a>
+          <a href="https://self-reg.ca/" target="_blank" rel="noopener">→ Self‑Reg Institute</a>
+          <a href="https://psychology.org.au/" target="_blank" rel="noopener">→ Australian Psychological Society</a>
+          <a href="https://emergingminds.com.au/" target="_blank" rel="noopener">→ Emerging Minds</a>
+          <a href="https://www.childmind.org/" target="_blank" rel="noopener">→ Child Mind Institute</a>
+          <a href="https://www.schoolpsychology.net.au/" target="_blank" rel="noopener">→ School Psych Hub</a>
         </div>
       </div>
     </article>
 
     <!-- 11. Culture -->
     <article class="card">
-      https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&w=1200" alt="Culture">
       <div class="content">
         <h3>Culture</h3>
         <div class="links">
-          https://www.8ways.online/→ 8 Ways Pedagogy</a>
-          https://aiatsis.gov.au/→ AIATSIS</a>
-          https://www.reconciliation.org.au/→ Reconciliation</a>
-          https://www.narragunnawali.org.au/→ Narragunnawali</a>
-          https://www.sbs.com.au/learn/→ SBS Learn</a>
+          <a href="https://www.8ways.online/" target="_blank" rel="noopener">→ 8 Ways Pedagogy</a>
+          <a href="https://aiatsis.gov.au/" target="_blank" rel="noopener">→ AIATSIS</a>
+          <a href="https://www.reconciliation.org.au/" target="_blank" rel="noopener">→ Reconciliation</a>
+          <a href="https://www.narragunnawali.org.au/" target="_blank" rel="noopener">→ Narragunnawali</a>
+          <a href="https://www.sbs.com.au/learn/" target="_blank" rel="noopener">→ SBS Learn</a>
         </div>
       </div>
     </article>
 
     <!-- 12. VoiceIt -->
     <article class="card">
-      https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&w=1200" alt="VoiceIt">
       <div class="content">
         <h3>VoiceIt</h3>
         <div class="links">
-          https://vimeo.com/channels/voiceit→ VoiceIt Vimeo</a>
-          https://www.studentvoice.com.au/→ Student Voice</a>
-          https://www.participation.gov.au/→ Participation Hub</a>
-          https://vicsrc.org.au/→ Vic SRC</a>
-          https://www.yacsa.com.au/→ YACSA</a>
+          <a href="https://vimeo.com/channels/voiceit" target="_blank" rel="noopener">→ VoiceIt Vimeo</a>
+          <a href="https://www.studentvoice.com.au/" target="_blank" rel="noopener">→ Student Voice</a>
+          <a href="https://www.participation.gov.au/" target="_blank" rel="noopener">→ Participation Hub</a>
+          <a href="https://vicsrc.org.au/" target="_blank" rel="noopener">→ Vic SRC</a>
+          <a href="https://www.yacsa.com.au/" target="_blank" rel="noopener">→ YACSA</a>
         </div>
       </div>
     </article>
 
     <!-- 13. Staff Wellbeing -->
     <article class="card">
-      https://images.pexels.com/photos/3755440/pexels-photo-3755440.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/3755440/pexels-photo-3755440.jpeg?auto=compress&w=1200" alt="Staff Wellbeing">
       <div class="content">
         <h3>Staff Wellbeing</h3>
         <div class="links">
-          https://beyou.edu.au→ Be You (Staff)</a>
-          https://www.headsup.org.au/→ Heads Up</a>
-          https://www.worksafe.sa.gov.au/→ WorkSafe SA</a>
-          https://www.blackdoginstitute.org.au/→ Black Dog Institute</a>
-          https://www.smilingmind.com.au/→ Smiling Mind</a>
+          <a href="https://beyou.edu.au" target="_blank" rel="noopener">→ Be You (Staff)</a>
+          <a href="https://www.headsup.org.au/" target="_blank" rel="noopener">→ Heads Up</a>
+          <a href="https://www.worksafe.sa.gov.au/" target="_blank" rel="noopener">→ WorkSafe SA</a>
+          <a href="https://www.blackdoginstitute.org.au/" target="_blank" rel="noopener">→ Black Dog Institute</a>
+          <a href="https://www.smilingmind.com.au/" target="_blank" rel="noopener">→ Smiling Mind</a>
         </div>
       </div>
     </article>
 
     <!-- 14. OT Sensory -->
     <article class="card">
-      https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&w=1200
+      <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&w=1200" alt="OT Sensory">
       <div class="content">
         <h3>OT Sensory</h3>
         <div class="links">
-          https://www.theottoolbox.com/→ OT Toolbox</a>
-          https://www.sensorysmarts.com/→ Sensory Smarts</a>
-          https://www.spd.org/→ SPD Foundation</a>
-          https://www.star.institute/→ STAR Institute</a>
-          https://www.sensory-processing-disorder.com/→ SPD Hub</a>
+          <a href="https://www.theottoolbox.com/" target="_blank" rel="noopener">→ OT Toolbox</a>
+          <a href="https://www.sensorysmarts.com/" target="_blank" rel="noopener">→ Sensory Smarts</a>
+          <a href="https://www.spd.org/" target="_blank" rel="noopener">→ SPD Foundation</a>
+          <a href="https://www.star.institute/" target="_blank" rel="noopener">→ STAR Institute</a>
+          <a href="https://www.sensory-processing-disorder.com/" target="_blank" rel="noopener">→ SPD Hub</a>
         </div>
       </div>
     </article>
@@ -265,12 +274,22 @@
     <div class="foot">
       <div>© 2026 ThriveHub</div>
       <div style="text-align:right">
-        about.htmlAbout</a> ·
-        privacy.htmlPrivacy</a> ·
-        disclaimer.htmlDisclaimer</a> ·
-        contact.htmlContact</a>
+        <a href="about.html">About</a> ·
+        <a href="privacy.html">Privacy</a> ·
+        <a href="disclaimer.html">Disclaimer</a> ·
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
 </body>
 </html>
+``
+  
+   
+
+   
+
+   
+   
+    
+  

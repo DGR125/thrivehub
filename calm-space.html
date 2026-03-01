@@ -17,7 +17,7 @@
       line-height:1.6; overflow-x:hidden;
     }
 
-    /* Top nav (same pattern as Home) */
+    /* Top nav (same feel as Home/Vault) */
     nav{
       position:absolute; top:28px; left:10%; right:10%;
       display:flex; justify-content:space-between; align-items:center; z-index:10;
@@ -31,16 +31,15 @@
     }
     .nav-links a:hover{background:var(--accent); color:var(--accent-ink)}
 
-    /* HERO with ocean visual (swap url for forest if you prefer) */
+    /* HERO with OCEAN visual (swap to forest by uncommenting the other url) */
     .hero{
       position:relative; min-height:58vh;
       display:flex; flex-direction:column; justify-content:flex-end;
       padding:0 10% 28px;
       background:
         linear-gradient(rgba(15,23,42,.85), rgba(15,23,42,.96)),
-        /* OCEAN image */
         url('https://images.pexels.com/photos/3571267/pexels-photo-3571267.jpeg?auto=compress&w=1600')
-        /* FOREST alternative (uncomment next line and comment ocean line above)
+        /* Forest alternative — swap by commenting the line above and uncommenting below:
         url('https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&w=1600')
         */
         center/cover no-repeat;
@@ -109,7 +108,7 @@
 </head>
 <body>
 
-  <!-- NAV (fixed anchors so no stray text prints) -->
+  <!-- NAV (proper anchors so nothing prints as stray text) -->
   <nav aria-label="Primary">
     <div class="logo">Thrive<span class="cyan">HUB</span></div>
     <div class="nav-links">
@@ -147,8 +146,8 @@
       <h2>Focus Sound</h2>
       <p>Play a soft chime to mark a reset.</p>
       <button class="btn" onclick="document.getElementById('chime').play()">Play Chime</button>
-      <audio id="chime">
-        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3" type="audio/mpeg">
+      <audio id="chime" preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3" type="audio/mpeg" />
       </audio>
     </section>
 
@@ -159,7 +158,7 @@
       <p style="margin-top:8px;color:var(--muted)">Tip: read the list slowly, or do one pass per minute while the timer runs.</p>
     </section>
 
-    <!-- Optional 4–7–8 (collapsed by default) -->
+    <!-- Optional 4–7–8 (collapsed) -->
     <details class="panel span2">
       <summary style="cursor:pointer;color:var(--accent);text-transform:uppercase;font-weight:800">Add 4–7–8 Breathing</summary>
       <p style="margin-top:8px">In 4 — hold 7 — out 8. Try 3–4 cycles.</p>
@@ -175,32 +174,30 @@
   <script>
     /* 4-4-4-4 */
     let t=null, left=120;
-    function f(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
+    const out=document.getElementById('readout');
+    function fmt(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
     function startTimer(sec){
-      clearInterval(t); left=sec; document.getElementById('readout').textContent=f(left);
-      t=setInterval(()=>{ left--; document.getElementById('readout').textContent=f(left);
-        if(left<=0){ clearInterval(t); left=0; document.getElementById('readout').textContent=f(left);
+      clearInterval(t); left=sec; out.textContent=fmt(left);
+      t=setInterval(()=>{ left--; out.textContent=fmt(left);
+        if(left<=0){ clearInterval(t); left=0; out.textContent=fmt(left);
           const bell=document.getElementById('chime'); if(bell) bell.play();
         }
       },1000);
     }
-    function resetTimer(){ clearInterval(t); left=120; document.getElementById('readout').textContent=f(left); }
+    function resetTimer(){ clearInterval(t); left=120; out.textContent=fmt(left); }
 
     /* 4–7–8 (one-minute guide) */
     let t478=null, left478=64;
-    function f478(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
+    const out478=()=>document.getElementById('readout478');
+    function fmt478(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
     function startTimer478(sec){
-      clearInterval(t478); left478=sec; document.getElementById('readout478').textContent=f478(left478);
-      t478=setInterval(()=>{ left478--; document.getElementById('readout478').textContent=f478(left478);
-        if(left478<=0){ clearInterval(t478); left478=0; document.getElementById('readout478').textContent=f478(left478); }
+      clearInterval(t478); left478=sec; out478().textContent=fmt478(left478);
+      t478=setInterval(()=>{ left478--; out478().textContent=fmt478(left478);
+        if(left478<=0){ clearInterval(t478); left478=0; out478().textContent=fmt478(left478); }
       },1000);
     }
-    function resetTimer478(){ clearInterval(t478); left478=64; document.getElementById('readout478').textContent=f478(left478); }
+    function resetTimer478(){ clearInterval(t478); left478=64; out478().textContent=fmt478(left478); }
   </script>
 </body>
 </html>
 ``
-   
-     
-
-

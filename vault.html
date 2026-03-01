@@ -3,31 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Vault | ThriveHub</title>
+    <title>The Vault | ThriveHub Library</title>
     <style>
         body { background-color: #0f172a; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; padding: 40px 10%; margin: 0; }
         .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid #22d3ee; padding-bottom: 20px; margin-bottom: 50px; }
-        .category-block { margin-bottom: 40px; background: #1e293b; padding: 30px; border-radius: 15px; border-left: 6px solid #22d3ee; }
-        h2 { color: #22d3ee; margin-top: 0; }
-        .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 15px; }
-        .btn { background: #0f172a; color: #22d3ee; border: 1px solid #334155; padding: 10px; text-decoration: none; border-radius: 5px; text-align: center; font-size: 0.9rem; }
-        footer { text-align: center; margin-top: 50px; color: #94a3b8; }
+        .category-block { margin-bottom: 50px; background: #1e293b; border-radius: 20px; border: 1px solid #334155; overflow: hidden; }
+        .category-img { width: 100%; height: 180px; object-fit: cover; }
+        .category-body { padding: 30px; border-left: 8px solid #22d3ee; }
+        h2 { color: #22d3ee; margin-top: 0; text-transform: uppercase; font-style: italic; }
+        .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 20px; }
+        .link-btn { background: #0f172a; color: #22d3ee; text-decoration: none; padding: 12px; border-radius: 8px; font-size: 13px; font-weight: 600; border: 1px solid #334155; text-align: center; }
+        .link-btn:hover { background: #22d3ee; color: #0f172a; }
+        footer { text-align: center; padding: 40px; color: #64748b; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>The Vault</h1><a href="index.html" style="color:#22d3ee;">← BACK HOME</a></div>
-
-    <div class="category-block">
-        <h2>Aboriginal Education</h2>
-        <div class="link-grid">
-            <a href="https://www.8ways.online/" class="btn">8 Ways Pedagogy</a>
-            <a href="https://www.narragunnawali.org.au/" class="btn">Narragunnawali</a>
-            <a href="https://aiatsis.gov.au/" class="btn">AIATSIS</a>
-            <a href="https://www.reconciliation.org.au/" class="btn">Reconciliation Aus</a>
-            <a href="https://www.indigenous.gov.au/" class="btn">Indigenous.gov.au</a>
-        </div>
-    </div>
+    <div class="header"><h1>The Vault</h1><a href="index.html" style="color:#22d3ee; font-weight:bold;">← BACK HOME</a></div>
     
-    <footer>&copy; 2026 Teresa Bruno | ThriveHub</footer>
+    <section class="category-block">
+        <img src="https://images.pexels.com/photos/1036857/pexels-photo-1036857.jpeg?auto=compress&w=800" class="category-img">
+        <div class="category-body">
+            <h2>Aboriginal Education</h2>
+            <div class="link-grid">
+                <a href="https://www.8ways.online/" class="link-btn">8 Ways</a>
+                <a href="https://www.narragunnawali.org.au/" class="link-btn">Narragunnawali</a>
+                <a href="https://aiatsis.gov.au/" class="link-btn">AIATSIS</a>
+                <a href="https://www.reconciliation.org.au/" class="link-btn">Reconciliation</a>
+                <a href="https://www.indigenous.gov.au/" class="link-btn">Indigenous.gov.au</a>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Teresa Bruno | ThriveHub</p></footer>
 </body>
 </html>

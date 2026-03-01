@@ -5,15 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Calm Space — a quiet place for regulation and reset." />
   <title>Calm Space · ThriveHub</title>
+  <!-- Simple favicon for this page too -->
+  <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%2322d3ee'/%3E%3C/svg%3E">
   <style>
     :root{
       --bg:#0f172a; --panel:#111827; --panel2:#1e293b; --text:#e2e8f0; --muted:#cbd5e1;
       --line:#334155; --accent:#22d3ee; --accent-ink:#0f172a; --glow:rgba(34,211,238,.25);
-
       /* Change this one line if you prefer the forest hero: */
       --hero-img: url('https://images.pexels.com/photos/3571267/pexels-photo-3571267.jpeg?auto=compress&w=1600'); /* OCEAN */
       /* Forest alternative:
-      --hero-img: url('https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&w=1600'); */
+      --hero-img: url('https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&w=1600');
+      */
     }
     *{box-sizing:border-box}
     html,body{
@@ -36,7 +39,7 @@
     }
     .nav-links a:hover{background:var(--accent); color:var(--accent-ink)}
 
-    /* HERO — safe layered approach so the photo always shows */
+    /* HERO — layered so the photo always shows */
     .hero{
       position:relative; min-height:58vh; display:flex; flex-direction:column;
       justify-content:flex-end; padding:0 10% 28px; border-bottom:4px solid var(--accent);
@@ -108,10 +111,6 @@
       .wrap{grid-template-columns:1fr 1fr}
       .panel.span2{grid-column:1 / -1}
     }
-
-    /* Simple link styles inside content if needed */
-    a.inline{color:var(--accent); text-decoration:none}
-    a.inline:hover{text-decoration:underline}
   </style>
 </head>
 <body>
@@ -149,11 +148,15 @@
         </select>
         <button class="btn" onclick="playAmbient()">Play</button>
         <button class="btn alt" onclick="pauseAmbient()">Pause</button>
-        <span style="color:var(--muted)">Volume: <input id="vol" type="range" min="0" max="1" step="0.05" value="0.25" oninput="setVolume(this.value)" /></span>
+        <span style="color:#cbd5e1">Volume: <input id="vol" type="range" min="0" max="1" step="0.05" value="0.25" oninput="setVolume(this.value)" /></span>
       </div>
-      <!-- lightweight, license‑free tracks hosted on Pixabay CDN -->
-      <audio id="amb-ocean" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2022/03/29/audio_d5f5b9a3f5.mp3?filename=waves-on-beach-ambient-10486.mp3"></audio>
-      <audio id="amb-forest" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8c5d0d3a34.mp3?filename=forest-birds-ambient-108346.mp3"></audio>
+      <!-- License‑free tracks on Pixabay CDN -->
+      <audio id="amb-ocean" preload="auto" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/29/audio_d5f5b9a3f5.mp3?filename=waves-on-beach-ambient-10486.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="amb-forest" preload="auto" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8c5d0d3a34.mp3?filename=forest-birds-ambient-108346.mp3" type="audio/mpeg">
+      </audio>
     </section>
 
     <!-- Box Breathing -->
@@ -168,19 +171,21 @@
       <div class="breath" aria-hidden="true"></div>
     </section>
 
-    <!-- Focus Sound -->
+    <!-- Focus Sound (Chime) -->
     <section class="panel">
       <h2>Focus Sound</h2>
       <p>Play a soft chime to mark a reset.</p>
       <button class="btn" onclick="document.getElementById('chime').play()">Play Chime</button>
-      <audio id="chime" preload="auto" src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3"></audio>
+      <audio id="chime" preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3" type="audio/mpeg">
+      </audio>
     </section>
 
     <!-- Grounding (5–4–3–2–1) -->
     <section class="panel span2">
       <h2>Grounding · 5–4–3–2–1</h2>
       <p>Notice five things you can see · four you can feel · three you can hear · two you can smell · one you can taste.</p>
-      <p style="margin-top:8px;color:var(--muted)">Tip: read the list slowly, or do one pass per minute while the timer runs.</p>
+      <p style="margin-top:8px;color:#cbd5e1">Tip: read the list slowly, or do one pass per minute while the timer runs.</p>
     </section>
 
     <!-- Optional 4–7–8 -->
@@ -225,15 +230,15 @@
 
     /* 4–7–8 (one-minute guide) */
     let t478=null, left478=64;
-    const out478=()=>document.getElementById('readout478');
+    const out478=document.getElementById('readout478');
     function fmt478(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
     function startTimer478(sec){
-      clearInterval(t478); left478=sec; out478().textContent=fmt478(left478);
-      t478=setInterval(()=>{ left478--; out478().textContent=fmt478(left478);
-        if(left478<=0){ clearInterval(t478); left478=0; out478().textContent=fmt478(left478); }
+      clearInterval(t478); left478=sec; out478.textContent=fmt478(left478);
+      t478=setInterval(()=>{ left478--; out478.textContent=fmt478(left478);
+        if(left478<=0){ clearInterval(t478); left478=0; out478.textContent=fmt478(left478); }
       },1000);
     }
-    function resetTimer478(){ clearInterval(t478); left478=64; out478().textContent=fmt478(left478); }
+    function resetTimer478(){ clearInterval(t478); left478=64; out478.textContent=fmt478(left478); }
   </script>
 </body>
 </html>

@@ -2,29 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Calm Space</title>
+    <title>Calm Space | ThriveHub</title>
     <style>
-        body { background-color: #0f172a; color: white; text-align: center; padding: 50px; font-family: sans-serif; }
+        body { background: #0f172a; color: white; text-align: center; padding: 50px; font-family: sans-serif; }
         .timer-container { border: 3px solid #22d3ee; padding: 40px; border-radius: 20px; width: 300px; margin: 50px auto; background: #1e293b; }
         #timer { font-size: 3rem; color: #22d3ee; margin-bottom: 20px; }
         button { padding: 15px 25px; cursor: pointer; background: #22d3ee; border: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
-    <a href="index.html" style="color: #22d3ee;">← Back Home</a>
+    <a href="index.html" style="color: #22d3ee; text-decoration: none;">← Back Home</a>
     <h1>Calm Space</h1>
     <div class="timer-container">
         <div id="timer">01:00</div>
-        <button onclick="startTimer()">Start Timer</button>
+        <button onclick="startTimer()">Start Breathing Timer</button>
     </div>
     <script>
         let timeLeft = 60;
         function startTimer() {
             let timerEl = document.getElementById('timer');
-            let timer = setInterval(() => {
+            let interval = setInterval(() => {
                 timeLeft--;
                 timerEl.innerHTML = "00:" + (timeLeft < 10 ? "0" : "") + timeLeft;
-                if (timeLeft <= 0) { clearInterval(timer); alert("Time for a check-in."); }
+                if (timeLeft <= 0) { clearInterval(interval); alert("Take a deep breath."); }
             }, 1000);
         }
     </script>

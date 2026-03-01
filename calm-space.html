@@ -7,72 +7,174 @@
   <title>Calm Space · ThriveHub</title>
   <style>
     :root{
-      --bg:#0f172a; --panel:#1e293b; --text:#e2e8f0; --muted:#cbd5e1;
-      --line:#334155; --accent:#22d3ee; --accent-ink:#0f172a;
+      --bg:#0f172a; --panel:#111827; --panel2:#1e293b; --text:#e2e8f0; --muted:#cbd5e1;
+      --line:#334155; --accent:#22d3ee; --accent-ink:#0f172a; --glow:rgba(34,211,238,.25);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);
-      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-    .header{display:flex;justify-content:space-between;align-items:center;padding:28px 10%;border-bottom:4px solid var(--accent)}
-    .header h1{margin:0;font-size:clamp(2rem,4.5vw,3rem);font-weight:900;text-transform:uppercase}
-    .header h1 span{color:var(--accent)}
-    .back{color:var(--accent);text-decoration:none;font-weight:800;border:2px solid var(--accent);
-      padding:10px 20px;border-radius:999px;transition:.2s}
-    .back:hover{background:var(--accent);color:var(--accent-ink)}
+    html,body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6; overflow-x:hidden;
+    }
 
-    .wrap{max-width:980px;margin:32px auto;padding:0 10%;display:grid;gap:24px}
-    .panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px}
-    .panel h2{margin-top:0;color:var(--accent);text-transform:uppercase;font-size:18px}
+    /* Top nav (consistent with Home) */
+    nav{
+      position:absolute; top:28px; left:10%; right:10%;
+      display:flex; justify-content:space-between; align-items:center; z-index:10;
+    }
+    .logo{font-size:28px; font-weight:900; letter-spacing:2px}
+    .logo .cyan{color:var(--accent)}
+    .nav-links a{
+      color:var(--accent); text-decoration:none; font-weight:800;
+      border:2px solid var(--accent); padding:10px 20px; border-radius:999px;
+      font-size:12px; margin-left:10px; transition:.25s;
+    }
+    .nav-links a:hover{background:var(--accent); color:var(--accent-ink)}
 
-    /* timer */
-    .timer{display:flex;align-items:center;gap:12px}
-    .time{font-size:40px;font-weight:800}
-    .btn{background:var(--accent);color:var(--accent-ink);border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer}
-    .btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+    /* HERO with visual */
+    .hero{
+      position:relative; min-height:58vh;
+      display:flex; flex-direction:column; justify-content:flex-end;
+      padding:0 10% 28px;
+      background:
+        linear-gradient(rgba(15,23,42,.85), rgba(15,23,42,.96)),
+        url('https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&w=1600')
+        center/cover no-repeat;
+      border-bottom:4px solid var(--accent);
+    }
+    .hero h1{
+      margin:0 0 6px;
+      font-size:clamp(2.4rem,7vw,4.5rem);
+      font-weight:900; text-transform:uppercase; letter-spacing:.5px;
+    }
+    .hero h1 .cyan{color:var(--accent)}
+    .crumbs{
+      position:absolute; right:10%; top:18px; font-size:12px; color:#c7d2fe80;
+    }
+    .crumbs a{color:var(--text); opacity:.8; text-decoration:none}
+    .crumbs a:hover{opacity:1; text-decoration:underline}
 
-    audio{display:none}
+    /* Content layout */
+    .wrap{max-width:1100px; margin:32px auto 60px; padding:0 10%; display:grid; gap:24px}
+
+    /* Panels */
+    .panel{
+      background:linear-gradient(180deg, var(--panel) 0%, var(--panel2) 100%);
+      border:1px solid var(--line); border-radius:18px; padding:22px 22px 26px;
+      box-shadow:0 10px 30px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.02) inset;
+    }
+    .panel h2{
+      margin:0 0 8px; color:var(--accent); text-transform:uppercase; font-size:18px;
+      letter-spacing:.5px;
+    }
+    .panel p{margin:0 0 12px; color:var(--muted)}
+
+    /* Timer + buttons */
+    .timer-row{display:flex; align-items:center; gap:12px; flex-wrap:wrap}
+    .time{font-size:42px; font-weight:900; letter-spacing:1px}
+    .btn{
+      background:var(--accent); color:var(--accent-ink); border:none; border-radius:10px;
+      padding:10px 16px; font-weight:800; cursor:pointer; box-shadow:0 8px 18px var(--glow);
+      transition:.2s;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.alt{
+      background:transparent; color:var(--accent); border:2px solid var(--accent);
+      box-shadow:none;
+    }
+
+    /* Breathing visual (gentle pulsing circle) */
+    .breath{
+      width:140px; height:140px; border-radius:50%;
+      margin:10px auto 0; border:3px solid var(--accent);
+      box-shadow:0 0 0 0 var(--glow), inset 0 0 35px rgba(34,211,238,.12);
+      animation:inhale 8s ease-in-out infinite;
+    }
+    @keyframes inhale{
+      0%  {transform:scale(.85); box-shadow:0 0 0 0 var(--glow), inset 0 0 10px rgba(34,211,238,.08)}
+      25% {transform:scale(1.00)}
+      50% {transform:scale(1.15); box-shadow:0 0 30px 6px var(--glow), inset 0 0 35px rgba(34,211,238,.18)}
+      75% {transform:scale(1.00)}
+      100%{transform:scale(.85)}
+    }
+
+    /* Two-column on wide screens */
+    @media (min-width: 920px){
+      .wrap{grid-template-columns:1fr 1fr}
+      .panel.span2{grid-column:1 / -1}
+    }
+
+    /* Footer (match theme if you decide to add later) */
   </style>
 </head>
 <body>
-  <header class="header">
-    <h1>Calm <span>Space</span></h1>
-    <nav>
-      index.html← Home</a>
+
+  <!-- NAV (matches Home) -->
+  <nav aria-label="Primary">
+    <div class="logo">Thrive<span class="cyan">HUB</span></div>
+    <div class="nav-links">
+      index.htmlHOME</a>
+      vault.htmlTHE VAULT</a>
+      about.htmlABOUT</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" role="banner">
+    <div class="crumbs">
+      index.htmlHome</a>  ·  
       vault.htmlThe Vault</a>
-    </nav>
+    </div>
+    <h1>Calm <span class="cyan">Space</span></h1>
   </header>
 
+  <!-- CONTENT -->
   <main class="wrap">
+
+    <!-- Box Breathing -->
     <section class="panel">
       <h2>Box Breathing (4·4·4·4)</h2>
-      <p class="muted" style="color:var(--muted)">Breathe in 4 — hold 4 — out 4 — hold 4. Repeat for 2–3 minutes.</p>
-      <div class="timer">
+      <p>Breathe in 4 — hold 4 — out 4 — hold 4. Repeat for 2–3 minutes.</p>
+      <div class="timer-row" aria-label="Box breathing timer">
         <span class="time" id="readout">02:00</span>
         <button class="btn" onclick="startTimer(120)">Start</button>
         <button class="btn alt" onclick="resetTimer()">Reset</button>
       </div>
+      <div class="breath" aria-hidden="true"></div>
     </section>
 
+    <!-- Focus Sound -->
     <section class="panel">
       <h2>Focus Sound</h2>
-      <p style="color:var(--muted)">Play a soft chime to mark a reset.</p>
+      <p>Play a soft chime to mark a reset.</p>
       <button class="btn" onclick="document.getElementById('chime').play()">Play Chime</button>
       <audio id="chime">
         https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3
       </audio>
     </section>
+
+    <!-- Grounding (5–4–3–2–1) -->
+    <section class="panel span2">
+      <h2>Grounding · 5–4–3–2–1</h2>
+      <p>Notice five things you can see · four you can feel · three you can hear · two you can smell · one you can taste.</p>
+      <p style="margin-top:8px;color:var(--muted)">Tip: read the list slowly, or do one pass per minute while the timer runs.</p>
+    </section>
+
   </main>
 
   <script>
     let t=null, left=120;
-    function format(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
+    function f(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
     function startTimer(sec){
-      clearInterval(t); left=sec; document.getElementById('readout').textContent=format(left);
-      t=setInterval(()=>{ left--; document.getElementById('readout').textContent=format(left);
-        if(left<=0){ clearInterval(t); document.getElementById('chime').play(); }
+      clearInterval(t); left=sec; document.getElementById('readout').textContent=f(left);
+      t=setInterval(()=>{ left--; document.getElementById('readout').textContent=f(left);
+        if(left<=0){ clearInterval(t); left=0; document.getElementById('readout').textContent=f(left);
+          const bell=document.getElementById('chime'); if(bell) bell.play();
+        }
       },1000);
     }
-    function resetTimer(){ clearInterval(t); left=120; document.getElementById('readout').textContent=format(left); }
+    function resetTimer(){ clearInterval(t); left=120; document.getElementById('readout').textContent=f(left); }
   </script>
 </body>
 </html>
+``

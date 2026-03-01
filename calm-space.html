@@ -38,8 +38,9 @@
       padding:0 10% 28px;
       background:
         linear-gradient(rgba(15,23,42,.85), rgba(15,23,42,.96)),
+        /* OCEAN image */
         url('https://images.pexels.com/photos/3571267/pexels-photo-3571267.jpeg?auto=compress&w=1600')
-        /* Forest alternative — swap by commenting the line above and uncommenting below:
+        /* FOREST alternative — to use this instead, comment the line above and uncomment the line below:
         url('https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&w=1600')
         */
         center/cover no-repeat;
@@ -146,8 +147,10 @@
       <h2>Focus Sound</h2>
       <p>Play a soft chime to mark a reset.</p>
       <button class="btn" onclick="document.getElementById('chime').play()">Play Chime</button>
+      <!-- Bell sound -->
       <audio id="chime" preload="auto">
-        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3" type="audio/mpeg" />
+        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
       </audio>
     </section>
 
@@ -201,3 +204,6 @@
 </body>
 </html>
 ``
+  
+
+ 

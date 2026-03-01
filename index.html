@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ThriveHub | Teresa Bruno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThriveHub | Home</title>
     <style>
-        body { margin: 0; font-family: sans-serif; background: #0f172a; color: #e2e8f0; }
-        .hero { height: 400px; background: #1e293b; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border-bottom: 5px solid #22d3ee; }
-        .nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 40px; }
-        .btn { padding: 15px; background: #22d3ee; color: #0f172a; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; }
-        footer { text-align: center; padding: 40px; border-top: 1px solid #334155; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        .hero { height: 60vh; background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600') center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 5px solid #22d3ee; }
+        h1 { font-size: 4rem; color: #22d3ee; margin: 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 10%; }
+        .card { background: #1e293b; padding: 30px; border-radius: 20px; text-align: center; border-top: 5px solid #22d3ee; }
+        .card a { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #22d3ee; color: #0f172a; text-decoration: none; font-weight: bold; border-radius: 8px; }
+        footer { text-align: center; padding: 40px; color: #64748b; }
     </style>
 </head>
 <body>
-    <div class="hero">
+    <header class="hero">
         <h1>ThriveHub</h1>
-        <p>Inclusive Educational Resources</p>
-    </div>
-    <div class="nav-grid">
-        <a href="vault.html" class="btn">The Vault</a>
-        <a href="calm-space.html" class="btn">Calm Space</a>
-        <a href="https://thestudentwellbeing.wordpress.com/" class="btn">Wellbeing Blog</a>
-        <a href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ" class="btn">YouTube Channel</a>
-    </div>
-    <footer>
-        <p>&copy; 2026 Teresa Bruno | ThriveHub</p>
-    </footer>
+        <p>Empowering educators, supporting learners.</p>
+    </header>
+    <main class="grid">
+        <div class="card"><h3>The Vault</h3><p>Curated pedagogical resources.</p><a href="vault.html">ENTER THE VAULT</a></div>
+        <div class="card"><h3>Calm Space</h3><p>Emotional regulation tools.</p><a href="calm-space.html">VISIT CALM SPACE</a></div>
+        <div class="card"><h3>Wellbeing Blog</h3><p>Read the latest insights.</p><a href="https://thestudentwellbeing.wordpress.com/">READ BLOG</a></div>
+    </main>
+    <footer>&copy; 2026 Teresa Bruno | ThriveHub</footer>
 </body>
 </html>

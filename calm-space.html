@@ -4,23 +4,35 @@
     <meta charset="UTF-8">
     <title>Calm Space | ThriveHub</title>
     <style>
-        body { background: #0f172a; color: white; font-family: sans-serif; padding: 40px; line-height: 1.6; }
-        .header { border-bottom: 3px solid #22d3ee; padding-bottom: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
-        .box { background: #1e293b; padding: 25px; border-radius: 10px; border-left: 5px solid #22d3ee; }
-        .btn { color: #22d3ee; text-decoration: none; }
+        body { background: #0f172a; color: white; text-align: center; padding: 50px; font-family: sans-serif; }
+        .timer-box { border: 2px solid #22d3ee; padding: 40px; border-radius: 20px; max-width: 500px; margin: 30px auto; }
+        #timer { font-size: 4rem; color: #22d3ee; }
+        button { padding: 15px 30px; font-size: 1.2rem; background: #22d3ee; border: none; border-radius: 10px; cursor: pointer; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <a href="index.html" class="btn">← Back Home</a>
-        <h1>Calm Space</h1>
-        <p>A sanctuary for emotional regulation and sensory support.</p>
+    <a href="index.html" style="color:#22d3ee;">← Back Home</a>
+    <h1>Calm Space</h1>
+    <div class="timer-box">
+        <div id="timer">01:00</div>
+        <button onclick="startTimer()">Start Breathing (1 Min)</button>
+        <button onclick="playChime()" style="background:#475569; color:white; margin-top:10px;">Play Chime</button>
     </div>
-    <div class="grid">
-        <div class="box"><h3>Grounding</h3><p>Techniques to return to the present moment.</p></div>
-        <div class="box"><h3>Sensory Aids</h3><p>Resources for managing classroom overstimulation.</p></div>
-        <div class="box"><h3>Emotional Check-ins</h3><p>Visual aids to help label and navigate feelings.</p></div>
-    </div>
+    <script>
+        let timeLeft = 60;
+        function startTimer() {
+            let timerEl = document.getElementById('timer');
+            let interval = setInterval(() => {
+                timeLeft--;
+                timerEl.innerHTML = "00:" + (timeLeft < 10 ? "0" : "") + timeLeft;
+                if (timeLeft <= 0) { clearInterval(interval); playChime(); alert("Time for a check-in."); }
+            }, 1000);
+        }
+        function playChime() {
+            // Using a standard browser sound or audio API
+            const audio = new Audio('https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3');
+            audio.play();
+        }
+    </script>
 </body>
 </html>

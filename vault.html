@@ -2,38 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Vault | ThriveHub Library</title>
+    <title>The Vault | ThriveHub</title>
     <style>
-        body { background-color: #0f172a; color: #e2e8f0; font-family: 'Segoe UI', sans-serif; padding: 40px 10%; margin: 0; }
-        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid #22d3ee; padding-bottom: 20px; margin-bottom: 50px; }
-        .category-block { margin-bottom: 50px; background: #1e293b; border-radius: 20px; border: 1px solid #334155; overflow: hidden; }
-        .category-img { width: 100%; height: 180px; object-fit: cover; }
-        .category-body { padding: 30px; border-left: 8px solid #22d3ee; }
-        h2 { color: #22d3ee; margin-top: 0; text-transform: uppercase; font-style: italic; }
-        .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 20px; }
-        .link-btn { background: #0f172a; color: #22d3ee; text-decoration: none; padding: 12px; border-radius: 8px; font-size: 13px; font-weight: 600; border: 1px solid #334155; text-align: center; }
-        .link-btn:hover { background: #22d3ee; color: #0f172a; }
-        footer { text-align: center; padding: 40px; color: #64748b; }
+        body { background: #0f172a; color: white; padding: 20px; font-family: sans-serif; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #22d3ee; padding-bottom: 20px; }
+        .cat-box { background: #1e293b; margin: 20px 0; padding: 20px; border-radius: 10px; border-left: 5px solid #22d3ee; }
+        .cat-img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; margin-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 10px; }
+        .link { color: #22d3ee; text-decoration: none; padding: 8px; border: 1px solid #22d3ee; border-radius: 4px; text-align: center; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>The Vault</h1><a href="index.html" style="color:#22d3ee; font-weight:bold;">← BACK HOME</a></div>
+    <div class="header"><h1>The Vault</h1><a href="index.html" style="color:#22d3ee;">← Back Home</a></div>
     
-    <section class="category-block">
-        <img src="https://images.pexels.com/photos/1036857/pexels-photo-1036857.jpeg?auto=compress&w=800" class="category-img">
-        <div class="category-body">
-            <h2>Aboriginal Education</h2>
-            <div class="link-grid">
-                <a href="https://www.8ways.online/" class="link-btn">8 Ways</a>
-                <a href="https://www.narragunnawali.org.au/" class="link-btn">Narragunnawali</a>
-                <a href="https://aiatsis.gov.au/" class="link-btn">AIATSIS</a>
-                <a href="https://www.reconciliation.org.au/" class="link-btn">Reconciliation</a>
-                <a href="https://www.indigenous.gov.au/" class="link-btn">Indigenous.gov.au</a>
-            </div>
-        </div>
-    </section>
-
-    <footer><p>&copy; 2026 Teresa Bruno | ThriveHub</p></footer>
+    <div class="cat-box">
+        <img src="https://images.pexels.com/photos/1036857/pexels-photo-1036857.jpeg" class="cat-img">
+        <h2>1. Aboriginal Education</h2>
+        <div class="grid"><a class="link" href="#">8 Ways</a><a class="link" href="#">Narragunnawali</a><a class="link" href="#">AIATSIS</a><a class="link" href="#">Reconciliation</a><a class="link" href="#">Indigenous.gov</a></div>
+    </div>
+    
+    <div class="cat-box">
+        <img src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg" class="cat-img">
+        <h2>2. EALD Learners</h2>
+        <div class="grid"><a class="link" href="#">ESL Resource</a><a class="link" href="#">Grammar Aid</a><a class="link" href="#">Vocabulary</a><a class="link" href="#">Speaking</a><a class="link" href="#">Writing</a></div>
+    </div>
+    
+    <footer>&copy; 2026 Teresa Bruno | ThriveHub</footer>
 </body>
 </html>

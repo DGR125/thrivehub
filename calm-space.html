@@ -15,21 +15,25 @@
       radial-gradient(1000px 520px at 85% 70%, rgba(34,211,238,.08), transparent 70%),
       radial-gradient(800px 400px at 50% 90%, rgba(255,255,255,.035), transparent 65%)}
 
+    /* Nav */
     nav{position:absolute;top:28px;left:10%;right:10%;display:flex;justify-content:space-between;align-items:center;z-index:10}
     .logo{font-size:28px;font-weight:900;letter-spacing:2px}.logo .cyan{color:var(--accent)}
     .nav-links a{display:inline-block;color:var(--accent);text-decoration:none;font-weight:800;border:2px solid var(--accent);padding:10px 20px;border-radius:999px;font-size:12px;margin-left:10px;transition:.25s}
     .nav-links a:hover{background:var(--accent);color:var(--ink)}
 
+    /* Hero */
     .hero{position:relative;min-height:58vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 10% 28px;border-bottom:4px solid var(--accent);
       background:radial-gradient(1200px 600px at 20% 15%, rgba(34,211,238,.14), transparent 65%),
                  linear-gradient(135deg,#0f172a 0%,#162236 55%,#0f172a 100%)}
     .hero::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;background:linear-gradient(90deg,#22d3ee 0%, #67e8f9 50%, #22d3ee 100%);animation:horizon 6s ease-in-out infinite alternate;filter:blur(.6px);opacity:.9}
     @keyframes horizon{from{opacity:.9}to{opacity:.4}}
+
     .crumbs{position:absolute;right:10%;top:18px;font-size:12px;color:#e2e8f0b3}
     .crumbs a{color:#e2e8f0;text-decoration:none;opacity:.85}.crumbs a:hover{opacity:1;text-decoration:underline}
     .hero h1{margin:0 0 6px;font-size:clamp(2.6rem,7vw,4.8rem);font-weight:900;text-transform:uppercase;letter-spacing:1.2px;text-shadow:0 0 18px rgba(34,211,238,.22)}
     .hero h1 .cyan{color:var(--accent)}
 
+    /* Layout */
     .wrap{max-width:1100px;margin:32px auto 60px;padding:0 10%;display:grid;gap:24px}
     .panel{background:linear-gradient(180deg,var(--panel) 0%,var(--panel2) 100%);border:1px solid var(--line);border-radius:18px;padding:22px 22px 26px;box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.02) inset,0 8px 22px -8px var(--glow)}
     .panel h2{margin:0 0 8px;color:var(--accent);text-transform:uppercase;font-size:18px;letter-spacing:.6px}
@@ -45,6 +49,7 @@
   </style>
 </head>
 <body>
+  <!-- NAV -->
   <nav aria-label="Primary">
     <div class="logo">Thrive<span class="cyan">HUB</span></div>
     <div class="nav-links">
@@ -54,6 +59,7 @@
     </div>
   </nav>
 
+  <!-- HERO -->
   <header class="hero" role="banner">
     <div class="crumbs">
       index.htmlHome</a> · vault.htmlThe Vault</a>
@@ -61,6 +67,7 @@
     <h1>CALM <span class="cyan">SPACE</span></h1>
   </header>
 
+  <!-- CONTENT -->
   <main class="wrap">
     <section class="panel">
       <h2>How to Use Calm Space</h2>

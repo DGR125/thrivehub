@@ -64,7 +64,7 @@
   <main class="wrap">
     <section class="panel">
       <h2>How to Use Calm Space</h2>
-      <p>Choose one practice for 2–3 minutes. The pulsing circle guides pace (in 4, hold 4, out 4, hold 4). Use the chime for transitions. Keep ambient sound low and invite a quick body scan before you start. Return here after transitions or as part of predictable routines.</p>
+      <p>Choose one practice for 2–3 minutes. The pulsing circle guides pace (in 4, hold 4, out 4, hold 4). Use the chime for transitions. Keep ambient sound low and invite a quick body scan before you start.</p>
     </section>
 
     <section class="panel">
@@ -89,7 +89,7 @@
 
     <section class="panel">
       <h2>Ambient Sound</h2>
-      <p>Select a gentle background sound to help the room settle (press Play; browsers block auto‑play).</p>
+      <p>Select a gentle background sound (press Play; browsers block auto‑play).</p>
       <div class="timer-row" style="gap:8px">
         <select id="track" class="btn alt" aria-label="Ambient track">
           <option value="ocean">Ocean Waves</option>
@@ -111,12 +111,10 @@
     <section class="panel span2">
       <h2>Grounding · 5–4–3–2–1</h2>
       <p>Notice five things you can see · four you can feel · three you can hear · two you can smell · one you can taste.</p>
-      <p style="margin-top:8px;color:#cbd5e1">Tip: read the list slowly, or do one pass per minute while the timer runs.</p>
     </section>
 
     <details class="panel span2">
       <summary style="cursor:pointer;color:var(--accent);text-transform:uppercase;font-weight:800">Add 4–7–8 Breathing</summary>
-      <p style="margin-top:8px">In 4 — hold 7 — out 8. Try 3–4 cycles.</p>
       <div class="timer-row">
         <span class="time" id="readout478">01:04</span>
         <button class="btn" onclick="startTimer478(64)">Start</button>
@@ -127,16 +125,16 @@
 
   <script>
     // Ambient
-    const ocean=document.getElementById('amb-ocean'); const forest=document.getElementById('amb-forest');
+    const ocean=document.getElementById('amb-ocean'), forest=document.getElementById('amb-forest');
     function playAmbient(){const v=document.getElementById('track').value; pauseAmbient(); if(v==='ocean'){ocean.currentTime=0;ocean.play()} if(v==='forest'){forest.currentTime=0;forest.play()}}
     function pauseAmbient(){ocean.pause();forest.pause()} function setVolume(v){ocean.volume=v;forest.volume=v}
-    // 4-4-4-4
+    // 4-4-4-4 timer
     let t=null,left=120; const out=document.getElementById('readout');
     const fmt=s=>`${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;
     function startTimer(sec){clearInterval(t); left=sec; out.textContent=fmt(left);
       t=setInterval(()=>{left--; out.textContent=fmt(left); if(left<=0){clearInterval(t); left=0; out.textContent=fmt(left); document.getElementById('chime').play()}},1000)}
     function resetTimer(){clearInterval(t); left=120; out.textContent=fmt(left)}
-    // 4–7–8
+    // 4–7–8 timer
     let t478=null,left478=64; const out478=document.getElementById('readout478');
     const fmt478=s=>`${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;
     function startTimer478(sec){clearInterval(t478); left478=sec; out478.textContent=fmt478(left478);

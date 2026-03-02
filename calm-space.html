@@ -6,184 +6,67 @@
   <meta name="description" content="Calm Space — a quiet place for regulation and reset." />
   <title>Calm Space · ThriveHub</title>
   <style>
-    :root{
-      /* Brand */
-      --bg:#0f172a; --panel:#111827; --panel2:#1e293b; --text:#e2e8f0; --muted:#cbd5e1;
-      --line:#334155; --accent:#22d3ee; --ink:#0b1220;
-      /* Ambient */
-      --glow:rgba(34,211,238,.28);
-    }
-
-    /* Global */
+    :root{--bg:#0f172a;--panel:#111827;--panel2:#1e293b;--text:#e2e8f0;--muted:#cbd5e1;--line:#334155;--accent:#22d3ee;--ink:#0b1220;--glow:rgba(34,211,238,.28)}
     *{box-sizing:border-box}
-    html,body{
-      margin:0; background:var(--bg); color:var(--text);
-      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6; overflow-x:hidden;
-      /* Gentle page “breathing” */
-      animation:bgpulse 18s ease-in-out infinite;
-    }
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;overflow-x:hidden;animation:bgpulse 18s ease-in-out infinite}
+    @keyframes bgpulse{0%{background-color:#0f172a}50%{background-color:#102030}100%{background-color:#0f172a}}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:
+      radial-gradient(1200px 600px at 20% 15%, rgba(34,211,238,.12), transparent 65%),
+      radial-gradient(1000px 520px at 85% 70%, rgba(34,211,238,.08), transparent 70%),
+      radial-gradient(800px 400px at 50% 90%, rgba(255,255,255,.035), transparent 65%)}
 
-    /* Subtle ambient glows (no images) */
-    body::before{
-      content:"";
-      position:fixed; inset:0; pointer-events:none; z-index:-1;
-      background:
-        radial-gradient(1200px 600px at 15% 15%, rgba(34,211,238,.10), transparent 65%),
-        radial-gradient(1000px 520px at 85% 70%, rgba(34,211,238,.06), transparent 70%),
-        radial-gradient(800px 400px at 50% 90%, rgba(255,255,255,.035), transparent 65%);
-      filter: blur(0.3px);
-    }
+    nav{position:absolute;top:28px;left:10%;right:10%;display:flex;justify-content:space-between;align-items:center;z-index:10}
+    .logo{font-size:28px;font-weight:900;letter-spacing:2px}.logo .cyan{color:var(--accent)}
+    .nav-links a{display:inline-block;color:var(--accent);text-decoration:none;font-weight:800;border:2px solid var(--accent);padding:10px 20px;border-radius:999px;font-size:12px;margin-left:10px;transition:.25s}
+    .nav-links a:hover{background:var(--accent);color:var(--ink)}
 
-    @keyframes bgpulse{
-      0%{ background-color:#0f172a }
-      50%{ background-color:#102030 }
-      100%{ background-color:#0f172a }
-    }
-
-    /* Top nav (match home/vault) */
-    nav{
-      position:absolute; top:28px; left:10%; right:10%;
-      display:flex; justify-content:space-between; align-items:center; z-index:10;
-    }
-    .logo{font-size:28px; font-weight:900; letter-spacing:2px}
-    .logo .cyan{color:var(--accent)}
-    .nav-links a{
-      display:inline-block; color:var(--accent); text-decoration:none; font-weight:800;
-      border:2px solid var(--accent); padding:10px 20px; border-radius:999px;
-      font-size:12px; margin-left:10px; transition:.25s;
-      box-shadow:0 0 0 0 rgba(34,211,238,0);
-    }
-    .nav-links a:hover{
-      background:var(--accent); color:var(--ink);
-      box-shadow:0 8px 18px var(--glow);
-      transform:translateY(-1px);
-    }
-
-    /* HERO — gradient only (no images) */
-    .hero{
-      position:relative; min-height:58vh; display:flex; flex-direction:column;
-      justify-content:flex-end; padding:0 10% 28px; border-bottom:4px solid var(--accent);
-      background:
-        radial-gradient(1200px 600px at 20% 15%, rgba(34,211,238,.14), transparent 65%),
-        linear-gradient(135deg, #0f172a 0%, #162236 55%, #0f172a 100%);
-    }
-    /* Soft animated horizon line under hero */
-    .hero::after{
-      content:""; position:absolute; left:0; right:0; bottom:-4px; height:4px;
-      background:linear-gradient(90deg,#22d3ee 0%, #67e8f9 50%, #22d3ee 100%);
-      animation:horizon 6s ease-in-out infinite alternate; filter:blur(.6px); opacity:.9;
-    }
-    @keyframes horizon{ from{opacity:.9} to{opacity:.4} }
-
-    .crumbs{
-      position:absolute; right:10%; top:18px; font-size:12px; color:#e2e8f0b3; z-index:3;
-    }
-    .crumbs a{color:#e2e8f0; text-decoration:none; opacity:.85}
-    .crumbs a:hover{opacity:1; text-decoration:underline}
-
-    .hero h1{
-      margin:0 0 6px; font-size:clamp(2.6rem,7vw,4.8rem);
-      font-weight:900; text-transform:uppercase; letter-spacing:1.2px;
-      text-shadow: 0 0 18px rgba(34,211,238,.22);
-    }
+    .hero{position:relative;min-height:58vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 10% 28px;border-bottom:4px solid var(--accent);
+      background:radial-gradient(1200px 600px at 20% 15%, rgba(34,211,238,.14), transparent 65%),
+                 linear-gradient(135deg,#0f172a 0%,#162236 55%,#0f172a 100%)}
+    .hero::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;background:linear-gradient(90deg,#22d3ee 0%, #67e8f9 50%, #22d3ee 100%);animation:horizon 6s ease-in-out infinite alternate;filter:blur(.6px);opacity:.9}
+    @keyframes horizon{from{opacity:.9}to{opacity:.4}}
+    .crumbs{position:absolute;right:10%;top:18px;font-size:12px;color:#e2e8f0b3}
+    .crumbs a{color:#e2e8f0;text-decoration:none;opacity:.85}.crumbs a:hover{opacity:1;text-decoration:underline}
+    .hero h1{margin:0 0 6px;font-size:clamp(2.6rem,7vw,4.8rem);font-weight:900;text-transform:uppercase;letter-spacing:1.2px;text-shadow:0 0 18px rgba(34,211,238,.22)}
     .hero h1 .cyan{color:var(--accent)}
 
-    /* Main layout */
-    .wrap{max-width:1100px; margin:32px auto 60px; padding:0 10%; display:grid; gap:24px}
-
-    /* Panels */
-    .panel{
-      background:linear-gradient(180deg, var(--panel) 0%, var(--panel2) 100%);
-      border:1px solid var(--line); border-radius:18px; padding:22px 22px 26px;
-      box-shadow:
-        0 10px 30px rgba(0,0,0,.35),
-        0 0 0 1px rgba(255,255,255,.02) inset,
-        0 8px 22px -8px var(--glow);
-    }
-    .panel h2{
-      margin:0 0 8px; color:var(--accent); text-transform:uppercase; font-size:18px; letter-spacing:.6px;
-    }
-    .panel p{margin:0 0 12px; color:var(--muted)}
-
-    /* Timer + buttons */
-    .timer-row{display:flex; align-items:center; gap:12px; flex-wrap:wrap}
-    .time{font-size:42px; font-weight:900; letter-spacing:1px}
-    .btn{
-      background:var(--accent); color:var(--ink); border:none; border-radius:10px;
-      padding:10px 16px; font-weight:800; cursor:pointer; box-shadow:0 8px 18px var(--glow);
-      transition:.2s;
-    }
+    .wrap{max-width:1100px;margin:32px auto 60px;padding:0 10%;display:grid;gap:24px}
+    .panel{background:linear-gradient(180deg,var(--panel) 0%,var(--panel2) 100%);border:1px solid var(--line);border-radius:18px;padding:22px 22px 26px;box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.02) inset,0 8px 22px -8px var(--glow)}
+    .panel h2{margin:0 0 8px;color:var(--accent);text-transform:uppercase;font-size:18px;letter-spacing:.6px}
+    .panel p{margin:0 0 12px;color:var(--muted)}
+    .timer-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .time{font-size:42px;font-weight:900;letter-spacing:1px}
+    .btn{background:var(--accent);color:var(--ink);border:none;border-radius:10px;padding:10px 16px;font-weight:800;cursor:pointer;box-shadow:0 8px 18px var(--glow);transition:.2s}
     .btn:hover{transform:translateY(-1px)}
-    .btn.alt{ background:transparent; color:var(--accent); border:2px solid var(--accent); box-shadow:none }
-
-    /* Breathing visual (gentle pulsing circle) */
-    .breath{
-      width:140px; height:140px; border-radius:50%;
-      margin:10px auto 0; border:3px solid var(--accent);
-      box-shadow:0 0 0 0 var(--glow), inset 0 0 35px rgba(34,211,238,.12);
-      animation:inhale 8s ease-in-out infinite;
-    }
-    @keyframes inhale{
-      0%  {transform:scale(.86); box-shadow:0 0 0 0 var(--glow), inset 0 0 10px rgba(34,211,238,.08)}
-      50% {transform:scale(1.14); box-shadow:0 0 30px 6px var(--glow), inset 0 0 35px rgba(34,211,238,.18)}
-      100%{transform:scale(.86)}
-    }
-
-    /* Two-column on wide screens */
-    @media (min-width: 920px){
-      .wrap{grid-template-columns:1fr 1fr}
-      .panel.span2{grid-column:1 / -1}
-    }
+    .btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none}
+    .breath{width:140px;height:140px;border-radius:50%;margin:10px auto 0;border:3px solid var(--accent);box-shadow:0 0 0 0 var(--glow), inset 0 0 35px rgba(34,211,238,.12);animation:inhale 8s ease-in-out infinite}
+    @keyframes inhale{0%{transform:scale(.86);box-shadow:0 0 0 0 var(--glow), inset 0 0 10px rgba(34,211,238,.08)}50%{transform:scale(1.14);box-shadow:0 0 30px 6px var(--glow), inset 0 0 35px rgba(34,211,238,.18)}100%{transform:scale(.86)}}
+    @media (min-width:920px){.wrap{grid-template-columns:1fr 1fr}.panel.span2{grid-column:1/-1}}
   </style>
 </head>
 <body>
-
-  <!-- NAV -->
   <nav aria-label="Primary">
     <div class="logo">Thrive<span class="cyan">HUB</span></div>
     <div class="nav-links">
-      <a href="index.html">HOME</a>
-      <a href="vault.html">THE VAULT</a>
-      <a href="about.html">ABOUT</a>
+      index.htmlHOME</a>
+      vault.htmlTHE VAULT</a>
+      about.htmlABOUT</a>
     </div>
   </nav>
 
-  <!-- HERO (no images; calming gradients only) -->
   <header class="hero" role="banner">
     <div class="crumbs">
-      <a href="index.html">Home</a> · <a href="vault.html">The Vault</a>
+      index.htmlHome</a> · vault.htmlThe Vault</a>
     </div>
     <h1>CALM <span class="cyan">SPACE</span></h1>
   </header>
 
-  <!-- CONTENT -->
   <main class="wrap">
-
-    <!-- Ambient music (Ocean / Forest) -->
-    <section class="panel span2">
-      <h2>Ambient Sound</h2>
-      <p>Choose a gentle background sound to help the room settle. (Press Play; browsers block auto‑play.)</p>
-      <div class="timer-row" style="gap:8px">
-        <select id="track" class="btn alt" aria-label="Ambient track">
-          <option value="ocean">Ocean Waves</option>
-          <option value="forest">Forest Birds</option>
-          <option value="off">Off</option>
-        </select>
-        <button class="btn" onclick="playAmbient()">Play</button>
-        <button class="btn alt" onclick="pauseAmbient()">Pause</button>
-        <span style="color:#cbd5e1">Volume: <input id="vol" type="range" min="0" max="1" step="0.05" value="0.25" oninput="setVolume(this.value)" /></span>
-      </div>
-      <!-- License‑free tracks (Pixabay CDN) -->
-      <audio id="amb-ocean" preload="auto" loop>
-        https://cdn.pixabay.com/download/audio/2022/03/29/audio_d5f5b9a3f5.mp3?filename=waves-on-beach-ambient-10486.mp3
-      </audio>
-      <audio id="amb-forest" preload="auto" loop>
-        https://cdn.pixabay.com/download/audio/2022/03/15/audio_8c5d0d3a34.mp3?filename=forest-birds-ambient-108346.mp3
-      </audio>
+    <section class="panel">
+      <h2>How to Use Calm Space</h2>
+      <p>Choose one practice for 2–3 minutes. The pulsing circle guides pace (in 4, hold 4, out 4, hold 4). Use the chime for transitions. Keep ambient sound low and invite a quick body scan before you start. Return here after transitions or as part of predictable routines.</p>
     </section>
 
-    <!-- Box Breathing -->
     <section class="panel">
       <h2>Box Breathing (4·4·4·4)</h2>
       <p>Breathe in 4 — hold 4 — out 4 — hold 4. Repeat for 2–3 minutes.</p>
@@ -195,7 +78,6 @@
       <div class="breath" aria-hidden="true"></div>
     </section>
 
-    <!-- Focus Sound (Chime) -->
     <section class="panel">
       <h2>Focus Sound</h2>
       <p>Play a soft chime to mark a reset.</p>
@@ -205,14 +87,33 @@
       </audio>
     </section>
 
-    <!-- Grounding (5–4–3–2–1) -->
+    <section class="panel">
+      <h2>Ambient Sound</h2>
+      <p>Select a gentle background sound to help the room settle (browsers block auto‑play; press Play).</p>
+      <div class="timer-row" style="gap:8px">
+        <select id="track" class="btn alt" aria-label="Ambient track">
+          <option value="ocean">Ocean Waves</option>
+          <option value="forest">Forest Birds</option>
+          <option value="off">Off</option>
+        </select>
+        <button class="btn" onclick="playAmbient()">Play</button>
+        <button class="btn alt" onclick="pauseAmbient()">Pause</button>
+        <span style="color:#cbd5e1">Volume: <input id="vol" type="range" min="0" max="1" step="0.05" value="0.25" oninput="setVolume(this.value)" /></span>
+      </div>
+      <audio id="amb-ocean" preload="auto" loop>
+        https://cdn.pixabay.com/download/audio/2022/03/29/audio_d5f5b9a3f5.mp3?filename=waves-on-beach-ambient-10486.mp3
+      </audio>
+      <audio id="amb-forest" preload="auto" loop>
+        https://cdn.pixabay.com/download/audio/2022/03/15/audio_8c5d0d3a34.mp3?filename=forest-birds-ambient-108346.mp3
+      </audio>
+    </section>
+
     <section class="panel span2">
       <h2>Grounding · 5–4–3–2–1</h2>
       <p>Notice five things you can see · four you can feel · three you can hear · two you can smell · one you can taste.</p>
       <p style="margin-top:8px;color:#cbd5e1">Tip: read the list slowly, or do one pass per minute while the timer runs.</p>
     </section>
 
-    <!-- Optional 4–7–8 -->
     <details class="panel span2">
       <summary style="cursor:pointer;color:var(--accent);text-transform:uppercase;font-weight:800">Add 4–7–8 Breathing</summary>
       <p style="margin-top:8px">In 4 — hold 7 — out 8. Try 3–4 cycles.</p>
@@ -222,56 +123,27 @@
         <button class="btn alt" onclick="resetTimer478()">Reset</button>
       </div>
     </details>
-
   </main>
 
   <script>
-    /* Ambient music — user controlled */
-    const ocean = document.getElementById('amb-ocean');
-    const forest = document.getElementById('amb-forest');
-    function playAmbient(){
-      const sel = document.getElementById('track').value;
-      pauseAmbient();
-      if(sel === 'ocean'){ ocean.currentTime=0; ocean.play(); }
-      if(sel === 'forest'){ forest.currentTime=0; forest.play(); }
-    }
-    function pauseAmbient(){ ocean.pause(); forest.pause(); }
-    function setVolume(v){ ocean.volume=v; forest.volume=v; }
+    // Ambient
+    const ocean=document.getElementById('amb-ocean'); const forest=document.getElementById('amb-forest');
+    function playAmbient(){const v=document.getElementById('track').value; pauseAmbient(); if(v==='ocean'){ocean.currentTime=0;ocean.play()} if(v==='forest'){forest.currentTime=0;forest.play()}}
+    function pauseAmbient(){ocean.pause();forest.pause()} function setVolume(v){ocean.volume=v;forest.volume=v}
 
-    /* 4-4-4-4 */
-    let t=null, left=120;
-    const out=document.getElementById('readout');
-    function fmt(s){
-      const m=String(Math.floor(s/60)).padStart(2,'0');
-      const c=String(s%60).padStart(2,'0');
-      return `${m}:${c}`;
-    }
-    function startTimer(sec){
-      clearInterval(t); left=sec; out.textContent=fmt(left);
-      t=setInterval(()=>{ left--; out.textContent=fmt(left);
-        if(left<=0){ clearInterval(t); left=0; out.textContent=fmt(left);
-          document.getElementById('chime').play();
-        }
-      },1000);
-    }
-    function resetTimer(){ clearInterval(t); left=120; out.textContent=fmt(left); }
+    // 4-4-4-4
+    let t=null,left=120; const out=document.getElementById('readout');
+    function fmt(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`}
+    function startTimer(sec){clearInterval(t); left=sec; out.textContent=fmt(left);
+      t=setInterval(()=>{left--; out.textContent=fmt(left); if(left<=0){clearInterval(t); left=0; out.textContent=fmt(left); document.getElementById('chime').play()}},1000)}
+    function resetTimer(){clearInterval(t); left=120; out.textContent=fmt(left)}
 
-    /* 4–7–8 (one-minute guide) */
-    let t478=null, left478=64;
-    const out478=document.getElementById('readout478');
-    function fmt478(s){
-      const m=String(Math.floor(s/60)).padStart(2,'0');
-      const c=String(s%60).padStart(2,'0');
-      return `${m}:${c}`;
-    }
-    function startTimer478(sec){
-      clearInterval(t478); left478=sec; out478.textContent=fmt478(left478);
-      t478=setInterval(()=>{ left478--; out478.textContent=fmt478(left478);
-        if(left478<=0){ clearInterval(t478); left478=0; out478.textContent=fmt478(left478); }
-      },1000);
-    }
-    function resetTimer478(){ clearInterval(t478); left478=64; out478.textContent=fmt478(left478); }
+    // 4–7–8
+    let t478=null,left478=64; const out478=document.getElementById('readout478');
+    function fmt478(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`}
+    function startTimer478(sec){clearInterval(t478); left478=sec; out478.textContent=fmt478(left478);
+      t478=setInterval(()=>{left478--; out478.textContent=fmt478(left478); if(left478<=0){clearInterval(t478); left478=0; out478.textContent=fmt478(left478)}},1000)}
+    function resetTimer478(){clearInterval(t478); left478=64; out478.textContent=fmt478(left478)}
   </script>
 </body>
 </html>
-``

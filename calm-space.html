@@ -37,7 +37,7 @@
       justify-content:flex-end; padding:0 10% 28px; border-bottom:4px solid var(--accent);
       overflow:hidden;
     }
-    .hero-img{
+    .hero img.hero-img{
       position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;
     }
     .hero::after{
@@ -105,7 +105,7 @@
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- NAV (proper anchors) -->
   <nav aria-label="Primary">
     <div class="logo">Thrive<span class="cyan">HUB</span></div>
     <div class="nav-links">
@@ -115,11 +115,12 @@
     </div>
   </nav>
 
-  <!-- HERO (swap src for forest if you prefer) -->
+  <!-- HERO -->
   <header class="hero" role="banner">
+    <!-- OCEAN hero image -->
     <img class="hero-img" src="https://images.pexels.com/photos/3571267/pexels-photo-3571267.jpeg?auto=compress&w=1600" alt="Calm ocean waves" />
-    <!-- Forest alternative:
-    <img class="hero-img" src="https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&w=1600" alt="Misty forest" />
+    <!-- Prefer forest? Swap the line above for this one:
+    <img class="hero-img" src="https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&w=1600" alt="Quiet misty forest" />
     -->
     <div class="crumbs">
       <a href="index.html">Home</a> · <a href="vault.html">The Vault</a>
@@ -144,11 +145,12 @@
         <button class="btn alt" onclick="pauseAmbient()">Pause</button>
         <span style="color:#cbd5e1">Volume: <input id="vol" type="range" min="0" max="1" step="0.05" value="0.25" oninput="setVolume(this.value)" /></span>
       </div>
+      <!-- License‑free tracks on Pixabay CDN -->
       <audio id="amb-ocean" preload="auto" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/29/audio_d5f5b9a3f5.mp3?filename=waves-on-beach-ambient-10486.mp3" type="audio/mpeg">
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/29/audio_d5f5b9a3f5.mp3?filename=waves-on-beach-ambient-10486.mp3" type="audio/mpeg" />
       </audio>
       <audio id="amb-forest" preload="auto" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8c5d0d3a34.mp3?filename=forest-birds-ambient-108346.mp3" type="audio/mpeg">
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8c5d0d3a34.mp3?filename=forest-birds-ambient-108346.mp3" type="audio/mpeg" />
       </audio>
     </section>
 
@@ -170,7 +172,7 @@
       <p>Play a soft chime to mark a reset.</p>
       <button class="btn" onclick="document.getElementById('chime').play()">Play Chime</button>
       <audio id="chime" preload="auto">
-        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3" type="audio/mpeg">
+        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3" type="audio/mpeg" />
       </audio>
     </section>
 
@@ -210,29 +212,4 @@
     /* 4-4-4-4 */
     let t=null, left=120;
     const out=document.getElementById('readout');
-    function fmt(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
-    function startTimer(sec){
-      clearInterval(t); left=sec; out.textContent=fmt(left);
-      t=setInterval(()=>{ left--; out.textContent=fmt(left);
-        if(left<=0){ clearInterval(t); left=0; out.textContent=fmt(left);
-          document.getElementById('chime').play();
-        }
-      },1000);
-    }
-    function resetTimer(){ clearInterval(t); left=120; out.textContent=fmt(left); }
-
-    /* 4–7–8 (one-minute guide) */
-    let t478=null, left478=64;
-    const out478=document.getElementById('readout478');
-    function fmt478(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
-    function startTimer478(sec){
-      clearInterval(t478); left478=sec; out478.textContent=fmt478(left478);
-      t478=setInterval(()=>{ left478--; out478.textContent=fmt478(left478);
-        if(left478<=0){ clearInterval(t478); left478=0; out478.textContent=fmt478(left478); }
-      },1000);
-    }
-    function resetTimer478(){ clearInterval(t478); left478=64; out478.textContent=fmt478(left478); }
-  </script>
-</body>
-</html>
-``
+    function fmt(s){const m=String(Math.floor(s/60)).padStart(2,'

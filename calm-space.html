@@ -9,16 +9,7 @@
     :root{
       --bg:#0f172a; --panel:#111827; --panel2:#1e293b; --text:#e2e8f0; --muted:#cbd5e1;
       --line:#334155; --accent:#22d3ee; --ink:#0f172a; --glow:rgba(34,211,238,.25);
-
-      /* ---------- CHOOSE YOUR HERO BACKGROUND HERE ---------- */
-      /* OCEAN (default) */
-      --hero-photo: url('https://images.pexels.com/photos/3571267/pexels-photo-3571267.jpeg?auto=compress&w=2000');
-      /* FOREST (to use instead, comment the line above and uncomment this one)
-      --hero-photo: url('https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&w=2000');
-      */
-      /* ------------------------------------------------------ */
     }
-
     *{box-sizing:border-box}
     html,body{
       margin:0; background:var(--bg); color:var(--text);
@@ -39,26 +30,6 @@
       font-size:12px; margin-left:10px; transition:.25s;
     }
     .nav-links a:hover{background:var(--accent); color:var(--ink)}
-
-    /* HERO with pure CSS background image + gradient overlay */
-    .hero{
-      position:relative; min-height:58vh; display:flex; flex-direction:column;
-      justify-content:flex-end; padding:0 10% 28px; border-bottom:4px solid var(--accent);
-      background:
-        linear-gradient(rgba(15,23,42,.85), rgba(15,23,42,.96)),
-        var(--hero-photo);
-      background-size:cover; background-position:center; background-repeat:no-repeat;
-    }
-    .hero h1{
-      margin:0 0 6px; font-size:clamp(2.4rem,7vw,4.5rem);
-      font-weight:900; text-transform:uppercase; letter-spacing:.5px;
-    }
-    .hero h1 .cyan{color:var(--accent)}
-    .crumbs{
-      position:absolute; right:10%; top:18px; font-size:12px; color:#e2e8f0b3;
-    }
-    .crumbs a{color:#e2e8f0; text-decoration:none; opacity:.85}
-    .crumbs a:hover{opacity:1; text-decoration:underline}
 
     /* Content layout */
     .wrap{max-width:1100px; margin:32px auto 60px; padding:0 10%; display:grid; gap:24px}
@@ -109,7 +80,7 @@
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- NAV (proper anchors) -->
   <nav aria-label="Primary">
     <div class="logo">Thrive<span class="cyan">HUB</span></div>
     <div class="nav-links">
@@ -119,12 +90,25 @@
     </div>
   </nav>
 
-  <!-- HERO (pure CSS background) -->
-  <header class="hero" role="banner">
-    <div class="crumbs">
-      <a href="index.html">Home</a> · <a href="vault.html">The Vault</a>
+  <!-- HERO (pure CSS background — set inline so it cannot be overridden) -->
+  <header class="hero" role="banner"
+    style="
+      min-height:58vh;
+      display:flex;flex-direction:column;justify-content:flex-end;
+      padding:0 10% 28px;border-bottom:4px solid #22d3ee;
+      background:
+        linear-gradient(rgba(15,23,42,.85), rgba(15,23,42,.96)),
+        url('https://images.pexels.com/photos/3571267/pexels-photo-3571267.jpeg?auto=compress&w=2000');
+      background-size:cover;background-position:center;background-repeat:no-repeat;
+    "
+  >
+    <div class="crumbs" style="position:absolute;right:10%;top:18px;font-size:12px;color:#e2e8f0b3">
+      <a href="index.html" style="color:#e2e8f0;text-decoration:none;opacity:.85">Home</a> ·
+      <a href="vault.html" style="color:#e2e8f0;text-decoration:none;opacity:.85">The Vault</a>
     </div>
-    <h1>Calm <span class="cyan">Space</span></h1>
+    <h1 style="margin:0 0 6px;font-size:clamp(2.4rem,7vw,4.5rem);font-weight:900;text-transform:uppercase;letter-spacing:.5px">
+      CALM <span style="color:#22d3ee">SPACE</span>
+    </h1>
   </header>
 
   <!-- CONTENT -->
@@ -144,13 +128,11 @@
         <button class="btn alt" onclick="pauseAmbient()">Pause</button>
         <span style="color:#cbd5e1">Volume: <input id="vol" type="range" min="0" max="1" step="0.05" value="0.25" oninput="setVolume(this.value)" /></span>
       </div>
-
-      <!-- License‑free tracks (Pixabay CDN) -->
       <audio id="amb-ocean" preload="auto" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/29/audio_d5f5b9a3f5.mp3?filename=waves-on-beach-ambient-10486.mp3" type="audio/mpeg" />
+        https://cdn.pixabay.com/download/audio/2022/03/29/audio_d5f5b9a3f5.mp3?filename=waves-on-beach-ambient-10486.mp3
       </audio>
       <audio id="amb-forest" preload="auto" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8c5d0d3a34.mp3?filename=forest-birds-ambient-108346.mp3" type="audio/mpeg" />
+        https://cdn.pixabay.com/download/audio/2022/03/15/audio_8c5d0d3a34.mp3?filename=forest-birds-ambient-108346.mp3
       </audio>
     </section>
 
@@ -172,7 +154,7 @@
       <p>Play a soft chime to mark a reset.</p>
       <button class="btn" onclick="document.getElementById('chime').play()">Play Chime</button>
       <audio id="chime" preload="auto">
-        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3" type="audio/mpeg" />
+        https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3
       </audio>
     </section>
 
@@ -185,7 +167,7 @@
 
     <!-- Optional 4–7–8 -->
     <details class="panel span2">
-      <summary style="cursor:pointer;color:var(--accent);text-transform:uppercase;font-weight:800">Add 4–7–8 Breathing</summary>
+      <summary style="cursor:pointer;color:#22d3ee;text-transform:uppercase;font-weight:800">Add 4–7–8 Breathing</summary>
       <p style="margin-top:8px">In 4 — hold 7 — out 8. Try 3–4 cycles.</p>
       <div class="timer-row">
         <span class="time" id="readout478">01:04</span>
@@ -212,7 +194,7 @@
     /* 4-4-4-4 */
     let t=null, left=120;
     const out=document.getElementById('readout');
-    function fmt(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
+    function fmt(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60)).padStart(2,'0'); return `${m}:${c}`;}
     function startTimer(sec){
       clearInterval(t); left=sec; out.textContent=fmt(left);
       t=setInterval(()=>{ left--; out.textContent=fmt(left);
@@ -226,7 +208,7 @@
     /* 4–7–8 (one-minute guide) */
     let t478=null, left478=64;
     const out478=document.getElementById('readout478');
-    function fmt478(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`;}
+    function fmt478(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60)).padStart(2,'0'); return `${m}:${c}`;}
     function startTimer478(sec){
       clearInterval(t478); left478=sec; out478.textContent=fmt478(left478);
       t478=setInterval(()=>{ left478--; out478.textContent=fmt478(left478);

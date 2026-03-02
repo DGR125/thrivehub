@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics (keep if you use GA4; safe to remove if not needed) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZ1PG5NVM4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-TZ1PG5NVM4');
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="ThriveHub — the essential toolkit for inclusive educators. Evidence-aligned resources that bridge theory and classroom reality." />
   <meta name="theme-color" content="#0f172a" />
-  <!-- Optional PWA manifest (only if you actually have one in the repo) -->
-  <!-- <link rel="manifest" href="manifest.json" /> -->
-
   <title>ThriveHub · Inclusive Education Resources</title>
+
+  <!-- AdSense: load once on this page (Home) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 
   <style>
     :root{
       --bg:#0f172a; --panel:#1e293b; --text:#e2e8f0; --muted:#94a3b8;
-      --line:#334155; --accent:#22d3ee; --accent-ink:#0f172a;
+      --line:#334155; --accent:#22d3ee; --ink:#0f172a;
     }
     *{box-sizing:border-box}
     html,body{
@@ -31,7 +22,7 @@
       line-height:1.6; overflow-x:hidden;
     }
 
-    /* Top nav sits over the hero */
+    /* Nav */
     nav{
       position:absolute; top:32px; left:10%; right:10%;
       display:flex; justify-content:space-between; align-items:center; z-index:10;
@@ -43,7 +34,7 @@
       border:2px solid var(--accent); padding:10px 20px; border-radius:999px;
       font-size:12px; margin-left:10px; transition:.25s;
     }
-    .nav-links a:hover{background:var(--accent); color:var(--accent-ink)}
+    .nav-links a:hover{background:var(--accent); color:var(--ink)}
 
     /* Hero */
     .hero{
@@ -55,39 +46,41 @@
       border-bottom:4px solid var(--accent);
       text-align:left;
     }
-    h1{font-size:clamp(3rem,8vw,6.5rem); font-weight:900; text-transform:uppercase; line-height:.85; margin:0; font-style:italic}
+    h1{font-size:clamp(3rem,8vw,6rem); font-weight:900; text-transform:uppercase; line-height:.9; margin:0; font-style:italic}
     .cyan{color:var(--accent)}
     .vault-btn{
-      background:var(--accent); color:var(--accent-ink); padding:18px 45px; border-radius:999px;
-      font-weight:900; text-decoration:none; display:inline-block; margin-top:40px;
-      text-transform:uppercase; letter-spacing:1px; font-size:16px; transition:.25s;
-      box-shadow:0 10px 20px rgba(34,211,238,.3);
+      background:var(--accent); color:var(--ink); padding:16px 40px; border-radius:999px; font-weight:900;
+      text-decoration:none; display:inline-block; margin-top:32px; text-transform:uppercase; letter-spacing:1px; font-size:16px; transition:.25s;
+      box-shadow:0 10px 20px rgba(34,211,238,.3)
     }
     .vault-btn:hover{transform:translateY(-2px); background:#fff; color:#000}
 
-    /* Intent strip */
-    .intent{
-      background:var(--panel); border-left:14px solid var(--accent); padding:48px;
-      margin:50px 10% 20px; border-radius:0 40px 40px 0; box-shadow:0 30px 60px rgba(0,0,0,.6);
+    /* Intro (publisher content for AdSense) */
+    .intro{
+      background:var(--panel); border-left:14px solid var(--accent); padding:28px;
+      margin:40px 10% 10px; border-radius:0 24px 24px 0; box-shadow:0 20px 40px rgba(0,0,0,.45)
     }
 
     /* Section title + resource cards */
     .section-title{padding:16px 10%; font-size:22px; font-weight:900; text-transform:uppercase; color:var(--accent); letter-spacing:2px}
     .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; padding:0 10% 60px}
     .card{
-      background:var(--panel); border-radius:24px; border:1px solid var(--line);
-      overflow:hidden; display:flex; flex-direction:column; transition:.25s;
+      background:var(--panel); border-radius:20px; border:1px solid var(--line);
+      overflow:hidden; display:flex; flex-direction:column; transition:.25s
     }
     .card:hover{transform:translateY(-4px); border-color:var(--accent)}
     .card img{height:160px; width:100%; object-fit:cover}
-    .card-content{padding:24px}
-    .card h4{margin:0 0 10px; text-transform:uppercase; font-size:18px; color:var(--accent)}
+    .card-content{padding:20px}
+    .card h4{margin:0 0 8px; text-transform:uppercase; font-size:18px; color:var(--accent)}
     .card p{margin:0; color:var(--muted); font-size:14px}
 
     /* Footer */
     footer{padding:40px 10%; border-top:1px solid var(--line); font-size:13px; color:#64748b}
     .footer-flex{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap}
     footer a{color:var(--accent); text-decoration:none; font-weight:700}
+
+    /* Ad blocks spacing */
+    .ad-block{padding:20px 10% 0}
   </style>
 </head>
 <body>
@@ -104,30 +97,32 @@
 
   <!-- HERO -->
   <header class="hero" role="banner">
-    <p style="color:var(--accent); font-weight:700; letter-spacing:5px; margin-bottom:20px">WAVE ONE MASTERY</p>
+    <p style="color:var(--accent); font-weight:700; letter-spacing:5px; margin-bottom:18px">WAVE ONE MASTERY</p>
     <h1>Empower <br><span class="cyan">Every</span> Learner.</h1>
-    <a class="vault-btn" href="vault.html">Open The Vault</a>
+    <a class="vault-btn" href="vault.html" aria-label="Open The Vault">Open The Vault</a>
   </header>
 
-  <!-- INTENT -->
-  <section class="intent" aria-label="Our intent">
-    <div style="font-size:clamp(1.15rem,2.5vw,2rem); font-weight:300; line-height:1.35; margin-bottom:18px">
-      To move beyond “accommodation” and toward
-      <strong style="font-style:italic; color:#fff">authentic inclusion</strong>.
-      We equip educators with Wave One universal supports so the environment fits the child.
-    </div>
-    <h2 style="margin:.5rem 0 0">Welcome to ThriveHub</h2>
-    <p style="margin:.25rem 0 0; color:#cbd5e1">
-      The essential toolkit for inclusive educators—bridging the gap between theory and classroom reality.
-    </p>
-    <a class="vault-btn" href="vault.html" style="padding:12px 24px; font-size:14px; margin-top:18px">Enter The Vault</a>
+  <!-- INTRO (original text for “publisher content”) -->
+  <section class="intro" aria-label="Introduction to ThriveHub">
+    <p><strong>ThriveHub</strong> curates evidence‑aligned strategies and ready‑to‑use tools that help teachers remove barriers at <em>Wave One</em>. Each resource is chosen for classroom practicality—what you can try today to improve regulation, participation, and learning. You’ll find short explanations, examples from practice, and links to reputable sources so you can go deeper. Whether you’re new to inclusion or mentoring colleagues, start with <strong>The Vault</strong> to explore neurodiversity, EALD, speech &amp; language, trauma‑informed practice, interoception, literacy and staff wellbeing. Our aim is simple: reduce friction for teachers and increase access for learners.</p>
   </section>
+
+  <!-- Ad #1 (Home) -->
+  <div class="ad-block">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-slot="1111111111"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
 
   <!-- COLLAB CARDS -->
   <h3 class="section-title">Collaboration &amp; Support</h3>
   <section class="grid" aria-label="Collaboration resources">
     <a class="card" href="https://thestudentwellbeing.wordpress.com/" target="_blank" rel="noopener">
-      <img src="https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&w=1200" alt="Wellbeing blog cover" />
+      <img src="https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&w=1200" alt="Wellbeing blog image"/>
       <div class="card-content">
         <h4>Wellbeing Blog</h4>
         <p>Insights and stories on student wellbeing.</p>
@@ -135,7 +130,7 @@
     </a>
 
     <a class="card" href="https://www.youtube.com/playlist?list=PL-1HkJ1DK_a4pDXhjOrcub0el4LFdb7MJ" target="_blank" rel="noopener">
-      <img src="https://images.pexels.com/photos/2510428/pexels-photo-2510428.jpeg?auto=compress&w=1200" alt="YouTube classroom resources" />
+      <img src="https://images.pexels.com/photos/2510428/pexels-photo-2510428.jpeg?auto=compress&w=1200" alt="YouTube thumbnail"/>
       <div class="card-content">
         <h4>YouTube Channel</h4>
         <p>On‑demand pedagogy and classroom strategies.</p>
@@ -143,7 +138,7 @@
     </a>
 
     <a class="card" href="https://teams.microsoft.com/l/team/19%3A53344c83f40f487fa875608e85a07a90%40thread.tacv2/conversations?groupId=ee98daea-2322-4015-a6df-db9720cf8aa7&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" rel="noopener">
-      <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&w=1200" alt="Students with disabilities collaboration" />
+      <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&w=1200" alt="Teams hub image"/>
       <div class="card-content">
         <h4>Students with Disabilities</h4>
         <p>Primary Teams hub for specialised supports.</p>
@@ -151,7 +146,7 @@
     </a>
 
     <a class="card" href="https://teams.microsoft.com/l/team/19%3A97c6fcce5852422998cee7cee1817b65%40thread.tacv2/conversations?groupId=880dc9f7-291b-4f3c-8555-b5bbae7a4c47&tenantId=73bbf4e9-0688-4946-aea9-bd0bb40ecf07" target="_blank" rel="noopener">
-      <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&w=1200" alt="Staff wellbeing collaboration" />
+      <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&w=1200" alt="Wellbeing connections image"/>
       <div class="card-content">
         <h4>Wellbeing Connections</h4>
         <p>Professional collaboration for staff and leadership.</p>
@@ -159,15 +154,26 @@
     </a>
   </section>
 
+  <!-- Ad #2 (Home) -->
+  <div class="ad-block" style="padding-bottom:40px">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-slot="2222222222"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
   <!-- FOOTER -->
   <footer role="contentinfo">
     <div class="footer-flex">
       <div>
-        <strong>Teresa Bruno ™</strong><br />
-        Leader in Education · <a href="mailto:teresa.bruno@sa.gov.au">Contact Support</a>
+        <strong>Teresa Bruno ™</strong><br/>Leader in Education ·
+        <a href="mailto:teresa.bruno@sa.gov.au">Contact Support</a>
       </div>
       <div style="text-align:right">
-        © 2026 ThriveHub. All rights reserved.<br />
+        © 2026 ThriveHub. All rights reserved.<br/>
         <a href="about.html">About</a> ·
         <a href="privacy.html">Privacy</a> ·
         <a href="disclaimer.html">Disclaimer</a> ·
@@ -178,4 +184,3 @@
   </footer>
 </body>
 </html>
-``

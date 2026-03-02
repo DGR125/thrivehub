@@ -5,18 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Calm Space — a quiet place for regulation and reset." />
   <title>Calm Space · ThriveHub</title>
-  <!-- Simple favicon for this page too -->
-  <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%2322d3ee'/%3E%3C/svg%3E">
   <style>
     :root{
       --bg:#0f172a; --panel:#111827; --panel2:#1e293b; --text:#e2e8f0; --muted:#cbd5e1;
-      --line:#334155; --accent:#22d3ee; --accent-ink:#0f172a; --glow:rgba(34,211,238,.25);
-      /* Change this one line if you prefer the forest hero: */
-      --hero-img: url('https://images.pexels.com/photos/3571267/pexels-photo-3571267.jpeg?auto=compress&w=1600'); /* OCEAN */
-      /* Forest alternative:
-      --hero-img: url('https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&w=1600');
-      */
+      --line:#334155; --accent:#22d3ee; --ink:#0f172a; --glow:rgba(34,211,238,.25);
     }
     *{box-sizing:border-box}
     html,body{
@@ -25,7 +17,7 @@
       line-height:1.6; overflow-x:hidden;
     }
 
-    /* Top nav (same feel as Home/Vault) */
+    /* Top nav (match Home/Vault) */
     nav{
       position:absolute; top:28px; left:10%; right:10%;
       display:flex; justify-content:space-between; align-items:center; z-index:10;
@@ -37,20 +29,20 @@
       border:2px solid var(--accent); padding:10px 20px; border-radius:999px;
       font-size:12px; margin-left:10px; transition:.25s;
     }
-    .nav-links a:hover{background:var(--accent); color:var(--accent-ink)}
+    .nav-links a:hover{background:var(--accent); color:var(--ink)}
 
-    /* HERO — layered so the photo always shows */
+    /* HERO with a *real image* behind a gradient overlay (bulletproof) */
     .hero{
       position:relative; min-height:58vh; display:flex; flex-direction:column;
       justify-content:flex-end; padding:0 10% 28px; border-bottom:4px solid var(--accent);
       overflow:hidden;
     }
-    .hero::before{
-      content:""; position:absolute; inset:0; background:var(--hero-img) center/cover no-repeat; z-index:0;
+    .hero-img{
+      position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;
     }
-    .hero::after{
-      content:""; position:absolute; inset:0;
-      background:linear-gradient(rgba(15,23,42,.85), rgba(15,23,42,.96)); z-index:1;
+    .hero::after{ /* gradient overlay */
+      content:""; position:absolute; inset:0; z-index:1;
+      background:linear-gradient(rgba(15,23,42,.85), rgba(15,23,42,.96));
     }
     .hero > *{position:relative; z-index:2}
     .hero h1{
@@ -82,7 +74,7 @@
     .timer-row{display:flex; align-items:center; gap:12px; flex-wrap:wrap}
     .time{font-size:42px; font-weight:900; letter-spacing:1px}
     .btn{
-      background:var(--accent); color:var(--accent-ink); border:none; border-radius:10px;
+      background:var(--accent); color:var(--ink); border:none; border-radius:10px;
       padding:10px 16px; font-weight:800; cursor:pointer; box-shadow:0 8px 18px var(--glow);
       transition:.2s;
     }
@@ -100,9 +92,7 @@
     }
     @keyframes inhale{
       0%  {transform:scale(.85); box-shadow:0 0 0 0 var(--glow), inset 0 0 10px rgba(34,211,238,.08)}
-      25% {transform:scale(1.00)}
       50% {transform:scale(1.15); box-shadow:0 0 30px 6px var(--glow), inset 0 0 35px rgba(34,211,238,.18)}
-      75% {transform:scale(1.00)}
       100%{transform:scale(.85)}
     }
 
@@ -115,7 +105,7 @@
 </head>
 <body>
 
-  <!-- NAV (proper anchors; no stray text) -->
+  <!-- NAV -->
   <nav aria-label="Primary">
     <div class="logo">Thrive<span class="cyan">HUB</span></div>
     <div class="nav-links">
@@ -125,8 +115,12 @@
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO (swap the image src for forest if you prefer) -->
   <header class="hero" role="banner">
+    <img class="hero-img" alt="Calm ocean waves" src="https://images.pexels.com/photos/3571267/pexels-photo-3571267.jpeg?auto=compress&w=1600" />
+    <!-- Forest alternative:
+    <img class="hero-img" alt="Calm forest" src="https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&w=1600" />
+    -->
     <div class="crumbs">
       <a href="index.html">Home</a> · <a href="vault.html">The Vault</a>
     </div>
@@ -139,7 +133,7 @@
     <!-- Ambient music (Ocean / Forest) -->
     <section class="panel span2">
       <h2>Ambient Sound</h2>
-      <p>Choose a gentle background sound to help the room settle. (Autoplay is blocked on most browsers; press Play.)</p>
+      <p>Choose a gentle background sound to help the room settle. (Press Play; browsers block auto‑play.)</p>
       <div class="timer-row" style="gap:8px">
         <select id="track" class="btn alt" aria-label="Ambient track">
           <option value="ocean">Ocean Waves</option>
@@ -150,13 +144,9 @@
         <button class="btn alt" onclick="pauseAmbient()">Pause</button>
         <span style="color:#cbd5e1">Volume: <input id="vol" type="range" min="0" max="1" step="0.05" value="0.25" oninput="setVolume(this.value)" /></span>
       </div>
-      <!-- License‑free tracks on Pixabay CDN -->
-      <audio id="amb-ocean" preload="auto" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/29/audio_d5f5b9a3f5.mp3?filename=waves-on-beach-ambient-10486.mp3" type="audio/mpeg">
-      </audio>
-      <audio id="amb-forest" preload="auto" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8c5d0d3a34.mp3?filename=forest-birds-ambient-108346.mp3" type="audio/mpeg">
-      </audio>
+      <!-- Proper audio sources -->
+      <audio id="amb-ocean" preload="auto" loop src="https://cdn.pixabay.com/download/audio/2022/03/29/audio_d5f5b9a3f5.mp3?filename=waves-on-beach-ambient-10486.mp3"></audio>
+      <audio id="amb-forest" preload="auto" loop src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8c5d0d3a34.mp3?filename=forest-birds-ambient-108346.mp3"></audio>
     </section>
 
     <!-- Box Breathing -->
@@ -176,9 +166,7 @@
       <h2>Focus Sound</h2>
       <p>Play a soft chime to mark a reset.</p>
       <button class="btn" onclick="document.getElementById('chime').play()">Play Chime</button>
-      <audio id="chime" preload="auto">
-        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3" type="audio/mpeg">
-      </audio>
+      <audio id="chime" preload="auto" src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_5b5bb4a3e4.mp3?filename=meditation-bell-6768.mp3"></audio>
     </section>
 
     <!-- Grounding (5–4–3–2–1) -->

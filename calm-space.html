@@ -89,7 +89,7 @@
 
     <section class="panel">
       <h2>Ambient Sound</h2>
-      <p>Select a gentle background sound to help the room settle (browsers block auto‑play; press Play).</p>
+      <p>Select a gentle background sound to help the room settle (press Play; browsers block auto‑play).</p>
       <div class="timer-row" style="gap:8px">
         <select id="track" class="btn alt" aria-label="Ambient track">
           <option value="ocean">Ocean Waves</option>
@@ -130,17 +130,15 @@
     const ocean=document.getElementById('amb-ocean'); const forest=document.getElementById('amb-forest');
     function playAmbient(){const v=document.getElementById('track').value; pauseAmbient(); if(v==='ocean'){ocean.currentTime=0;ocean.play()} if(v==='forest'){forest.currentTime=0;forest.play()}}
     function pauseAmbient(){ocean.pause();forest.pause()} function setVolume(v){ocean.volume=v;forest.volume=v}
-
     // 4-4-4-4
     let t=null,left=120; const out=document.getElementById('readout');
-    function fmt(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`}
+    const fmt=s=>`${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;
     function startTimer(sec){clearInterval(t); left=sec; out.textContent=fmt(left);
       t=setInterval(()=>{left--; out.textContent=fmt(left); if(left<=0){clearInterval(t); left=0; out.textContent=fmt(left); document.getElementById('chime').play()}},1000)}
     function resetTimer(){clearInterval(t); left=120; out.textContent=fmt(left)}
-
     // 4–7–8
     let t478=null,left478=64; const out478=document.getElementById('readout478');
-    function fmt478(s){const m=String(Math.floor(s/60)).padStart(2,'0'); const c=String(s%60).padStart(2,'0'); return `${m}:${c}`}
+    const fmt478=s=>`${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;
     function startTimer478(sec){clearInterval(t478); left478=sec; out478.textContent=fmt478(left478);
       t478=setInterval(()=>{left478--; out478.textContent=fmt478(left478); if(left478<=0){clearInterval(t478); left478=0; out478.textContent=fmt478(left478)}},1000)}
     function resetTimer478(){clearInterval(t478); left478=64; out478.textContent=fmt478(left478)}
